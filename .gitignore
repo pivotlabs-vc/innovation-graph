@@ -1,0 +1,6 @@
+sparql-explorer/
+sparql
+sparql-service/
+*~
+challenges.db
+serve
