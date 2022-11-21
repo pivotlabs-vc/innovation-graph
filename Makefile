@@ -18,9 +18,9 @@ serve:
 
 sparql-explorer:
 	-rm -rf sparql-explorer
-	git clone git@github.com:cybermaggedon/sparql-explorer
-	git checkout v${SPARQL_EXPLORER_VERSION}
-	(cd sparql-explorer &&npm install && ng build)
+	git clone git@github.com:cybermaggedon/sparql-explorer sparql-explorer
+	(cd sparql-explorer; git checkout v${SPARQL_EXPLORER_VERSION})
+	(cd sparql-explorer && npm install && ng build)
 
 sparql:
 	-rm -rf sparql-service
