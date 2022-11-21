@@ -5,6 +5,7 @@ RUN dnf install -y libgo && dnf clean all
 
 ADD serve /usr/local/bin/serve
 ADD sparql-explorer/dist/sparql-explorer /usr/local/web/
+ADD query.html /usr/local/web/
 
 WORKDIR /usr/local/web/
 CMD /usr/local/bin/serve

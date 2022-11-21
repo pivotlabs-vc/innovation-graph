@@ -18,9 +18,6 @@
     </style>
   </head>
   <body>
-<!-- 
- http://localhost:8080/query.html?query=SELECT%20%2A%20WHERE%20%7B%20?a%20?b%20?c%20.%20%7D%20LIMIT%205
--->
 
     <div>
       <div>
@@ -29,9 +26,9 @@
 
       <div>
 	<button id="submit">Submit</button>
-	<button id="sow">Suitcase of Wine party</button>
-	<button id="b1">Parties attended by Boris</button>
-	<button id="b2">Parties attended by Boris which broke rules</button>
+	<button id="b0">KTN information exchange challenges</button>
+	<button id="b1">Farming challenges</button>
+	<button id="b2">Source/topic map</button>
       </div>
 
     </div>
@@ -118,14 +115,13 @@
 	  run_query();
       }
 
-      var sow = "SELECT ?label ?value\nWHERE {\n  <http://e623fd-partygate/suitcase-of-wine> ?prop ?value .\n  ?prop <http://www.w3.org/2000/01/rdf-schema#label> ?label .\n}";
-//      var sow = "SELECT ?label ?value\nWHERE {\n  {\n    <http://e623fd-partygate/suitcase-of-wine> ?prop ?value .\n    FILTER (!isURI(?value))\n    ?prop <http://www.w3.org/2000/01/rdf-schema#label> ?label .\n  } UNION {\n    <http://e623fd-partygate/suitcase-of-wine> ?prop ?obj .\n    FILTER (isURI(?obj)) .\n    ?prop <http://www.w3.org/2000/01/rdf-schema#label> ?label .\n    ?obj <http://www.w3.org/2000/01/rdf-schema#label> ?value .\n  }\n}";
-      var b1 = "PREFIX pgp: <http://e623fd-partygate/p#>\nPREFIX pg: <http://e623fd-partygate/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?party\nWHERE {\n  ?id rdfs:label ?party .\n  ?id pgp:attended-by pg:boris .\n}\n";
-      var b2 = "PREFIX pgp: <http://e623fd-partygate/p#>\nPREFIX pg: <http://e623fd-partygate/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?party ?breaks\n WHERE {\n  ?a rdfs:label ?party .\n  ?a pgp:contravenes ?d .\n  ?d rdfs:label ?breaks .\n  ?a pgp:attended-by pg:boris .\n}\n";
-      
+      var b0 = "SELECT DISTINCT ?title ?opens ?closes\nWHERE {\n  ?chl <http://pivotlabs.vc/challenges/p#has-source>\n      <http://pivotlabs.vc/challenges/s/ktnie> .\n  ?chl <http://pivotlabs.vc/challenges/p#title> ?title .\n  ?chl <http://pivotlabs.vc/challenges/p#opens> ?opens .\n  ?chl <http://pivotlabs.vc/challenges/p#closes> ?closes .\n}\nLIMIT 25";
+      var b1 = "SELECT DISTINCT ?title ?url\nWHERE {\n  ?chl <http://pivotlabs.vc/challenges/p#has-topic>\n      <http://pivotlabs.vc/challenges/t/farming> .\n  ?chl <http://pivotlabs.vc/challenges/p#title> ?title .\n  ?chl <http://purl.org/dc/elements/1.1/relation> ?url .\n}\nLIMIT 25";
+
+      var b2 = "SELECT DISTINCT ?source ?topic\nWHERE {\n  ?chl <http://pivotlabs.vc/challenges/p#has-topic> ?t .\n  ?chl <http://pivotlabs.vc/challenges/p#has-source> ?s .\n  ?s <http://www.w3.org/2000/01/rdf-schema#label> ?source .\n  ?t <http://www.w3.org/2000/01/rdf-schema#label> ?topic .\n}\nLIMIT 25";
 
       document.getElementById("submit").onclick = run_query;
-      document.getElementById("sow").onclick = function() { execute(sow); };
+      document.getElementById("b0").onclick = function() { execute(b0); };
       document.getElementById("b1").onclick = function() { execute(b1); };
       document.getElementById("b2").onclick = function() { execute(b2); };
 
