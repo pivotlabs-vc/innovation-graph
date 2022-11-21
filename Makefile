@@ -1,5 +1,5 @@
 
-VERSION=1.0
+VERSION=0.4.0
 
 PROJECT=challenges
 
@@ -24,31 +24,35 @@ sparql:
 	cp sparql-service/sparql sparql
 
 BASE_CONTAINER=challenges-base
-WEB_CONTAINER=docker.io/cybermaggedon/challenges-web
-SPARQL_CONTAINER=docker.io/cybermaggedon/challenges-sparql
 
-containers: sparql-explorer sparql serve build-base build-web build-sparql
-	sudo ./build-base ${BASE_CONTAINER}
-	sudo ./build-web ${BASE_CONTAINER} ${WEB_CONTAINER}:${VERSION}
-	sudo ./build-sparql ${BASE_CONTAINER} ${SPARQL_CONTAINER}:${VERSION}
-	sudo buildah tag ${WEB_CONTAINER}:${VERSION} ${WEB_CONTAINER}:latest
-	sudo buildah tag ${SPARQL_CONTAINER}:${VERSION} \
-		${SPARQL_CONTAINER}:latest
+REPO=europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
+WEB_CONTAINER=${REPO}/web:${VERSION}
+SPARQL_CONTAINER=${REPO}/sparql:${VERSION}
+
+containers: sparql-explorer sparql serve
+	podman build -f Containerfile.base -t ${BASE_CONTAINER} \
+	    --format docker
+	podman build -f Containerfile.web -t ${WEB_CONTAINER} \
+	    --format docker
+	podman build -f Containerfile.sparql -t ${SPARQL_CONTAINER} \
+	    --format docker
 
 push:
-	sudo buildah push ${WEB_CONTAINER}:${VERSION}
-	sudo buildah push ${WEB_CONTAINER}:latest
-	sudo buildah push ${SPARQL_CONTAINER}:${VERSION}
-	sudo buildah push ${SPARQL_CONTAINER}:latest
+	podman push --remove-signatures ${WEB_CONTAINER}
+	podman push --remove-signatures ${SPARQL_CONTAINER}
 
 run:
-	sudo podman run -d --name web \
+	podman run -d --name web \
 		-p 8080/tcp --expose=8080 \
-		--ip=10.88.1.1 --add-host sparql:10.88.1.2 \
-		${WEB_CONTAINER}:${VERSION}
-	sudo podman run -d --name sparql -p 8089/tcp --ip=10.88.1.2 \
-		${SPARQL_CONTAINER}:${VERSION}
+		${WEB_CONTAINER}
+	podman run -d --name sparql -p 8089/tcp \
+		${SPARQL_CONTAINER}
 
 stop:
-	sudo podman rm -f web sparql
+	podman rm -f web sparql
+
+login:
+	gcloud auth print-access-token | \
+	    podman login -u oauth2accesstoken --password-stdin \
+	        europe-west1-docker.pkg.dev
 
