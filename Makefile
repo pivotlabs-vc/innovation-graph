@@ -1,13 +1,17 @@
 
-VERSION=0.4.0
+VERSION=$(shell git describe | sed 's/^v//')
+SPARQL_EXPLORER_VERSION=0.4.1
 
 PROJECT=challenges
 
 all: sparql-explorer sparql
-	rapper -i turtle -o ntriples ${PROJECT}.ttl > ${PROJECT}.ntriples
-	rapper -i turtle -o rdfxml ${PROJECT}.ttl > ${PROJECT}.rdf
-	rapper -i turtle -o json ${PROJECT}.ttl > ${PROJECT}.json
 	rdfproc -n -s sqlite ${PROJECT}.db parse ${PROJECT}.ttl turtle
+
+clean:
+	-rm -rf sparql-explorer
+	-rm -f sparql
+	-rm -rf sparql-service
+	-rm -f ${PROJECT}.db
 
 serve:
 	go build proxy/serve.go
@@ -15,6 +19,7 @@ serve:
 sparql-explorer:
 	-rm -rf sparql-explorer
 	git clone git@github.com:cybermaggedon/sparql-explorer
+	git checkout v${SPARQL_EXPLORER_VERSION}
 	(cd sparql-explorer &&npm install && ng build)
 
 sparql:
@@ -29,7 +34,7 @@ REPO=europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
 WEB_CONTAINER=${REPO}/web:${VERSION}
 SPARQL_CONTAINER=${REPO}/sparql:${VERSION}
 
-containers: sparql-explorer sparql serve
+containers: all sparql-explorer sparql serve
 	podman build -f Containerfile.base -t ${BASE_CONTAINER} \
 	    --format docker
 	podman build -f Containerfile.web -t ${WEB_CONTAINER} \
