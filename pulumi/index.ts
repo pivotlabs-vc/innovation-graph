@@ -1,24 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-// Create a GCP resource (Storage Bucket)
-//const bucket = new gcp.storage.Bucket("my-bucket", {
-//    location: "US"
-//});
-
-// Export the DNS name of the bucket
-//export const bucketName = bucket.url;
-
-/*
-const project = new gcp.projects.Service("project", {
-    disableDependentServices: true,
-    project: "your-project-id",
-    service: "iam.googleapis.com",
-}, { timeouts: {
-    create: "30m",
-    update: "40m",
-} });
-*/
+const version = "0.4.1";
 
 const provider = new gcp.Provider(
     "gcp",
@@ -60,10 +43,10 @@ const enableCloudDns = new gcp.projects.Service(
 
 const repo = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs";
 
-const webVersion = "0.4.0";
+const webVersion = version;
 const webImage = repo + "/web:" + webVersion;
 
-const sparqlVersion = "0.4.0";
+const sparqlVersion = version;
 const sparqlImage = repo + "/sparql:" + sparqlVersion;
 
 const sparqlService = new gcp.cloudrun.Service(
