@@ -38,6 +38,26 @@ const enableCloudRun = new gcp.projects.Service(
     }
 );
 
+const enableComputeEngine = new gcp.projects.Service(
+    "enable-compute-engine",
+    {
+	service: "compute.googleapis.com",
+    },
+    {
+	provider: provider
+    }
+);
+
+const enableCloudDns = new gcp.projects.Service(
+    "enable-cloud-dns",
+    {
+	service: "dns.googleapis.com",
+    },
+    {
+	provider: provider
+    }
+);
+
 const repo = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs";
 
 const webVersion = "0.4.0";
@@ -189,5 +209,58 @@ const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
     }
 );
 
+const webDomainMapping = new gcp.cloudrun.DomainMapping(
+    "web-domain-mapping",
+    {
+	"name": "graph.innovate.pivotlabs.vc",
+	location: "europe-west1",
+	metadata: {
+	    namespace: "pivot-labs",
+	},
+	spec: {
+	    routeName: webService.name,
+	}
+    },
+    {
+	provider: provider
+    }
+);
 
+// Get rrdata from domain mapping.
+export const webhost = webDomainMapping.statuses.apply(
+    x => x[0].resourceRecords
+).apply(
+    x => x ? x[0] : { rrdata: "" }
+).apply(
+    x => x.rrdata
+);
+
+const innovateZone = new gcp.dns.ManagedZone(
+    "innovate-zone",
+    {
+	name: "innovate",
+	description: "innovate.pivotlabs.vc",
+	dnsName: "innovate.pivotlabs.vc.",
+	labels: {
+	},
+    },
+    {
+	provider: provider,
+	dependsOn: [enableCloudDns],
+    }
+);
+
+const recordSet = new gcp.dns.RecordSet(
+    "web-record",
+    {
+	name: pulumi.interpolate`graph.${innovateZone.dnsName}`,
+	managedZone: innovateZone.name,
+	type: "CNAME",
+	ttl: 300,
+	rrdatas: [webhost],
+    },
+    {
+	provider: provider,
+    }
+);
 
