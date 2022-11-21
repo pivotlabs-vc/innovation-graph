@@ -3,13 +3,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://pivotlabs.vc/challenges/t#challenge> a rdfs:Class ;
-    rdfs:label "challenge" .
+    rdfs:label "challenge" ;
+    ns1:description "An innovation challenge is a means to encourage creation and elaboration of the best and most sustainable ideas from the best innovators by providing a competition for innovation grants." ;
+    dc:relation <https://en.wikipedia.org/wiki/Innovation_competition> .
 
 <http://pivotlabs.vc/challenges/t#source> a rdfs:Class ;
-    rdfs:label "source" .
+    rdfs:label "source" ;
+    ns1:description "An identifier for a source of innovation challenges" ;
+    dc:relation <https://en.wikipedia.org/wiki/Source_text> .
 
 <http://pivotlabs.vc/challenges/t#topic> a rdfs:Class ;
-    rdfs:label "topic" .
+    rdfs:label "topic" ;
+    ns1:description "A subject or classification of an innovation opportunity derived using topic classification" ;
+    dc:relation <https://en.wikipedia.org/wiki/Topic_and_comment> .
 
 <http://pivotlabs.vc/challenges/c/019f2ff9af32dfac3a0dcc473cb089ebbf26ade8> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Launchpad - Advanced Manufacturing - CR&" ;
@@ -6857,2145 +6863,2862 @@ to recover from a cyber incident.""" ;
     dc:relation <https://ktn-uk.org/opportunities/ati-programme-strategic-batch-expression-of-interest-october-2022/> .
 
 ns1:closes a rdfs:Property ;
-    rdfs:label "closes" .
+    rdfs:label "closes" ;
+    ns1:description "The closing date of an innovation challenge" .
 
 ns1:description a rdfs:Property ;
-    rdfs:label "description" .
+    rdfs:label "description" ;
+    ns1:description "A full elaborative explanation" .
 
 ns1:has-source a rdfs:Property ;
     rdfs:label "has-source" .
 
 ns1:has-topic a rdfs:Property ;
-    rdfs:label "has-topic" .
+    rdfs:label "has-topic" ;
+    ns1:description "Relationship describing innovation topics",
+        "Relationship describing sources of innovation challenges" .
 
 ns1:opens a rdfs:Property ;
-    rdfs:label "opens" .
+    rdfs:label "opens" ;
+    ns1:description "The opening date of an innovation challenge" .
 
 ns1:title a rdfs:Property ;
-    rdfs:label "title" .
+    rdfs:label "title" ;
+    ns1:description "A descriptive summary title" .
 
 dc:relation a rdfs:Property ;
-    rdfs:label "relation" .
+    rdfs:label "relation" ;
+    ns1:description "Link to original source material" .
 
 <http://pivotlabs.vc/challenges/t/1> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "1" .
+    rdfs:label "1" ;
+    ns1:description "The topic '1' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/12> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "12" .
+    rdfs:label "12" ;
+    ns1:description "The topic '12' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/2> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "2" .
+    rdfs:label "2" ;
+    ns1:description "The topic '2' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/20> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "20" .
+    rdfs:label "20" ;
+    ns1:description "The topic '20' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/2008> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "2008" .
+    rdfs:label "2008" ;
+    ns1:description "The topic '2008' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/2023> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "2023" .
+    rdfs:label "2023" ;
+    ns1:description "The topic '2023' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/2025> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "2025" .
+    rdfs:label "2025" ;
+    ns1:description "The topic '2025' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/250000> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "250000" .
+    rdfs:label "250000" ;
+    ns1:description "The topic '250000' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/5g> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "5g" .
+    rdfs:label "5g" ;
+    ns1:description "The topic '5g' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/able> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "able" .
+    rdfs:label "able" ;
+    ns1:description "The topic 'able' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/academic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "academic" .
+    rdfs:label "academic" ;
+    ns1:description "The topic 'academic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/action> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "action" .
+    rdfs:label "action" ;
+    ns1:description "The topic 'action' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/active> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "active" .
+    rdfs:label "active" ;
+    ns1:description "The topic 'active' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/adhesive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "adhesive" .
+    rdfs:label "adhesive" ;
+    ns1:description "The topic 'adhesive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/admission> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "admission" .
+    rdfs:label "admission" ;
+    ns1:description "The topic 'admission' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/adoption> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "adoption" .
+    rdfs:label "adoption" ;
+    ns1:description "The topic 'adoption' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/adtech> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "adtech" .
+    rdfs:label "adtech" ;
+    ns1:description "The topic 'adtech' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ae> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ae" .
+    rdfs:label "ae" ;
+    ns1:description "The topic 'ae' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ageing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ageing" .
+    rdfs:label "ageing" ;
+    ns1:description "The topic 'ageing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ahrc> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ahrc" .
+    rdfs:label "ahrc" ;
+    ns1:description "The topic 'ahrc' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ai> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ai" .
+    rdfs:label "ai" ;
+    ns1:description "The topic 'ai' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/alliance> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "alliance" .
+    rdfs:label "alliance" ;
+    ns1:description "The topic 'alliance' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/allocate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "allocate" .
+    rdfs:label "allocate" ;
+    ns1:description "The topic 'allocate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/allowance> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "allowance" .
+    rdfs:label "allowance" ;
+    ns1:description "The topic 'allowance' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/alternative> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "alternative" .
+    rdfs:label "alternative" ;
+    ns1:description "The topic 'alternative' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ambition> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ambition" .
+    rdfs:label "ambition" ;
+    ns1:description "The topic 'ambition' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/analysis> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "analysis" .
+    rdfs:label "analysis" ;
+    ns1:description "The topic 'analysis' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/anderson> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "anderson" .
+    rdfs:label "anderson" ;
+    ns1:description "The topic 'anderson' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/announced> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "announced" .
+    rdfs:label "announced" ;
+    ns1:description "The topic 'announced' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/antarctic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "antarctic" .
+    rdfs:label "antarctic" ;
+    ns1:description "The topic 'antarctic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/application> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "application" .
+    rdfs:label "application" ;
+    ns1:description "The topic 'application' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/applying> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "applying" .
+    rdfs:label "applying" ;
+    ns1:description "The topic 'applying' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/approach> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "approach" .
+    rdfs:label "approach" ;
+    ns1:description "The topic 'approach' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/area> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "area" .
+    rdfs:label "area" ;
+    ns1:description "The topic 'area' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/army> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "army" .
+    rdfs:label "army" ;
+    ns1:description "The topic 'army' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/array> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "array" .
+    rdfs:label "array" ;
+    ns1:description "The topic 'array' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/artemis> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "artemis" .
+    rdfs:label "artemis" ;
+    ns1:description "The topic 'artemis' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/asia> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "asia" .
+    rdfs:label "asia" ;
+    ns1:description "The topic 'asia' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/assessment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "assessment" .
+    rdfs:label "assessment" ;
+    ns1:description "The topic 'assessment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/assist> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "assist" .
+    rdfs:label "assist" ;
+    ns1:description "The topic 'assist' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/assistance> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "assistance" .
+    rdfs:label "assistance" ;
+    ns1:description "The topic 'assistance' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/associate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "associate" .
+    rdfs:label "associate" ;
+    ns1:description "The topic 'associate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/attack> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "attack" .
+    rdfs:label "attack" ;
+    ns1:description "The topic 'attack' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/australia> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "australia" .
+    rdfs:label "australia" ;
+    ns1:description "The topic 'australia' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/automated> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "automated" .
+    rdfs:label "automated" ;
+    ns1:description "The topic 'automated' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/availability> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "availability" .
+    rdfs:label "availability" ;
+    ns1:description "The topic 'availability' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/awe> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "awe" .
+    rdfs:label "awe" ;
+    ns1:description "The topic 'awe' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ba> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ba" .
+    rdfs:label "ba" ;
+    ns1:description "The topic 'ba' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/based> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "based" .
+    rdfs:label "based" ;
+    ns1:description "The topic 'based' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/battery> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "battery" .
+    rdfs:label "battery" ;
+    ns1:description "The topic 'battery' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/behalf> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "behalf" .
+    rdfs:label "behalf" ;
+    ns1:description "The topic 'behalf' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/beis> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "beis" .
+    rdfs:label "beis" ;
+    ns1:description "The topic 'beis' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/best> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "best" .
+    rdfs:label "best" ;
+    ns1:description "The topic 'best' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/better> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "better" .
+    rdfs:label "better" ;
+    ns1:description "The topic 'better' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/blu> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "blu" .
+    rdfs:label "blu" ;
+    ns1:description "The topic 'blu' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/bold> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "bold" .
+    rdfs:label "bold" ;
+    ns1:description "The topic 'bold' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/border> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "border" .
+    rdfs:label "border" ;
+    ns1:description "The topic 'border' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/brazil> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "brazil" .
+    rdfs:label "brazil" ;
+    ns1:description "The topic 'brazil' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/budget> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "budget" .
+    rdfs:label "budget" ;
+    ns1:description "The topic 'budget' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/businessled> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "businessled" .
+    rdfs:label "businessled" ;
+    ns1:description "The topic 'businessled' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cable" .
+    rdfs:label "cable" ;
+    ns1:description "The topic 'cable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/call> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "call" .
+    rdfs:label "call" ;
+    ns1:description "The topic 'call' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cam> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cam" .
+    rdfs:label "cam" ;
+    ns1:description "The topic 'cam' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/campaign> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "campaign" .
+    rdfs:label "campaign" ;
+    ns1:description "The topic 'campaign' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cancer> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cancer" .
+    rdfs:label "cancer" ;
+    ns1:description "The topic 'cancer' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/capable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "capable" .
+    rdfs:label "capable" ;
+    ns1:description "The topic 'capable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/capacity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "capacity" .
+    rdfs:label "capacity" ;
+    ns1:description "The topic 'capacity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/capture> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "capture" .
+    rdfs:label "capture" ;
+    ns1:description "The topic 'capture' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/car> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "car" .
+    rdfs:label "car" ;
+    ns1:description "The topic 'car' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cardiff> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cardiff" .
+    rdfs:label "cardiff" ;
+    ns1:description "The topic 'cardiff' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/career> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "career" .
+    rdfs:label "career" ;
+    ns1:description "The topic 'career' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/carer> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "carer" .
+    rdfs:label "carer" ;
+    ns1:description "The topic 'carer' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/carry> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "carry" .
+    rdfs:label "carry" ;
+    ns1:description "The topic 'carry' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cellular> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cellular" .
+    rdfs:label "cellular" ;
+    ns1:description "The topic 'cellular' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/centre> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "centre" .
+    rdfs:label "centre" ;
+    ns1:description "The topic 'centre' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/change> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "change" .
+    rdfs:label "change" ;
+    ns1:description "The topic 'change' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/changer> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "changer" .
+    rdfs:label "changer" ;
+    ns1:description "The topic 'changer' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/characterise> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "characterise" .
+    rdfs:label "characterise" ;
+    ns1:description "The topic 'characterise' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/chiller> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "chiller" .
+    rdfs:label "chiller" ;
+    ns1:description "The topic 'chiller' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/chilli> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "chilli" .
+    rdfs:label "chilli" ;
+    ns1:description "The topic 'chilli' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/circular> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "circular" .
+    rdfs:label "circular" ;
+    ns1:description "The topic 'circular' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/co2> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "co2" .
+    rdfs:label "co2" ;
+    ns1:description "The topic 'co2' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/codling> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "codling" .
+    rdfs:label "codling" ;
+    ns1:description "The topic 'codling' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cofunding> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cofunding" .
+    rdfs:label "cofunding" ;
+    ns1:description "The topic 'cofunding' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/collection> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "collection" .
+    rdfs:label "collection" ;
+    ns1:description "The topic 'collection' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/competitiveness> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "competitiveness" .
+    rdfs:label "competitiveness" ;
+    ns1:description "The topic 'competitiveness' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/condenser> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "condenser" .
+    rdfs:label "condenser" ;
+    ns1:description "The topic 'condenser' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/conductor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "conductor" .
+    rdfs:label "conductor" ;
+    ns1:description "The topic 'conductor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/confidence> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "confidence" .
+    rdfs:label "confidence" ;
+    ns1:description "The topic 'confidence' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/connect> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "connect" .
+    rdfs:label "connect" ;
+    ns1:description "The topic 'connect' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/connected> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "connected" .
+    rdfs:label "connected" ;
+    ns1:description "The topic 'connected' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/consumer> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "consumer" .
+    rdfs:label "consumer" ;
+    ns1:description "The topic 'consumer' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/consumption> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "consumption" .
+    rdfs:label "consumption" ;
+    ns1:description "The topic 'consumption' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/content> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "content" .
+    rdfs:label "content" ;
+    ns1:description "The topic 'content' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/contest> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "contest" .
+    rdfs:label "contest" ;
+    ns1:description "The topic 'contest' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/continuity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "continuity" .
+    rdfs:label "continuity" ;
+    ns1:description "The topic 'continuity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/control> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "control" .
+    rdfs:label "control" ;
+    ns1:description "The topic 'control' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/corby> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "corby" .
+    rdfs:label "corby" ;
+    ns1:description "The topic 'corby' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cost> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cost" .
+    rdfs:label "cost" ;
+    ns1:description "The topic 'cost' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/county> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "county" .
+    rdfs:label "county" ;
+    ns1:description "The topic 'county' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cover> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cover" .
+    rdfs:label "cover" ;
+    ns1:description "The topic 'cover' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/creative> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "creative" .
+    rdfs:label "creative" ;
+    ns1:description "The topic 'creative' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/croda> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "croda" .
+    rdfs:label "croda" ;
+    ns1:description "The topic 'croda' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/current> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "current" .
+    rdfs:label "current" ;
+    ns1:description "The topic 'current' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/day> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "day" .
+    rdfs:label "day" ;
+    ns1:description "The topic 'day' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dcms> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dcms" .
+    rdfs:label "dcms" ;
+    ns1:description "The topic 'dcms' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/de> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "de" .
+    rdfs:label "de" ;
+    ns1:description "The topic 'de' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/deadline> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "deadline" .
+    rdfs:label "deadline" ;
+    ns1:description "The topic 'deadline' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/decarbonise> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "decarbonise" .
+    rdfs:label "decarbonise" ;
+    ns1:description "The topic 'decarbonise' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/delivery> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "delivery" .
+    rdfs:label "delivery" ;
+    ns1:description "The topic 'delivery' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dementia> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dementia" .
+    rdfs:label "dementia" ;
+    ns1:description "The topic 'dementia' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/demonstrate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "demonstrate" .
+    rdfs:label "demonstrate" ;
+    ns1:description "The topic 'demonstrate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/demonstrating> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "demonstrating" .
+    rdfs:label "demonstrating" ;
+    ns1:description "The topic 'demonstrating' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/demonstrator> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "demonstrator" .
+    rdfs:label "demonstrator" ;
+    ns1:description "The topic 'demonstrator' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/department> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "department" .
+    rdfs:label "department" ;
+    ns1:description "The topic 'department' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/detect> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "detect" .
+    rdfs:label "detect" ;
+    ns1:description "The topic 'detect' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/devex> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "devex" .
+    rdfs:label "devex" ;
+    ns1:description "The topic 'devex' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/device> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "device" .
+    rdfs:label "device" ;
+    ns1:description "The topic 'device' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dft> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dft" .
+    rdfs:label "dft" ;
+    ns1:description "The topic 'dft' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/diagnosis> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "diagnosis" .
+    rdfs:label "diagnosis" ;
+    ns1:description "The topic 'diagnosis' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/digital> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "digital" .
+    rdfs:label "digital" ;
+    ns1:description "The topic 'digital' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/directly> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "directly" .
+    rdfs:label "directly" ;
+    ns1:description "The topic 'directly' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dog> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dog" .
+    rdfs:label "dog" ;
+    ns1:description "The topic 'dog' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/due> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "due" .
+    rdfs:label "due" ;
+    ns1:description "The topic 'due' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dynamic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dynamic" .
+    rdfs:label "dynamic" ;
+    ns1:description "The topic 'dynamic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/earlystage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "earlystage" .
+    rdfs:label "earlystage" ;
+    ns1:description "The topic 'earlystage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/earth> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "earth" .
+    rdfs:label "earth" ;
+    ns1:description "The topic 'earth' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/economic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "economic" .
+    rdfs:label "economic" ;
+    ns1:description "The topic 'economic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ecosystem> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ecosystem" .
+    rdfs:label "ecosystem" ;
+    ns1:description "The topic 'ecosystem' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/edge> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "edge" .
+    rdfs:label "edge" ;
+    ns1:description "The topic 'edge' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/efficient> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "efficient" .
+    rdfs:label "efficient" ;
+    ns1:description "The topic 'efficient' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/effort> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "effort" .
+    rdfs:label "effort" ;
+    ns1:description "The topic 'effort' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/eit> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "eit" .
+    rdfs:label "eit" ;
+    ns1:description "The topic 'eit' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/eliminate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "eliminate" .
+    rdfs:label "eliminate" ;
+    ns1:description "The topic 'eliminate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/em> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "em" .
+    rdfs:label "em" ;
+    ns1:description "The topic 'em' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/emergency> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "emergency" .
+    rdfs:label "emergency" ;
+    ns1:description "The topic 'emergency' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/empathy> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "empathy" .
+    rdfs:label "empathy" ;
+    ns1:description "The topic 'empathy' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/enable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "enable" .
+    rdfs:label "enable" ;
+    ns1:description "The topic 'enable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/enabling> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "enabling" .
+    rdfs:label "enabling" ;
+    ns1:description "The topic 'enabling' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/endtoend> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "endtoend" .
+    rdfs:label "endtoend" ;
+    ns1:description "The topic 'endtoend' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/engage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "engage" .
+    rdfs:label "engage" ;
+    ns1:description "The topic 'engage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/england> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "england" .
+    rdfs:label "england" ;
+    ns1:description "The topic 'england' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/enjoy> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "enjoy" .
+    rdfs:label "enjoy" ;
+    ns1:description "The topic 'enjoy' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ensure> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ensure" .
+    rdfs:label "ensure" ;
+    ns1:description "The topic 'ensure' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/enter> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "enter" .
+    rdfs:label "enter" ;
+    ns1:description "The topic 'enter' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/enterprise> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "enterprise" .
+    rdfs:label "enterprise" ;
+    ns1:description "The topic 'enterprise' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/entrepreneurial> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "entrepreneurial" .
+    rdfs:label "entrepreneurial" ;
+    ns1:description "The topic 'entrepreneurial' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/environmental> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "environmental" .
+    rdfs:label "environmental" ;
+    ns1:description "The topic 'environmental' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/eoi> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "eoi" .
+    rdfs:label "eoi" ;
+    ns1:description "The topic 'eoi' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/established> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "established" .
+    rdfs:label "established" ;
+    ns1:description "The topic 'established' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/establishing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "establishing" .
+    rdfs:label "establishing" ;
+    ns1:description "The topic 'establishing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/european> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "european" .
+    rdfs:label "european" ;
+    ns1:description "The topic 'european' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/every> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "every" .
+    rdfs:label "every" ;
+    ns1:description "The topic 'every' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/experience> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "experience" .
+    rdfs:label "experience" ;
+    ns1:description "The topic 'experience' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/exploration> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "exploration" .
+    rdfs:label "exploration" ;
+    ns1:description "The topic 'exploration' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/expression> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "expression" .
+    rdfs:label "expression" ;
+    ns1:description "The topic 'expression' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/extra> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "extra" .
+    rdfs:label "extra" ;
+    ns1:description "The topic 'extra' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/faced> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "faced" .
+    rdfs:label "faced" ;
+    ns1:description "The topic 'faced' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/farm> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "farm" .
+    rdfs:label "farm" ;
+    ns1:description "The topic 'farm' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/feed> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "feed" .
+    rdfs:label "feed" ;
+    ns1:description "The topic 'feed' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fellowship> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fellowship" .
+    rdfs:label "fellowship" ;
+    ns1:description "The topic 'fellowship' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/final> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "final" .
+    rdfs:label "final" ;
+    ns1:description "The topic 'final' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/financial> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "financial" .
+    rdfs:label "financial" ;
+    ns1:description "The topic 'financial' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/financing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "financing" .
+    rdfs:label "financing" ;
+    ns1:description "The topic 'financing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/find> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "find" .
+    rdfs:label "find" ;
+    ns1:description "The topic 'find' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/firm> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "firm" .
+    rdfs:label "firm" ;
+    ns1:description "The topic 'firm' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/first> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "first" .
+    rdfs:label "first" ;
+    ns1:description "The topic 'first' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fisp> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fisp" .
+    rdfs:label "fisp" ;
+    ns1:description "The topic 'fisp' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fitting> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fitting" .
+    rdfs:label "fitting" ;
+    ns1:description "The topic 'fitting' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fleet> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fleet" .
+    rdfs:label "fleet" ;
+    ns1:description "The topic 'fleet' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/flexibly> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "flexibly" .
+    rdfs:label "flexibly" ;
+    ns1:description "The topic 'flexibly' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/focus> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "focus" .
+    rdfs:label "focus" ;
+    ns1:description "The topic 'focus' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/forwardthinking> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "forwardthinking" .
+    rdfs:label "forwardthinking" ;
+    ns1:description "The topic 'forwardthinking' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/foundation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "foundation" .
+    rdfs:label "foundation" ;
+    ns1:description "The topic 'foundation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/frequency> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "frequency" .
+    rdfs:label "frequency" ;
+    ns1:description "The topic 'frequency' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fully> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fully" .
+    rdfs:label "fully" ;
+    ns1:description "The topic 'fully' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/future> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "future" .
+    rdfs:label "future" ;
+    ns1:description "The topic 'future' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/gamification> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "gamification" .
+    rdfs:label "gamification" ;
+    ns1:description "The topic 'gamification' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/gap> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "gap" .
+    rdfs:label "gap" ;
+    ns1:description "The topic 'gap' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/gasoil> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "gasoil" .
+    rdfs:label "gasoil" ;
+    ns1:description "The topic 'gasoil' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/gauntlet> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "gauntlet" .
+    rdfs:label "gauntlet" ;
+    ns1:description "The topic 'gauntlet' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/glass> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "glass" .
+    rdfs:label "glass" ;
+    ns1:description "The topic 'glass' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/graffiti> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "graffiti" .
+    rdfs:label "graffiti" ;
+    ns1:description "The topic 'graffiti' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/greenhouse> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "greenhouse" .
+    rdfs:label "greenhouse" ;
+    ns1:description "The topic 'greenhouse' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ground> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ground" .
+    rdfs:label "ground" ;
+    ns1:description "The topic 'ground' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/grow> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "grow" .
+    rdfs:label "grow" ;
+    ns1:description "The topic 'grow' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/growth> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "growth" .
+    rdfs:label "growth" ;
+    ns1:description "The topic 'growth' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hazard> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hazard" .
+    rdfs:label "hazard" ;
+    ns1:description "The topic 'hazard' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/healthcare> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "healthcare" .
+    rdfs:label "healthcare" ;
+    ns1:description "The topic 'healthcare' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/heat> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "heat" .
+    rdfs:label "heat" ;
+    ns1:description "The topic 'heat' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/heating> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "heating" .
+    rdfs:label "heating" ;
+    ns1:description "The topic 'heating' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/heritage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "heritage" .
+    rdfs:label "heritage" ;
+    ns1:description "The topic 'heritage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/highquality> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "highquality" .
+    rdfs:label "highquality" ;
+    ns1:description "The topic 'highquality' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hot> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hot" .
+    rdfs:label "hot" ;
+    ns1:description "The topic 'hot' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hs2> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hs2" .
+    rdfs:label "hs2" ;
+    ns1:description "The topic 'hs2' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hub> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hub" .
+    rdfs:label "hub" ;
+    ns1:description "The topic 'hub' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hull> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hull" .
+    rdfs:label "hull" ;
+    ns1:description "The topic 'hull' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/human> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "human" .
+    rdfs:label "human" ;
+    ns1:description "The topic 'human' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hydrofoil> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hydrofoil" .
+    rdfs:label "hydrofoil" ;
+    ns1:description "The topic 'hydrofoil' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/i3p> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "i3p" .
+    rdfs:label "i3p" ;
+    ns1:description "The topic 'i3p' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ict> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ict" .
+    rdfs:label "ict" ;
+    ns1:description "The topic 'ict' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ie> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ie" .
+    rdfs:label "ie" ;
+    ns1:description "The topic 'ie' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ietf> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ietf" .
+    rdfs:label "ietf" ;
+    ns1:description "The topic 'ietf' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/immediate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "immediate" .
+    rdfs:label "immediate" ;
+    ns1:description "The topic 'immediate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/impact> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "impact" .
+    rdfs:label "impact" ;
+    ns1:description "The topic 'impact' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/improvement> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "improvement" .
+    rdfs:label "improvement" ;
+    ns1:description "The topic 'improvement' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/improving> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "improving" .
+    rdfs:label "improving" ;
+    ns1:description "The topic 'improving' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/increasing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "increasing" .
+    rdfs:label "increasing" ;
+    ns1:description "The topic 'increasing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/indian> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "indian" .
+    rdfs:label "indian" ;
+    ns1:description "The topic 'indian' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/individual> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "individual" .
+    rdfs:label "individual" ;
+    ns1:description "The topic 'individual' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/information> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "information" .
+    rdfs:label "information" ;
+    ns1:description "The topic 'information' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/initially> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "initially" .
+    rdfs:label "initially" ;
+    ns1:description "The topic 'initially' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/inspection> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "inspection" .
+    rdfs:label "inspection" ;
+    ns1:description "The topic 'inspection' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/institute> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "institute" .
+    rdfs:label "institute" ;
+    ns1:description "The topic 'institute' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/institutionrtocatapult> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "institutionrtocatapult" .
+    rdfs:label "institutionrtocatapult" ;
+    ns1:description "The topic 'institutionrtocatapult' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/integrate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "integrate" .
+    rdfs:label "integrate" ;
+    ns1:description "The topic 'integrate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/integrating> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "integrating" .
+    rdfs:label "integrating" ;
+    ns1:description "The topic 'integrating' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/intent> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "intent" .
+    rdfs:label "intent" ;
+    ns1:description "The topic 'intent' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/interdisciplinary> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "interdisciplinary" .
+    rdfs:label "interdisciplinary" ;
+    ns1:description "The topic 'interdisciplinary' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/invest> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "invest" .
+    rdfs:label "invest" ;
+    ns1:description "The topic 'invest' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/investable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "investable" .
+    rdfs:label "investable" ;
+    ns1:description "The topic 'investable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/island> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "island" .
+    rdfs:label "island" ;
+    ns1:description "The topic 'island' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/isotope> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "isotope" .
+    rdfs:label "isotope" ;
+    ns1:description "The topic 'isotope' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/jackup> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "jackup" .
+    rdfs:label "jackup" ;
+    ns1:description "The topic 'jackup' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/joint> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "joint" .
+    rdfs:label "joint" ;
+    ns1:description "The topic 'joint' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/knowledge> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "knowledge" .
+    rdfs:label "knowledge" ;
+    ns1:description "The topic 'knowledge' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/land> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "land" .
+    rdfs:label "land" ;
+    ns1:description "The topic 'land' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/launch> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "launch" .
+    rdfs:label "launch" ;
+    ns1:description "The topic 'launch' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/launched> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "launched" .
+    rdfs:label "launched" ;
+    ns1:description "The topic 'launched' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/launchpad> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "launchpad" .
+    rdfs:label "launchpad" ;
+    ns1:description "The topic 'launchpad' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/leading> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "leading" .
+    rdfs:label "leading" ;
+    ns1:description "The topic 'leading' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/lethal> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "lethal" .
+    rdfs:label "lethal" ;
+    ns1:description "The topic 'lethal' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/liverpool> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "liverpool" .
+    rdfs:label "liverpool" ;
+    ns1:description "The topic 'liverpool' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/low> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "low" .
+    rdfs:label "low" ;
+    ns1:description "The topic 'low' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/luton> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "luton" .
+    rdfs:label "luton" ;
+    ns1:description "The topic 'luton' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/machine> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "machine" .
+    rdfs:label "machine" ;
+    ns1:description "The topic 'machine' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/make> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "make" .
+    rdfs:label "make" ;
+    ns1:description "The topic 'make' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/manage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "manage" .
+    rdfs:label "manage" ;
+    ns1:description "The topic 'manage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/managing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "managing" .
+    rdfs:label "managing" ;
+    ns1:description "The topic 'managing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/manhole> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "manhole" .
+    rdfs:label "manhole" ;
+    ns1:description "The topic 'manhole' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/maritime> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "maritime" .
+    rdfs:label "maritime" ;
+    ns1:description "The topic 'maritime' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/may> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "may" .
+    rdfs:label "may" ;
+    ns1:description "The topic 'may' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/measure> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "measure" .
+    rdfs:label "measure" ;
+    ns1:description "The topic 'measure' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/measurement> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "measurement" .
+    rdfs:label "measurement" ;
+    ns1:description "The topic 'measurement' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/medium> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "medium" .
+    rdfs:label "medium" ;
+    ns1:description "The topic 'medium' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/member> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "member" .
+    rdfs:label "member" ;
+    ns1:description "The topic 'member' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mentoring> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mentoring" .
+    rdfs:label "mentoring" ;
+    ns1:description "The topic 'mentoring' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/metro> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "metro" .
+    rdfs:label "metro" ;
+    ns1:description "The topic 'metro' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/micro> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "micro" .
+    rdfs:label "micro" ;
+    ns1:description "The topic 'micro' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mid> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mid" .
+    rdfs:label "mid" ;
+    ns1:description "The topic 'mid' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/military> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "military" .
+    rdfs:label "military" ;
+    ns1:description "The topic 'military' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mind> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mind" .
+    rdfs:label "mind" ;
+    ns1:description "The topic 'mind' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mix> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mix" .
+    rdfs:label "mix" ;
+    ns1:description "The topic 'mix' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mobility> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mobility" .
+    rdfs:label "mobility" ;
+    ns1:description "The topic 'mobility' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/move> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "move" .
+    rdfs:label "move" ;
+    ns1:description "The topic 'move' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/multinational> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "multinational" .
+    rdfs:label "multinational" ;
+    ns1:description "The topic 'multinational' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mutually> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mutually" .
+    rdfs:label "mutually" ;
+    ns1:description "The topic 'mutually' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/national> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "national" .
+    rdfs:label "national" ;
+    ns1:description "The topic 'national' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/needed> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "needed" .
+    rdfs:label "needed" ;
+    ns1:description "The topic 'needed' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/nondestructive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "nondestructive" .
+    rdfs:label "nondestructive" ;
+    ns1:description "The topic 'nondestructive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/notforprofit> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "notforprofit" .
+    rdfs:label "notforprofit" ;
+    ns1:description "The topic 'notforprofit' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/novel> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "novel" .
+    rdfs:label "novel" ;
+    ns1:description "The topic 'novel' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/now> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "now" .
+    rdfs:label "now" ;
+    ns1:description "The topic 'now' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/nstix> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "nstix" .
+    rdfs:label "nstix" ;
+    ns1:description "The topic 'nstix' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/nuclear> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "nuclear" .
+    rdfs:label "nuclear" ;
+    ns1:description "The topic 'nuclear' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/nursery> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "nursery" .
+    rdfs:label "nursery" ;
+    ns1:description "The topic 'nursery' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/offering> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "offering" .
+    rdfs:label "offering" ;
+    ns1:description "The topic 'offering' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ofgem> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ofgem" .
+    rdfs:label "ofgem" ;
+    ns1:description "The topic 'ofgem' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ondemand> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ondemand" .
+    rdfs:label "ondemand" ;
+    ns1:description "The topic 'ondemand' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/one> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "one" .
+    rdfs:label "one" ;
+    ns1:description "The topic 'one' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/online> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "online" .
+    rdfs:label "online" ;
+    ns1:description "The topic 'online' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/onvehicle> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "onvehicle" .
+    rdfs:label "onvehicle" ;
+    ns1:description "The topic 'onvehicle' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/openxr> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "openxr" .
+    rdfs:label "openxr" ;
+    ns1:description "The topic 'openxr' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/operator> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "operator" .
+    rdfs:label "operator" ;
+    ns1:description "The topic 'operator' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/option> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "option" .
+    rdfs:label "option" ;
+    ns1:description "The topic 'option' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/order> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "order" .
+    rdfs:label "order" ;
+    ns1:description "The topic 'order' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/outcome> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "outcome" .
+    rdfs:label "outcome" ;
+    ns1:description "The topic 'outcome' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/outstanding> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "outstanding" .
+    rdfs:label "outstanding" ;
+    ns1:description "The topic 'outstanding' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/owa> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "owa" .
+    rdfs:label "owa" ;
+    ns1:description "The topic 'owa' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/package> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "package" .
+    rdfs:label "package" ;
+    ns1:description "The topic 'package' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/packaging> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "packaging" .
+    rdfs:label "packaging" ;
+    ns1:description "The topic 'packaging' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/park> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "park" .
+    rdfs:label "park" ;
+    ns1:description "The topic 'park' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/particularly> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "particularly" .
+    rdfs:label "particularly" ;
+    ns1:description "The topic 'particularly' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/passage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "passage" .
+    rdfs:label "passage" ;
+    ns1:description "The topic 'passage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pathway> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pathway" .
+    rdfs:label "pathway" ;
+    ns1:description "The topic 'pathway' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/patient> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "patient" .
+    rdfs:label "patient" ;
+    ns1:description "The topic 'patient' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/peatland> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "peatland" .
+    rdfs:label "peatland" ;
+    ns1:description "The topic 'peatland' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/per> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "per" .
+    rdfs:label "per" ;
+    ns1:description "The topic 'per' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/permanent> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "permanent" .
+    rdfs:label "permanent" ;
+    ns1:description "The topic 'permanent' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/personal> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "personal" .
+    rdfs:label "personal" ;
+    ns1:description "The topic 'personal' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/phase> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "phase" .
+    rdfs:label "phase" ;
+    ns1:description "The topic 'phase' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/photonics> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "photonics" .
+    rdfs:label "photonics" ;
+    ns1:description "The topic 'photonics' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/picture> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "picture" .
+    rdfs:label "picture" ;
+    ns1:description "The topic 'picture' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pilot> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pilot" .
+    rdfs:label "pilot" ;
+    ns1:description "The topic 'pilot' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pipe> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pipe" .
+    rdfs:label "pipe" ;
+    ns1:description "The topic 'pipe' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/place> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "place" .
+    rdfs:label "place" ;
+    ns1:description "The topic 'place' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/placement> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "placement" .
+    rdfs:label "placement" ;
+    ns1:description "The topic 'placement' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/platform> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "platform" .
+    rdfs:label "platform" ;
+    ns1:description "The topic 'platform' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pool> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pool" .
+    rdfs:label "pool" ;
+    ns1:description "The topic 'pool' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/poor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "poor" .
+    rdfs:label "poor" ;
+    ns1:description "The topic 'poor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/population> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "population" .
+    rdfs:label "population" ;
+    ns1:description "The topic 'population' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/postdoctoral> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "postdoctoral" .
+    rdfs:label "postdoctoral" ;
+    ns1:description "The topic 'postdoctoral' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/predeployment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "predeployment" .
+    rdfs:label "predeployment" ;
+    ns1:description "The topic 'predeployment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/predicting> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "predicting" .
+    rdfs:label "predicting" ;
+    ns1:description "The topic 'predicting' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/problem> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "problem" .
+    rdfs:label "problem" ;
+    ns1:description "The topic 'problem' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/produced> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "produced" .
+    rdfs:label "produced" ;
+    ns1:description "The topic 'produced' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/producing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "producing" .
+    rdfs:label "producing" ;
+    ns1:description "The topic 'producing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/provider> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "provider" .
+    rdfs:label "provider" ;
+    ns1:description "The topic 'provider' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/public> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "public" .
+    rdfs:label "public" ;
+    ns1:description "The topic 'public' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/quantum> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "quantum" .
+    rdfs:label "quantum" ;
+    ns1:description "The topic 'quantum' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/railway> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "railway" .
+    rdfs:label "railway" ;
+    ns1:description "The topic 'railway' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rainforest> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rainforest" .
+    rdfs:label "rainforest" ;
+    ns1:description "The topic 'rainforest' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ran> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ran" .
+    rdfs:label "ran" ;
+    ns1:description "The topic 'ran' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ransomware> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ransomware" .
+    rdfs:label "ransomware" ;
+    ns1:description "The topic 'ransomware' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rapidly> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rapidly" .
+    rdfs:label "rapidly" ;
+    ns1:description "The topic 'rapidly' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/reactor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "reactor" .
+    rdfs:label "reactor" ;
+    ns1:description "The topic 'reactor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/receive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "receive" .
+    rdfs:label "receive" ;
+    ns1:description "The topic 'receive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/receptor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "receptor" .
+    rdfs:label "receptor" ;
+    ns1:description "The topic 'receptor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/recycling> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "recycling" .
+    rdfs:label "recycling" ;
+    ns1:description "The topic 'recycling' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rehabilitation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rehabilitation" .
+    rdfs:label "rehabilitation" ;
+    ns1:description "The topic 'rehabilitation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/relevant> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "relevant" .
+    rdfs:label "relevant" ;
+    ns1:description "The topic 'relevant' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/removal> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "removal" .
+    rdfs:label "removal" ;
+    ns1:description "The topic 'removal' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/remove> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "remove" .
+    rdfs:label "remove" ;
+    ns1:description "The topic 'remove' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/replace> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "replace" .
+    rdfs:label "replace" ;
+    ns1:description "The topic 'replace' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/researcher> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "researcher" .
+    rdfs:label "researcher" ;
+    ns1:description "The topic 'researcher' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/resilient> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "resilient" .
+    rdfs:label "resilient" ;
+    ns1:description "The topic 'resilient' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/resistant> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "resistant" .
+    rdfs:label "resistant" ;
+    ns1:description "The topic 'resistant' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/resolve> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "resolve" .
+    rdfs:label "resolve" ;
+    ns1:description "The topic 'resolve' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/responsible> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "responsible" .
+    rdfs:label "responsible" ;
+    ns1:description "The topic 'responsible' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/retrospective> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "retrospective" .
+    rdfs:label "retrospective" ;
+    ns1:description "The topic 'retrospective' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/return> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "return" .
+    rdfs:label "return" ;
+    ns1:description "The topic 'return' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/reuse> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "reuse" .
+    rdfs:label "reuse" ;
+    ns1:description "The topic 'reuse' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rf> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rf" .
+    rdfs:label "rf" ;
+    ns1:description "The topic 'rf' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/robotic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "robotic" .
+    rdfs:label "robotic" ;
+    ns1:description "The topic 'robotic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rural> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rural" .
+    rdfs:label "rural" ;
+    ns1:description "The topic 'rural' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/safely> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "safely" .
+    rdfs:label "safely" ;
+    ns1:description "The topic 'safely' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sarscov2> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sarscov2" .
+    rdfs:label "sarscov2" ;
+    ns1:description "The topic 'sarscov2' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/satellite> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "satellite" .
+    rdfs:label "satellite" ;
+    ns1:description "The topic 'satellite' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sbritype> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sbritype" .
+    rdfs:label "sbritype" ;
+    ns1:description "The topic 'sbritype' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/science> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "science" .
+    rdfs:label "science" ;
+    ns1:description "The topic 'science' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/screening> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "screening" .
+    rdfs:label "screening" ;
+    ns1:description "The topic 'screening' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/seafood> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "seafood" .
+    rdfs:label "seafood" ;
+    ns1:description "The topic 'seafood' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/segment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "segment" .
+    rdfs:label "segment" ;
+    ns1:description "The topic 'segment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sensing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sensing" .
+    rdfs:label "sensing" ;
+    ns1:description "The topic 'sensing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/separate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "separate" .
+    rdfs:label "separate" ;
+    ns1:description "The topic 'separate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/series> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "series" .
+    rdfs:label "series" ;
+    ns1:description "The topic 'series' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/serviceled> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "serviceled" .
+    rdfs:label "serviceled" ;
+    ns1:description "The topic 'serviceled' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/shorter> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "shorter" .
+    rdfs:label "shorter" ;
+    ns1:description "The topic 'shorter' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/significantly> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "significantly" .
+    rdfs:label "significantly" ;
+    ns1:description "The topic 'significantly' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/simulation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "simulation" .
+    rdfs:label "simulation" ;
+    ns1:description "The topic 'simulation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/since> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "since" .
+    rdfs:label "since" ;
+    ns1:description "The topic 'since' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sky> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sky" .
+    rdfs:label "sky" ;
+    ns1:description "The topic 'sky' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/smallsats> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "smallsats" .
+    rdfs:label "smallsats" ;
+    ns1:description "The topic 'smallsats' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/smart> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "smart" .
+    rdfs:label "smart" ;
+    ns1:description "The topic 'smart' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sme> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sme" .
+    rdfs:label "sme" ;
+    ns1:description "The topic 'sme' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/smes> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "smes" .
+    rdfs:label "smes" ;
+    ns1:description "The topic 'smes' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/social> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "social" .
+    rdfs:label "social" ;
+    ns1:description "The topic 'social' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/software> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "software" .
+    rdfs:label "software" ;
+    ns1:description "The topic 'software' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sponsor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sponsor" .
+    rdfs:label "sponsor" ;
+    ns1:description "The topic 'sponsor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sprint> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sprint" .
+    rdfs:label "sprint" ;
+    ns1:description "The topic 'sprint' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ssent> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ssent" .
+    rdfs:label "ssent" ;
+    ns1:description "The topic 'ssent' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sser> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sser" .
+    rdfs:label "sser" ;
+    ns1:description "The topic 'sser' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/stakeholder> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "stakeholder" .
+    rdfs:label "stakeholder" ;
+    ns1:description "The topic 'stakeholder' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/standard> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "standard" .
+    rdfs:label "standard" ;
+    ns1:description "The topic 'standard' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/step> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "step" .
+    rdfs:label "step" ;
+    ns1:description "The topic 'step' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/stipend> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "stipend" .
+    rdfs:label "stipend" ;
+    ns1:description "The topic 'stipend' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/storage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "storage" .
+    rdfs:label "storage" ;
+    ns1:description "The topic 'storage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/story> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "story" .
+    rdfs:label "story" ;
+    ns1:description "The topic 'story' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/stream> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "stream" .
+    rdfs:label "stream" ;
+    ns1:description "The topic 'stream' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/strengthen> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "strengthen" .
+    rdfs:label "strengthen" ;
+    ns1:description "The topic 'strengthen' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/stroke> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "stroke" .
+    rdfs:label "stroke" ;
+    ns1:description "The topic 'stroke' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/submission> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "submission" .
+    rdfs:label "submission" ;
+    ns1:description "The topic 'submission' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/subsistence> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "subsistence" .
+    rdfs:label "subsistence" ;
+    ns1:description "The topic 'subsistence' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/suite> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "suite" .
+    rdfs:label "suite" ;
+    ns1:description "The topic 'suite' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/suited> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "suited" .
+    rdfs:label "suited" ;
+    ns1:description "The topic 'suited' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/suspect> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "suspect" .
+    rdfs:label "suspect" ;
+    ns1:description "The topic 'suspect' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sustainable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sustainable" .
+    rdfs:label "sustainable" ;
+    ns1:description "The topic 'sustainable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/switching> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "switching" .
+    rdfs:label "switching" ;
+    ns1:description "The topic 'switching' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/tackle> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "tackle" .
+    rdfs:label "tackle" ;
+    ns1:description "The topic 'tackle' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/talent> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "talent" .
+    rdfs:label "talent" ;
+    ns1:description "The topic 'talent' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/talented> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "talented" .
+    rdfs:label "talented" ;
+    ns1:description "The topic 'talented' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/telexistence> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "telexistence" .
+    rdfs:label "telexistence" ;
+    ns1:description "The topic 'telexistence' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/temperature> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "temperature" .
+    rdfs:label "temperature" ;
+    ns1:description "The topic 'temperature' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/testing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "testing" .
+    rdfs:label "testing" ;
+    ns1:description "The topic 'testing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/threat> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "threat" .
+    rdfs:label "threat" ;
+    ns1:description "The topic 'threat' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/together> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "together" .
+    rdfs:label "together" ;
+    ns1:description "The topic 'together' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/tool> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "tool" .
+    rdfs:label "tool" ;
+    ns1:description "The topic 'tool' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/trade> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "trade" .
+    rdfs:label "trade" ;
+    ns1:description "The topic 'trade' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/train> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "train" .
+    rdfs:label "train" ;
+    ns1:description "The topic 'train' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/transfer> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "transfer" .
+    rdfs:label "transfer" ;
+    ns1:description "The topic 'transfer' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/transition> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "transition" .
+    rdfs:label "transition" ;
+    ns1:description "The topic 'transition' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/transmission> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "transmission" .
+    rdfs:label "transmission" ;
+    ns1:description "The topic 'transmission' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/transport> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "transport" .
+    rdfs:label "transport" ;
+    ns1:description "The topic 'transport' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/trent> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "trent" .
+    rdfs:label "trent" ;
+    ns1:description "The topic 'trent' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/turbine> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "turbine" .
+    rdfs:label "turbine" ;
+    ns1:description "The topic 'turbine' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/turn> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "turn" .
+    rdfs:label "turn" ;
+    ns1:description "The topic 'turn' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/turnover> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "turnover" .
+    rdfs:label "turnover" ;
+    ns1:description "The topic 'turnover' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ukaea> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ukaea" .
+    rdfs:label "ukaea" ;
+    ns1:description "The topic 'ukaea' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ukri> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ukri" .
+    rdfs:label "ukri" ;
+    ns1:description "The topic 'ukri' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/underrepresented> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "underrepresented" .
+    rdfs:label "underrepresented" ;
+    ns1:description "The topic 'underrepresented' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/unilever> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "unilever" .
+    rdfs:label "unilever" ;
+    ns1:description "The topic 'unilever' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/university> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "university" .
+    rdfs:label "university" ;
+    ns1:description "The topic 'university' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/unsafe> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "unsafe" .
+    rdfs:label "unsafe" ;
+    ns1:description "The topic 'unsafe' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/usage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "usage" .
+    rdfs:label "usage" ;
+    ns1:description "The topic 'usage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/user> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "user" .
+    rdfs:label "user" ;
+    ns1:description "The topic 'user' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/v2x> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "v2x" .
+    rdfs:label "v2x" ;
+    ns1:description "The topic 'v2x' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vaccine> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "vaccine" .
+    rdfs:label "vaccine" ;
+    ns1:description "The topic 'vaccine' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/validate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "validate" .
+    rdfs:label "validate" ;
+    ns1:description "The topic 'validate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/value> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "value" .
+    rdfs:label "value" ;
+    ns1:description "The topic 'value' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/varying> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "varying" .
+    rdfs:label "varying" ;
+    ns1:description "The topic 'varying' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/venture> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "venture" .
+    rdfs:label "venture" ;
+    ns1:description "The topic 'venture' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/verification> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "verification" .
+    rdfs:label "verification" ;
+    ns1:description "The topic 'verification' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vessel> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "vessel" .
+    rdfs:label "vessel" ;
+    ns1:description "The topic 'vessel' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/video> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "video" .
+    rdfs:label "video" ;
+    ns1:description "The topic 'video' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/visual> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "visual" .
+    rdfs:label "visual" ;
+    ns1:description "The topic 'visual' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vulnerable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "vulnerable" .
+    rdfs:label "vulnerable" ;
+    ns1:description "The topic 'vulnerable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wale> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wale" .
+    rdfs:label "wale" ;
+    ns1:description "The topic 'wale' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/watertight> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "watertight" .
+    rdfs:label "watertight" ;
+    ns1:description "The topic 'watertight' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wave> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wave" .
+    rdfs:label "wave" ;
+    ns1:description "The topic 'wave' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wbf> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wbf" .
+    rdfs:label "wbf" ;
+    ns1:description "The topic 'wbf' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/well> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "well" .
+    rdfs:label "well" ;
+    ns1:description "The topic 'well' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wellbeing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wellbeing" .
+    rdfs:label "wellbeing" ;
+    ns1:description "The topic 'wellbeing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/welsh> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "welsh" .
+    rdfs:label "welsh" ;
+    ns1:description "The topic 'welsh' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/west> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "west" .
+    rdfs:label "west" ;
+    ns1:description "The topic 'west' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/whilst> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "whilst" .
+    rdfs:label "whilst" ;
+    ns1:description "The topic 'whilst' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/win> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "win" .
+    rdfs:label "win" ;
+    ns1:description "The topic 'win' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/windfarms> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "windfarms" .
+    rdfs:label "windfarms" ;
+    ns1:description "The topic 'windfarms' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wish> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wish" .
+    rdfs:label "wish" ;
+    ns1:description "The topic 'wish' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/within> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "within" .
+    rdfs:label "within" ;
+    ns1:description "The topic 'within' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/without> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "without" .
+    rdfs:label "without" ;
+    ns1:description "The topic 'without' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/woman> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "woman" .
+    rdfs:label "woman" ;
+    ns1:description "The topic 'woman' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/worldclass> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "worldclass" .
+    rdfs:label "worldclass" ;
+    ns1:description "The topic 'worldclass' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/worldleading> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "worldleading" .
+    rdfs:label "worldleading" ;
+    ns1:description "The topic 'worldleading' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/young> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "young" .
+    rdfs:label "young" ;
+    ns1:description "The topic 'young' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£10> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£10" .
+    rdfs:label "£10" ;
+    ns1:description "The topic '£10' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£120k> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£120k" .
+    rdfs:label "£120k" ;
+    ns1:description "The topic '£120k' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£140> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£140" .
+    rdfs:label "£140" ;
+    ns1:description "The topic '£140' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£1billion> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£1billion" .
+    rdfs:label "£1billion" ;
+    ns1:description "The topic '£1billion' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£1m> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£1m" .
+    rdfs:label "£1m" ;
+    ns1:description "The topic '£1m' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£20> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£20" .
+    rdfs:label "£20" ;
+    ns1:description "The topic '£20' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£20000> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£20000" .
+    rdfs:label "£20000" ;
+    ns1:description "The topic '£20000' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£20m> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£20m" .
+    rdfs:label "£20m" ;
+    ns1:description "The topic '£20m' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£250k> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£250k" .
+    rdfs:label "£250k" ;
+    ns1:description "The topic '£250k' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£27> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£27" .
+    rdfs:label "£27" ;
+    ns1:description "The topic '£27' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£3> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£3" .
+    rdfs:label "£3" ;
+    ns1:description "The topic '£3' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£30> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£30" .
+    rdfs:label "£30" ;
+    ns1:description "The topic '£30' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£3000> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£3000" .
+    rdfs:label "£3000" ;
+    ns1:description "The topic '£3000' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£50k> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£50k" .
+    rdfs:label "£50k" ;
+    ns1:description "The topic '£50k' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£55million> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£55million" .
+    rdfs:label "£55million" ;
+    ns1:description "The topic '£55million' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£5k> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£5k" .
+    rdfs:label "£5k" ;
+    ns1:description "The topic '£5k' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£6> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£6" .
+    rdfs:label "£6" ;
+    ns1:description "The topic '£6' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£60m> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£60m" .
+    rdfs:label "£60m" ;
+    ns1:description "The topic '£60m' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£7> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£7" .
+    rdfs:label "£7" ;
+    ns1:description "The topic '£7' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£7million> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£7million" .
+    rdfs:label "£7million" ;
+    ns1:description "The topic '£7million' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£9> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£9" .
+    rdfs:label "£9" ;
+    ns1:description "The topic '£9' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/“> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "“" .
+    rdfs:label "“" ;
+    ns1:description "The topic '“' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/2022> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "2022" .
+    rdfs:label "2022" ;
+    ns1:description "The topic '2022' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/activity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "activity" .
+    rdfs:label "activity" ;
+    ns1:description "The topic 'activity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/advanced> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "advanced" .
+    rdfs:label "advanced" ;
+    ns1:description "The topic 'advanced' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/agrifood> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "agrifood" .
+    rdfs:label "agrifood" ;
+    ns1:description "The topic 'agrifood' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/andor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "andor" .
+    rdfs:label "andor" ;
+    ns1:description "The topic 'andor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/artificial> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "artificial" .
+    rdfs:label "artificial" ;
+    ns1:description "The topic 'artificial' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/asset> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "asset" .
+    rdfs:label "asset" ;
+    ns1:description "The topic 'asset' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ati> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ati" .
+    rdfs:label "ati" ;
+    ns1:description "The topic 'ati' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/authority> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "authority" .
+    rdfs:label "authority" ;
+    ns1:description "The topic 'authority' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/autonomous> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "autonomous" .
+    rdfs:label "autonomous" ;
+    ns1:description "The topic 'autonomous' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/award> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "award" .
+    rdfs:label "award" ;
+    ns1:description "The topic 'award' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/biodiversity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "biodiversity" .
+    rdfs:label "biodiversity" ;
+    ns1:description "The topic 'biodiversity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/bolt> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "bolt" .
+    rdfs:label "bolt" ;
+    ns1:description "The topic 'bolt' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/carbon> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "carbon" .
+    rdfs:label "carbon" ;
+    ns1:description "The topic 'carbon' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/catapult> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "catapult" .
+    rdfs:label "catapult" ;
+    ns1:description "The topic 'catapult' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/ccr> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "ccr" .
+    rdfs:label "ccr" ;
+    ns1:description "The topic 'ccr' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cell> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cell" .
+    rdfs:label "cell" ;
+    ns1:description "The topic 'cell' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/centric> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "centric" .
+    rdfs:label "centric" ;
+    ns1:description "The topic 'centric' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/chain> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "chain" .
+    rdfs:label "chain" ;
+    ns1:description "The topic 'chain' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/child> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "child" .
+    rdfs:label "child" ;
+    ns1:description "The topic 'child' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/climate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "climate" .
+    rdfs:label "climate" ;
+    ns1:description "The topic 'climate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cluster> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cluster" .
+    rdfs:label "cluster" ;
+    ns1:description "The topic 'cluster' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/collaborate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "collaborate" .
+    rdfs:label "collaborate" ;
+    ns1:description "The topic 'collaborate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/collaboration> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "collaboration" .
+    rdfs:label "collaboration" ;
+    ns1:description "The topic 'collaboration' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/collaborative> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "collaborative" .
+    rdfs:label "collaborative" ;
+    ns1:description "The topic 'collaborative' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/commercial> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "commercial" .
+    rdfs:label "commercial" ;
+    ns1:description "The topic 'commercial' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/commercially> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "commercially" .
+    rdfs:label "commercially" ;
+    ns1:description "The topic 'commercially' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/commission> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "commission" .
+    rdfs:label "commission" ;
+    ns1:description "The topic 'commission' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/community> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "community" .
+    rdfs:label "community" ;
+    ns1:description "The topic 'community' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/corporate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "corporate" .
+    rdfs:label "corporate" ;
+    ns1:description "The topic 'corporate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/council> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "council" .
+    rdfs:label "council" ;
+    ns1:description "The topic 'council' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/covid19> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "covid19" .
+    rdfs:label "covid19" ;
+    ns1:description "The topic 'covid19' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/damage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "damage" .
+    rdfs:label "damage" ;
+    ns1:description "The topic 'damage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/dasa> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "dasa" .
+    rdfs:label "dasa" ;
+    ns1:description "The topic 'dasa' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/delivering> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "delivering" .
+    rdfs:label "delivering" ;
+    ns1:description "The topic 'delivering' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/different> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "different" .
+    rdfs:label "different" ;
+    ns1:description "The topic 'different' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/electric> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "electric" .
+    rdfs:label "electric" ;
+    ns1:description "The topic 'electric' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/electricity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "electricity" .
+    rdfs:label "electricity" ;
+    ns1:description "The topic 'electricity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/engineering> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "engineering" .
+    rdfs:label "engineering" ;
+    ns1:description "The topic 'engineering' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/explore> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "explore" .
+    rdfs:label "explore" ;
+    ns1:description "The topic 'explore' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/extended> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "extended" .
+    rdfs:label "extended" ;
+    ns1:description "The topic 'extended' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/facing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "facing" .
+    rdfs:label "facing" ;
+    ns1:description "The topic 'facing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/farming> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "farming" .
+    rdfs:label "farming" ;
+    ns1:description "The topic 'farming' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fuel> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fuel" .
+    rdfs:label "fuel" ;
+    ns1:description "The topic 'fuel' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/game> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "game" .
+    rdfs:label "game" ;
+    ns1:description "The topic 'game' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/generation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "generation" .
+    rdfs:label "generation" ;
+    ns1:description "The topic 'generation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/global> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "global" .
+    rdfs:label "global" ;
+    ns1:description "The topic 'global' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/greener> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "greener" .
+    rdfs:label "greener" ;
+    ns1:description "The topic 'greener' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/growing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "growing" .
+    rdfs:label "growing" ;
+    ns1:description "The topic 'growing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/highway> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "highway" .
+    rdfs:label "highway" ;
+    ns1:description "The topic 'highway' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/home> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "home" .
+    rdfs:label "home" ;
+    ns1:description "The topic 'home' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/horticultural> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "horticultural" .
+    rdfs:label "horticultural" ;
+    ns1:description "The topic 'horticultural' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/implementation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "implementation" .
+    rdfs:label "implementation" ;
+    ns1:description "The topic 'implementation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/industrialise> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "industrialise" .
+    rdfs:label "industrialise" ;
+    ns1:description "The topic 'industrialise' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/industryled> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "industryled" .
+    rdfs:label "industryled" ;
+    ns1:description "The topic 'industryled' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/initiative> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "initiative" .
+    rdfs:label "initiative" ;
+    ns1:description "The topic 'initiative' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/institution> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "institution" .
+    rdfs:label "institution" ;
+    ns1:description "The topic 'institution' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/interested> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "interested" .
+    rdfs:label "interested" ;
+    ns1:description "The topic 'interested' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/international> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "international" .
+    rdfs:label "international" ;
+    ns1:description "The topic 'international' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/investor> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "investor" .
+    rdfs:label "investor" ;
+    ns1:description "The topic 'investor' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/local> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "local" .
+    rdfs:label "local" ;
+    ns1:description "The topic 'local' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/management> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "management" .
+    rdfs:label "management" ;
+    ns1:description "The topic 'management' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/material> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "material" .
+    rdfs:label "material" ;
+    ns1:description "The topic 'material' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/medical> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "medical" .
+    rdfs:label "medical" ;
+    ns1:description "The topic 'medical' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/mvm> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "mvm" .
+    rdfs:label "mvm" ;
+    ns1:description "The topic 'mvm' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/nh> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "nh" .
+    rdfs:label "nh" ;
+    ns1:description "The topic 'nh' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/north> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "north" .
+    rdfs:label "north" ;
+    ns1:description "The topic 'north' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/office> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "office" .
+    rdfs:label "office" ;
+    ns1:description "The topic 'office' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/operation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "operation" .
+    rdfs:label "operation" ;
+    ns1:description "The topic 'operation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/operational> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "operational" .
+    rdfs:label "operational" ;
+    ns1:description "The topic 'operational' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/overcome> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "overcome" .
+    rdfs:label "overcome" ;
+    ns1:description "The topic 'overcome' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/phd> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "phd" .
+    rdfs:label "phd" ;
+    ns1:description "The topic 'phd' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pitch> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pitch" .
+    rdfs:label "pitch" ;
+    ns1:description "The topic 'pitch' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/port> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "port" .
+    rdfs:label "port" ;
+    ns1:description "The topic 'port' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/positive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "positive" .
+    rdfs:label "positive" ;
+    ns1:description "The topic 'positive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/process> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "process" .
+    rdfs:label "process" ;
+    ns1:description "The topic 'process' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/production> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "production" .
+    rdfs:label "production" ;
+    ns1:description "The topic 'production' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/pump> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "pump" .
+    rdfs:label "pump" ;
+    ns1:description "The topic 'pump' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/quality> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "quality" .
+    rdfs:label "quality" ;
+    ns1:description "The topic 'quality' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rail> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rail" .
+    rdfs:label "rail" ;
+    ns1:description "The topic 'rail' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/reduce> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "reduce" .
+    rdfs:label "reduce" ;
+    ns1:description "The topic 'reduce' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/refill> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "refill" .
+    rdfs:label "refill" ;
+    ns1:description "The topic 'refill' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/regulatory> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "regulatory" .
+    rdfs:label "regulatory" ;
+    ns1:description "The topic 'regulatory' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/related> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "related" .
+    rdfs:label "related" ;
+    ns1:description "The topic 'related' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/resource> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "resource" .
+    rdfs:label "resource" ;
+    ns1:description "The topic 'resource' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/round> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "round" .
+    rdfs:label "round" ;
+    ns1:description "The topic 'round' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rtos> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rtos" .
+    rdfs:label "rtos" ;
+    ns1:description "The topic 'rtos' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/scheme> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "scheme" .
+    rdfs:label "scheme" ;
+    ns1:description "The topic 'scheme' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/scotland> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "scotland" .
+    rdfs:label "scotland" ;
+    ns1:description "The topic 'scotland' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/seek> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "seek" .
+    rdfs:label "seek" ;
+    ns1:description "The topic 'seek' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/seeking> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "seeking" .
+    rdfs:label "seeking" ;
+    ns1:description "The topic 'seeking' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sellafield> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sellafield" .
+    rdfs:label "sellafield" ;
+    ns1:description "The topic 'sellafield' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/service> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "service" .
+    rdfs:label "service" ;
+    ns1:description "The topic 'service' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/society> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "society" .
+    rdfs:label "society" ;
+    ns1:description "The topic 'society' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/specific> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "specific" .
+    rdfs:label "specific" ;
+    ns1:description "The topic 'specific' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/stage> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "stage" .
+    rdfs:label "stage" ;
+    ns1:description "The topic 'stage' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/strand> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "strand" .
+    rdfs:label "strand" ;
+    ns1:description "The topic 'strand' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/tech> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "tech" .
+    rdfs:label "tech" ;
+    ns1:description "The topic 'tech' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/towards> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "towards" .
+    rdfs:label "towards" ;
+    ns1:description "The topic 'towards' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/training> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "training" .
+    rdfs:label "training" ;
+    ns1:description "The topic 'training' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/transform> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "transform" .
+    rdfs:label "transform" ;
+    ns1:description "The topic 'transform' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/u> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "u" .
+    rdfs:label "u" ;
+    ns1:description "The topic 'u' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/using> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "using" .
+    rdfs:label "using" ;
+    ns1:description "The topic 'using' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/valley> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "valley" .
+    rdfs:label "valley" ;
+    ns1:description "The topic 'valley' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/variety> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "variety" .
+    rdfs:label "variety" ;
+    ns1:description "The topic 'variety' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/viable> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "viable" .
+    rdfs:label "viable" ;
+    ns1:description "The topic 'viable' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/waste> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "waste" .
+    rdfs:label "waste" ;
+    ns1:description "The topic 'waste' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/way> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "way" .
+    rdfs:label "way" ;
+    ns1:description "The topic 'way' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wider> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wider" .
+    rdfs:label "wider" ;
+    ns1:description "The topic 'wider' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/wind> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "wind" .
+    rdfs:label "wind" ;
+    ns1:description "The topic 'wind' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£15> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£15" .
+    rdfs:label "£15" ;
+    ns1:description "The topic '£15' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£300000> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£300000" .
+    rdfs:label "£300000" ;
+    ns1:description "The topic '£300000' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£45> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£45" .
+    rdfs:label "£45" ;
+    ns1:description "The topic '£45' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£5> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£5" .
+    rdfs:label "£5" ;
+    ns1:description "The topic '£5' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£5m> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£5m" .
+    rdfs:label "£5m" ;
+    ns1:description "The topic '£5m' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/–> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "–" .
+    rdfs:label "–" ;
+    ns1:description "The topic '–' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/accelerate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "accelerate" .
+    rdfs:label "accelerate" ;
+    ns1:description "The topic 'accelerate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/across> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "across" .
+    rdfs:label "across" ;
+    ns1:description "The topic 'across' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/africa> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "africa" .
+    rdfs:label "africa" ;
+    ns1:description "The topic 'africa' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/aim> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "aim" .
+    rdfs:label "aim" ;
+    ns1:description "The topic 'aim' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/air> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "air" .
+    rdfs:label "air" ;
+    ns1:description "The topic 'air' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/applicant> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "applicant" .
+    rdfs:label "applicant" ;
+    ns1:description "The topic 'applicant' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/capability> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "capability" .
+    rdfs:label "capability" ;
+    ns1:description "The topic 'capability' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/civil> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "civil" .
+    rdfs:label "civil" ;
+    ns1:description "The topic 'civil' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/company> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "company" .
+    rdfs:label "company" ;
+    ns1:description "The topic 'company' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/concept> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "concept" .
+    rdfs:label "concept" ;
+    ns1:description "The topic 'concept' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/early> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "early" .
+    rdfs:label "early" ;
+    ns1:description "The topic 'early' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/economy> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "economy" .
+    rdfs:label "economy" ;
+    ns1:description "The topic 'economy' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/efficiency> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "efficiency" .
+    rdfs:label "efficiency" ;
+    ns1:description "The topic 'efficiency' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/electrified> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "electrified" .
+    rdfs:label "electrified" ;
+    ns1:description "The topic 'electrified' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/environment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "environment" .
+    rdfs:label "environment" ;
+    ns1:description "The topic 'environment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/equans> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "equans" .
+    rdfs:label "equans" ;
+    ns1:description "The topic 'equans' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/eureka> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "eureka" .
+    rdfs:label "eureka" ;
+    ns1:description "The topic 'eureka' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/europe> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "europe" .
+    rdfs:label "europe" ;
+    ns1:description "The topic 'europe' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/exchange> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "exchange" .
+    rdfs:label "exchange" ;
+    ns1:description "The topic 'exchange' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/given> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "given" .
+    rdfs:label "given" ;
+    ns1:description "The topic 'given' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/healthy> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "healthy" .
+    rdfs:label "healthy" ;
+    ns1:description "The topic 'healthy' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/high> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "high" .
+    rdfs:label "high" ;
+    ns1:description "The topic 'high' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/horizon> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "horizon" .
+    rdfs:label "horizon" ;
+    ns1:description "The topic 'horizon' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/identify> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "identify" .
+    rdfs:label "identify" ;
+    ns1:description "The topic 'identify' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/infrastructure> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "infrastructure" .
+    rdfs:label "infrastructure" ;
+    ns1:description "The topic 'infrastructure' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/innovator> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "innovator" .
+    rdfs:label "innovator" ;
+    ns1:description "The topic 'innovator' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/join> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "join" .
+    rdfs:label "join" ;
+    ns1:description "The topic 'join' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/london> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "london" .
+    rdfs:label "london" ;
+    ns1:description "The topic 'london' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/marine> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "marine" .
+    rdfs:label "marine" ;
+    ns1:description "The topic 'marine' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/model> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "model" .
+    rdfs:label "model" ;
+    ns1:description "The topic 'model' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/monitoring> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "monitoring" .
+    rdfs:label "monitoring" ;
+    ns1:description "The topic 'monitoring' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/offshore> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "offshore" .
+    rdfs:label "offshore" ;
+    ns1:description "The topic 'offshore' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/part> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "part" .
+    rdfs:label "part" ;
+    ns1:description "The topic 'part' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/participating> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "participating" .
+    rdfs:label "participating" ;
+    ns1:description "The topic 'participating' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/partner> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "partner" .
+    rdfs:label "partner" ;
+    ns1:description "The topic 'partner' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/people> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "people" .
+    rdfs:label "people" ;
+    ns1:description "The topic 'people' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/plastic> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "plastic" .
+    rdfs:label "plastic" ;
+    ns1:description "The topic 'plastic' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/power> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "power" .
+    rdfs:label "power" ;
+    ns1:description "The topic 'power' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/productivity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "productivity" .
+    rdfs:label "productivity" ;
+    ns1:description "The topic 'productivity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/renewables> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "renewables" .
+    rdfs:label "renewables" ;
+    ns1:description "The topic 'renewables' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/set> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "set" .
+    rdfs:label "set" ;
+    ns1:description "The topic 'set' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/supporting> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "supporting" .
+    rdfs:label "supporting" ;
+    ns1:description "The topic 'supporting' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/work> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "work" .
+    rdfs:label "work" ;
+    ns1:description "The topic 'work' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£2> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£2" .
+    rdfs:label "£2" ;
+    ns1:description "The topic '£2' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/s/ktnie> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "ktnie" .
+    rdfs:label "KTN-iX" ;
+    ns1:description "KTN-iX provides an opportunity to become directly linked to, or collaborate with, key industry stakeholders who are actively seeking the most innovative solutions" ;
+    dc:relation <https://www.ktninnovationexchange.co.uk/> .
 
 <http://pivotlabs.vc/challenges/t/accelerator> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "accelerator" .
+    rdfs:label "accelerator" ;
+    ns1:description "The topic 'accelerator' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/aerospace> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "aerospace" .
+    rdfs:label "aerospace" ;
+    ns1:description "The topic 'aerospace' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/aid> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "aid" .
+    rdfs:label "aid" ;
+    ns1:description "The topic 'aid' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/capital> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "capital" .
+    rdfs:label "capital" ;
+    ns1:description "The topic 'capital' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/care> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "care" .
+    rdfs:label "care" ;
+    ns1:description "The topic 'care' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/competitive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "competitive" .
+    rdfs:label "competitive" ;
+    ns1:description "The topic 'competitive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cyber> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "cyber" .
+    rdfs:label "cyber" ;
+    ns1:description "The topic 'cyber' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/data> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "data" .
+    rdfs:label "data" ;
+    ns1:description "The topic 'data' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/deployment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "deployment" .
+    rdfs:label "deployment" ;
+    ns1:description "The topic 'deployment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/design> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "design" .
+    rdfs:label "design" ;
+    ns1:description "The topic 'design' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/food> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "food" .
+    rdfs:label "food" ;
+    ns1:description "The topic 'food' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/government> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "government" .
+    rdfs:label "government" ;
+    ns1:description "The topic 'government' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/grant> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "grant" .
+    rdfs:label "grant" ;
+    ns1:description "The topic 'grant' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/hydrogen> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "hydrogen" .
+    rdfs:label "hydrogen" ;
+    ns1:description "The topic 'hydrogen' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/idea> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "idea" .
+    rdfs:label "idea" ;
+    ns1:description "The topic 'idea' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/improve> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "improve" .
+    rdfs:label "improve" ;
+    ns1:description "The topic 'improve' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/inclusive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "inclusive" .
+    rdfs:label "inclusive" ;
+    ns1:description "The topic 'inclusive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/innovate> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "innovate" .
+    rdfs:label "innovate" ;
+    ns1:description "The topic 'innovate' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/market> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "market" .
+    rdfs:label "market" ;
+    ns1:description "The topic 'market' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/must> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "must" .
+    rdfs:label "must" ;
+    ns1:description "The topic 'must' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/net> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "net" .
+    rdfs:label "net" ;
+    ns1:description "The topic 'net' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/network> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "network" .
+    rdfs:label "network" ;
+    ns1:description "The topic 'network' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/product> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "product" .
+    rdfs:label "product" ;
+    ns1:description "The topic 'product' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/provide> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "provide" .
+    rdfs:label "provide" ;
+    ns1:description "The topic 'provide' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/scottish> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "scottish" .
+    rdfs:label "scottish" ;
+    ns1:description "The topic 'scottish' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/space> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "space" .
+    rdfs:label "space" ;
+    ns1:description "The topic 'space' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/startup> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "startup" .
+    rdfs:label "startup" ;
+    ns1:description "The topic 'startup' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/use> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "use" .
+    rdfs:label "use" ;
+    ns1:description "The topic 'use' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/used> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "used" .
+    rdfs:label "used" ;
+    ns1:description "The topic 'used' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vehicle> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "vehicle" .
+    rdfs:label "vehicle" ;
+    ns1:description "The topic 'vehicle' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/working> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "working" .
+    rdfs:label "working" ;
+    ns1:description "The topic 'working' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£1> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£1" .
+    rdfs:label "£1" ;
+    ns1:description "The topic '£1' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/billion> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "billion" .
+    rdfs:label "billion" ;
+    ns1:description "The topic 'billion' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/clean> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "clean" .
+    rdfs:label "clean" ;
+    ns1:description "The topic 'clean' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/feasibility> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "feasibility" .
+    rdfs:label "feasibility" ;
+    ns1:description "The topic 'feasibility' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/loan> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "loan" .
+    rdfs:label "loan" ;
+    ns1:description "The topic 'loan' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/open> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "open" .
+    rdfs:label "open" ;
+    ns1:description "The topic 'open' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/security> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "security" .
+    rdfs:label "security" ;
+    ns1:description "The topic 'security' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vat> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "vat" .
+    rdfs:label "vat" ;
+    ns1:description "The topic 'vat' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/automotive> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "automotive" .
+    rdfs:label "automotive" ;
+    ns1:description "The topic 'automotive' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/available> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "available" .
+    rdfs:label "available" ;
+    ns1:description "The topic 'available' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/competition> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "competition" .
+    rdfs:label "competition" ;
+    ns1:description "The topic 'competition' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/defence> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "defence" .
+    rdfs:label "defence" ;
+    ns1:description "The topic 'defence' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/development> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "development" .
+    rdfs:label "development" ;
+    ns1:description "The topic 'development' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/emission> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "emission" .
+    rdfs:label "emission" ;
+    ns1:description "The topic 'emission' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/health> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "health" .
+    rdfs:label "health" ;
+    ns1:description "The topic 'health' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/looking> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "looking" .
+    rdfs:label "looking" ;
+    ns1:description "The topic 'looking' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/manufacturing> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "manufacturing" .
+    rdfs:label "manufacturing" ;
+    ns1:description "The topic 'manufacturing' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/region> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "region" .
+    rdfs:label "region" ;
+    ns1:description "The topic 'region' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/s> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "s" .
+    rdfs:label "s" ;
+    ns1:description "The topic 's' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/scale> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "scale" .
+    rdfs:label "scale" ;
+    ns1:description "The topic 'scale' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/sector> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "sector" .
+    rdfs:label "sector" ;
+    ns1:description "The topic 'sector' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/supply> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "supply" .
+    rdfs:label "supply" ;
+    ns1:description "The topic 'supply' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/water> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "water" .
+    rdfs:label "water" ;
+    ns1:description "The topic 'water' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/will> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "will" .
+    rdfs:label "will" ;
+    ns1:description "The topic 'will' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/s/ncsc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "ncsc" .
+    rdfs:label "NCSC" ;
+    ns1:description "The National Cyber Security Centre (NCSC) is an organisation of the United Kingdom Government that provides advice and support for the public and private sector in how to avoid computer security threats" ;
+    dc:relation <https://www.ncsc.gov.uk/> .
 
 <http://pivotlabs.vc/challenges/t/develop> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "develop" .
+    rdfs:label "develop" ;
+    ns1:description "The topic 'develop' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/help> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "help" .
+    rdfs:label "help" ;
+    ns1:description "The topic 'help' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/industrial> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "industrial" .
+    rdfs:label "industrial" ;
+    ns1:description "The topic 'industrial' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/new> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "new" .
+    rdfs:label "new" ;
+    ns1:description "The topic 'new' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/opportunity> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "opportunity" .
+    rdfs:label "opportunity" ;
+    ns1:description "The topic 'opportunity' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/partnership> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "partnership" .
+    rdfs:label "partnership" ;
+    ns1:description "The topic 'partnership' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/zero> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "zero" .
+    rdfs:label "zero" ;
+    ns1:description "The topic 'zero' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/fund> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "fund" .
+    rdfs:label "fund" ;
+    ns1:description "The topic 'fund' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/industry> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "industry" .
+    rdfs:label "industry" ;
+    ns1:description "The topic 'industry' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/investment> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "investment" .
+    rdfs:label "investment" ;
+    ns1:description "The topic 'investment' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/rd> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "rd" .
+    rdfs:label "rd" ;
+    ns1:description "The topic 'rd' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/system> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "system" .
+    rdfs:label "system" ;
+    ns1:description "The topic 'system' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/’> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "’" .
+    rdfs:label "’" ;
+    ns1:description "The topic '’' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/£25> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "£25" .
+    rdfs:label "£25" ;
+    ns1:description "The topic '£25' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/programme> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "programme" .
+    rdfs:label "programme" ;
+    ns1:description "The topic 'programme' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/energy> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "energy" .
+    rdfs:label "energy" ;
+    ns1:description "The topic 'energy' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/support> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "support" .
+    rdfs:label "support" ;
+    ns1:description "The topic 'support' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/innovative> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "innovative" .
+    rdfs:label "innovative" ;
+    ns1:description "The topic 'innovative' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/challenge> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "challenge" .
+    rdfs:label "challenge" ;
+    ns1:description "The topic 'challenge' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/registered> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "registered" .
+    rdfs:label "registered" ;
+    ns1:description "The topic 'registered' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/technology> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "technology" .
+    rdfs:label "technology" ;
+    ns1:description "The topic 'technology' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/apply> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "apply" .
+    rdfs:label "apply" ;
+    ns1:description "The topic 'apply' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/solution> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "solution" .
+    rdfs:label "solution" ;
+    ns1:description "The topic 'solution' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/organisation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "organisation" .
+    rdfs:label "organisation" ;
+    ns1:description "The topic 'organisation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/research> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "research" .
+    rdfs:label "research" ;
+    ns1:description "The topic 'research' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/share> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "share" .
+    rdfs:label "share" ;
+    ns1:description "The topic 'share' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/funding> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "funding" .
+    rdfs:label "funding" ;
+    ns1:description "The topic 'funding' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/million> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "million" .
+    rdfs:label "million" ;
+    ns1:description "The topic 'million' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/innovation> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "innovation" .
+    rdfs:label "innovation" ;
+    ns1:description "The topic 'innovation' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/project> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "project" .
+    rdfs:label "project" ;
+    ns1:description "The topic 'project' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/business> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "business" .
+    rdfs:label "business" ;
+    ns1:description "The topic 'business' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/can> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "can" .
+    rdfs:label "can" ;
+    ns1:description "The topic 'can' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/uk> a <http://pivotlabs.vc/challenges/t#topic> ;
-    rdfs:label "uk" .
+    rdfs:label "uk" ;
+    ns1:description "The topic 'uk' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/s/ktn> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "ktn" .
+    rdfs:label "KTN" ;
+    ns1:description "Innovate UK KTN exists to connect innovators with new partners and new opportunities beyond their existing thinking" ;
+    dc:relation <https://ktn-uk.org/> .
 
 
