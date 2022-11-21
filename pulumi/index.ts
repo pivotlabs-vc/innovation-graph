@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const version = "0.4.7";
+const version = "0.4.8";
 
 const provider = new gcp.Provider(
     "gcp",
