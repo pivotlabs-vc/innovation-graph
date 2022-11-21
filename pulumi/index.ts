@@ -38,9 +38,65 @@ const enableCloudRun = new gcp.projects.Service(
     }
 );
 
+const repo = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs";
+
 const webVersion = "0.4.0";
-const webImage = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs/web:" +
-      webVersion;
+const webImage = repo + "/web:" + webVersion;
+
+const sparqlVersion = "0.4.0";
+const sparqlImage = repo + "/sparql:" + sparqlVersion;
+
+const sparqlService = new gcp.cloudrun.Service(
+    "sparql-service",
+    {
+	name: "sparql",
+	location: "europe-west1",
+	template: {
+	    metadata: {
+		labels: {
+		    version: "v" + sparqlVersion.replace(/\./g, "-"),
+		},		
+		annotations: {
+                    "autoscaling.knative.dev/minScale": "0",
+                    "autoscaling.knative.dev/maxScale": "1",
+		}
+	    },
+            spec: {
+		containerConcurrency: 1000,
+		containers: [
+		    {
+			image: sparqlImage,
+			ports: [
+                            {
+				"name": "http1", // Must be http1 or h2c.
+				"containerPort": 8089
+                            }
+			],
+			envs: [
+                            { name: "ASD", value: "DEF" }
+			],
+			resources: {
+                            limits: {
+				cpu: "1000m",
+				memory: "256Mi",
+                            }
+			},
+		    }
+		],
+            },
+	},
+    },
+    {
+	provider: provider,
+	dependsOn: [enableCloudRun],
+    }
+);
+
+const sparqlUrl = sparqlService.statuses[0].url;
+
+export const sparqlResource = sparqlUrl.apply(
+    x => x.replace(/^https:\/\//, "")
+);
 
 const webService = new gcp.cloudrun.Service(
     "web-service",
@@ -67,6 +123,13 @@ const webService = new gcp.cloudrun.Service(
 				"name": "http1", // Must be http1 or h2c.
 				"containerPort": 8080
                             }
+			],
+			commands: [
+			    "/usr/local/bin/serve",
+			    "0:8080",                // Listen
+			    sparqlResource,	     // SPARQL API resource
+			    "https",		     // SPARQL scheme
+			    "",			     // Base
 			],
 			envs: [
                             { name: "ASD", value: "DEF" }
@@ -113,4 +176,18 @@ const webNoAuthPolicy = new gcp.cloudrun.IamPolicy(
     }
 );
 
-export const url = webService.statuses[0].url;
+const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
+    "sparql-no-auth-policy",
+    {
+	location: sparqlService.location,
+	project: sparqlService.project,
+	service: sparqlService.name,
+	policyData: allUsersPolicy.then(pol => pol.policyData),
+    },
+    {
+	provider: provider,
+    }
+);
+
+
+
