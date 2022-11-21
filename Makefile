@@ -1,6 +1,6 @@
 
 VERSION=$(shell git describe | sed 's/^v//')
-SPARQL_EXPLORER_VERSION=0.4.1
+SPARQL_EXPLORER_VERSION=0.4.2
 
 PROJECT=challenges
 
