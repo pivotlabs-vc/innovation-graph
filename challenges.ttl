@@ -23471,7 +23471,7 @@ dc:relation a rdfs:Property ;
     dc:relation <https://www.gov.uk/government/organisations/defence-and-security-accelerator> .
 
 <http://pivotlabs.vc/challenges/s/research-england> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "Research Eengland" ;
+    rdfs:label "Research England" ;
     ns1:description "We are responsible for funding and engaging with English higher education providers, to create and sustain the conditions for a healthy and dynamic research and knowledge exchange system in the higher education sector." ;
     dc:relation <https://www.ukri.org/councils/research-england/> .
 
