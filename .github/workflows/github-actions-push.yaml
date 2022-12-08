@@ -100,14 +100,15 @@ jobs:
       - name: Install Pulumi
         run: cd pulumi && npm install
 
-      # - name: Applying infrastructure 🚀🙏
-      #   uses: pulumi/actions@v3
-      #   with:
-      #     command: up
-      #     stack-name: prod
-      #     work-dir: pulumi
-      #     cloud-url: gs://pivot-labs-deploy/prod
-      #   env:
-      #     PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
-      #     WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
-      #     SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
+      - name: Applying infrastructure 🚀🙏
+        uses: pulumi/actions@v3
+        with:
+          command: up
+          stack-name: prod
+          work-dir: pulumi
+          cloud-url: gs://pivot-labs-deploy/prod
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+          WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
+          SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
+

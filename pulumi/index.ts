@@ -1,7 +1,14 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const version = "0.4.12";
+const webVersion = process.env.WEB_IMAGE_VERSION;
+const sparqlVersion = process.env.SPARQL_IMAGE_VERSION;
+
+if (!webVersion)
+    throw Error("WEB_IMAGE_VERSION not defined");
+
+if (!sparqlVersion)
+    throw Error("SPARQL_IMAGE_VERSION not defined");
 
 const provider = new gcp.Provider(
     "gcp",
@@ -43,10 +50,7 @@ const enableCloudDns = new gcp.projects.Service(
 
 const repo = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs";
 
-const webVersion = version;
 const webImage = repo + "/web:" + webVersion;
-
-const sparqlVersion = version;
 const sparqlImage = repo + "/sparql:" + sparqlVersion;
 
 const sparqlService = new gcp.cloudrun.Service(
@@ -74,9 +78,6 @@ const sparqlService = new gcp.cloudrun.Service(
 				"name": "http1", // Must be http1 or h2c.
 				"containerPort": 8089
                             }
-			],
-			envs: [
-                            { name: "ASD", value: "DEF" }
 			],
 			resources: {
                             limits: {
@@ -192,6 +193,8 @@ const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
     }
 );
 
+/*
+
 const webDomainMapping = new gcp.cloudrun.DomainMapping(
     "web-domain-mapping",
     {
@@ -246,4 +249,6 @@ const recordSet = new gcp.dns.RecordSet(
 	provider: provider,
     }
 );
+
+*/
 
