@@ -32,7 +32,8 @@ jobs:
         run: echo VERSION=sha-$(git rev-parse --short HEAD) >> $GITHUB_OUTPUT
 
       - name: Install packages
-        run: sudo apt update && sudo apt install redland-utils
+        run: sudo apt update &&
+	    sudo apt install redland-utils librdf-storage-sqlite
 
       - name: Assemble RDF data
         run: make data
