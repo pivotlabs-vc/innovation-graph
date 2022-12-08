@@ -1,13 +1,7 @@
 
-FROM challenges-base
+FROM docker.io/cybermaggedon/sparql-service
 
-RUN dnf install -y rasqal-devel redland-devel raptor2-devel && \
-    dnf install -y boost-system boost-coroutine && dnf clean all
+COPY challenges.db /data/data.db
 
-ADD sparql /usr/local/bin/sparql
-ADD challenges.db /usr/local/kb/kb.db
 
-WORKDIR /usr/local/kb/
-CMD /usr/local/bin/sparql 8089 sqlite kb.db
-EXPOSE 8089
 
