@@ -33,7 +33,7 @@ jobs:
 
       - name: Install packages
         run: sudo apt update &&
-	    sudo apt install redland-utils librdf-storage-sqlite
+            sudo apt install redland-utils librdf-storage-sqlite
 
       - name: Assemble RDF data
         run: make data
