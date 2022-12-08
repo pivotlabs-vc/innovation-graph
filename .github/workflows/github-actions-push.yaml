@@ -86,7 +86,7 @@ jobs:
           push: true
           tags: ${{ steps.meta-web.outputs.tags }}
           labels: ${{ steps.meta-web.outputs.labels }}
-          file: Dockerfile.web
+          file: Containerfile.web
 
       - name: Build and push sparql
         uses: docker/build-push-action@v3
@@ -95,7 +95,7 @@ jobs:
           push: true
           tags: ${{ steps.meta-sparql.outputs.tags }}
           labels: ${{ steps.meta-sparql.outputs.labels }}
-          file: Dockerfile.sparql
+          file: Containerfile.sparql
 
       - name: Install Pulumi
         run: cd pulumi && npm install
