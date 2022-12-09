@@ -92,7 +92,7 @@ const sparqlImage = repo + "/sparql:" + sparqlVersion;
 const sparqlService = new gcp.cloudrun.Service(
     "sparql-service",
     {
-	name: "sparql" + process.env.ENVIRONMENT,
+	name: "sparql-" + process.env.ENVIRONMENT,
 	location: process.env.CLOUD_RUN_REGION,
 	template: {
 	    metadata: {
@@ -141,7 +141,7 @@ export const sparqlResource = sparqlUrl.apply(
 const webService = new gcp.cloudrun.Service(
     "web-service",
     {
-	name: "web" + process.env.ENVIRONMENT,
+	name: "web-" + process.env.ENVIRONMENT,
 	location: process.env.CLOUD_RUN_REGION,
 	template: {
 	    metadata: {
@@ -255,8 +255,8 @@ export const webhost = webDomainMapping.statuses.apply(
     x => x.rrdata
 );
 
-const innovateZone = new gcp.dns.ManagedZone(
-    "innovate-zone",
+const zone = new gcp.dns.ManagedZone(
+    "zone",
     {
 	name: process.env.DNS_DOMAIN_DESCRIPTION,
 	description: process.env.DOMAIN,
@@ -273,8 +273,8 @@ const innovateZone = new gcp.dns.ManagedZone(
 const recordSet = new gcp.dns.RecordSet(
     "web-record",
     {
-	name: pulumi.interpolate`graph.${innovateZone.dnsName}`,
-	managedZone: innovateZone.name,
+	name: process.env.WEB_HOSTNAME,
+	managedZone: zone.name,
 	type: "CNAME",
 	ttl: 300,
 	rrdatas: [webhost],
