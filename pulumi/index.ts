@@ -193,8 +193,6 @@ const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
     }
 );
 
-/*
-
 const webDomainMapping = new gcp.cloudrun.DomainMapping(
     "web-domain-mapping",
     {
@@ -250,5 +248,5 @@ const recordSet = new gcp.dns.RecordSet(
     }
 );
 
-*/
+
 
