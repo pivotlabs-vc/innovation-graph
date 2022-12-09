@@ -22,7 +22,7 @@ jobs:
       - name: Install packages
         run: sudo apt update &&
             sudo apt install -y redland-utils librdf-storage-sqlite &&
-            pip3 install python3-rdflib
+            sudo apt install python3-rdflib
 
       - name: Test assembly of RDF data
         run: make curate
