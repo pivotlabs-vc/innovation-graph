@@ -1,5 +1,5 @@
 
 FROM docker.io/cybermaggedon/sparql-service
 
-COPY challenges.db /data/data.db
+COPY data.db /data/data.db
 
