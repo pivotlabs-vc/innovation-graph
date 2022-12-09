@@ -10,6 +10,27 @@ if (!webVersion)
 if (!sparqlVersion)
     throw Error("SPARQL_IMAGE_VERSION not defined");
 
+if (!process.env.ARTIFACT_REPO)
+    throw Error("ARTIFACT_REPO not defined");
+
+if (!process.env.GCP_PROJECT)
+    throw Error("GCP_PROJECT not defined");
+
+if (!process.env.GCP_REGION)
+    throw Error("GCP_REGION not defined");
+
+if (!process.env.ENVIRONMENT)
+    throw Error("ENVIRONMENT not defined");
+
+if (!process.env.CLOUD_RUN_REGION)
+    throw Error("CLOUD_RUN_REGION not defined");
+
+if (!process.env.DNS_DOMAIN_DESCRIPTION)
+    throw Error("DNS_DOMAIN_DESCRIPTION not defined");
+
+if (!process.env.DOMAIN)
+    throw Error("DOMAIN not defined");
+
 const provider = new gcp.Provider(
     "gcp",
     {
@@ -197,7 +218,7 @@ const webDomainMapping = new gcp.cloudrun.DomainMapping(
     "web-domain-mapping",
     {
 	"name": 
-	location: CLOUD_RUN_REGION,
+	location: process.env.CLOUD_RUN_REGION,
 	spec: {
 	    routeName: webService.name,
 	}
@@ -220,8 +241,8 @@ const innovateZone = new gcp.dns.ManagedZone(
     "innovate-zone",
     {
 	name: process.env.DNS_DOMAIN_DESCRIPTION,
-	description: DOMAIN,
-	dnsName: DOMAIN,
+	description: process.env.DOMAIN,
+	dnsName: process.env.DOMAIN,
 	labels: {
 	},
     },
