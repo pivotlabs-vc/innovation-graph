@@ -20162,34 +20162,6 @@ has at least six months remaining from the start of this award.""" ;
     ns1:title "ATI Programme strategic batch: expression of interest October 2022" ;
     dc:relation <https://ktn-uk.org/opportunities/ati-programme-strategic-batch-expression-of-interest-october-2022/> .
 
-ns1:closes a rdfs:Property ;
-    rdfs:label "closes" ;
-    ns1:description "The closing date of an innovation challenge" .
-
-ns1:description a rdfs:Property ;
-    rdfs:label "description" ;
-    ns1:description "A full elaborative explanation" .
-
-ns1:has-source a rdfs:Property ;
-    rdfs:label "has-source" .
-
-ns1:has-topic a rdfs:Property ;
-    rdfs:label "has-topic" ;
-    ns1:description "Relationship describing innovation topics",
-        "Relationship describing sources of innovation challenges" .
-
-ns1:opens a rdfs:Property ;
-    rdfs:label "opens" ;
-    ns1:description "The opening date of an innovation challenge" .
-
-ns1:title a rdfs:Property ;
-    rdfs:label "title" ;
-    ns1:description "A descriptive summary title" .
-
-dc:relation a rdfs:Property ;
-    rdfs:label "relation" ;
-    ns1:description "Link to original source material" .
-
 <http://pivotlabs.vc/challenges/t/1> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "1" ;
     ns1:description "The topic '1' derived from natural language analysis" .

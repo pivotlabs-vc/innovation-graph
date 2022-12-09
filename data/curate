@@ -224,6 +224,9 @@ class Curator:
 
       g = Graph()
 
+      for tpl in self.schema.graph:
+         g.add(tpl)
+
       for subdir, dirs, files in os.walk(dir):
    
          ix_path = subdir + "/metadata.json"
