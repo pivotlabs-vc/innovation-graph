@@ -9,8 +9,6 @@ on:
     tags:
       - 'v*'
 
-  pull_request:
-
 permissions:
   contents: read
   id-token: 'write'
@@ -36,7 +34,7 @@ jobs:
             sudo apt install redland-utils librdf-storage-sqlite
 
       - name: Assemble RDF data
-        run: make data
+        run: make curate
 
       - name: Extract metadata for web container
         id: meta-web

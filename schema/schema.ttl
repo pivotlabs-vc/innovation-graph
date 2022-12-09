@@ -1,0 +1,48 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix property: <http://pivotlabs.vc/challenges/p#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+type:challenge a rdfs:Class ;
+    rdfs:label "challenge" ;
+    property:description "An innovation challenge is a means to encourage creation and elaboration of the best and most sustainable ideas from the best innovators by providing a competition for innovation grants." ;
+    dc:relation <https://en.wikipedia.org/wiki/Innovation_competition> .
+
+type:source a rdfs:Class ;
+    rdfs:label "source" ;
+    property:description "An identifier for a source of innovation challenges" ;
+    dc:relation <https://en.wikipedia.org/wiki/Source_text> .
+
+type:topic a rdfs:Class ;
+    rdfs:label "topic" ;
+    property:description "A subject or classification of an innovation opportunity derived using topic classification" ;
+    dc:relation <https://en.wikipedia.org/wiki/Topic_and_comment> .
+
+property:closes a rdfs:Property ;
+    rdfs:label "closes" ;
+    property:description "The closing date of an innovation challenge" .
+
+property:description a rdfs:Property ;
+    rdfs:label "description" ;
+    property:description "A full elaborative explanation" .
+
+property:has-source a rdfs:Property ;
+    rdfs:label "has-source" .
+
+property:has-topic a rdfs:Property ;
+    rdfs:label "has-topic" ;
+    property:description "Relationship describing innovation topics",
+        "Relationship describing sources of innovation challenges" .
+
+property:opens a rdfs:Property ;
+    rdfs:label "opens" ;
+    property:description "The opening date of an innovation challenge" .
+
+property:title a rdfs:Property ;
+    rdfs:label "title" ;
+    property:description "A descriptive summary title" .
+
+dc:relation a rdfs:Property ;
+    rdfs:label "relation" ;
+    property:description "Link to original source material" .
+

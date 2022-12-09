@@ -1,0 +1,46 @@
+
+
+
+
+SELECT DISTINCT ?title ?opens ?closes
+WHERE {
+  ?chl <http://pivotlabs.vc/challenges/p#has-source>
+      <http://pivotlabs.vc/challenges/s/ktn> .
+  ?chl <http://pivotlabs.vc/challenges/p#title> ?title .
+  ?chl <http://pivotlabs.vc/challenges/p#opens> ?opens .
+  ?chl <http://pivotlabs.vc/challenges/p#closes> ?closes .
+}
+LIMIT 25
+
+http://localhost:8080/query.html?query=SELECT%20DISTINCT%20%3Ftitle%20%3Fopens%20%3Fcloses%0AWHERE%20%7B%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23has-source%3E%0A%20%20%20%20%20%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fs%2Fktn%3E%20.%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23title%3E%20%3Ftitle%20.%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23opens%3E%20%3Fopens%20.%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23closes%3E%20%3Fcloses%20.%0A%7D%0ALIMIT%2025%0A
+
+
+
+SELECT DISTINCT ?title ?url
+WHERE {
+  ?chl <http://pivotlabs.vc/challenges/p#has-topic>
+      <http://pivotlabs.vc/challenges/t/farming> .
+  ?chl <http://pivotlabs.vc/challenges/p#title> ?title .
+  ?chl <http://purl.org/dc/elements/1.1/relation> ?url .
+}
+LIMIT 25
+
+
+http://localhost:8080/query.html?query=SELECT%20DISTINCT%20%3Ftitle%20%3Furl%0AWHERE%20%7B%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23has-topic%3E%0A%20%20%20%20%20%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Ft%2Ffarming%3E%20.%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23title%3E%20%3Ftitle%20.%0A%20%20%3Fchl%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2Frelation%3E%20%3Furl%20.%0A%7D%0ALIMIT%2025
+
+
+
+SELECT DISTINCT ?source ?topic
+WHERE {
+  ?chl <http://pivotlabs.vc/challenges/p#has-topic> ?t .
+  ?chl <http://pivotlabs.vc/challenges/p#has-source> ?s .
+  ?s <http://www.w3.org/2000/01/rdf-schema#label> ?source .
+  ?t <http://www.w3.org/2000/01/rdf-schema#label> ?topic .
+}
+LIMIT 25
+
+
+
+http://localhost:8080/query.html?query=SELECT%20DISTINCT%20?source%20?topic%0AWHERE%20%7B%0A%20%20?chl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23has-topic%3E%20?t%20.%0A%20%20?chl%20%3Chttp%3A%2F%2Fpivotlabs.vc%2Fchallenges%2Fp%23has-source%3E%20?s%20.%0A%20%20?s%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20?source%20.%0A%20%20?t%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20?topic%20.%0A%7D%0ALIMIT%2025
+
+
