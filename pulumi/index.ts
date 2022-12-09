@@ -274,7 +274,7 @@ const zone = new gcp.dns.ManagedZone(
 const recordSet = new gcp.dns.RecordSet(
     "web-record",
     {
-	name: process.env.WEB_HOSTNAME,
+	name: process.env.WEB_HOSTNAME + ".",
 	managedZone: zone.name,
 	type: "CNAME",
 	ttl: 300,
