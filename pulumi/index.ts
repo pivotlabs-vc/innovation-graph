@@ -133,7 +133,7 @@ const webService = new gcp.cloudrun.Service(
 			    "0:8080",                // Listen
 			    sparqlResource,	     // SPARQL API resource
 			    "https",		     // SPARQL scheme
-			    "",			     // Base
+			    ".",		     // Base
 			],
 			envs: [
                             { name: "ASD", value: "DEF" }
