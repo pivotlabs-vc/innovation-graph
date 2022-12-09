@@ -115,7 +115,7 @@ jobs:
           CLOUD_RUN_REGION: europe-west1
           ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
           WEB_HOSTNAME: graph.innovate.pivotlabs.vc
-          DOMAIN: innovate.pivotlabs.vc
+          DOMAIN: innovate.pivotlabs.vc.
           DNS_DOMAIN_DESCRIPTION: innovate
           SPARQL_MIN_SCALE: "0"
           SPARQL_MAX_SCALE: "1"
