@@ -13,6 +13,9 @@ if (!sparqlVersion)
 if (!process.env.ARTIFACT_REPO)
     throw Error("ARTIFACT_REPO not defined");
 
+if (!process.env.WEB_HOSTNAME)
+    throw Error("WEB_HOSTNAME not defined");
+
 if (!process.env.GCP_PROJECT)
     throw Error("GCP_PROJECT not defined");
 
@@ -30,6 +33,18 @@ if (!process.env.DNS_DOMAIN_DESCRIPTION)
 
 if (!process.env.DOMAIN)
     throw Error("DOMAIN not defined");
+
+if (!process.env.WEB_MIN_SCALE)
+    throw Error("WEB_MIN_SCALE not defined");
+
+if (!process.env.WEB_MAX_SCALE)
+    throw Error("WEB_MAX_SCALE not defined");
+
+if (!process.env.SPARQL_MIN_SCALE)
+    throw Error("SPARQL_MIN_SCALE not defined");
+
+if (!process.env.SPARQL_MAX_SCALE)
+    throw Error("SPARQL_MAX_SCALE not defined");
 
 const provider = new gcp.Provider(
     "gcp",
@@ -85,8 +100,8 @@ const sparqlService = new gcp.cloudrun.Service(
 		    version: "v" + sparqlVersion.replace(/\./g, "-"),
 		},		
 		annotations: {
-                    "autoscaling.knative.dev/minScale": SPARQL_MIN_SCALE,
-                    "autoscaling.knative.dev/maxScale": SPARQL_MAX_SCALE,
+                    "autoscaling.knative.dev/minScale": process.env.SPARQL_MIN_SCALE,
+                    "autoscaling.knative.dev/maxScale": process.env.SPARQL_MAX_SCALE,
 		}
 	    },
             spec: {
@@ -134,8 +149,8 @@ const webService = new gcp.cloudrun.Service(
 		    version: "v" + webVersion.replace(/\./g, "-"),
 		},		
 		annotations: {
-                    "autoscaling.knative.dev/minScale": WEB_MIN_SCALE,
-                    "autoscaling.knative.dev/maxScale": WEB_MAX_SCALE,
+                    "autoscaling.knative.dev/minScale": process.env.WEB_MIN_SCALE,
+                    "autoscaling.knative.dev/maxScale": process.env.WEB_MAX_SCALE,
 		}
 	    },
             spec: {
@@ -217,7 +232,7 @@ const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
 const webDomainMapping = new gcp.cloudrun.DomainMapping(
     "web-domain-mapping",
     {
-	"name": 
+	"name": process.env.WEB_HOSTNAME,
 	location: process.env.CLOUD_RUN_REGION,
 	spec: {
 	    routeName: webService.name,
