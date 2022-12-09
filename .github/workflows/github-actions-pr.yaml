@@ -28,6 +28,6 @@ jobs:
             sudo apt install -y redland-utils librdf-storage-sqlite &&
             sudo apt install -y python-rdflib
 
-      - name: Assemble RDF data
+      - name: Test assembly of RDF data
         run: make curate
 
