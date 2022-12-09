@@ -47,10 +47,10 @@ The file must contain the following fields:
 ## The `csv` processing type
 
 This is for CSV files.  The metadata file should also contain:
-- `input`, the filename of the CSV input data
-- `fields`, a list of types for the columns of the CSV file.  The number
+- `input`: the filename of the CSV input data
+- `fields`: a list of types for the columns of the CSV file.  The number
   of field list entries must equal the number of columns in the CSV file.
-- `id-prefix` a prefix added to the identifier column entries to form
+- `id-prefix`: a prefix added to the identifier column entries to form
   unique identifiers.
 
 The first field type must be `%%identity%%` which indicates that the
@@ -70,7 +70,7 @@ This is for Turtle data files which are already constructed in accordance
 with the schema.
 
 The metadata file should also contain:
-- `input`, the filename of the CSV input data
+- `input`: the filename of the CSV input data
 
 ## Schema
 
@@ -80,5 +80,18 @@ TBD
 
 Community contributions to this data set are welcome and encouraged.
 To contribute, clone this Github repository, fork the repository and
-make a pull-request.
+make a pull-request, which we will review.
+
+Your pull request will trigger a Github action which runs a data load
+which provides a simple verification check that your change hasn't
+broken anything.  We'll take the discussion on your pull request if
+there's anything to discuss.
+
+Your pull request can propose a change to an existing data set, or you
+can add a new data set by creating a subdirectory below the data
+directory.
+
+The curation process can accept new data processing types if needed.
+
+
 
