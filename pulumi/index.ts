@@ -234,6 +234,8 @@ const webDomainMapping = new gcp.cloudrun.DomainMapping(
     {
 	"name": process.env.WEB_HOSTNAME,
 	location: process.env.CLOUD_RUN_REGION,
+	metadata: {
+	},
 	spec: {
 	    routeName: webService.name,
 	}
