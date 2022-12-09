@@ -17,7 +17,7 @@ jobs:
 
   container-push:
 
-    name: Container push
+    name: Deploy to production
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,8 @@ jobs:
 
       - name: Install packages
         run: sudo apt update &&
-            sudo apt install redland-utils librdf-storage-sqlite
+            sudo apt install -y redland-utils librdf-storage-sqlite &&
+            sudo apt install -y python-rdflib
 
       - name: Assemble RDF data
         run: make curate
@@ -109,4 +110,15 @@ jobs:
           PULUMI_CONFIG_PASSPHRASE: ""
           WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
           SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
-
+          GCP_PROJECT: pivot-labs
+          GCP_REGION: eu-west1
+          CLOUD_RUN_REGION: europe-west1
+          ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
+          WEB_HOSTNAME: graph.innovate.pivotlabs.vc
+          DOMAIN: innovate.pivotlabs.vc
+          DNS_DOMAIN_DESCRIPTION: innovate
+          SPARQL_MIN_SCALE: "0"
+          SPARQL_MAX_SCALE: "1"
+          WEB_MIN_SCALE: "0"
+          WEB_MAX_SCALE: "1"
+          ENVIRONMENT: "prod"

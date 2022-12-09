@@ -13,8 +13,8 @@ if (!sparqlVersion)
 const provider = new gcp.Provider(
     "gcp",
     {
-	project: "pivot-labs",
-	region: "eu-west1",
+	project: process.env.GCP_PROJECT,
+	region: process.env.GCP_REGION,
     }
 );
 
@@ -48,7 +48,7 @@ const enableCloudDns = new gcp.projects.Service(
     }
 );
 
-const repo = "europe-west1-docker.pkg.dev/pivot-labs/pivot-labs";
+const repo = process.env.ARTIFACT_REPO;
 
 const webImage = repo + "/web:" + webVersion;
 const sparqlImage = repo + "/sparql:" + sparqlVersion;
@@ -56,16 +56,16 @@ const sparqlImage = repo + "/sparql:" + sparqlVersion;
 const sparqlService = new gcp.cloudrun.Service(
     "sparql-service",
     {
-	name: "sparql",
-	location: "europe-west1",
+	name: "sparql" + process.env.ENVIRONMENT,
+	location: process.env.CLOUD_RUN_REGION,
 	template: {
 	    metadata: {
 		labels: {
 		    version: "v" + sparqlVersion.replace(/\./g, "-"),
 		},		
 		annotations: {
-                    "autoscaling.knative.dev/minScale": "0",
-                    "autoscaling.knative.dev/maxScale": "1",
+                    "autoscaling.knative.dev/minScale": SPARQL_MIN_SCALE,
+                    "autoscaling.knative.dev/maxScale": SPARQL_MAX_SCALE,
 		}
 	    },
             spec: {
@@ -105,16 +105,16 @@ export const sparqlResource = sparqlUrl.apply(
 const webService = new gcp.cloudrun.Service(
     "web-service",
     {
-	name: "web",
-	location: "europe-west1",
+	name: "web" + process.env.ENVIRONMENT,
+	location: process.env.CLOUD_RUN_REGION,
 	template: {
 	    metadata: {
 		labels: {
 		    version: "v" + webVersion.replace(/\./g, "-"),
 		},		
 		annotations: {
-                    "autoscaling.knative.dev/minScale": "0",
-                    "autoscaling.knative.dev/maxScale": "1",
+                    "autoscaling.knative.dev/minScale": WEB_MIN_SCALE,
+                    "autoscaling.knative.dev/maxScale": WEB_MAX_SCALE,
 		}
 	    },
             spec: {
@@ -196,11 +196,8 @@ const sparqlNoAuthPolicy = new gcp.cloudrun.IamPolicy(
 const webDomainMapping = new gcp.cloudrun.DomainMapping(
     "web-domain-mapping",
     {
-	"name": "graph.innovate.pivotlabs.vc",
-	location: "europe-west1",
-	metadata: {
-	    namespace: "pivot-labs",
-	},
+	"name": 
+	location: CLOUD_RUN_REGION,
 	spec: {
 	    routeName: webService.name,
 	}
@@ -222,9 +219,9 @@ export const webhost = webDomainMapping.statuses.apply(
 const innovateZone = new gcp.dns.ManagedZone(
     "innovate-zone",
     {
-	name: "innovate",
-	description: "innovate.pivotlabs.vc",
-	dnsName: "innovate.pivotlabs.vc.",
+	name: process.env.DNS_DOMAIN_DESCRIPTION,
+	description: DOMAIN,
+	dnsName: DOMAIN,
 	labels: {
 	},
     },
@@ -247,6 +244,4 @@ const recordSet = new gcp.dns.RecordSet(
 	provider: provider,
     }
 );
-
-
 
