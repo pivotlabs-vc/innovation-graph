@@ -1,0 +1,11 @@
+{
+    "id": "challenges",
+    "description": "UK government innovation challenges",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "Scraped from NCSC, Innovate UK and UKRI publicly hosted assets",
+    "copyright": "Not defined, information in the public domain",
+    "processing": "turtle",
+    "input": "challenges.ttl"
+}

@@ -2,21 +2,6 @@
 @prefix ns1: <http://pivotlabs.vc/challenges/p#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://pivotlabs.vc/challenges/t#challenge> a rdfs:Class ;
-    rdfs:label "challenge" ;
-    ns1:description "An innovation challenge is a means to encourage creation and elaboration of the best and most sustainable ideas from the best innovators by providing a competition for innovation grants." ;
-    dc:relation <https://en.wikipedia.org/wiki/Innovation_competition> .
-
-<http://pivotlabs.vc/challenges/t#source> a rdfs:Class ;
-    rdfs:label "source" ;
-    ns1:description "An identifier for a source of innovation challenges" ;
-    dc:relation <https://en.wikipedia.org/wiki/Source_text> .
-
-<http://pivotlabs.vc/challenges/t#topic> a rdfs:Class ;
-    rdfs:label "topic" ;
-    ns1:description "A subject or classification of an innovation opportunity derived using topic classification" ;
-    dc:relation <https://en.wikipedia.org/wiki/Topic_and_comment> .
-
 <http://pivotlabs.vc/challenges/c/00afeaa7d4d2fc27b034d04c0c2aa8ad98a8abe6> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Healthy Ageing Catalyst Awards 2021" ;
     ns1:closes "2021-02-25" ;
@@ -23465,16 +23450,6 @@ dc:relation a rdfs:Property ;
     rdfs:label "–" ;
     ns1:description "The topic '–' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/dasa> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "DASA" ;
-    ns1:description "DASA finds and funds exploitable innovation to support UK defence and security quickly and effectively, and support UK prosperity." ;
-    dc:relation <https://www.gov.uk/government/organisations/defence-and-security-accelerator> .
-
-<http://pivotlabs.vc/challenges/s/research-england> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "Research England" ;
-    ns1:description "We are responsible for funding and engaging with English higher education providers, to create and sustain the conditions for a healthy and dynamic research and knowledge exchange system in the higher education sector." ;
-    dc:relation <https://www.ukri.org/councils/research-england/> .
-
 <http://pivotlabs.vc/challenges/t/3> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "3" ;
     ns1:description "The topic '3' derived from natural language analysis" .
@@ -23790,11 +23765,6 @@ dc:relation a rdfs:Property ;
 <http://pivotlabs.vc/challenges/t/£500000> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "£500000" ;
     ns1:description "The topic '£500000' derived from natural language analysis" .
-
-<http://pivotlabs.vc/challenges/s/ktnie> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "KTN-iX" ;
-    ns1:description "KTN-iX provides an opportunity to become directly linked to, or collaborate with, key industry stakeholders who are actively seeking the most innovative solutions" ;
-    dc:relation <https://www.ktninnovationexchange.co.uk/> .
 
 <http://pivotlabs.vc/challenges/t/2> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "2" ;
@@ -24320,11 +24290,6 @@ dc:relation a rdfs:Property ;
     rdfs:label "£25" ;
     ns1:description "The topic '£25' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/ncsc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "NCSC" ;
-    ns1:description "The National Cyber Security Centre (NCSC) is an organisation of the United Kingdom Government that provides advice and support for the public and private sector in how to avoid computer security threats" ;
-    dc:relation <https://www.ncsc.gov.uk/> .
-
 <http://pivotlabs.vc/challenges/t/accelerator> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "accelerator" ;
     ns1:description "The topic 'accelerator' derived from natural language analysis" .
@@ -24645,11 +24610,6 @@ dc:relation a rdfs:Property ;
     rdfs:label "innovative" ;
     ns1:description "The topic 'innovative' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/ukri> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "UKRI" ;
-    ns1:description "UKRI convenes, catalyses and invests in close collaboration with others to build a thriving, inclusive research and innovation system." ;
-    dc:relation <https://www.ukri.org/> .
-
 <http://pivotlabs.vc/challenges/t/energy> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "energy" ;
     ns1:description "The topic 'energy' derived from natural language analysis" .
@@ -24706,11 +24666,6 @@ dc:relation a rdfs:Property ;
     rdfs:label "researcher" ;
     ns1:description "The topic 'researcher' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/nerc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "NERC" ;
-    ns1:description "NERC is the driving force of investment in environmental science." ;
-    dc:relation <https://www.ukri.org/councils/nerc/> .
-
 <http://pivotlabs.vc/challenges/t/registered> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "registered" ;
     ns1:description "The topic 'registered' derived from natural language analysis" .
@@ -24727,42 +24682,17 @@ dc:relation a rdfs:Property ;
     rdfs:label "business" ;
     ns1:description "The topic 'business' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/stfc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "STFC" ;
-    ns1:description "STFC’s mission is to deliver world-leading national and international research and innovation capabilities and, through those, discover the secrets of the Universe. Our major research and innovation campuses at Harwell, Daresbury and research facilities across the UK support fundamental research in astronomy, physics and space science." ;
-    dc:relation <https://www.ukri.org/councils/stfc/> .
-
 <http://pivotlabs.vc/challenges/t/must> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "must" ;
     ns1:description "The topic 'must' derived from natural language analysis" .
-
-<http://pivotlabs.vc/challenges/s/ahrc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "AHRC" ;
-    ns1:description "Arts and Humanities Research Council funds outstanding original research across the whole range of the arts and humanities." ;
-    dc:relation <https://www.ukri.org/councils/ahrc/> .
 
 <http://pivotlabs.vc/challenges/t/share> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "share" ;
     ns1:description "The topic 'share' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/s/bbsrc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "BBSRC" ;
-    ns1:description "Biotechnology and Biological Sciences Research Council invests to push back the frontiers of biology and deliver a healthy, prosperous and sustainable future." ;
-    dc:relation <https://www.ukri.org/councils/bbsrc/> .
-
 <http://pivotlabs.vc/challenges/t/organisation> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "organisation" ;
     ns1:description "The topic 'organisation' derived from natural language analysis" .
-
-<http://pivotlabs.vc/challenges/s/epsrc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "EPSRC" ;
-    ns1:description "EPSRC creates knowledge in engineering and physical sciences for UK capability to benefit society and the economy." ;
-    dc:relation <https://www.ukri.org/councils/epsrc/> .
-
-<http://pivotlabs.vc/challenges/s/esrc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "ESRC" ;
-    ns1:description "ESRC is the UK’s largest funder of economic, social, behavioural and human data science." ;
-    dc:relation <https://www.ukri.org/councils/esrc/> .
 
 <http://pivotlabs.vc/challenges/t/apply> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "apply" ;
@@ -24771,11 +24701,6 @@ dc:relation a rdfs:Property ;
 <http://pivotlabs.vc/challenges/t/can> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "can" ;
     ns1:description "The topic 'can' derived from natural language analysis" .
-
-<http://pivotlabs.vc/challenges/s/mrc> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "MRC" ;
-    ns1:description "MRC funds research at the forefront of science to prevent illness, develop therapies and improve human health." ;
-    dc:relation <https://www.ukri.org/councils/mrc/> .
 
 <http://pivotlabs.vc/challenges/t/uk> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "uk" ;
@@ -24788,15 +24713,4 @@ dc:relation a rdfs:Property ;
 <http://pivotlabs.vc/challenges/t/research> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "research" ;
     ns1:description "The topic 'research' derived from natural language analysis" .
-
-<http://pivotlabs.vc/challenges/s/innovate-uk> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "Innovate UK" ;
-    ns1:description "Innovate UK is the UK’s national innovation agency supporting business-led innovation in all sectors, technologies and UK regions." ;
-    dc:relation <https://www.ukri.org/councils/innovate-uk/> .
-
-<http://pivotlabs.vc/challenges/s/ktn> a <http://pivotlabs.vc/challenges/t#source> ;
-    rdfs:label "KTN" ;
-    ns1:description "Innovate UK KTN exists to connect innovators with new partners and new opportunities beyond their existing thinking" ;
-    dc:relation <https://ktn-uk.org/> .
-
 
