@@ -32,7 +32,7 @@ jobs:
       - name: Install packages
         run: sudo apt update &&
             sudo apt install -y redland-utils librdf-storage-sqlite &&
-	    sudo apt install -y python-rdflib
+            sudo apt install -y python-rdflib
 
       - name: Assemble RDF data
         run: make curate
