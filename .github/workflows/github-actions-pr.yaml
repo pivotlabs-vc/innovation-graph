@@ -19,14 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Get version
-        id: version
-        run: echo VERSION=sha-$(git rev-parse --short HEAD) >> $GITHUB_OUTPUT
-
       - name: Install packages
         run: sudo apt update &&
             sudo apt install -y redland-utils librdf-storage-sqlite &&
-            sudo apt install -y python-rdflib
+            pip3 install python3-rdflib
 
       - name: Test assembly of RDF data
         run: make curate
