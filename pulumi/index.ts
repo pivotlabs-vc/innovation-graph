@@ -117,21 +117,21 @@ const artifactRepo = new gcp.artifactregistry.Repository(
 const webImageName = repo + "/web:" + webVersion;
 const sparqlImageName = repo + "/sparql:" + sparqlVersion;
 
-const taggedWebImage = local.Command(
+const taggedWebImage = new local.Command(
     "web-docker-tag-command",
     {
 	create: "docker tag web " + webImageName,
     }
 );
 
-const taggedSparqlImage = local.Command(
+const taggedSparqlImage = new local.Command(
     "sparql-docker-tag-command",
     {
 	create: "docker tag sparql " + sparqlImageName,
     }
 );
 
-const webImage = local.Command(
+const webImage = new local.Command(
     "web-docker-push-command",
     {
 	create: "docker push " + webImageName,
@@ -141,7 +141,7 @@ const webImage = local.Command(
     }
 );
 
-const sparqlImage = local.Command(
+const sparqlImage = new local.Command(
     "sparql-docker-push-command",
     {
 	create: "docker push " + sparqlImageName,
