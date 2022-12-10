@@ -170,7 +170,7 @@ const sparqlService = new gcp.cloudrun.Service(
 		containerConcurrency: 1000,
 		containers: [
 		    {
-			image: sparqlImage,
+			image: sparqlImageName,
 			ports: [
                             {
 				"name": "http1", // Must be http1 or h2c.
@@ -219,7 +219,7 @@ const webService = new gcp.cloudrun.Service(
 		containerConcurrency: 1000,
 		containers: [
 		    {
-			image: webImage,
+			image: webImageName,
 			ports: [
                             {
 				"name": "http1", // Must be http1 or h2c.
