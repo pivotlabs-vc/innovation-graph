@@ -39,7 +39,7 @@ jobs:
         id: meta-web
         uses: docker/metadata-action@v4
         with:
-          images: europe-west1-docker.pkg.dev/pivot-labs/staging/web
+          images: web
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -51,7 +51,7 @@ jobs:
         id: meta-sparql
         uses: docker/metadata-action@v4
         with:
-          images: europe-west1-docker.pkg.dev/pivot-labs/staging/sparql
+          images: sparql
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -80,7 +80,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta-web.outputs.tags }}
           labels: ${{ steps.meta-web.outputs.labels }}
           file: Containerfile.web
@@ -89,7 +89,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta-sparql.outputs.tags }}
           labels: ${{ steps.meta-sparql.outputs.labels }}
           file: Containerfile.sparql
@@ -109,9 +109,11 @@ jobs:
           WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
           SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
           GCP_PROJECT: pivot-labs
-          GCP_REGION: eu-west1
+          GCP_REGION: europe-west1
           CLOUD_RUN_REGION: europe-west1
-          ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/staging/
+          ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/staging
+          ARTIFACT_NAME: staging
+          ARTIFACT_REPO_REGION: europe-west1
           WEB_HOSTNAME: graph.staging.pivotlabs.vc
           DOMAIN: staging.pivotlabs.vc.
           DNS_DOMAIN_DESCRIPTION: staging

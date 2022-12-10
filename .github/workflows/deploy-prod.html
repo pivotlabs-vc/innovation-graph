@@ -41,7 +41,7 @@ jobs:
         id: meta-web
         uses: docker/metadata-action@v4
         with:
-          images: europe-west1-docker.pkg.dev/pivot-labs/pivot-labs/web
+          images: web
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -53,7 +53,7 @@ jobs:
         id: meta-sparql
         uses: docker/metadata-action@v4
         with:
-          images: europe-west1-docker.pkg.dev/pivot-labs/pivot-labs/sparql
+          images: sparql
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -82,7 +82,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta-web.outputs.tags }}
           labels: ${{ steps.meta-web.outputs.labels }}
           file: Containerfile.web
@@ -91,7 +91,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta-sparql.outputs.tags }}
           labels: ${{ steps.meta-sparql.outputs.labels }}
           file: Containerfile.sparql
@@ -111,9 +111,11 @@ jobs:
           WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
           SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
           GCP_PROJECT: pivot-labs
-          GCP_REGION: eu-west1
+          GCP_REGION: europe-west1
           CLOUD_RUN_REGION: europe-west1
           ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
+          ARTIFACT_NAME: pivot-labs
+          ARTIFACT_REPO_REGION: europe-west1
           WEB_HOSTNAME: graph.innovate.pivotlabs.vc
           DOMAIN: innovate.pivotlabs.vc.
           DNS_DOMAIN_DESCRIPTION: innovate
