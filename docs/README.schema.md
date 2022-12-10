@@ -3,8 +3,8 @@
 
 ## Innovation challenge
 
-Type: `http://pivotlabs.vc/challenges/t#challenge`
-Abbreviation: `type:challenge`
+- Type: `http://pivotlabs.vc/challenges/t#challenge`
+- Abbreviation: `type:challenge`
 
 Properties:
 - `http://pivotlabs.vc/challenges/p#opens`: Date innovation challenge
@@ -19,11 +19,11 @@ Properties:
 
 ## Innovation challenge source
 
-Type: `http://pivotlabs.vc/challenges/t#source`
-Abbreviation: `type:source`
+- Type: `http://pivotlabs.vc/challenges/t#source`
+- Abbreviation: `type:source`
 
 ## Innovatin challenge topic
 
-Type: `http://pivotlabs.vc/challenges/t#topic`
-Abbreviation: `type:topic`
+- Type: `http://pivotlabs.vc/challenges/t#topic`
+- Abbreviation: `type:topic`
 
