@@ -1,7 +1,7 @@
 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
-import local from "@pulumi/command";
+import { local } from "@pulumi/command";
 
 const webVersion = process.env.WEB_IMAGE_VERSION;
 const sparqlVersion = process.env.SPARQL_IMAGE_VERSION;
