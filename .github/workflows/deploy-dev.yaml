@@ -101,7 +101,7 @@ jobs:
         uses: pulumi/actions@v3
         with:
           command: up
-          stack-name: prod
+          stack-name: dev
           work-dir: pulumi
           cloud-url: gs://pivot-labs-deploy/prod
         env:
