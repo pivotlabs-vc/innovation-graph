@@ -145,7 +145,7 @@ const sparqlImage = new local.Command(
     "sparql-docker-push-command",
     {
 	create: "docker push " + sparqlImageName,
-    }
+    },
     {
 	dependsOn: [taggedSparqlImage, artifactRepo],
     }
