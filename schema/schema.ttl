@@ -46,3 +46,7 @@ dc:relation a rdfs:Property ;
     rdfs:label "relation" ;
     property:description "Link to original source material" .
 
+property:founded a rdfs:Property ;
+    rdfs:label "founded" ;
+    property:description "Organisation founding year" .
+

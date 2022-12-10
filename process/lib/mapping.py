@@ -12,6 +12,7 @@ namespaces = {
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "type": "http://pivotlabs.vc/challenges/t#",
    "source": "http://pivotlabs.vc/challenges/s/",
+   "xsd": "http://www.w3.org/2001/XMLSchema#",
 }
 
 class URIMapping:
@@ -29,12 +30,16 @@ class URIMapping:
 
    # Map prefix, if it exists and return either URIRef or Literal
    @staticmethod
-   def map(str):
+   def map(str, tp=None):
       str = URIMapping.map_ns(str)
       if str.startswith("http:"):
          return URIRef(str)
       if str.startswith("https:"):
          return URIRef(str)
+
+      if tp:
+         tp = URIMapping.map_ns(tp)
+         return Literal(str, datatype=tp)
       return Literal(str)
 
   
