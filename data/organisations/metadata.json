@@ -13,7 +13,11 @@
 	"property:description",
 	"dc:relation",
 	"rdfs:label",
-	"rdf:type"
+	"rdf:type",
+	"property:founded"
     ],
+    "datatypes": {
+	"property:founded": "xsd:gYear"
+    },
     "id-prefix": "source:"
 }
