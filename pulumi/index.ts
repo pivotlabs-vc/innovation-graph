@@ -90,7 +90,7 @@ const enableCloudDns = new gcp.projects.Service(
 );
 
 const enableArtifactRegistry = new gcp.projects.Service(
-    "enable-cloud-dns",
+    "enable-artifact-registry",
     {
 	service: "artifactregistry.googleapis.com",
     },
