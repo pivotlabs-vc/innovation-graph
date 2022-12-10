@@ -129,7 +129,7 @@ introduces.  For entities that are predicates or types, they can be
 associated with RDF Schema entities to specify that they are
 classes or properties.
 
-| Prefi x   | URL part                                   |
+| Prefix    | URL part                                   |
 | --------- | ------------------------------------------ |
 | `rdfs`    | `http://www.w3.org/2000/01/rdf-schema#`    |
 
@@ -141,6 +141,11 @@ respectively.  So now we have:
 | `prop:lives-with` | `rdf:type`        | `rdfs:Property` |
 | `prop:has-legs`   | `rdf:type`        | `rdfs:Property` |
 | `type:cat`        | `rdf:type`        | `rdfs:Class`    |
+
+If it was of interest, the relationships around the `type:cat` object could be
+elaborated.  A `type:cat` could be a type of `type:mammal`, a
+`type:mammal` a type of `type:animal`, and `type:animal` of type `rdfs:Class`.
+For this dataset, I'm not particularly interested in animal classification.
 
 ## Labels
 
@@ -159,9 +164,81 @@ That includes entities, predicates and types we have defined.
 
 There are two other useful predicates which will be introduced now:
 - `http://dbpedia.org/ontology/thumbnail` links an entity to a visual
-  small thumbnail image.
+  small thumbnail image. The object should be the URL of an image.
 - `http://purl.org/dc/elements/1.1/relation` links an entity to a web
-  page or further information.
+  page or further information.  The object should be a URL.
+
+## Putting it all together
+
+| Subject              | Predicate         | Object          |
+| -------------------- | ----------------- | --------------- |
+| `animal:fred`        | `rdfs:label`      | Fred            |
+| `animal:fred`        | `rdf:type`        | `type:cat`      |
+| `animal:fred`        | `prop:lives-with` | `animal:hope`   |
+| `animal:fred`        | `prop:has-legs`   | `4`             |
+| `animal:hope`        | `rdfs:label`      | Hope            |
+| `animal:hope`        | `rdf:type`        | `type:cat`      |
+| `animal:hope`        | `prop:lives-with` | `animal:fred`   |
+| `animal:hope`        | `prop:has-legs`   | `4`             |
+| `prop:lives-with`    | `rdf:type`        | `rdfs:Property` |
+| `prop:lives-with`    | `rdfs:label`      | lives with      |
+| `prop:has-legs`      | `rdf:type`        | `rdfs:Property` |
+| `prop:has-legs`      | `rdfs:label`      | has legs        |
+| `type:cat`           | `rdf:type`        | `rdfs:Class`    |
+| `type:cat`           | `rdfs:label`      | cat             |
+
+## N-Triples
+
+The simplest file format for RDF triples is N-Triples.  Each line of the
+file describes a triple.  The S, P, O elements are written out, space-separated.
+Each element is surrounded either by angle-brackets for a URI, or double-quotes
+for literals:
+
+```
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/2000/01/rdf-schema#label> "Fred" .
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/typecat> .
+<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/lives-with> <http://pivotlabs.vc.animal/hope> .
+<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/has-legs> "4" .
+```
+
+## Turtle
+
+N-Triples are very verbose, and not so easy to edit.  There's a lot
+of repitition.  Another format is Turtle format.  Turtle allows prefixes to
+be defined and used.  The format also allows grouping so that the
+entity strings don't need to be repeated.
+
+```
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix animal: <http://pivotlabs.vc.animal/> .
+@prefix prop: <http://pivotlabs.vc/property/> .
+@prefix type: <http://pivotlabs.vc/type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+animal:fred
+    prop:has-legs 4 ;
+    prop:lives-with animal:hope ;
+    a type:cat ;
+    rdfs:label "Fred" .
+
+animal:hope
+    prop:has-legs 4 ;
+    prop:lives-with animal:fred ;
+    a type:cat ;
+    rdfs:label "Hope" .
+
+prop:has-legs
+    a rdfs:Property ;
+    rdfs:label "has legs" .
+
+prop:lives-with
+    a rdfs:Property ;
+    rdfs:label "lives with" .
+
+type:cat
+    a rdfs:Class ;
+    rdfs:label "cat" .
+```
 
 ## Going further
 
