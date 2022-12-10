@@ -192,13 +192,23 @@ There are two other useful predicates which will be introduced now:
 The simplest file format for RDF triples is N-Triples.  Each line of the
 file describes a triple.  The S, P, O elements are written out, space-separated.
 Each element is surrounded either by angle-brackets for a URI, or double-quotes
-for literals:
+for literals.  Here's a snippet:
 
 ```
-<http://pivotlabs.vc.animal/fred> <http://www.w3.org/2000/01/rdf-schema#label> "Fred" .
-<http://pivotlabs.vc.animal/fred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/typecat> .
+<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/has-legs> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/lives-with> <http://pivotlabs.vc.animal/hope> .
-<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/has-legs> "4" .
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/type/cat> .
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/2000/01/rdf-schema#label> "Fred" .
+<http://pivotlabs.vc.animal/hope> <http://pivotlabs.vc/property/has-legs> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://pivotlabs.vc.animal/hope> <http://pivotlabs.vc/property/lives-with> <http://pivotlabs.vc.animal/fred> .
+<http://pivotlabs.vc.animal/hope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/type/cat> .
+<http://pivotlabs.vc.animal/hope> <http://www.w3.org/2000/01/rdf-schema#label> "Hope" .
+<http://pivotlabs.vc/property/has-legs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://pivotlabs.vc/property/has-legs> <http://www.w3.org/2000/01/rdf-schema#label> "has legs" .
+<http://pivotlabs.vc/property/lives-with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://pivotlabs.vc/property/lives-with> <http://www.w3.org/2000/01/rdf-schema#label> "lives with" .
+<http://pivotlabs.vc/type/cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://pivotlabs.vc/type/cat> <http://www.w3.org/2000/01/rdf-schema#label> "cat" .
 ```
 
 ## Turtle
@@ -210,7 +220,7 @@ entity strings don't need to be repeated.
 
 ```
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix animal: <http://pivotlabs.vc.animal/> .
+@prefix animal: <http://pivotlabs.vc/animal/> .
 @prefix prop: <http://pivotlabs.vc/property/> .
 @prefix type: <http://pivotlabs.vc/type/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
