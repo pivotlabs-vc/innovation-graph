@@ -113,7 +113,8 @@ const artifactRepo = new gcp.artifactregistry.Repository(
 	repositoryId: process.env.ARTIFACT_NAME,
     },
     {
-	provider: provider
+	provider: provider,
+	dependsOn: enableArtifactRegistry,
     }
 );
 
