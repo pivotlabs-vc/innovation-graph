@@ -91,9 +91,9 @@ an existing predicate defined by the W3C in the RDF standard, which is
 
 | Subject                         | Predicate                                       | Object                          |
 | ------------------------------- | ----------------------------------------------- | ------------------------------- |
-| http://pivotlabs.vc/animal/fred | http://pivotlabs.vc/property/lives-with         | http://pivotlabs.vc/animal/hope |
-| http://pivotlabs.vc/animal/fred | http://www.w3.org/1999/02/22-rdf-syntax-ns#type | http://pivotlabs.vc/type/cat    |
-| http://pivotlabs.vc/animal/fred | http://pivotlabs.vc/property/has-legs           | 4                               |
+| `http://pivotlabs.vc/animal/fred` | `http://pivotlabs.vc/property/lives-with`         | `http://pivotlabs.vc/animal/hope` |
+| `http://pivotlabs.vc/animal/fred` | `http://www.w3.org/1999/02/22-rdf-syntax-ns#type` | `http://pivotlabs.vc/type/cat`    |
+| `http://pivotlabs.vc/animal/fred` | `http://pivotlabs.vc/property/has-legs`           | `4                               |
 
 ## The prefix
 
