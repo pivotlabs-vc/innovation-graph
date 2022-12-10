@@ -74,7 +74,9 @@ The metadata file should also contain:
 
 ## Schema
 
-See [Crash course in knowledge graph concepts](docs/README.schema.md).
+See [Crash course in knowledge graph concepts](docs/README.knowledge-graphs.md).
+
+See [Schema](docs/README.schema.md).
 
 The schema lives in the `schema/schema.ttl` file, and is in Turtle format.
 

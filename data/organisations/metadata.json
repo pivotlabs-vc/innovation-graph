@@ -12,7 +12,8 @@
 	"%%identity%%",
 	"property:description",
 	"dc:relation",
-	"rdfs:label"
+	"rdfs:label",
+	"rdf:type"
     ],
     "id-prefix": "source:"
 }
