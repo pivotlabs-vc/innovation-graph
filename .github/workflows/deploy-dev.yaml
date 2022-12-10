@@ -1,0 +1,122 @@
+
+name: Publish docker images
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: read
+  id-token: 'write'
+
+jobs:
+
+  container-push:
+
+    name: Deploy to dev
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get version
+        id: version
+        run: echo VERSION=sha-$(git rev-parse --short HEAD) >> $GITHUB_OUTPUT
+
+      - name: Install packages
+        run: sudo apt update &&
+            sudo apt install -y redland-utils librdf-storage-sqlite &&
+            sudo apt install -y python3-rdflib
+
+      - name: Assemble RDF data
+        run: make curate
+
+      - name: Extract metadata for web container
+        id: meta-web
+        uses: docker/metadata-action@v4
+        with:
+          images: europe-west1-docker.pkg.dev/pivot-labs/dev/web
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+
+      - name: Extract metadata for sparql container
+        id: meta-sparql
+        uses: docker/metadata-action@v4
+        with:
+          images: europe-west1-docker.pkg.dev/pivot-labs/dev/sparql
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+
+      - id: auth
+        name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v0
+        with:
+          token_format: access_token
+          workload_identity_provider: projects/623496167036/locations/global/workloadIdentityPools/deploy/providers/github-deploy
+          service_account: deploy@pivot-labs.iam.gserviceaccount.com
+          access_token_lifetime: 600s
+          create_credentials_file: true
+
+      - name: Login to Artifact Registry
+        uses: docker/login-action@v1
+        with:
+          registry: europe-west1-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - name: Build and push web
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta-web.outputs.tags }}
+          labels: ${{ steps.meta-web.outputs.labels }}
+          file: Containerfile.web
+
+      - name: Build and push sparql
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta-sparql.outputs.tags }}
+          labels: ${{ steps.meta-sparql.outputs.labels }}
+          file: Containerfile.sparql
+
+      - name: Install Pulumi
+        run: cd pulumi && npm install
+
+      - name: Applying infrastructure 🚀🙏
+        uses: pulumi/actions@v3
+        with:
+          command: up
+          stack-name: prod
+          work-dir: pulumi
+          cloud-url: gs://pivot-labs-deploy/prod
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ""
+          WEB_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
+          SPARQL_IMAGE_VERSION: ${{ steps.version.outputs.VERSION }}
+          GCP_PROJECT: pivot-labs
+          GCP_REGION: eu-west1
+          CLOUD_RUN_REGION: europe-west1
+          ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/dev/
+          WEB_HOSTNAME: graph.dev.pivotlabs.vc
+          DOMAIN: dev.pivotlabs.vc.
+          DNS_DOMAIN_DESCRIPTION: dev
+          SPARQL_MIN_SCALE: "0"
+          SPARQL_MAX_SCALE: "1"
+          WEB_MIN_SCALE: "0"
+          WEB_MAX_SCALE: "1"
+          ENVIRONMENT: "dev"
