@@ -1,5 +1,5 @@
 
-name: Publish docker images
+name: Deploy to staging
 
 on:
   workflow_dispatch:
