@@ -113,7 +113,7 @@ jobs:
           CLOUD_RUN_REGION: europe-west1
           ARTIFACT_REPO: europe-west1-docker.pkg.dev/pivot-labs/dev
           ARTIFACT_NAME: dev
-	  ARTIFACT_REPO_REGION: europe-west1
+          ARTIFACT_REPO_REGION: europe-west1
           WEB_HOSTNAME: graph.dev.pivotlabs.vc
           DOMAIN: dev.pivotlabs.vc.
           DNS_DOMAIN_DESCRIPTION: dev
