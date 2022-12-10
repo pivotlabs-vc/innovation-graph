@@ -74,9 +74,9 @@ The metadata file should also contain:
 
 ## Schema
 
-The schema lives in the `schema/schema.ttl` file, and is in Turtle format.
+See [Crash course in knowledge graph concepts](docs/README.schema.md).
 
-More documentation to come.
+The schema lives in the `schema/schema.ttl` file, and is in Turtle format.
 
 Data is validated against the schema in Github action pipelines, and a failure
 is flagged in the pull request or deploy pipelines as a failure.
@@ -99,6 +99,18 @@ directory.
 The curation process can accept new data processing types if needed.
 
 If you want to know more or need more documentation, raise an issue.
+If you want collaboration access, raise an issue.
+
+There are three deployments.  The deployment from Github is automated,
+deployed environments track the branches described below.  People who wish
+to collaborate will be granted access to deploy to merge to dev to test their
+own changes.
+
+| Environment  | Branch    | Application URL                     |
+| ------------ | --------- | ----------------------------------- |
+| Development  | dev       | https://graph.dev.pivotlabs.vc      |
+| Staging      | staging   | https://graph.staging.pivotlabs.vc  |
+| Production   | master    | https://graph.innovate.pivotlabs.vc |
 
 ## Licence
 
