@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+
+import sys
+import logging
+
+from lib.exceptions import *
+from lib.curator import *
+
+format = '%(asctime)s %(levelname)s: %(message)s'
+logging.basicConfig(format=format, level=logging.DEBUG)
+
+if len(sys.argv) != 3:
+   sys.stderr.write("Usage:\n")
+   sys.stderr.write("    curate <data-dir> <schemafile>\n")
+   sys.exit(1)
+
+try:
+   c = Curator()
+
+   logging.info("Loading schema...")
+   c.load_schema(sys.argv[2])
+
+   logging.info("Process inputs...")
+   g = c.walk(sys.argv[1])
+   logging.info("Processing complete")
+
+except MetadataError as e:
+   logging.error(f"Metadata error in {e.dir}: {e}")
+   sys.exit(1)
+except FileProcessingError as e:
+   logging.error(f"Error in {e.file}: {e}")
+   sys.exit(1)
+except LineProcessingError as e:
+   logging.error(f"Error in {e.file} line {e.line}: {e}")
+   sys.exit(1)
+except PredicateNotKnown as e:
+   logging.error(f"Predicate {e.predicate} not known, parsing {e.file}")
+   sys.exit(1)
+
+logging.info("Output in Turtle format...")
+print(g.serialize(format="turtle"))
+logging.info("Output complete")
+
