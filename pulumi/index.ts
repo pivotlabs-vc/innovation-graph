@@ -15,6 +15,9 @@ if (!sparqlVersion)
 if (!process.env.ARTIFACT_REPO)
     throw Error("ARTIFACT_REPO not defined");
 
+if (!process.env.ARTIFACT_REPO_REGION)
+    throw Error("ARTIFACT_REPO_REGION not defined");
+
 if (!process.env.ARTIFACT_NAME)
     throw Error("ARTIFACT_NAME not defined");
 
@@ -106,7 +109,7 @@ const artifactRepo = new gcp.artifactregistry.Repository(
     {
 	description: "repository for " + process.env.ENVIRONMENT,
 	format: "DOCKER",
-	location: process.env.GCP_REGION,
+	location: process.env.ARTIFACT_REPO_REGION,
 	repositoryId: process.env.ARTIFACT_NAME,
     },
     {
