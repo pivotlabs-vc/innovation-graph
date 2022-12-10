@@ -14,13 +14,17 @@ https://graph.innovate.pivotlabs.vc/graph?node=http:%2F%2Fpivotlabs.vc%2Fchallen
 The dataset is also available through an open graph API supporting the
 SPARQL query language allowing access to the underlying dataset.
 
+The purpose of publishing this project is to invite the whole community to
+engage and help grow the dataset.  This Github repository is set up with
+Github actions to automatically deploy changes.  See below.
+
 ## Data curation
 
 The source data is stored directly in this Github repository, and assembled
 into a graph which is then bundled with the software repositories and
 released to the cloud.
 
-## Data structures
+## Datasets
 
 Data sets are stored in subdirectories of the `data` directory.
 
