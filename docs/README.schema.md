@@ -14,10 +14,15 @@ Starting with a collection of facts about my cats:
 
 In English grammar, facts can commonly be seen structured as subject, verb,
 object.  But verbs don't always work the way that we want them to
-for representing knowledge.  Instead of recording that
-`Fred (subject) has (verb) 4 legs (object)` I want to say that
-`Fred (subject) has legs (verb) 4`.  Hence we'll talk about predicates
-rather than verbs.
+for representing knowledge.  Instead of recording that:
+
+> Fred (subject) has (verb) 4 legs (object)
+
+I want to say that
+
+> Fred (subject) has legs (verb) 4
+
+Hence we'll talk about predicates rather than verbs.
 
 In an RDF knowledge graph, facts are triples: subject, predicate,
 object.
@@ -94,9 +99,20 @@ Before going any further, the syntax is starting to get a
 little verbose and repetitive.  So, prefixes are used to replace long
 repeated part of the URL. e.g.
 
-| Prefix               | URL part                                 |
-| -------------------- | ---------------------------------------- |
-| animal               | http://pivotlabs.vc.animal/              |
+| Prefix               | URL part                                    |
+| -------------------- | ------------------------------------------- |
+| animal               | http://pivotlabs.vc.animal/                 |
+| rdf                  | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| prop                 | http://pivotlabs.vc/property/               |
+| type                 | http://pivotlabs.vc/type                    |
 
+Using the prefixes, our fact table looks like this:
 
+| Subject     | Predicate       | Object      |
+| ----------- | --------------- | ----------- |
+| animal:fred | prop:lives-with | animal:hope |
+| animal:fred | rdf:type        | type:cat    |
+| animal:fred | prop:has-legs   | 4           |
+
+This is a much more compact and readable representation of the data.
 
