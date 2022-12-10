@@ -1,6 +1,7 @@
 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
+import { local } from "@pulumi/command";
 
 const webVersion = process.env.WEB_IMAGE_VERSION;
 const sparqlVersion = process.env.SPARQL_IMAGE_VERSION;
@@ -13,6 +14,12 @@ if (!sparqlVersion)
 
 if (!process.env.ARTIFACT_REPO)
     throw Error("ARTIFACT_REPO not defined");
+
+if (!process.env.ARTIFACT_REPO_REGION)
+    throw Error("ARTIFACT_REPO_REGION not defined");
+
+if (!process.env.ARTIFACT_NAME)
+    throw Error("ARTIFACT_NAME not defined");
 
 if (!process.env.WEB_HOSTNAME)
     throw Error("WEB_HOSTNAME not defined");
@@ -85,10 +92,70 @@ const enableCloudDns = new gcp.projects.Service(
     }
 );
 
+const enableArtifactRegistry = new gcp.projects.Service(
+    "enable-artifact-registry",
+    {
+	service: "artifactregistry.googleapis.com",
+    },
+    {
+	provider: provider
+    }
+);
+
 const repo = process.env.ARTIFACT_REPO;
 
-const webImage = repo + "/web:" + webVersion;
-const sparqlImage = repo + "/sparql:" + sparqlVersion;
+const artifactRepo = new gcp.artifactregistry.Repository(
+    "artifact-repo",
+    {
+	description: "repository for " + process.env.ENVIRONMENT,
+	format: "DOCKER",
+	location: process.env.ARTIFACT_REPO_REGION,
+	repositoryId: process.env.ARTIFACT_NAME,
+    },
+    {
+	provider: provider
+    }
+);
+
+const localWebImageName = "web:" + webVersion;
+const localSparqlImageName = "sparql:" + sparqlVersion;
+
+const webImageName = repo + "/web:" + webVersion;
+const sparqlImageName = repo + "/sparql:" + sparqlVersion;
+
+const taggedWebImage = new local.Command(
+    "web-docker-tag-command",
+    {
+	create: "docker tag " + localWebImageName + " " + webImageName,
+    }
+);
+
+const taggedSparqlImage = new local.Command(
+    "sparql-docker-tag-command",
+    {
+	create: "docker tag " + localSparqlImageName + " " + sparqlImageName,
+    }
+);
+
+const webImage = new local.Command(
+    "web-docker-push-command",
+    {
+	create: "docker push " + webImageName,
+    },
+    {
+	dependsOn: [taggedWebImage, artifactRepo],
+    }
+);
+
+const sparqlImage = new local.Command(
+    "sparql-docker-push-command",
+    {
+	create: "docker push " + sparqlImageName,
+    },
+    {
+	dependsOn: [taggedSparqlImage, artifactRepo],
+    }
+);
 
 const sparqlService = new gcp.cloudrun.Service(
     "sparql-service",
@@ -109,7 +176,7 @@ const sparqlService = new gcp.cloudrun.Service(
 		containerConcurrency: 1000,
 		containers: [
 		    {
-			image: sparqlImage,
+			image: sparqlImageName,
 			ports: [
                             {
 				"name": "http1", // Must be http1 or h2c.
@@ -129,7 +196,7 @@ const sparqlService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun],
+	dependsOn: [enableCloudRun, sparqlImage],
     }
 );
 
@@ -158,7 +225,7 @@ const webService = new gcp.cloudrun.Service(
 		containerConcurrency: 1000,
 		containers: [
 		    {
-			image: webImage,
+			image: webImageName,
 			ports: [
                             {
 				"name": "http1", // Must be http1 or h2c.
@@ -188,7 +255,7 @@ const webService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun],
+	dependsOn: [enableCloudRun, webImage],
     }
 );
 
