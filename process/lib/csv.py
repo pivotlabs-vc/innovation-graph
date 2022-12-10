@@ -37,6 +37,11 @@ class Csv:
             subdir, "%%identity%% must be first element of fields list"
          )
 
+      if "datatypes" in metadata:
+         datatypes = metadata["datatypes"]
+      else:
+         datatypes = {}
+
       with open(path) as f:
 
          reader = csv.reader(f)
@@ -55,8 +60,8 @@ class Csv:
                s = URIMapping.map(prefix + row[0])
                p = URIMapping.map(fields[i])
 
-               if "datatypes" in metadata and fields[i] in metadata["datatypes"]:
-                  o = URIMapping.map(row[i], metadata["datatypes"][fields[i]])
+               if fields[i] in datatypes:
+                  o = URIMapping.map(row[i], datatypes[fields[i]])
                else:
                   o = URIMapping.map(row[i])
                   
