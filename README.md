@@ -74,7 +74,12 @@ The metadata file should also contain:
 
 ## Schema
 
-TBD
+The schema lives in the `schema/schema.ttl` file, and is in Turtle format.
+
+More documentation to come.
+
+Data is validated against the schema in Github action pipelines, and a failure
+is flagged in the pull request or deploy pipelines as a failure.
 
 ## Community Contributions
 
