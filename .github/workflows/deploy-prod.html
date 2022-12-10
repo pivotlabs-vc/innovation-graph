@@ -1,14 +1,6 @@
 
 name: Deploy to production
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-    tags:
-      - 'v*'
-
 permissions:
   contents: read
   id-token: 'write'
