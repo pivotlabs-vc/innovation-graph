@@ -17,6 +17,8 @@ SPARQL query language allowing access to the underlying dataset.
 The purpose of publishing this project is to invite the whole community to
 engage and help grow the dataset.  This Github repository is set up with
 Github actions to automatically deploy changes.  See below.
+Everyone is encouraged to contribute, add datasets, and grow and extend
+the schema to meet the community's needs.
 
 ## Data curation
 
