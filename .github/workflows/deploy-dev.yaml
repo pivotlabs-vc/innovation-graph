@@ -13,7 +13,7 @@ permissions:
 
 jobs:
 
-  container-push:
+  deploy:
 
     name: Deploy to dev
     runs-on: ubuntu-latest
