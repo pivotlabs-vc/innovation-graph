@@ -1,4 +1,6 @@
 
+# Loads schema and maintains sets of properties and classes
+
 from rdflib import Graph
 
 from . defs import *

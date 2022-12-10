@@ -1,4 +1,6 @@
 
+# Some common predicates
+
 from rdflib import URIRef
 
 LABEL=URIRef("http://www.w3.org/2000/01/rdf-schema#label")

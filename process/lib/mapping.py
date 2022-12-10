@@ -1,6 +1,10 @@
 
+# Hearistic mapping of a string to either a URIRef or Literal depending on
+# whether it looks like a URL or not.
+
 from rdflib import Literal, URIRef
 
+# Set of namespace prefixes supported
 namespaces = {
    "dc": "http://purl.org/dc/elements/1.1/",
    "property": "http://pivotlabs.vc/challenges/p#",
@@ -12,6 +16,7 @@ namespaces = {
 
 class URIMapping:
 
+   # Prefix mapping
    @staticmethod
    def map_ns(str):
       if str.startswith("http://"): return str
@@ -22,6 +27,7 @@ class URIMapping:
       if ns not in namespaces: return str
       return namespaces[ns] + str[ix + 1:]
 
+   # Map prefix, if it exists and return either URIRef or Literal
    @staticmethod
    def map(str):
       str = URIMapping.map_ns(str)

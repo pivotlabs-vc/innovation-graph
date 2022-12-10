@@ -1,3 +1,4 @@
+# Various exceptions used to capture processing errors
 
 class MetadataError(Exception):
    def __init__(self, dir, msg):

@@ -1,4 +1,6 @@
 
+# Handle CSV input
+
 from rdflib import Graph
 import csv
 
