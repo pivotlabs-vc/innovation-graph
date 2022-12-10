@@ -54,7 +54,12 @@ class Csv:
             for i in range(1, len(row)):
                s = URIMapping.map(prefix + row[0])
                p = URIMapping.map(fields[i])
-               o = URIMapping.map(row[i])
+
+               if "datatypes" in metadata and fields[i] in metadata["datatypes"]:
+                  o = URIMapping.map(row[i], metadata["datatypes"][fields[i]])
+               else:
+                  o = URIMapping.map(row[i])
+                  
 
                if p not in schema.properties:
                   if  p not in schema.classes:
