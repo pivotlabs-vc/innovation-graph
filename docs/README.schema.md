@@ -4,7 +4,8 @@
 ## Facts
 
 The knowledge graph represents a collection of assertions of facts.
-Starting with a collection of facts about my cats:
+By way of example, this document starts with a collection of facts about my
+cats:
 
 - Fred lives with Hope
 - Fred is a cat
@@ -76,14 +77,15 @@ As we said, triples are three parts:
 
 So, consolidating this, our 3 facts look like this:
 
-| Subject                         | Predicate                               | Object                          |
-| ------------------------------- | --------------------------------------- | ------------------------------- |
-| http://pivotlabs.vc/animal/fred | http://pivotlabs.vc/property/lives-with | http://pivotlabs.vc/animal/hope |
-| http://pivotlabs.vc/animal/fred | ???                                     | http://pivotlabs.vc/type/cat    |
-| http://pivotlabs.vc/animal/fred | http://pivotlabs.vc/property/has-legs   | 4                               |
+| Subject                           | Predicate                                 | Object                            |
+| --------------------------------- | ----------------------------------------- | --------------------------------- |
+| `http://pivotlabs.vc/animal/fred` | `http://pivotlabs.vc/property/lives-with` | `http://pivotlabs.vc/animal/hope` |
+| `http://pivotlabs.vc/animal/fred` | ???                                       | `http://pivotlabs.vc/type/cat`    |
+| `http://pivotlabs.vc/animal/fred` | `http://pivotlabs.vc/property/has-legs`   | 4                                 |
 
 There's a predicate we didn't define, and that's "is a".  As in the
-fact "Fred is a cat".  As that's such a fundamental in RDF, there's
+fact "Fred is a cat".  It links an entity to its type.
+As that's such a fundamental in RDF, there's
 an existing predicate defined by the W3C in the RDF standard, which is
 `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`.
 
@@ -99,20 +101,71 @@ Before going any further, the syntax is starting to get a
 little verbose and repetitive.  So, prefixes are used to replace long
 repeated part of the URL. e.g.
 
-| Prefix               | URL part                                    |
-| -------------------- | ------------------------------------------- |
-| animal               | http://pivotlabs.vc.animal/                 |
-| rdf                  | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| prop                 | http://pivotlabs.vc/property/               |
-| type                 | http://pivotlabs.vc/type                    |
+| Prefix   | URL part                                      |
+| -------- | --------------------------------------------- |
+| `animal` | `http://pivotlabs.vc.animal/`                 |
+| `rdf`    | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
+| `prop`   | `http://pivotlabs.vc/property/`               |
+| `type`   | `http://pivotlabs.vc/type`                    |
 
 Using the prefixes, our fact table looks like this:
 
-| Subject     | Predicate       | Object      |
-| ----------- | --------------- | ----------- |
-| animal:fred | prop:lives-with | animal:hope |
-| animal:fred | rdf:type        | type:cat    |
-| animal:fred | prop:has-legs   | 4           |
+| Subject       | Predicate         | Object        |
+| ------------- | ----------------- | ------------- |
+| `animal:fred` | `prop:lives-with` | `animal:hope` |
+| `animal:fred` | `rdf:type`        | `type:cat`    |
+| `animal:fred` | `prop:has-legs`   | `4`           |
 
 This is a much more compact and readable representation of the data.
+
+## Defining types
+
+We already included some entities which aren't completely defined
+e.g. `prop:has-legs`.  This has meaning but our graph doesn't explain
+that meaning.  In classic database design this would mean defining a
+schema.  In knowledge graphs, that 'schema' information can just go in the
+graph using RDF Schema standard.  The `rdf:type` predicate has already been
+introduces.  For entities that are predicates or types, they can be
+associated with RDF Schema entities to specify that they are
+classes or properties.
+
+| Prefi x   | URL part                                   |
+| --------- | ------------------------------------------ |
+| `rdfs`    | `http://www.w3.org/2000/01/rdf-schema#`    |
+
+The entities `rdfs:Class` and `rdfs:Property` are used for types and predicates
+respectively.  So now we have:
+
+| Subject           | Predicate         | Object          |
+| ----------------- | ----------------- | --------------- |
+| `prop:lives-with` | `rdf:type`        | `rdfs:Property` |
+| `prop:has-legs`   | `rdf:type`        | `rdfs:Property` |
+| `type:cat`        | `rdf:type`        | `rdfs:Class`    |
+
+## Labels
+
+The `rdfs:label` predicate is used to associate labels with any entity.
+That includes entities, predicates and types we have defined.
+
+| Subject              | Predicate         | Object          |
+| -------------------- | ----------------- | --------------- |
+| `type:cat`           | `rdfs:label`      | cat             |
+| `animal:fred`        | `rdfs:label`      | Fred            |
+| `animal:hope`        | `rdfs:label`      | Hope            |
+| `prop:lives-with`    | `rdfs:label`      | lives with      |
+| `prop:has-legs`      | `rdfs:label`      | has legs        |
+
+## Other useful predicates
+
+There are two other useful predicates which will be introduced now:
+- `http://dbpedia.org/ontology/thumbnail` links an entity to a visual
+  small thumbnail image.
+- `http://purl.org/dc/elements/1.1/relation` links an entity to a web
+  page or further information.
+
+## Going further
+
+The RDF technologies and standards are big and very powerful for knowledge
+management, and we only scraped the surface here.  But this is enough to
+get started with our knowledge graph.
 
