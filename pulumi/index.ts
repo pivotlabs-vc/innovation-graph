@@ -1,6 +1,7 @@
 
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
+import local from "@pulumi/command";
 
 const webVersion = process.env.WEB_IMAGE_VERSION;
 const sparqlVersion = process.env.SPARQL_IMAGE_VERSION;
@@ -13,6 +14,9 @@ if (!sparqlVersion)
 
 if (!process.env.ARTIFACT_REPO)
     throw Error("ARTIFACT_REPO not defined");
+
+if (!process.env.ARTIFACT_NAME)
+    throw Error("ARTIFACT_NAME not defined");
 
 if (!process.env.WEB_HOSTNAME)
     throw Error("WEB_HOSTNAME not defined");
@@ -85,10 +89,67 @@ const enableCloudDns = new gcp.projects.Service(
     }
 );
 
+const enableArtifactRegistry = new gcp.projects.Service(
+    "enable-cloud-dns",
+    {
+	service: "artifactregistry.googleapis.com",
+    },
+    {
+	provider: provider
+    }
+);
+
 const repo = process.env.ARTIFACT_REPO;
 
-const webImage = repo + "/web:" + webVersion;
-const sparqlImage = repo + "/sparql:" + sparqlVersion;
+const artifactRepo = new gcp.artifactregistry.Repository(
+    "artifact-repo",
+    {
+	description: "repository for " + process.env.ENVIRONMENT,
+	format: "DOCKER",
+	location: process.env.GCP_REGION,
+	repositoryId: process.env.ARTIFACT_NAME,
+    },
+    {
+	provider: provider
+    }
+);
+
+const webImageName = repo + "/web:" + webVersion;
+const sparqlImageName = repo + "/sparql:" + sparqlVersion;
+
+const taggedWebImage = local.Command(
+    "web-docker-tag-command",
+    {
+	create: "docker tag web " + webImageName,
+    }
+);
+
+const taggedSparqlImage = local.Command(
+    "sparql-docker-tag-command",
+    {
+	create: "docker tag sparql " + sparqlImageName,
+    }
+);
+
+const webImage = local.Command(
+    "web-docker-push-command",
+    {
+	create: "docker push " + webImageName,
+    },
+    {
+	dependsOn: [taggedWebImage, artifactRepo],
+    }
+);
+
+const sparqlImage = local.Command(
+    "sparql-docker-push-command",
+    {
+	create: "docker push " + sparqlImageName,
+    }
+    {
+	dependsOn: [taggedSparqlImage, artifactRepo],
+    }
+);
 
 const sparqlService = new gcp.cloudrun.Service(
     "sparql-service",
@@ -129,7 +190,7 @@ const sparqlService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun],
+	dependsOn: [enableCloudRun, sparqlImage],
     }
 );
 
@@ -188,7 +249,7 @@ const webService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun],
+	dependsOn: [enableCloudRun, webImage],
     }
 );
 
