@@ -57,6 +57,10 @@ class Csv:
 
             triples = []
             for i in range(1, len(row)):
+
+               # Ignore fields marked '%%ignore%%'
+               if fields[i] == "%%ignore%%": continue
+
                s = URIMapping.map(prefix + row[0])
                p = URIMapping.map(fields[i])
 
@@ -65,7 +69,6 @@ class Csv:
                else:
                   o = URIMapping.map(row[i])
                   
-
                if p not in schema.properties:
                   if  p not in schema.classes:
                      raise PredicateNotKnown(path, p, "Not known: " + str(p))
