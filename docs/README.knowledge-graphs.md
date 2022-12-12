@@ -66,7 +66,7 @@ a URL of `http://pivotlabs.vc/property/has-legs`.
 
 References are always URLs.  There is another form of data in the graph:
 the literal.  This is used for strings and numbers.  When describing that
-Fred has 4 legs, the number 4 is going to appear in a statement as a triple.
+Fred has 4 legs, the number 4 is going to appear in a statement as a literal.
 
 As we said, triples are three parts:
 - The subject is always a URL.
@@ -85,7 +85,7 @@ So, consolidating this, our 3 facts look like this:
 
 There's a predicate we didn't define, and that's "is a".  As in the
 fact "Fred is a cat".  It links an entity to its type.
-As that's such a fundamental in RDF, there's
+As that's such a fundamental concept in RDF, there's
 an existing predicate defined by the W3C in the RDF standard, which is
 `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`.
 
@@ -106,7 +106,7 @@ repeated part of the URL. e.g.
 | `animal` | `http://pivotlabs.vc.animal/`                 |
 | `rdf`    | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
 | `prop`   | `http://pivotlabs.vc/property/`               |
-| `type`   | `http://pivotlabs.vc/type`                    |
+| `type`   | `http://pivotlabs.vc/type/`                    |
 
 Using the prefixes, our fact table looks like this:
 
@@ -118,6 +118,9 @@ Using the prefixes, our fact table looks like this:
 
 This is a much more compact and readable representation of the data.
 
+Prefixes are just a short-hand, `animal:fred` and
+`http://pivotlabs.vc.animal/fred` mean the same thing.
+
 ## Defining types
 
 We already included some entities which aren't completely defined
@@ -125,9 +128,9 @@ e.g. `prop:has-legs`.  This has meaning but our graph doesn't explain
 that meaning.  In classic database design this would mean defining a
 schema.  In knowledge graphs, that 'schema' information can just go in the
 graph using RDF Schema standard.  The `rdf:type` predicate has already been
-introduces.  For entities that are predicates or types, they can be
+introduced.  For entities that are predicates or types, they can be
 associated with RDF Schema entities to specify that they are
-classes or properties.
+classes or properties.  Now we need a new prefix:
 
 | Prefix    | URL part                                   |
 | --------- | ------------------------------------------ |
@@ -142,10 +145,12 @@ respectively.  So now we have:
 | `prop:has-legs`   | `rdf:type`        | `rdfs:Property` |
 | `type:cat`        | `rdf:type`        | `rdfs:Class`    |
 
-If it was of interest, the relationships around the `type:cat` object could be
-elaborated.  A `type:cat` could be a type of `type:mammal`, a
-`type:mammal` a type of `type:animal`, and `type:animal` of type `rdfs:Class`.
-For this dataset, I'm not particularly interested in animal classification.
+Types can point to other derived types.  So, if it was of interest,
+the types around the `type:cat` object could be elaborated.  A
+`type:cat` could be a type of `type:mammal`, a `type:mammal` a type of
+`type:animal`, and `type:animal` of type `rdfs:Class`.  For this
+dataset, I'm not particularly interested in animal classification, so
+will skip that complexity.
 
 ## Labels
 
