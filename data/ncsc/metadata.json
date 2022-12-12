@@ -1,0 +1,11 @@
+{
+    "id": "ncsc-challenges",
+    "description": "NCSC innovation challenges",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "Scraped from NCSC website, publicly hosted assets",
+    "copyright": "Open Government",
+    "processing": "turtle",
+    "input": "ncsc.ttl"
+}
