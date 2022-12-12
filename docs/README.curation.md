@@ -41,11 +41,36 @@ first column is used as the identifier of an object.  The object identifier
 is added to the end of the `id-prefix` string, and an identifier
 results.
 
+You can ignore a column in the CSV file by setting its field identifier to
+`%%ignore%%`.
+
 The identifier should be a unique ID across all the data, and needs
 to have a http:// or https:// prefix.  Although that makes it look like
 a URL, it doesn't actually need to exist as a web page on the real internet.
 To make the URL unique you can make up something random or put your
 organisation's web site in it.
+
+As the graph is an RDF graph, the literal values have a type defined
+by the XSD standard.  The default type is string or `xsd:string`.
+
+You can map a field to a different type mapping with the
+optional`datatypes` field e.g.
+To set `property:founded` to be a year, we map `property:founded` to
+`xsd:gYear`.
+
+```
+    "fields": [
+        ...
+	"property:founded",
+	...
+    ],
+    "datatypes": {
+	"property:founded": "xsd:gYear"
+    },
+```
+
+Other useful types are: `xsd:integer`, `xsd:decimal`, `xsd:date`
+for YYYY-MM-DD format dates.
 
 ## The `turtle` processing type
 
@@ -54,3 +79,4 @@ with the schema.
 
 The metadata file should also contain:
 - `input`: the filename of the CSV input data
+
