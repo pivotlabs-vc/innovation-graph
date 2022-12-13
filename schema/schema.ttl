@@ -18,6 +18,21 @@ type:topic a rdfs:Class ;
     property:description "A subject or classification of an innovation opportunity derived using topic classification" ;
     dc:relation <https://en.wikipedia.org/wiki/Topic_and_comment> .
 
+type:person a rdfs:Class ;
+    rdfs:label "person" ;
+    property:description "A person" ;
+    dc:relation <https://en.wikipedia.org/wiki/Person> .
+
+type:occupation a rdfs:Class ;
+    rdfs:label "occupation" ;
+    property:description "An occupation" ;
+    dc:relation <https://en.wikipedia.org/wiki/Occupation> .
+
+type:region a rdfs:Class ;
+    rdfs:label "region" ;
+    property:description "A region" ;
+    dc:relation <https://en.wikipedia.org/wiki/Region> .
+
 property:closes a rdfs:Property ;
     rdfs:label "closes" ;
     property:description "The closing date of an innovation challenge" .
@@ -49,4 +64,40 @@ dc:relation a rdfs:Property ;
 property:founded a rdfs:Property ;
     rdfs:label "founded" ;
     property:description "Organisation founding year" .
+
+property:name a rdfs:Property ;
+    rdfs:label "name" ;
+    property:description "Person's name" .
+
+property:grade a rdfs:Property ;
+    rdfs:label "grade" ;
+    property:description "Job grade or rank" .
+
+property:team a rdfs:Property ;
+    rdfs:label "team" ;
+    property:description "Name of team" .
+
+property:department a rdfs:Property ;
+    rdfs:label "department" ;
+    property:description "Name of department" .
+
+property:unit a rdfs:Property ;
+    rdfs:label "unit" ;
+    property:description "Name of organisational unit" .
+
+property:organisation a rdfs:Property ;
+    rdfs:label "organisation" ;
+    property:description "Name of organisational" .
+
+property:fte a rdfs:Property ;
+    rdfs:label "fte" ;
+    property:description "Full-time employee count" .
+
+property:occupation a rdfs:Property ;
+    rdfs:label "occupation" ;
+    property:description "Occupation" .
+
+property:region a rdfs:Property ;
+    rdfs:label "region" ;
+    property:description "Region of the country" .
 

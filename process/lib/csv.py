@@ -17,30 +17,41 @@ class Csv:
       if "input" not in metadata:
          raise MetadataError(subdir, "The 'input' field does not exist")
 
-      if "fields" not in metadata:
-         raise MetadataError(subdir, "The 'fields' field does not exist")
+      if "object" not in metadata:
+         raise MetadataError(subdir, "The 'object' field does not exist")
 
-      if "id-prefix" not in metadata:
-         raise MetadataError(subdir, "The 'id-prefix' field does not exist")
+      object = metadata["object"]
+
+      if "id-prefix" in object:
+         id_prefix = object["id-prefix"]
+      else:
+         id_prefix = None
+
+      if "skip" in metadata:
+         skip = int(metadata["skip"])
+      else:
+         skip = 0
+
+      
+      if "fields-from-header" in metadata:
+         if metadata["fields-from-header"]:
+            fields_from_header = True
+         else:
+            fields_from_header = False
+      else:
+         fields_from_header = False
+
+      if not fields_from_header:
+         if "fields" not in metadata:
+            raise MetadataError(subdir, "The 'fields' field does not exist")
+         fields = metadata["fields"]
 
       path = subdir + "/" + metadata["input"]
-      fields = metadata["fields"]
-      prefix = metadata["id-prefix"]
 
-      if len(fields) < 2:
-         raise MetadataError(
-            subdir, "Fields list must have at least 2 elements"
-         )
+      if "class" not in object:
+         raise MetadataError(subdir, "The 'object.class' field does not exist")
 
-      if fields[0] != "%%identity%%":
-         raise MetadataError(
-            subdir, "%%identity%% must be first element of fields list"
-         )
-
-      if "datatypes" in metadata:
-         datatypes = metadata["datatypes"]
-      else:
-         datatypes = {}
+      cls = URIMapping.map(object["class"])
 
       with open(path) as f:
 
@@ -49,31 +60,42 @@ class Csv:
 
          for row in reader:
 
+            if fields_from_header:
+               fields = row
+               fields_from_header = False
+               continue
+
+            if skip > 0:
+               skip -= 1
+               continue
+
             if len(row) != len(fields):
                raise LineProcessingError(
                   path, line,
                   f"CSV row has {len(row)} cells, mismatches the field list"
                )
 
-            triples = []
-            for i in range(1, len(row)):
+            f = {}
+            for i in range(0, len(row)):
+               f[fields[i]] = row[i]
 
-               # Ignore fields marked '%%ignore%%'
-               if fields[i] == "%%ignore%%": continue
+            identity = f[object["id-field"]]
+            if id_prefix:
+               identity = id_prefix + identity
+            identity = URIMapping.map(identity)
 
-               s = URIMapping.map(prefix + row[0])
-               p = URIMapping.map(fields[i])
+            g.add((identity, URIMapping.map("rdf:type"), cls))
 
-               if fields[i] in datatypes:
-                  o = URIMapping.map(row[i], datatypes[fields[i]])
+            for prop in object["properties"]:
+
+               pred = URIMapping.map(prop["predicate"])
+
+               if "datatype" in prop:
+                  obj = URIMapping.map(f[prop["object-field"]], prop["datatype"])
                else:
-                  o = URIMapping.map(row[i])
-                  
-               if p not in schema.properties:
-                  if  p not in schema.classes:
-                     raise PredicateNotKnown(path, p, "Not known: " + str(p))
+                  obj = URIMapping.map(f[prop["object-field"]])
 
-               g.add((s, p, o))
+               g.add((identity, pred, obj))
 
             line += 1
 

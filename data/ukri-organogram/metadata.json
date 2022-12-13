@@ -1,0 +1,75 @@
+{
+    "id": "ukri-organogram",
+    "description": "UKRI Organograms",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "data.gov.uk website",
+    "copyright": "Open Government Licence",
+    "processing": "csv",
+    "input": "organogram-senior.csv",
+
+    "fields-from-header": true,
+
+    "object": {
+
+	"class": "type:person",
+	"id-prefix": "person:ukri/",
+	"id-field": "Post Unique Reference",
+
+	"properties": [
+
+	    {
+		"predicate": "property:name",
+		"object-field": "Name"
+	    },
+	    {
+		"predicate": "property:grade",
+		"object-field": "Grade (or equivalent)"
+	    },
+	    {
+		"predicate": "property:job-title",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "property:team",
+		"object-field": "Job/Team Function"
+	    },
+	    {
+		"predicate": "property:department",
+		"object-field": "Parent Department"
+	    },
+	    {
+		"predicate": "property:organisation",
+		"object-field": "Organisation"
+	    },
+	    {
+		"predicate": "property:unit",
+		"object-field": "Unit"
+	    },
+	    {
+		"predicate": "property:fte",
+		"object-field": "FTE",
+		"datatype": "xsd:decimal"
+	    },
+	    {
+		"predicate": "property:occupation",
+		"object-field": "Professional/Occupational Group"
+	    },
+	    {
+		"predicate": "property:region",
+		"object-field": "Office Region"
+	    }
+	    
+
+	]
+
+    },
+
+    "skip": 0,
+
+    "FIXMEdatatypes": {
+	"FIXMEproperty:fte": "xsd:decimal"
+    }
+
+}

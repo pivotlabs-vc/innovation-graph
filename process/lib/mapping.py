@@ -12,6 +12,7 @@ namespaces = {
    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
    "type": "http://pivotlabs.vc/challenges/t#",
    "source": "http://pivotlabs.vc/challenges/s/",
+   "person": "http://pivotlabs.vc/challenges/p/",
    "xsd": "http://www.w3.org/2001/XMLSchema#",
 }
 
