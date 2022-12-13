@@ -5,7 +5,6 @@ from rdflib import Graph
 import csv
 import hashlib
 
-from . mapping import *
 from . exceptions import *
 
 def hash(x):
@@ -55,7 +54,7 @@ class Csv:
       if "class" not in object:
          raise MetadataError(subdir, "The 'object.class' field does not exist")
 
-      cls = URIMapping.map(object["class"])
+      cls = schema.map(object["class"])
 
       with open(path) as f:
 
@@ -86,13 +85,13 @@ class Csv:
             identity = f[object["id-field"]]
             if id_prefix:
                identity = id_prefix + identity
-            identity = URIMapping.map(identity)
+            identity = schema.map(identity)
 
-            g.add((identity, URIMapping.map("rdf:type"), cls))
+            g.add((identity, schema.map("rdf:type"), cls))
 
             for prop in object["properties"]:
 
-               pred = URIMapping.map(prop["predicate"])
+               pred = schema.map(prop["predicate"])
                value = f[prop["object-field"]]
                raw = value
 
@@ -115,22 +114,22 @@ class Csv:
                   value = prop["object-id-prefix"] + value
 
                if "datatype" in prop:
-                  obj = URIMapping.map(value, prop["datatype"])
+                  obj = schema.map(value, prop["datatype"])
                else:
-                  obj = URIMapping.map(value)
+                  obj = schema.map(value)
 
                g.add((identity, pred, obj))
 
                if "object-type" in prop:
                   g.add((
                      obj,
-                     URIMapping.map("rdf:type"),
-                     URIMapping.map(prop["object-type"])
+                     schema.map("rdf:type"),
+                     schema.map(prop["object-type"])
                   ))
                   g.add((
                      obj,
-                     URIMapping.map("rdfs:label"),
-                     URIMapping.map(raw)
+                     schema.map("rdfs:label"),
+                     schema.map(raw)
                   ))
 
             line += 1
