@@ -27,10 +27,17 @@
 	    },
 	    {
 		"predicate": "property:grade",
-		"object-field": "Grade (or equivalent)"
+		"object-field": "Grade (or equivalent)",
+		"object-type": "type:grade",
+		"derive-object-id": true,
+		"object-id-prefix": "grade:"
 	    },
 	    {
 		"predicate": "property:job-title",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "rdfs:label",
 		"object-field": "Job Title"
 	    },
 	    {

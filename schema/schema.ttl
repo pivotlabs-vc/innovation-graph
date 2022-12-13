@@ -43,6 +43,11 @@ type:unit a rdfs:Class ;
     property:description "A unit" ;
     dc:relation <https://en.wikipedia.org/wiki/Unit> .
 
+type:grade a rdfs:Class ;
+    rdfs:label "grade" ;
+    property:description "A grade" ;
+    dc:relation <https://en.wikipedia.org/wiki/Grade> .
+
 type:organisation a rdfs:Class ;
     rdfs:label "organisation" ;
     property:description "An organisation" ;
@@ -116,3 +121,6 @@ property:region a rdfs:Property ;
     rdfs:label "region" ;
     property:description "Region of the country" .
 
+property:grade a rdfs:Property ;
+    rdfs:label "grade" ;
+    property:description "Grade" .
