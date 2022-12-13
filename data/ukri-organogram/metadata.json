@@ -6,6 +6,7 @@
     ],
     "origin": "data.gov.uk website",
     "copyright": "Open Government Licence",
+    "licence": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "processing": "csv",
 
     "input": "organogram-senior.csv",
