@@ -5,7 +5,7 @@ all:
 
 curate:
 	rm -f data.db
-	./process/curate data schema/schema.ttl > data.ttl
+	./process/curate data schema > data.ttl
 	rdfproc -n -s sqlite -t synchronous=off data.db parse data.ttl turtle
 
 REPO=europe-west1-docker.pkg.dev/pivot-labs/pivot-labs

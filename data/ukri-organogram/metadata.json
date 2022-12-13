@@ -1,0 +1,104 @@
+{
+    "id": "ukri-organogram",
+    "description": "UKRI Organograms",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "data.gov.uk website",
+    "copyright": "Open Government Licence",
+    "processing": "csv",
+
+    "input": "organogram-senior.csv",
+    "skip": 0,
+
+    "fields-from-header": true,
+
+    "object": {
+
+	"class": "type:person",
+	"id-prefix": "person:ukri/",
+	"id-field": "Post Unique Reference",
+
+	"properties": [
+
+	    {
+		"predicate": "property:name",
+		"object-field": "Name"
+	    },
+	    {
+		"predicate": "property:grade",
+		"object-field": "Grade (or equivalent)",
+		"object-type": "type:grade",
+		"derive-object-id": true,
+		"object-id-prefix": "grade:"
+	    },
+	    {
+		"predicate": "property:job-title",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "rdfs:label",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "property:team",
+		"object-field": "Job/Team Function"
+	    },
+	    {
+		"predicate": "property:department",
+		"object-field": "Parent Department",
+		"object-type": "type:department",
+		"map": {
+		    "Department for Business, Energy & Industrial Strategy": "dept:beis"
+		}
+	    },
+	    {
+		"predicate": "property:organisation",
+		"object-field": "Organisation",
+		"object-type": "type:organisation",
+		"derive-object-id": true,
+		"object-id-prefix": "organisation:"
+	    },
+	    {
+		"predicate": "property:unit",
+		"object-field": "Unit",
+		"object-type": "type:unit",
+		"derive-object-id": true,
+		"object-id-prefix": "unit:"
+	    },
+	    {
+		"predicate": "property:fte",
+		"object-field": "FTE",
+		"datatype": "xsd:decimal"
+	    },
+	    {
+		"predicate": "property:occupation",
+		"object-field": "Professional/Occupational Group",
+		"object-type": "type:occupation",
+		"use-object-id-hash": true,
+		"object-id-prefix": "occupation:"
+	    },
+	    {
+		"predicate": "property:region",
+		"object-field": "Office Region",
+		"object-type": "type:region",
+		"ignore": {
+		    "Unknown": true
+		},
+		"map": {
+		    "East Midlands": "region:east-midlands",
+		    "East of England": "region:east-of-england",
+		    "London": "region:london",
+		    "North West": "region:north-west",
+		    "Scotland": "region:scotland",
+		    "South East": "region:south-east",
+		    "South West": "region:south-west"
+		}
+	    }
+	    
+
+	]
+
+    }
+
+}

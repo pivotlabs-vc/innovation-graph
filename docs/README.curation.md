@@ -25,24 +25,50 @@ The file must contain the following fields:
 - `copyright`: A human-readable copyright claim.  Pull requests for
   datasets which aren't compatible with this repositories licence can't be
   accepted, although we can discuss other ways of contributing.
-- `processing`: describes how the data is parsed and loaded.
+- `processing`: describes how the data is parsed and loaded, this can be
+  `csv` or `turtle`.
 
 ## The `csv` processing type
 
 This is for CSV files.  The metadata file should also contain:
 - `input`: the filename of the CSV input data
-- `fields`: a list of types for the columns of the CSV file.  The number
-  of field list entries must equal the number of columns in the CSV file.
-- `id-prefix`: a prefix added to the identifier column entries to form
-  unique identifiers.
+- A list of the fields in the CSV file.  Either set
+  `fields` to be a list of names, one for each column, or set
+  `fields-from-header` to indicate that the fields list can be loaded
+  from the first line of the CSV file.  The field names aren't
+  particularly important, they are referenced elsewhere in the configuration
+  file.
+- An optional `skip` field set to an integer, indicating how many rows
+  of the CSV file to skip.
+- An `object` field describing how a row from the CSV file is handled:
+  - The `class` field should specify the RDF type of the primary object
+    created for each row.
+  - The `id-field` field specifies which CSV column contains a unique
+    identifier for each row.  This should be a name from the field list.
+  - The optional `id-prefix` specifies a string prepended to the value
+    from the `id-field` field to construct a unique ID before RDF
+    processing.  This should begin with a prefix.
+  - The `properties` field is a list, one object for each CSV column
+    (but not the ID column).  Each element consists of:
+    - `predicate` specifies the RDF predicate for this CSV column
+    - `object-field` refers to the CSV `field` list identifying the column
+      to work with.
+    - An optional `ignore` field which contains an object.  If a value
+      in the CSV column matches a key in the object, and the matching
+      value is set to true, the value will be skipped.
+    - An optional `map` field.  If values match the key in the object,
+      they are mapped to the value.
+    - For a literal, the optional `datatype` field specifies the XSD
+      datatype to apply to the value.  Uuseful types are: `xsd:integer`,
+      `xsd:decimal`, `xsd:date`for YYYY-MM-DD format dates.  If not
+      specified, a string type is used.
+    - To create a class object from a CSV column:
+      - Add an `object-type` field containing the RDF type including a
+        prefix.
+      - Specify `derive-object-id` or `use-object-id-hash`.
 
-The first field type must be `%%identity%%` which indicates that the
-first column is used as the identifier of an object.  The object identifier
-is added to the end of the `id-prefix` string, and an identifier
-results.
-
-You can ignore a column in the CSV file by setting its field identifier to
-`%%ignore%%`.
+FIXME: This documentation is very difficult to follow.  Needs a HOWTO
+approach.
 
 The identifier should be a unique ID across all the data, and needs
 to have a http:// or https:// prefix.  Although that makes it look like

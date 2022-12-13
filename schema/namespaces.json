@@ -1,0 +1,16 @@
+{
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "property": "http://pivotlabs.vc/challenges/p#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "type": "http://pivotlabs.vc/challenges/t#",
+    "source": "http://pivotlabs.vc/challenges/s/",
+    "person": "http://pivotlabs.vc/challenges/p/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "region": "http://pivotlabs.vc/challenges/region/",
+    "occupation": "http://pivotlabs.vc/challenges/occupation/",
+    "unit": "http://pivotlabs.vc/challenges/unit/",
+    "organisation": "http://pivotlabs.vc/challenges/org/",
+    "dept": "http://pivotlabs.vc/challenges/dept/",
+    "grade": "http://pivotlabs.vc/challenges/grade/"
+}
