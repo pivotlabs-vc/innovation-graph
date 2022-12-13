@@ -7,7 +7,9 @@
     "origin": "data.gov.uk website",
     "copyright": "Open Government Licence",
     "processing": "csv",
+
     "input": "organogram-senior.csv",
+    "skip": 0,
 
     "fields-from-header": true,
 
@@ -37,15 +39,25 @@
 	    },
 	    {
 		"predicate": "property:department",
-		"object-field": "Parent Department"
+		"object-field": "Parent Department",
+		"object-type": "type:department",
+		"map": {
+		    "Department for Business, Energy & Industrial Strategy": "dept:beis"
+		}
 	    },
 	    {
 		"predicate": "property:organisation",
-		"object-field": "Organisation"
+		"object-field": "Organisation",
+		"object-type": "type:organisation",
+		"derive-object-id": true,
+		"object-id-prefix": "organisation:"
 	    },
 	    {
 		"predicate": "property:unit",
-		"object-field": "Unit"
+		"object-field": "Unit",
+		"object-type": "type:unit",
+		"derive-object-id": true,
+		"object-id-prefix": "unit:"
 	    },
 	    {
 		"predicate": "property:fte",
@@ -54,22 +66,32 @@
 	    },
 	    {
 		"predicate": "property:occupation",
-		"object-field": "Professional/Occupational Group"
+		"object-field": "Professional/Occupational Group",
+		"object-type": "type:occupation",
+		"use-object-id-hash": true,
+		"object-id-prefix": "occupation:"
 	    },
 	    {
 		"predicate": "property:region",
-		"object-field": "Office Region"
+		"object-field": "Office Region",
+		"object-type": "type:region",
+		"ignore": {
+		    "Unknown": true
+		},
+		"map": {
+		    "East Midlands": "region:east-midlands",
+		    "East of England": "region:east-of-england",
+		    "London": "region:london",
+		    "North West": "region:north-west",
+		    "Scotland": "region:scotland",
+		    "South East": "region:south-east",
+		    "South West": "region:south-west"
+		}
 	    }
 	    
 
 	]
 
-    },
-
-    "skip": 0,
-
-    "FIXMEdatatypes": {
-	"FIXMEproperty:fte": "xsd:decimal"
     }
 
 }

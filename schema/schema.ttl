@@ -33,6 +33,21 @@ type:region a rdfs:Class ;
     property:description "A region" ;
     dc:relation <https://en.wikipedia.org/wiki/Region> .
 
+type:dept a rdfs:Class ;
+    rdfs:label "department" ;
+    property:description "A department" ;
+    dc:relation <https://en.wikipedia.org/wiki/Department> .
+
+type:unit a rdfs:Class ;
+    rdfs:label "unit" ;
+    property:description "A unit" ;
+    dc:relation <https://en.wikipedia.org/wiki/Unit> .
+
+type:organisation a rdfs:Class ;
+    rdfs:label "organisation" ;
+    property:description "An organisation" ;
+    dc:relation <https://en.wikipedia.org/wiki/Organisation> .
+
 property:closes a rdfs:Property ;
     rdfs:label "closes" ;
     property:description "The closing date of an innovation challenge" .

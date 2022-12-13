@@ -3,9 +3,13 @@
 
 from rdflib import Graph
 import csv
+import hashlib
 
 from . mapping import *
 from . exceptions import *
+
+def hash(x):
+   return hashlib.md5(x.encode('utf-8')).hexdigest()[:12]
 
 class Csv:
 
@@ -89,13 +93,45 @@ class Csv:
             for prop in object["properties"]:
 
                pred = URIMapping.map(prop["predicate"])
+               value = f[prop["object-field"]]
+               raw = value
+
+               if "ignore" in prop:
+                  if value in prop["ignore"]:
+                     if prop["ignore"][value]:
+                        continue
+
+               if "map" in prop:
+                  if value not in prop["map"]: continue
+                  value = prop["map"][value]
+
+               if "derive-object-id" in prop and prop["derive-object-id"]:
+                  value = value.replace(" ", "-")
+                  value = value.lower()
+                  value = prop["object-id-prefix"] + value
+
+               if "use-object-id-hash" in prop and prop["use-object-id-hash"]:
+                  value = hash(value)
+                  value = prop["object-id-prefix"] + value
 
                if "datatype" in prop:
-                  obj = URIMapping.map(f[prop["object-field"]], prop["datatype"])
+                  obj = URIMapping.map(value, prop["datatype"])
                else:
-                  obj = URIMapping.map(f[prop["object-field"]])
+                  obj = URIMapping.map(value)
 
                g.add((identity, pred, obj))
+
+               if "object-type" in prop:
+                  g.add((
+                     obj,
+                     URIMapping.map("rdf:type"),
+                     URIMapping.map(prop["object-type"])
+                  ))
+                  g.add((
+                     obj,
+                     URIMapping.map("rdfs:label"),
+                     URIMapping.map(raw)
+                  ))
 
             line += 1
 
