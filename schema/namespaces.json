@@ -11,6 +11,6 @@
     "occupation": "http://pivotlabs.vc/challenges/occupation/",
     "unit": "http://pivotlabs.vc/challenges/unit/",
     "organisation": "http://pivotlabs.vc/challenges/org/",
-    "dept": "http://pivotlabs.vc/challenges/dept/",
+    "department": "http://pivotlabs.vc/challenges/department/",
     "grade": "http://pivotlabs.vc/challenges/grade/"
 }
