@@ -33,7 +33,7 @@ type:region a rdfs:Class ;
     property:description "A region" ;
     dc:relation <https://en.wikipedia.org/wiki/Region> .
 
-type:dept a rdfs:Class ;
+type:department a rdfs:Class ;
     rdfs:label "department" ;
     property:description "A department" ;
     dc:relation <https://en.wikipedia.org/wiki/Department> .
