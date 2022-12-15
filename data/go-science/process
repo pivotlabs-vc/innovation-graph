@@ -2,6 +2,12 @@
 
 import json
 
+class Edge:
+    pass
+
+class Element:
+    pass
+
 try:
 
     dump = json.load(open("kumu-cybermaggedon-science-networks.json"))
@@ -13,21 +19,24 @@ try:
 
         id = i["_id"]
 
-        elt = {
-            "id": id
-        }
+        elt = Element()
+        elt.id = id
 
         if "element type" in i["attributes"]:
-            elt["type"] = i["attributes"]["element type"]
+            elt.type = i["attributes"]["element type"]
+        else:
+            elt.type = None
 
         if "label" in i["attributes"]:
-            elt["label"] = i["attributes"]["label"]
+            elt.label = i["attributes"]["label"]
 
         if "description" in i["attributes"]:
-            elt["description"] = i["attributes"]["description"]
+            elt.description = i["attributes"]["description"]
+        else:
+            elt.description = None
 
         if "tags" in i["attributes"]:
-            elt["tags"] = i["attributes"]["tags"]
+            elt.tags = i["attributes"]["tags"]
             
         elts[id] = elt
 
@@ -36,34 +45,37 @@ try:
         src = elts[it["from"]]
         dest = elts[it["to"]]
 
-        edges[(src["id"], dest["id"])] = {
-            "src": src,
-            "dest": dest,
-        }
+        edge = Edge()
+        edge.src = src
+        edge.dest = dest
+
+        id = (src.id, dest.id)
+        
+        edges[id] = edge
 
 except Exception as e:
     print(e)
 
 def edge_name(e):
 
-    n = e["label"]
+    n = e.label
 
-    if "type" not in e:
-        n += " [-]"
+    if e.type:
+        n += " [" + e.type + "]"
     else:
-        n += " [" + e["type"] + "]"
+        n += " [-]"
 
     return n
 
 def reln(src, dest):
 
-    if "type" in src:
-        stype = src["type"]
+    if src.type:
+        stype = src.type
     else:
         stype = None
 
-    if "type" in dest:
-        dtype = dest["type"]
+    if dest.type:
+        dtype = dest.type
     else:
         dtype = None
 
@@ -188,37 +200,83 @@ def reln(src, dest):
 
     return rels[stype][dtype]
 
-for id in elts:
+tiers = []
 
-    elt = elts[id]
+tier = set()
 
-    print(id + ":")
-    print("  label: " + elt["label"])
+for elt in elts.values():
+    elt.edges = []
 
-    if "type" not in elt:
-        print("  type: " + "UNKNOWN")
-    else:
-        print("  type: " + elt["type"])
-    print()
+for edge in edges.values():
+    edge.src.edges.append(edge)
+    edge.dest.edges.append(edge)
 
-for id in edges:
+for elt in elts.values():
+    elt.edges = list(set(elt.edges))
 
-    edge = edges[id]
+#for v in tier:
+#    print(elts[v].label)
 
-    try:
-        a = reln(edge["src"], edge["dest"])
-    except Exception as e:
-        print(e)
+found = set()
+tier = 0
 
-    print(
-        edge_name(edge["src"]),
-        " -> ",
-        edge_name(edge["dest"]),
-        " / ",
-        reln(edge["src"], edge["dest"])
-    )
+for elt in elts.values():
+    elt.tier = None
 
-depts = []
+while True:
 
-for id, elt in elts.items():
+    found_before = len(found)
+    this_tier_found = set()
 
+    for elt in elts.values():
+
+        if elt.id in found: continue
+
+        this_tier = False
+
+        if tier == 0 and elt.type == "Department":
+            this_tier = True
+
+        if tier > 0:
+            for edge in elt.edges:
+                if edge.src.id in found:
+                    this_tier = True
+                if edge.dest.id in found:
+                    this_tier = True
+
+        if this_tier:
+            elt.tier = tier
+
+            if elt.label == "MHPRA":
+                print(">>>", elt.label, elt.tier)
+
+            if elt.label == "ABRHP":
+                print(">>>", elt.label, elt.tier)
+
+            this_tier_found.add(elt.id)
+
+    found = found.union(this_tier_found)
+
+    # Stop when we can't find any more nodes by edges
+    if len(found) == found_before:
+        break
+
+    tier += 1
+
+assert len(elts) == len(found)
+
+for edge in edges.values():
+
+    print(edge.src.label, edge.dest.label)
+
+#    print(edge.src.tier, edge.dest.tier)
+
+    if edge.src.tier == edge.dest.tier:
+
+        if edge.src.description == "Cluster": continue
+        if edge.dest.description == "Cluster": continue
+#        print(edge.src.description)
+#        print(edge.dest.description)
+
+        print(edge.src.label, edge.dest.label)
+        assert 1 == 2, "Wrod"
