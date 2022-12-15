@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import json
-import sys
+from rdflib import Literal, URIRef, Graph
 
 class Edge:
     def __init__(self, data):
@@ -137,11 +137,27 @@ for i in range(0, len(hier)):
     for elt in hier[i]:
         tier[elt] = i + 1
 
-#for elt in m.elements.values():
-#    print(elt.label, tier[elt])
+g = Graph()
 
-#for elt in m.elements.values():
-#    print(elt.label)
+for elt in m.elements.values():
+    g.add((
+        URIRef("http://fixme.com/" + elt.id),
+        URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+        URIRef("http://fixme.com/t/thing")
+    ))
+    
+    g.add((
+        URIRef("http://fixme.com/" + elt.id),
+        URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+        Literal(elt.label),
+    ))
+
+    if elt.description:
+        g.add((
+            URIRef("http://fixme.com/" + elt.id),
+            URIRef("http://www.w3.org/2000/01/rdf-schema#description"),
+            Literal(elt.description)
+        ))
 
 for edge in m.edges.values():
 
@@ -161,3 +177,21 @@ for edge in m.edges.values():
 
         # FIXME: Maybe use type to help hierarchy?
         fwd = True
+
+    if fwd:
+        g.add((
+            URIRef("http://fixme.com/" + edge.src.id),
+            URIRef("http://fixme.com/oversight"),
+            URIRef("http://fixme.com/" + edge.dest.id),
+        ))
+    else:
+        g.add((
+            URIRef("http://fixme.com/" + edge.dest.id),
+            URIRef("http://fixme.com/oversight"),
+            URIRef("http://fixme.com/" + edge.src.id),
+        ))
+
+
+
+print(g.serialize(format="turtle"))
+
