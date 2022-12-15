@@ -1,282 +1,163 @@
 #!/usr/bin/env python3
 
 import json
+import sys
 
 class Edge:
-    pass
+    def __init__(self, data):
+
+        self.id = data["_id"]
 
 class Element:
-    pass
+    def __init__(self, data):
 
-try:
+        self.id = data["_id"]
+        attrs = data["attributes"]
 
-    dump = json.load(open("kumu-cybermaggedon-science-networks.json"))
+        self.label = attrs.get("label")
+        self.description = attrs.get("description", None)
+        self.tags = attrs.get("tags", [])
+        self.type = attrs.get("element type", None)
+        self.size = attrs.get("size", 0)
+        self.last = attrs.get("metrics::last", 0)
 
-    elts = {}
-    edges = {}
+class Map:
+    def __init__(self, elements, edges):
+        self.edges = edges
+        self.elements = elements
 
-    for i in dump["elements"]:
+    def get_type(self, type):
+        return [
+            v
+            for v in self.elements.values()
+            if v.type == type
+        ]
 
-        id = i["_id"]
+    def get_hierarchy(self, base):
 
-        elt = Element()
-        elt.id = id
+        hier = []
+        discovered = set([v.id for v in base])
+        tier = 1
 
-        if "element type" in i["attributes"]:
-            elt.type = i["attributes"]["element type"]
-        else:
-            elt.type = None
+        while True:
 
-        if "label" in i["attributes"]:
-            elt.label = i["attributes"]["label"]
+            discovered_before = len(discovered)
+            tier_discovery = set()
 
-        if "description" in i["attributes"]:
-            elt.description = i["attributes"]["description"]
-        else:
-            elt.description = None
+            for elt in self.elements.values():
 
-        if "tags" in i["attributes"]:
-            elt.tags = i["attributes"]["tags"]
-            
-        elts[id] = elt
+                if elt.id in discovered: continue
 
-    for it in dump["connections"]:
+                this_tier = False
 
-        src = elts[it["from"]]
-        dest = elts[it["to"]]
+                for edge in self.edges.values():
+                    if edge.src == elt and edge.dest.id in discovered:
+                        this_tier = True
+                    elif edge.dest == elt and edge.src.id in discovered:
+                        this_tier = True
 
-        edge = Edge()
-        edge.src = src
-        edge.dest = dest
+                if this_tier:
+                    tier_discovery.add(elt.id)
 
-        id = (src.id, dest.id)
-        
-        edges[id] = edge
+            tier += 1
 
-except Exception as e:
-    print(e)
+            hier.append(
+                [self.elements[v] for v in tier_discovery]
+            )
+            discovered = discovered.union(tier_discovery)
 
-def edge_name(e):
+            if len(discovered) == discovered_before:
+                break
 
-    n = e.label
+        return hier
 
-    if e.type:
-        n += " [" + e.type + "]"
+class Project:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def load(path):
+
+        p = Project()
+        p.project = json.load(open(path))
+        return p
+
+    def maps(self):
+        return {
+            map["_id"]: map["name"]
+            for map in self.project["maps"]
+        }
+
+    def get(self, id):
+
+        m = None
+        for map in self.project["maps"]:            
+            if map["_id"] == id:
+                m = map
+
+        if m == None: raise RuntimeError("No such map")
+
+        all_elements = {
+            v["_id"]: v
+            for v in self.project["elements"]
+        }
+
+        all_edges = {
+            v["_id"]: v
+            for v in self.project["connections"]
+        }
+
+        elements = {}
+        for element in m["elements"]:
+            id = element["element"]
+            elements[id] = Element(all_elements[id])
+
+        edges = {}
+        for edge in m["connections"]:
+            id = edge["connection"]
+            edges[id] = Edge(all_edges[id])
+            edges[id].src = elements[all_edges[id]["from"]]
+            edges[id].dest = elements[all_edges[id]["to"]]
+
+        return Map(elements, edges)
+
+p = Project.load("kumu-cybermaggedon-science-networks.json")
+
+m = p.get("map-1vlBsQ28")
+
+depts = m.get_type("Department")
+hier = m.get_hierarchy(depts)
+
+tier = {
+    v: 0
+    for v in depts
+}
+
+for i in range(0, len(hier)):
+    for elt in hier[i]:
+        tier[elt] = i + 1
+
+#for elt in m.elements.values():
+#    print(elt.label, tier[elt])
+
+#for elt in m.elements.values():
+#    print(elt.label)
+
+for edge in m.edges.values():
+
+    if tier[edge.src] > tier[edge.dest]:
+        fwd = True
+    elif tier[edge.dest] > tier[edge.src]:
+        fwd = False
+    elif edge.src.size > edge.dest.size:
+        fwd = True
+    elif edge.dest.size > edge.src.size:
+        fwd = False
+    elif edge.src.last > edge.dest.last:
+        fwd = True
+    elif edge.dest.last > edge.src.last:
+        fwd = False
     else:
-        n += " [-]"
 
-    return n
-
-def reln(src, dest):
-
-    if src.type:
-        stype = src.type
-    else:
-        stype = None
-
-    if dest.type:
-        dtype = dest.type
-    else:
-        dtype = None
-
-    rels = {
-        "Arm's Length Body": {
-            "Arm's Length Body": "relates-to",
-            "Department": "FIXME",
-            "Network": "FIXME",
-            "Science Advisory Committee": "FIXME",
-            "Science Advisory Council": "FIXME",
-            "Subcommittee": "FIXME",
-            None: "FIXME",
-        },
-        "Department": {
-            "Arm's Length Body": "FIXME",
-            "Department": "FIXME",
-            "Executive Agency": "FIXME",
-            "External Experts": "FIXME",
-            "Group of government experts": "FIXME",
-            "Industrial Council": "FIXME",
-            "Network": "FIXME",
-            "Office": "FIXME",
-            "Profession": "FIXME",
-            "Research Centre": "FIXME",
-            "Research Council": "FIXME",
-            "Science Advisory Committee": "FIXME",
-            "Science Advisory Council": "FIXME",
-            "n/a": "FIXME",
-            None: "FIXME",
-        },
-        "Devolved Administration": {
-            "Arm's Length Body": "FIXME",
-            "Executive Agency": "FIXME",
-            "Research Centre": "FIXME",
-            "Science Advisory Committee": "FIXME",
-            "Science Advisory Council": "FIXME",
-        },
-        "Executive Agency": {
-            "Arm's Length Body": "FIXME",
-            "Science Advisory Committee": "FIXME",
-        },
-        "External Experts": {
-            "Industrial Council": "FIXME",
-            "National Academy": "FIXME",
-            "Network": "FIXME",
-            "Office": "FIXME",
-            "Research Council": "FIXME",
-            "Science Advisory Committee": "FIXME",
-            None: "FIXME",
-        },
-        "Group of government experts": {
-            None: "FIXME",
-        },
-        "Industrial Council": {
-            "Science Advisory Committee": "FIXME",
-        },
-        "National Academy": {
-            "National Academy": "FIXME",
-        },
-        "Network": {
-            "Department": "FIXME",
-            "Devolved Administration": "FIXME",
-            "External Experts": "FIXME",
-            "Network": "FIXME",
-            "Subcommittee": "FIXME",
-            "n/a": "FIXME",
-            None: "FIXME",
-        },
-        "Office": {
-            "Arm's Length Body": "FIXME",
-            "Department": "FIXME",
-            "External Experts": "FIXME",
-            "Group of government experts": "FIXME",
-            "Network": "FIXME",
-            "Office": "FIXME",
-            "Profession": "FIXME",
-            "Science Advisory Committee": "FIXME",
-            "Science Advisory Council": "FIXME",
-        },
-        "Research Centre": {
-            "Arm's Length Body": "FIXME",
-            "Research Centre": "FIXME",
-            "Research Council": "FIXME",
-        },
-        "Research Council": {
-            "Department": "FIXME",
-            "Executive Agency": "FIXME",
-            "External Experts": "FIXME",
-            "Research Centre": "FIXME",
-        },
-        "Science Advisory Committee": {
-            "Arm's Length Body": "FIXME",
-            "Department": "FIXME",
-            "Executive Agency": "FIXME",
-            "Industrial Council": "FIXME",
-            "Subcommittee": "FIXME",
-            "n/a": "FIXME",
-        },
-        "Science Advisory Council": {
-            "Department": "FIXME",
-            "External Experts": "FIXME",
-            "National Academy": "FIXME",
-            "Science Advisory Council": "FIXME",
-            None: "FIXME",
-        },
-        "Subcommittee": {
-            "Department": "FIXME",
-            "Devolved Administration": "FIXME",
-        },
-        "n/a": {
-            "Department": "FIXME",
-            "Science Advisory Committee": "FIXME",
-        },
-        None: {
-            "Arm's Length Body": "FIXME",
-            "Department": "FIXME",
-            "External Experts": "FIXME",
-            "n/a": "FIXME",
-            None: "FIXME",
-        },
-    }
-
-    return rels[stype][dtype]
-
-tiers = []
-
-tier = set()
-
-for elt in elts.values():
-    elt.edges = []
-
-for edge in edges.values():
-    edge.src.edges.append(edge)
-    edge.dest.edges.append(edge)
-
-for elt in elts.values():
-    elt.edges = list(set(elt.edges))
-
-#for v in tier:
-#    print(elts[v].label)
-
-found = set()
-tier = 0
-
-for elt in elts.values():
-    elt.tier = None
-
-while True:
-
-    found_before = len(found)
-    this_tier_found = set()
-
-    for elt in elts.values():
-
-        if elt.id in found: continue
-
-        this_tier = False
-
-        if tier == 0 and elt.type == "Department":
-            this_tier = True
-
-        if tier > 0:
-            for edge in elt.edges:
-                if edge.src.id in found:
-                    this_tier = True
-                if edge.dest.id in found:
-                    this_tier = True
-
-        if this_tier:
-            elt.tier = tier
-
-            if elt.label == "MHPRA":
-                print(">>>", elt.label, elt.tier)
-
-            if elt.label == "ABRHP":
-                print(">>>", elt.label, elt.tier)
-
-            this_tier_found.add(elt.id)
-
-    found = found.union(this_tier_found)
-
-    # Stop when we can't find any more nodes by edges
-    if len(found) == found_before:
-        break
-
-    tier += 1
-
-assert len(elts) == len(found)
-
-for edge in edges.values():
-
-    print(edge.src.label, edge.dest.label)
-
-#    print(edge.src.tier, edge.dest.tier)
-
-    if edge.src.tier == edge.dest.tier:
-
-        if edge.src.description == "Cluster": continue
-        if edge.dest.description == "Cluster": continue
-#        print(edge.src.description)
-#        print(edge.dest.description)
-
-        print(edge.src.label, edge.dest.label)
-        assert 1 == 2, "Wrod"
+        # FIXME: Maybe use type to help hierarchy?
+        fwd = True
