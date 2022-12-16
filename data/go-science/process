@@ -121,7 +121,7 @@ class Project:
 
         return Map(elements, edges)
 
-p = Project.load("kumu-cybermaggedon-science-networks.json")
+p = Project.load("science-networks.json")
 
 m = p.get("map-1vlBsQ28")
 
