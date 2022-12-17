@@ -10,6 +10,7 @@ import logging
 
 from . csv import *
 from . turtle import *
+from . module import *
 from . schema import *
 
 # This is the list of processors currently supported.  To add a new processing
@@ -17,6 +18,7 @@ from . schema import *
 processors = {
     "csv": Csv,
     "turtle": Turtle,
+    "module": Module,
 }
 
 # Curator class
