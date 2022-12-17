@@ -171,116 +171,118 @@ class Project:
 
         return Map(elements, edges)
 
-def construct_tiers(m):
+class Curator:
+    def __init__(self, map):
+        self.map = map
+        self.tiers = self.construct_tiers()
 
-    depts = m.get_type("Department")
-    hier = m.get_hierarchy(depts)
+    def construct_tiers(self):
 
-    tier = {
-        v: 0
-        for v in depts
-    }
+        depts = self.map.get_type("Department")
+        hier = self.map.get_hierarchy(depts)
 
-    for i in range(0, len(hier)):
-        for elt in hier[i]:
-            tier[elt] = i + 1
+        tiers = {
+            v: 0
+            for v in depts
+        }
 
-    return tier
+        for i in range(0, len(hier)):
+            for elt in hier[i]:
+                tiers[elt] = i + 1
 
-def determine_advises_relationship(tiers, a, b):
-    
-    if tiers[a] < tiers[b]:
-        return b, a
-    elif tiers[b] < tiers[a]:
-        return a, b
-    elif a.betweenness > b.betweenness:
-        return b, a
-    elif b.betweenness > a.betweenness:
-        return a, b
+        return tiers
 
-    raise RuntimeError("Cannot determine advises relationship")
+    def determine_advises_relationship(self, a, b):
 
-def make_graph(map):
+        if self.tiers[a] < self.tiers[b]:
+            return b, a
+        elif self.tiers[b] < self.tiers[a]:
+            return a, b
+        elif a.betweenness > b.betweenness:
+            return b, a
+        elif b.betweenness > a.betweenness:
+            return a, b
 
-    tiers = construct_tiers(map)
+        raise RuntimeError("Cannot determine advises relationship")
 
-    g = Graph()
+    def make_graph(self):
 
-    for elt in map.elements.values():
+        g = Graph()
 
-        g.add((
-            elt.get_uri(),
-            URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
-            elt.get_type(),
-        ))
+        for elt in self.map.elements.values():
 
-        g.add((
-            elt.get_uri(),
-            URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
-            Literal(elt.label),
-        ))
-
-        if elt.description:
             g.add((
                 elt.get_uri(),
-                DESCRIPTION,
-                Literal(elt.description)
+                URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                elt.get_type(),
             ))
 
-    for edge in map.edges.values():
+            g.add((
+                elt.get_uri(),
+                URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                Literal(elt.label),
+            ))
 
-        try:
-            a, b = determine_advises_relationship(tiers, edge.src, edge.dest)
-        except:
+            if elt.description:
+                g.add((
+                    elt.get_uri(),
+                    DESCRIPTION,
+                    Literal(elt.description)
+                ))
 
-            # No advises relationship, ignore this edge
-            continue
+        for edge in self.map.edges.values():
 
-        g.add((
-            a.get_uri(),
-            ADVISES,
-            b.get_uri(),
-        ))
+            try:
+                a, b = determine_advises_relationship(edge.src, edge.dest)
+            except:
 
-    return g
+                # No advises relationship, ignore this edge
+                continue
 
-def make_table(map):
+            g.add((
+                a.get_uri(),
+                ADVISES,
+                b.get_uri(),
+            ))
 
-    tiers = construct_tiers(map)
+        return g
 
-    # FIXME: Did nothing with tiers
+    def make_table(map):
 
-    table = []
+        # FIXME: Did nothing with tiers
 
-    for v in map.edges.values():
+        table = []
 
-        src = v.src
-        dest = v.dest
+        for v in map.edges.values():
 
-        row = (
-            src.label, src.description, src.type,
-            dest.label, dest.description, dest.type
-        )
+            src = v.src
+            dest = v.dest
 
-        table.append(row)
+            row = (
+                src.label, src.description, src.type,
+                dest.label, dest.description, dest.type
+            )
 
-    return table
+            table.append(row)
 
-def write_csv(map):
+        return table
 
-    tbl = make_table(map)
+    def write_csv(map):
 
-    writer = csv.writer(sys.stdout)
+        tbl = make_table(map)
 
-    for row in tbl:
-        writer.writerow(row)
+        writer = csv.writer(sys.stdout)
 
-def process(subdir, metadata, schema):
+        for row in tbl:
+            writer.writerow(row)
 
-    p = Project.load(subdir + "/" + "science-networks.json")
-    m = p.get("map-1vlBsQ28")
+    @staticmethod
+    def process(subdir, metadata, schema):
 
-    g = make_graph(m)
+        p = Project.load(subdir + "/" + "science-networks.json")
+        m = p.get("map-1vlBsQ28")
 
-    return g
+        c = Curator(m)
+
+        return c.make_graph()
 

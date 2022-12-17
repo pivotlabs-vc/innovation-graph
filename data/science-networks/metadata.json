@@ -4,9 +4,9 @@
     "contributors": [
 	"cybermaggedon"
     ],
-    "origin": "Found on the internet, public at kumu.io",
-    "copyright": "Not defined, information in the public domain",
+    "origin": "https://kumu.io/Buryan/science-networks",
+    "copyright": "Copyright (c) 2022 Buryan Aleksiev",
     "processing": "module",
-    "module": "process.py"
+    "module": "process.py",
+    "entrypoint": "Curator.process"
 }
-

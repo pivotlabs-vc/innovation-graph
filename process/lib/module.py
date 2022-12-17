@@ -13,16 +13,24 @@ class Module:
       if "module" not in metadata:
          raise MetadataError(subdir, "The 'module' field does not exist")
 
-      t = Module()
+      ep = metadata.get("entrypoint", "process")
 
-#      g = Graph()
+      t = Module()
 
       path = subdir + "/" + metadata["module"]
 
-#      mod = importlib.import_module(path)
       mod = importlib.machinery.SourceFileLoader("process", path).load_module()
 
-      g = mod.process(subdir, metadata, schema)
+      fn = mod
+
+      for v in ep.split("."):
+         print(v)
+         try:
+            fn = getattr(fn, v)
+         except:
+            raise RuntimeError("Couldn't find entrypoint '%s'" % ep)
+
+      g = fn(subdir, metadata, schema)
       
       
 
