@@ -53,6 +53,81 @@ type:organisation a rdfs:Class ;
     property:description "An organisation" ;
     dc:relation <https://en.wikipedia.org/wiki/Organisation> .
 
+type:arms-length-body a rdfs:Class ;
+    rdfs:label "Arm's length body" ;
+    property:description "Arm's length body" ;
+    dc:relation <https://en.wikipedia.org/wiki/Arm%27s_length_body> .
+
+type:committee a rdfs:Class ;
+    rdfs:label "Committee" ;
+    property:description "Committee" ;
+    dc:relation <https://en.wikipedia.org/wiki/Committee> .
+
+type:devolved-administration a rdfs:Class ;
+    rdfs:label "Devolved administration" ;
+    property:description "Devolved administration" ;
+    dc:relation <https://en.wikipedia.org/wiki/Devolved_administration> .
+
+type:executive-agency a rdfs:Class ;
+    rdfs:label "Executive agency" ;
+    property:description "Executive agency" ;
+    dc:relation <https://en.wikipedia.org/wiki/Executive_agency> .
+
+type:external-experts a rdfs:Class ;
+    rdfs:label "External experts" ;
+    property:description "External experts" ;
+    dc:relation <https://en.wikipedia.org/wiki/External_experts> .
+
+type:group-of-government-experts a rdfs:Class ;
+    rdfs:label "Group of government experts" ;
+    property:description "Group of government experts" ;
+    dc:relation <https://www.nti.org/education-center/treaties-and-regimes/united-nations-groups-governmental-experts/> .
+
+type:industrial-council a rdfs:Class ;
+    rdfs:label "Industrial council" ;
+    property:description "Industrial council" ;
+    dc:relation <https://en.wikipedia.org/wiki/Industrial_council> .
+
+type:network a rdfs:Class ;
+    rdfs:label "Network" ;
+    property:description "Network" ;
+    dc:relation <https://en.wikipedia.org/wiki/Network> .
+
+type:office a rdfs:Class ;
+    rdfs:label "Office" ;
+    property:description "Office" ;
+    dc:relation <https://en.wikipedia.org/wiki/Office> .
+
+type:profession a rdfs:Class ;
+    rdfs:label "Profession" ;
+    property:description "Profession" ;
+    dc:relation <https://en.wikipedia.org/wiki/Profession> .
+
+type:research-centre a rdfs:Class ;
+    rdfs:label "Research centre" ;
+    property:description "Research centre" ;
+    dc:relation <https://en.wikipedia.org/wiki/Research_centre> .
+
+type:research-council a rdfs:Class ;
+    rdfs:label "Research council" ;
+    property:description "Research council" ;
+    dc:relation <https://en.wikipedia.org/wiki/Research_council> .
+
+type:science-advisory-committee a rdfs:Class ;
+    rdfs:label "Science advisory committee" ;
+    property:description "Science advisory committee" ;
+    dc:relation <https://en.wikipedia.org/wiki/Science_advisory_committee> .
+
+type:science-advisory-council a rdfs:Class ;
+    rdfs:label "Science advisory council" ;
+    property:description "Science advisory council" ;
+    dc:relation <https://en.wikipedia.org/wiki/Science_advisory_council> .
+
+type:subcommittee a rdfs:Class ;
+    rdfs:label "Subcommittee" ;
+    property:description "Subcommittee" ;
+    dc:relation <https://en.wikipedia.org/wiki/Subcommittee> .
+
 property:closes a rdfs:Property ;
     rdfs:label "closes" ;
     property:description "The closing date of an innovation challenge" .
@@ -124,3 +199,8 @@ property:region a rdfs:Property ;
 property:grade a rdfs:Property ;
     rdfs:label "grade" ;
     property:description "Grade" .
+
+property:occupation a rdfs:Property ;
+    rdfs:label "has-oversight" ;
+    property:description "Has oversight" .
+
