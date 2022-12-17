@@ -24,7 +24,6 @@ class Module:
       fn = mod
 
       for v in ep.split("."):
-         print(v)
          try:
             fn = getattr(fn, v)
          except:
