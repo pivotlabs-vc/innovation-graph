@@ -200,7 +200,7 @@ property:grade a rdfs:Property ;
     rdfs:label "grade" ;
     property:description "Grade" .
 
-property:occupation a rdfs:Property ;
+property:has-oversight a rdfs:Property ;
     rdfs:label "has-oversight" ;
     property:description "Has oversight" .
 

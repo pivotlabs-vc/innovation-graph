@@ -1,0 +1,12 @@
+{
+    "id": "science-networks",
+    "description": "Interoperation of UK government science networks with government organisations",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "Found on the internet, public at kumu.io",
+    "copyright": "Not defined, information in the public domain",
+    "processing": "module",
+    "module": "process.py"
+}
+

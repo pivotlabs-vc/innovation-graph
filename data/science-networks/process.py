@@ -170,9 +170,6 @@ class Project:
 
         return Map(elements, edges)
 
-p = Project.load("science-networks.json")
-m = p.get("map-1vlBsQ28")
-
 def construct_tiers(m):
 
     depts = m.get_type("Department")
@@ -215,7 +212,7 @@ def make_graph(map):
 
     g = Graph()
 
-    for elt in m.elements.values():
+    for elt in map.elements.values():
 
         g.add((
             elt.get_uri(),
@@ -236,7 +233,7 @@ def make_graph(map):
                 Literal(elt.description)
             ))
 
-    for edge in m.edges.values():
+    for edge in map.edges.values():
 
         a, b = determine_oversight_relationship(tiers, edge.src, edge.dest)
 
@@ -279,6 +276,14 @@ def write_csv(map):
     for row in tbl:
         writer.writerow(row)
 
-g = make_graph(m)
-print(g.serialize(format="turtle"))
+def process(subdir, metadata, schema):
 
+    p = Project.load(subdir + "/" + "science-networks.json")
+    m = p.get("map-1vlBsQ28")
+
+    g = make_graph(m)
+    return g
+
+
+
+    
