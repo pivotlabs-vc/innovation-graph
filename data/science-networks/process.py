@@ -7,7 +7,7 @@ from rdflib import Literal, URIRef, Graph
 import csv
 
 DESCRIPTION=URIRef("http://pivotlabs.vc/challenges/p#description")
-HAS_OVERSIGHT=URIRef("http://pivotlabs.vc/challenges/p#has-oversight")
+ADVISES=URIRef("http://pivotlabs.vc/challenges/p#advises")
 
 class Edge:
     def __init__(self, data):
@@ -25,6 +25,7 @@ class Element:
         self.tags = attrs.get("tags", [])
         self.type = attrs.get("element type", None)
         self.size = attrs.get("size", 0)
+        self.betweenness = attrs.get("betweenness", 0)
         self.last = attrs.get("metrics::last", 0)
 
     def get_type_slug(self):
@@ -186,25 +187,18 @@ def construct_tiers(m):
 
     return tier
 
-def determine_oversight_relationship(tiers, a, b):
+def determine_advises_relationship(tiers, a, b):
     
-        if tiers[a] > tiers[b]:
-            return a, b
-        elif tiers[b] > tiers[a]:
-            return b, a
-        elif a.size > b.size:
-            return a, b
-        elif b.size > a.size:
-            return b, a
-        elif a.last > b.last:
-            return a, b
-        elif b.last > a.last:
-            return b, a
-        else:
+    if tiers[a] < tiers[b]:
+        return b, a
+    elif tiers[b] < tiers[a]:
+        return a, b
+    elif a.betweenness > b.betweenness:
+        return b, a
+    elif b.betweenness > a.betweenness:
+        return a, b
 
-            # FIXME: Dunno.  There are other metrics?
-            return a, b
-
+    raise RuntimeError("Cannot determine advises relationship")
 
 def make_graph(map):
 
@@ -235,11 +229,16 @@ def make_graph(map):
 
     for edge in map.edges.values():
 
-        a, b = determine_oversight_relationship(tiers, edge.src, edge.dest)
+        try:
+            a, b = determine_advises_relationship(tiers, edge.src, edge.dest)
+        except:
+
+            # No advises relationship, ignore this edge
+            continue
 
         g.add((
             a.get_uri(),
-            HAS_OVERSIGHT,
+            ADVISES,
             b.get_uri(),
         ))
 
@@ -282,8 +281,6 @@ def process(subdir, metadata, schema):
     m = p.get("map-1vlBsQ28")
 
     g = make_graph(m)
+
     return g
 
-
-
-    
