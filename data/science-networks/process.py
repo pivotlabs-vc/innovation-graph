@@ -233,7 +233,7 @@ class Curator:
         for edge in self.map.edges.values():
 
             try:
-                a, b = determine_advises_relationship(edge.src, edge.dest)
+                a, b = self.determine_advises_relationship(edge.src, edge.dest)
             except:
 
                 # No advises relationship, ignore this edge
