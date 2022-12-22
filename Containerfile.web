@@ -1,7 +1,6 @@
 
-FROM docker.io/cybermaggedon/sparql-explorer:1.1.0
+FROM docker.io/cybermaggedon/sparql-explorer:1.2.0
 
 # Add local query form.
 COPY query.html /usr/local/web/
-
 
