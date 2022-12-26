@@ -48,6 +48,8 @@ class Schema:
 
         s.properties[LABEL] = True
         s.properties[IS_A] = True
+        s.properties[SEE_ALSO] = True
+        s.properties[COMMENT] = True
 
         return s
 

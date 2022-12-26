@@ -1,10 +1,11 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns1: <http://pivotlabs.vc/challenges/p#> .
+@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns1: <http://pivotlabs.vc/challenges/p#> .
 
 <http://pivotlabs.vc/challenges/c/32a9e744bf531391ad7d3a1fadebf762da037ade> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Broader cyber security challenge areas" ;
-    ns1:description """Applications and enquiries from startups addressing our broad cyber security
+    rdfs:comment """Applications and enquiries from startups addressing our broad cyber security
 challenge areas below are still welcomed as we continue to introduce other
 challenges and invite new startups to join our programme throughout 2022.""" ;
     ns1:has-source <http://pivotlabs.vc/challenges/s/ncsc> ;
@@ -12,11 +13,11 @@ challenges and invite new startups to join our programme throughout 2022.""" ;
         <http://pivotlabs.vc/challenges/t/startup>,
         <http://pivotlabs.vc/challenges/t/still> ;
     ns1:title "Broader cyber security challenge areas" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_8> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_8> .
 
 <http://pivotlabs.vc/challenges/c/3dd03799289653172f354f60956c6de5c9f7af4d> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Ransomware" ;
-    ns1:description """Ransomware is the biggest cyber security challenge facing the UK today and the
+    rdfs:comment """Ransomware is the biggest cyber security challenge facing the UK today and the
 models used by criminals have been honed and strengthened over time. ​
 
 Organised crime groups invest in collecting information about potential
@@ -33,11 +34,11 @@ We're looking for startups that can;""" ;
         <http://pivotlabs.vc/challenges/t/startup>,
         <http://pivotlabs.vc/challenges/t/​> ;
     ns1:title "Ransomware" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_5> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_5> .
 
 <http://pivotlabs.vc/challenges/c/86d6cd1478c4ffcdc0ca8f02e3788c69d4241d58> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Malvertising" ;
-    ns1:description """The online advertising ecosystem offers attackers unique opportunities to
+    rdfs:comment """The online advertising ecosystem offers attackers unique opportunities to
 commit fraud and deliver malware. To keep people safe online, we want to hear
 from startups that:
 
@@ -53,11 +54,11 @@ get in touch with Plexal's innovation team at
         <http://pivotlabs.vc/challenges/t/can>,
         <http://pivotlabs.vc/challenges/t/online> ;
     ns1:title "Malvertising" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_7> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_7> .
 
 <http://pivotlabs.vc/challenges/c/95c9fd92900bd9df7ffc1011c56924f6ab1c9af4> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Operational technology" ;
-    ns1:description """As the internet is combined with operational technology, new digital risks are
+    rdfs:comment """As the internet is combined with operational technology, new digital risks are
 introduced. To realise the benefits of Industry 4.0 in advanced manufacturing
 settings and protect our most critical national infrastructure, we need robust
 cyber security.
@@ -72,11 +73,11 @@ faster?""" ;
         <http://pivotlabs.vc/challenges/t/protect>,
         <http://pivotlabs.vc/challenges/t/vulnerability> ;
     ns1:title "Operational technology" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_1> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_1> .
 
 <http://pivotlabs.vc/challenges/c/b516bd5a926903d52c75f3ac535379cb00ff2722> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Protecting SMEs and citizens" ;
-    ns1:description """Cyber security should be for everyone. We're looking for solutions that can
+    rdfs:comment """Cyber security should be for everyone. We're looking for solutions that can
 empower busy SMEs and citizens to defend themselves from digital threats.
 
 We want to raise the level of cyber awareness and basic cyber hygiene. Your
@@ -87,11 +88,11 @@ updating devices or creating backups, for example.""" ;
         <http://pivotlabs.vc/challenges/t/helping>,
         <http://pivotlabs.vc/challenges/t/updating> ;
     ns1:title "Protecting SMEs and citizens" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_2> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_2> .
 
 <http://pivotlabs.vc/challenges/c/b7c664ab2187e9b6069b624971a52e9e2d6ecf3b> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Better engagement" ;
-    ns1:description """How can we use innovative ways of engaging people, security teams and the
+    rdfs:comment """How can we use innovative ways of engaging people, security teams and the
 wider business in cyber security to help them put what they learn into
 practice and create a positive security culture?
 
@@ -110,11 +111,11 @@ economics or psychology (for example) to:
         <http://pivotlabs.vc/challenges/t/security>,
         <http://pivotlabs.vc/challenges/t/use> ;
     ns1:title "Better engagement" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_4> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_4> .
 
 <http://pivotlabs.vc/challenges/c/b93ca147c803ee967b93d0892f55ebf8e85ab760> a <http://pivotlabs.vc/challenges/t#challenge> ;
     rdfs:label "Incident response for SMEs and citizens" ;
-    ns1:description """When a cyber attack happens, how quickly can people and organisations recover?
+    rdfs:comment """When a cyber attack happens, how quickly can people and organisations recover?
 We're looking for startups that can build resilience.
 
 For example, can you help people and SMEs with the following:
@@ -130,82 +131,82 @@ to recover from a cyber incident.""" ;
         <http://pivotlabs.vc/challenges/t/incident>,
         <http://pivotlabs.vc/challenges/t/response> ;
     ns1:title "Incident response for SMEs and citizens" ;
-    dc:relation <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_3> .
+    rdf:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_3> .
 
 <http://pivotlabs.vc/challenges/t/advertising> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "advertising" ;
-    ns1:description "The topic 'advertising' derived from natural language analysis" .
+    rdfs:comment "The topic 'advertising' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/can> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "can" ;
-    ns1:description "The topic 'can' derived from natural language analysis" .
+    rdfs:comment "The topic 'can' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/challenge> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "challenge" ;
-    ns1:description "The topic 'challenge' derived from natural language analysis" .
+    rdfs:comment "The topic 'challenge' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/culture> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "culture" ;
-    ns1:description "The topic 'culture' derived from natural language analysis" .
+    rdfs:comment "The topic 'culture' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/everyone> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "everyone" ;
-    ns1:description "The topic 'everyone' derived from natural language analysis" .
+    rdfs:comment "The topic 'everyone' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/helping> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "helping" ;
-    ns1:description "The topic 'helping' derived from natural language analysis" .
+    rdfs:comment "The topic 'helping' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/incident> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "incident" ;
-    ns1:description "The topic 'incident' derived from natural language analysis" .
+    rdfs:comment "The topic 'incident' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/looking> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "looking" ;
-    ns1:description "The topic 'looking' derived from natural language analysis" .
+    rdfs:comment "The topic 'looking' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/online> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "online" ;
-    ns1:description "The topic 'online' derived from natural language analysis" .
+    rdfs:comment "The topic 'online' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/protect> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "protect" ;
-    ns1:description "The topic 'protect' derived from natural language analysis" .
+    rdfs:comment "The topic 'protect' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/response> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "response" ;
-    ns1:description "The topic 'response' derived from natural language analysis" .
+    rdfs:comment "The topic 'response' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/security> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "security" ;
-    ns1:description "The topic 'security' derived from natural language analysis" .
+    rdfs:comment "The topic 'security' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/still> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "still" ;
-    ns1:description "The topic 'still' derived from natural language analysis" .
+    rdfs:comment "The topic 'still' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/updating> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "updating" ;
-    ns1:description "The topic 'updating' derived from natural language analysis" .
+    rdfs:comment "The topic 'updating' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/use> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "use" ;
-    ns1:description "The topic 'use' derived from natural language analysis" .
+    rdfs:comment "The topic 'use' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/vulnerability> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "vulnerability" ;
-    ns1:description "The topic 'vulnerability' derived from natural language analysis" .
+    rdfs:comment "The topic 'vulnerability' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/​> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "​" ;
-    ns1:description "The topic '​' derived from natural language analysis" .
+    rdfs:comment "The topic '​' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/cyber> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "cyber" ;
-    ns1:description "The topic 'cyber' derived from natural language analysis" .
+    rdfs:comment "The topic 'cyber' derived from natural language analysis" .
 
 <http://pivotlabs.vc/challenges/t/startup> a <http://pivotlabs.vc/challenges/t#topic> ;
     rdfs:label "startup" ;
-    ns1:description "The topic 'startup' derived from natural language analysis" .
+    rdfs:comment "The topic 'startup' derived from natural language analysis" .
 
 

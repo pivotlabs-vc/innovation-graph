@@ -6,7 +6,7 @@ import sys
 from rdflib import Literal, URIRef, Graph
 import csv
 
-DESCRIPTION=URIRef("http://pivotlabs.vc/challenges/p#description")
+COMMENT=URIRef("http://www.w3.org/2000/01/rdf-schema#comment")
 ADVISES=URIRef("http://pivotlabs.vc/challenges/p#advises")
 
 class Edge:
@@ -226,7 +226,7 @@ class Curator:
             if elt.description:
                 g.add((
                     elt.get_uri(),
-                    DESCRIPTION,
+                    COMMENT,
                     Literal(elt.description)
                 ))
 

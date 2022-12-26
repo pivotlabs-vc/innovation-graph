@@ -25,11 +25,11 @@
 
 	"properties": [
 	    {
-		"predicate": "property:description",
+		"predicate": "rdfs:comment",
 		"object-field": "description"
 	    },
 	    {
-		"predicate": "dc:relation",
+		"predicate": "rdf:seeAlso",
 		"object-field": "web-url"
 	    },
 	    {

@@ -2,3 +2,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix property: <http://pivotlabs.vc/challenges/p#> .
+
+type:source a rdfs:Class ;
+    rdfs:label "source" ;
+    rdfs:comment "An identifier for a source of innovation challenges" ;
+    rdf:seeAlso <https://en.wikipedia.org/wiki/Source_text> .
