@@ -14,6 +14,9 @@ class Schema:
        self.properties = {}
        self.classes = {}
 
+       self.domains = {}
+       self.ranges = {}
+
     @staticmethod
     def load(path):
 
@@ -46,10 +49,20 @@ class Schema:
                 if tpl[2] == CLASS:
                     s.classes[tpl[0]] = True
 
+            if tpl[1] == DOMAIN:
+                if tpl[0] not in s.domains: s.domains[tpl[0]] = []
+                s.domains[tpl[0]].append(tpl[2])
+
+            if tpl[1] == RANGE:
+                if tpl[0] not in s.ranges: s.ranges[tpl[0]] = []
+                s.ranges[tpl[0]].append(tpl[2])
+
         s.properties[LABEL] = True
         s.properties[IS_A] = True
         s.properties[SEE_ALSO] = True
         s.properties[COMMENT] = True
+        s.properties[DOMAIN] = True
+        s.properties[RANGE] = True
 
         return s
 

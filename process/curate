@@ -46,7 +46,7 @@ except LineProcessingError as e:
    logging.error(f"Error in {e.file} line {e.line}: {e}")
    sys.exit(1)
 except PredicateNotKnown as e:
-   logging.error(f"Predicate {e.predicate} not known, parsing {e.file}")
+   logging.error(f"Predicate {e.predicate} not known")
    sys.exit(1)
 
 # Graph is loaded, serialise in Turtle format on standard output

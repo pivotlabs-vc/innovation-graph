@@ -7,6 +7,7 @@
 import os
 import json
 import logging
+from rdflib.term import Literal
 
 from . csv import *
 from . turtle import *
@@ -37,6 +38,7 @@ class Curator:
 
         logging.info("Processing " + subdir + "...")
         metadata = json.load(open(subdir + "/metadata.json"))
+
         for field in [
                 "id", "description", "contributors", "origin", "copyright",
                 "processing"
@@ -54,6 +56,57 @@ class Curator:
 
         return cls.load(subdir, metadata, self.schema)
 
+    def is_type(self, val, cls, graph, schema):
+
+        if type(val) == Literal:
+            if cls == LITERAL:
+                return True
+            if cls == URIRef("http://www.w3.org/2001/XMLSchema#date"):
+                return True
+
+        for (s, p, o) in graph.triples((val, IS_A, cls)):
+            return True
+
+        for (s, p, o) in schema.triples((val, IS_A, cls)):
+            return True
+
+        return False
+
+    def check_type(self, val, allowed, graph, schema):
+
+        for a in allowed:
+            if self.is_type(val, a, graph, schema):
+                return
+
+        logging.error("Value not allowed %s" % val)
+        logging.error("Does not match %s" % allowed)
+        raise RuntimeError("Value %s not allowed" % val)
+    
+    def validate(self, graph):
+
+        schema = self.schema
+
+        for (s, p, o) in graph:
+
+            if p in schema.properties:
+
+                if p in schema.ranges:
+                    self.check_type(
+                        o, schema.ranges[p], graph, schema.graph
+                    )
+
+                if p in schema.domains:
+                    self.check_type(
+                        s, schema.domains[p], graph, schema.graph
+                    )
+
+                continue
+            
+            if p in schema.classes:
+                continue
+
+            raise PredicateNotKnown(p, "Not known: " + str(p))
+        
     # Walks a directory searching for sub-directories with metadata.json
     # files
     def walk(self, dir):
@@ -79,6 +132,9 @@ class Curator:
             # Add the sub-graph to the conglomerate graph
             for tpl in sg.graph:
                 g.add(tpl)
+
+        # Validate against schema
+        self.validate(g)
 
         return g
 
