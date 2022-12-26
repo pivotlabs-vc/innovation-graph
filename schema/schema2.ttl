@@ -1,0 +1,45 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix property: <http://pivotlabs.vc/challenges/p#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+property:grade a rdfs:Property ;
+    rdfs:label "grade" ;
+    property:description "Job grade or rank" .
+
+property:team a rdfs:Property ;
+    rdfs:label "team" ;
+    property:description "Name of team" .
+
+property:department a rdfs:Property ;
+    rdfs:label "department" ;
+    property:description "Name of department" .
+
+property:unit a rdfs:Property ;
+    rdfs:label "unit" ;
+    property:description "Name of organisational unit" .
+
+property:organisation a rdfs:Property ;
+    rdfs:label "organisation" ;
+    property:description "Name of organisational" .
+
+property:fte a rdfs:Property ;
+    rdfs:label "fte" ;
+    property:description "Full-time employee count" .
+
+property:occupation a rdfs:Property ;
+    rdfs:label "occupation" ;
+    property:description "Occupation" .
+
+property:region a rdfs:Property ;
+    rdfs:label "region" ;
+    property:description "Region of the country" .
+
+property:grade a rdfs:Property ;
+    rdfs:label "grade" ;
+    property:description "Grade" .
+
+property:advises a rdfs:Property ;
+    rdfs:label "advises" ;
+    property:description "Advises" .
+

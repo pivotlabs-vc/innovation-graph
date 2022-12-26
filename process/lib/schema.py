@@ -3,6 +3,8 @@
 
 from rdflib import Literal, URIRef, Graph
 import json
+import os
+import logging
 
 from . defs import *
 
@@ -18,7 +20,14 @@ class Schema:
         s = Schema()
 
         g = Graph()
-        g.parse(path + "/schema.ttl", format="turtle")
+
+        # Walk subdirectory, load anything with a .ttl suffix
+        for subdir, dirs, files in os.walk(path):
+            for f in files:
+                if f.endswith(".ttl"):
+                    file = subdir + "/" + f
+                    logging.info(f"Loading {file}...")
+                    g.parse(file, format="turtle")
 
         s.graph = g
         s.namespaces = json.load(open(path + "/namespaces.json"))
