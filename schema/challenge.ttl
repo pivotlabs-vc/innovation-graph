@@ -1,29 +1,46 @@
-@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix type: <http://pivotlabs.vc/innov/t/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix property: <http://pivotlabs.vc/challenges/p#> .
+@prefix challenge: <http://pivotlabs.vc/innov/t/challenge#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 type:challenge a rdfs:Class ;
     rdfs:label "challenge" ;
     rdfs:comment "An innovation challenge is a means to encourage creation and elaboration of the best and most sustainable ideas from the best innovators by providing a competition for innovation grants." ;
     rdf:seeAlso <https://en.wikipedia.org/wiki/Innovation_competition> .
 
-property:title a rdfs:Property ;
+challenge:title a rdfs:Property ;
     rdfs:label "title" ;
-    rdfs:comment "A descriptive summary title" .
+    rdfs:comment "A descriptive summary title" ;
+    rdfs:domain type:challenge ;
+    rdfs:range rdfs:Literal .
 
-property:closes a rdfs:Property ;
-    rdfs:label "closes" ;
-    rdfs:comment "The closing date of an innovation challenge" .
-
-property:has-source a rdfs:Property ;
-    rdfs:label "has-source" .
-
-property:has-topic a rdfs:Property ;
-    rdfs:label "has-topic" ;
-    rdfs:comment "Relationship describing innovation topics",
-        "Relationship describing sources of innovation challenges" .
-
-property:opens a rdfs:Property ;
+challenge:opens a rdfs:Property ;
     rdfs:label "opens" ;
-    rdfs:comment "The opening date of an innovation challenge" .
+    rdfs:comment "The opening date of an innovation challenge" ;
+    rdfs:domain type:challenge ;
+    rdfs:range xsd:date .
+
+challenge:closes a rdfs:Property ;
+    rdfs:label "closes" ;
+    rdfs:comment "The closing date of an innovation challenge" ;
+    rdfs:domain type:challenge ;
+    rdfs:range xsd:date .
+
+challenge:has-sponsor a rdfs:Property ;
+    rdfs:label "has-sponsor" ;
+    rdfs:comment "Relationship describing sponsor of innovation challenges" ;
+    rdfs:domain type:challenge ;
+    rdfs:range type:sponsor .
+
+challenge:has-topic a rdfs:Property ;
+    rdfs:label "has-topic" ;
+    rdfs:comment "Relationship describing innovation topics" ;
+    rdfs:domain type:challenge ;
+    rdfs:range type:topic .
+
+type:sponsor a rdfs:Class ;
+    rdfs:label "sponsor" ;
+    rdfs:comment "The sponsor of an innovation challenges" ;
+    rdf:seeAlso <https://en.wikipedia.org/wiki/Sponsor> .
+
