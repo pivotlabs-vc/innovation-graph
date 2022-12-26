@@ -6,4 +6,4 @@
 type:department a rdfs:Class ;
     rdfs:label "department" ;
     rdfs:comment "A department" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Department> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Department> .

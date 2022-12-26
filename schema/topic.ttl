@@ -5,4 +5,4 @@
 type:topic a rdfs:Class ;
     rdfs:label "topic" ;
     rdfs:comment "A subject or classification of an innovation opportunity derived using topic classification" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Topic_and_comment> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Topic_and_comment> .

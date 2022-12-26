@@ -6,4 +6,4 @@
 type:grade a rdfs:Class ;
     rdfs:label "grade" ;
     rdfs:comment "A grade" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Grade> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Grade> .

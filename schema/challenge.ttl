@@ -7,7 +7,7 @@
 type:challenge a rdfs:Class ;
     rdfs:label "challenge" ;
     rdfs:comment "An innovation challenge is a means to encourage creation and elaboration of the best and most sustainable ideas from the best innovators by providing a competition for innovation grants." ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Innovation_competition> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Innovation_competition> .
 
 challenge:title a rdfs:Property ;
     rdfs:label "title" ;
@@ -42,5 +42,5 @@ challenge:has-topic a rdfs:Property ;
 type:sponsor a rdfs:Class ;
     rdfs:label "sponsor" ;
     rdfs:comment "The sponsor of an innovation challenges" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Sponsor> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Sponsor> .
 

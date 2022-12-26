@@ -6,4 +6,4 @@
 type:region a rdfs:Class ;
     rdfs:label "region" ;
     rdfs:comment "A region" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Region> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Region> .

@@ -6,4 +6,4 @@
 type:unit a rdfs:Class ;
     rdfs:label "unit" ;
     rdfs:comment "A unit" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Unit> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Unit> .

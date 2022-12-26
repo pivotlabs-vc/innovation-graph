@@ -3,14 +3,14 @@
     "property": "http://pivotlabs.vc/challenges/p#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "type": "http://pivotlabs.vc/challenges/t#",
-    "source": "http://pivotlabs.vc/challenges/s/",
-    "person": "http://pivotlabs.vc/challenges/p/",
+    "type": "http://pivotlabs.vc/innov/t/",
+    "sponsor": "http://pivotlabs.vc/innov/sponsor/",
+    "person": "http://pivotlabs.vc/innov/person/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "region": "http://pivotlabs.vc/challenges/region/",
-    "occupation": "http://pivotlabs.vc/challenges/occupation/",
-    "unit": "http://pivotlabs.vc/challenges/unit/",
-    "organisation": "http://pivotlabs.vc/challenges/org/",
-    "department": "http://pivotlabs.vc/challenges/department/",
-    "grade": "http://pivotlabs.vc/challenges/grade/"
+    "region": "http://pivotlabs.vc/innov/region/",
+    "occupation": "http://pivotlabs.vc/innov/occupation/",
+    "unit": "http://pivotlabs.vc/innov/unit/",
+    "organisation": "http://pivotlabs.vc/innov/org/",
+    "department": "http://pivotlabs.vc/innov/department/",
+    "grade": "http://pivotlabs.vc/innov/grade/"
 }

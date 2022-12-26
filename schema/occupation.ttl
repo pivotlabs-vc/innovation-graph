@@ -6,4 +6,4 @@
 type:occupation a rdfs:Class ;
     rdfs:label "occupation" ;
     rdfs:comment "An occupation" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Occupation> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Occupation> .

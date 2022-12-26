@@ -6,7 +6,7 @@
 type:person a rdfs:Class ;
     rdfs:label "person" ;
     rdfs:comment "A person" ;
-    rdf:seeAlso <https://en.wikipedia.org/wiki/Person> .
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/Person> .
 
 property:name a rdfs:Property ;
     rdfs:label "name" ;
