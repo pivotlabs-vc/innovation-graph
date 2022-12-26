@@ -19,8 +19,8 @@
 
     "object": {
 
-	"class": "type:source",
-	"id-prefix": "source:",
+	"class": "type:sponsor",
+	"id-prefix": "sponsor:",
 	"id-field": "id",
 
 	"properties": [
@@ -29,7 +29,7 @@
 		"object-field": "description"
 	    },
 	    {
-		"predicate": "rdf:seeAlso",
+		"predicate": "rdfs:seeAlso",
 		"object-field": "web-url"
 	    },
 	    {
