@@ -5,7 +5,8 @@ all:
 
 curate:
 	rm -f data.db
-	./process/curate data schema > data.ttl
+#	./process/curate data schema > data.ttl
+	./process/curate data/dasa schema > data.ttl
 	rdfproc -n -s sqlite -t synchronous=off data.db parse data.ttl turtle
 
 turtle: 
