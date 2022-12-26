@@ -3,42 +3,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix property: <http://pivotlabs.vc/challenges/p#> .
 
-property:grade a rdfs:Property ;
-    rdfs:label "grade" ;
-    rdfs:comment "Job grade or rank" .
-
-property:team a rdfs:Property ;
-    rdfs:label "team" ;
-    rdfs:comment "Name of team" .
-
-property:department a rdfs:Property ;
-    rdfs:label "department" ;
-    rdfs:comment "Name of department" .
-
-property:unit a rdfs:Property ;
-    rdfs:label "unit" ;
-    rdfs:comment "Name of organisational unit" .
-
-property:organisation a rdfs:Property ;
-    rdfs:label "organisation" ;
-    rdfs:comment "Name of organisational" .
-
-property:fte a rdfs:Property ;
-    rdfs:label "fte" ;
-    rdfs:comment "Full-time employee count" .
-
-property:occupation a rdfs:Property ;
-    rdfs:label "occupation" ;
-    rdfs:comment "Occupation" .
-
-property:region a rdfs:Property ;
-    rdfs:label "region" ;
-    rdfs:comment "Region of the country" .
-
-property:grade a rdfs:Property ;
-    rdfs:label "grade" ;
-    rdfs:comment "Grade" .
-
 property:advises a rdfs:Property ;
     rdfs:label "advises" ;
     rdfs:comment "Advises" .

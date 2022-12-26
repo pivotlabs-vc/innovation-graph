@@ -1,0 +1,105 @@
+{
+    "id": "ukri-organogram",
+    "description": "UKRI Organograms",
+    "contributors": [
+	"cybermaggedon"
+    ],
+    "origin": "data.gov.uk website",
+    "copyright": "Open Government Licence",
+    "licence": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "processing": "csv",
+
+    "input": "organogram-senior.csv",
+    "skip": 0,
+
+    "fields-from-header": true,
+
+    "object": {
+
+	"class": "type:person",
+	"id-prefix": "personinst:ukri/",
+	"id-field": "Post Unique Reference",
+
+	"properties": [
+
+	    {
+		"predicate": "person:name",
+		"object-field": "Name"
+	    },
+	    {
+		"predicate": "person:grade",
+		"object-field": "Grade (or equivalent)",
+		"object-type": "type:grade",
+		"derive-object-id": true,
+		"object-id-prefix": "gradeinst:"
+	    },
+	    {
+		"predicate": "person:job-title",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "rdfs:label",
+		"object-field": "Job Title"
+	    },
+	    {
+		"predicate": "person:team",
+		"object-field": "Job/Team Function"
+	    },
+	    {
+		"predicate": "person:department",
+		"object-field": "Parent Department",
+		"object-type": "type:department",
+		"map": {
+		    "Department for Business, Energy & Industrial Strategy": "department:beis"
+		}
+	    },
+	    {
+		"predicate": "person:organisation",
+		"object-field": "Organisation",
+		"object-type": "type:organisation",
+		"derive-object-id": true,
+		"object-id-prefix": "organisationinst:"
+	    },
+	    {
+		"predicate": "person:unit",
+		"object-field": "Unit",
+		"object-type": "type:unit",
+		"derive-object-id": true,
+		"object-id-prefix": "unitisnt:"
+	    },
+	    {
+		"predicate": "person:fte",
+		"object-field": "FTE",
+		"datatype": "xsd:decimal"
+	    },
+	    {
+		"predicate": "person:occupation",
+		"object-field": "Professional/Occupational Group",
+		"object-type": "type:occupation",
+		"use-object-id-hash": true,
+		"object-id-prefix": "occupationinst:"
+	    },
+	    {
+		"predicate": "person:region",
+		"object-field": "Office Region",
+		"object-type": "type:region",
+		"ignore": {
+		    "Unknown": true
+		},
+		"map": {
+		    "East Midlands": "regioninst:east-midlands",
+		    "East of England": "regioninst:east-of-england",
+		    "London": "regioninst:london",
+		    "North West": "regioninst:north-west",
+		    "Scotland": "regioninst:scotland",
+		    "South East": "regioninst:south-east",
+		    "South West": "regioninst:south-west"
+		}
+	    }
+	    
+
+	]
+
+    }
+
+}

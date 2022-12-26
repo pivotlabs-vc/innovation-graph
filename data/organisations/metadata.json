@@ -20,7 +20,7 @@
     "object": {
 
 	"class": "type:sponsor",
-	"id-prefix": "sponsor:",
+	"id-prefix": "sponsorinst:",
 	"id-field": "id",
 
 	"properties": [
@@ -37,7 +37,7 @@
 		"object-field": "label"
 	    },
 	    {
-		"predicate": "property:founded",
+		"predicate": "organisation:founded",
 		"object-field": "founded",
 		"datatype": "xsd:gYear"
 	    }

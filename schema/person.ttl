@@ -1,13 +1,69 @@
-@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix type: <http://pivotlabs.vc/innov/t/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix property: <http://pivotlabs.vc/challenges/p#> .
+@prefix person: <http://pivotlabs.vc/innov/t/person#> .
 
 type:person a rdfs:Class ;
     rdfs:label "person" ;
     rdfs:comment "A person" ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Person> .
 
-property:name a rdfs:Property ;
+person:name a rdfs:Property ;
     rdfs:label "name" ;
-    rdfs:comment "Person's name" .
+    rdfs:comment "Person's name" ;
+    rdfs:domain type:person ;
+    rdfs:range rdfs:Literal .
+
+person:grade a rdfs:Property ;
+    rdfs:label "grade" ;
+    rdfs:comment "Grade" ;
+    rdfs:domain type:person ;
+    rdfs:range type:grade .
+
+person:job-title a rdfs:Property ;
+    rdfs:label "job title" ;
+    rdfs:comment "Person's job title" ;
+    rdfs:domain type:person ;
+    rdfs:range rdfs:Literal .
+
+person:region a rdfs:Property ;
+    rdfs:label "region" ;
+    rdfs:comment "Region of the country" ;
+    rdfs:domain type:person ;
+    rdfs:range type:region .
+
+person:occupation a rdfs:Property ;
+    rdfs:label "occupation" ;
+    rdfs:comment "Occupation" ;
+    rdfs:domain type:person ;
+    rdfs:range type:occupation .
+
+person:organisation a rdfs:Property ;
+    rdfs:label "organisation" ;
+    rdfs:comment "Name of organisation" ;
+    rdfs:domain type:person ;
+    rdfs:range type:organisation .
+
+person:team a rdfs:Property ;
+    rdfs:label "team" ;
+    rdfs:comment "Name of team" ;
+    rdfs:domain type:person ;
+    rdfs:range rdfs:Literal .
+
+person:fte a rdfs:Property ;
+    rdfs:label "fte" ;
+    rdfs:comment "Full-time employee count" ;
+    rdfs:domain type:person ;
+    rdfs:range rdfs:Literal .
+
+person:unit a rdfs:Property ;
+    rdfs:label "unit" ;
+    rdfs:comment "Name of organisational unit" ;
+    rdfs:domain type:person ;
+    rdfs:range type:unit .
+
+person:department a rdfs:Property ;
+    rdfs:label "department" ;
+    rdfs:comment "Name of department" ;
+    rdfs:domain type:person ;
+    rdfs:range type:department .

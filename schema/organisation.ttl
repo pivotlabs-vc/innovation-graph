@@ -1,7 +1,7 @@
-@prefix type: <http://pivotlabs.vc/challenges/t#> .
+@prefix type: <http://pivotlabs.vc/innov/t/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix property: <http://pivotlabs.vc/challenges/p#> .
+@prefix organisation: <http://pivotlabs.vc/innov/t/organisation#> .
 
 type:organisation a rdfs:Class ;
     rdfs:label "organisation" ;
@@ -83,6 +83,13 @@ type:subcommittee a rdfs:Class ;
     rdfs:comment "Subcommittee" ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Subcommittee> .
 
-property:founded a rdfs:Property ;
+organisation:founded a rdfs:Property ;
     rdfs:label "founded" ;
-    rdfs:comment "Organisation founding year" .
+    rdfs:comment "Organisation founding year" ;
+
+    # FIXME: Sponsor / organisation needs resolving.
+
+    rdfs:domain type:organisation ;
+    rdfs:domain type:sponsor ;
+    rdfs:range rdfs:Literal .
+    

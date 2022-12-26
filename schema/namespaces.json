@@ -1,16 +1,27 @@
 {
     "dc": "http://purl.org/dc/elements/1.1/",
-    "property": "http://pivotlabs.vc/challenges/p#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
     "type": "http://pivotlabs.vc/innov/t/",
-    "sponsor": "http://pivotlabs.vc/innov/sponsor/",
-    "person": "http://pivotlabs.vc/innov/person/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "region": "http://pivotlabs.vc/innov/region/",
-    "occupation": "http://pivotlabs.vc/innov/occupation/",
-    "unit": "http://pivotlabs.vc/innov/unit/",
-    "organisation": "http://pivotlabs.vc/innov/org/",
-    "department": "http://pivotlabs.vc/innov/department/",
-    "grade": "http://pivotlabs.vc/innov/grade/"
+
+    "sponsor": "http://pivotlabs.vc/innov/t/sponsor#",
+    "person": "http://pivotlabs.vc/innov/t/person#",
+    "region": "http://pivotlabs.vc/innov/t/region#",
+    "occupation": "http://pivotlabs.vc/innov/t/occupation#",
+    "unit": "http://pivotlabs.vc/innov/t/unit#",
+    "organisation": "http://pivotlabs.vc/innov/t/organisation#",
+    "department": "http://pivotlabs.vc/innov/t/department#",
+    "grade": "http://pivotlabs.vc/innov/t/grade#",
+
+    "sponsorinst": "http://pivotlabs.vc/innov/sponsor/",
+    "personinst": "http://pivotlabs.vc/innov/person/",
+    "regioninst": "http://pivotlabs.vc/innov/region/",
+    "occupationinst": "http://pivotlabs.vc/innov/occupation/",
+    "unitinst": "http://pivotlabs.vc/innov/unit/",
+    "organisationinst": "http://pivotlabs.vc/innov/organisation/",
+    "departmentinst": "http://pivotlabs.vc/innov/department/",
+    "gradeinst": "http://pivotlabs.vc/innov/grade/",
+
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
 }
