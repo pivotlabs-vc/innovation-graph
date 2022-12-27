@@ -239,6 +239,8 @@ class Curator:
                 # No advises relationship, ignore this edge
                 continue
 
+            # FIXME
+            continue
             g.add((
                 a.get_uri(),
                 ADVISES,

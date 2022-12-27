@@ -23,5 +23,7 @@
     "departmentinst": "http://pivotlabs.vc/innov/department/",
     "gradeinst": "http://pivotlabs.vc/innov/grade/",
 
+    "schema": "https://schema.org/",
+
     "xsd": "http://www.w3.org/2001/XMLSchema#"
 }

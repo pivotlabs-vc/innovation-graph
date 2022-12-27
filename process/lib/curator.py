@@ -91,16 +91,29 @@ class Curator:
             if p in schema.properties:
 
                 if p in schema.ranges:
+                    try:
 #                    logging.info("%s %s %s" % (s, p, o))
-                    self.check_type(
-                        o, schema.ranges[p], graph, schema.graph
-                    )
+                        self.check_type(
+                            o, schema.ranges[p], graph, schema.graph
+                        )
+                    except Exception as e:
+                        logging.error(
+                            "Validation range check for predicate " + str(p)
+                        )
+                        raise e
+
 
                 if p in schema.domains:
 #                    logging.info("%s %s %s" % (s, p, o))
-                    self.check_type(
-                        s, schema.domains[p], graph, schema.graph
-                    )
+                    try:
+                        self.check_type(
+                            s, schema.domains[p], graph, schema.graph
+                        )
+                    except Exception as e:
+                        logging.error(
+                            "Validation domain check for predicate " + str(p)
+                        )
+                        raise e
 
                 continue
             
@@ -108,6 +121,10 @@ class Curator:
                 continue
 
             logging.error("Predicate not known: " + str(p))
+
+            for p in schema.properties:
+                logging.error(p)
+
             raise PredicateNotKnown(p, "Not known: " + str(p))
         
     # Walks a directory searching for sub-directories with metadata.json
