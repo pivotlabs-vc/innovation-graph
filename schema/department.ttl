@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix property: <http://pivotlabs.vc/challenges/p#> .
 
-type:department a rdfs:Class ;
-    rdfs:label "department" ;
-    rdfs:comment "A department" ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/Department> .
+#type:department a rdfs:Class ;
+#    rdfs:label "department" ;
+#    rdfs:comment "A department" ;
+#    rdfs:seeAlso <https://en.wikipedia.org/wiki/Department> .

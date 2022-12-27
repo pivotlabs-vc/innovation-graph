@@ -21,19 +21,19 @@ mappings = {
     },
     "committee": {
         "arms-length-body": "-advises",
-        "department": "-delegates",
+        "department": "-owns",
         "science-advisory-committee": "-advises",
     },
     "department": {
         "arms-length-body": "-advises",
-        "committee": "delegates",
+        "committee": "owns",
         "department": "=consults",
-        "executive-agency": "-delegates",
+        "executive-agency": "owns",
         "external-experts": "-advises",
         "group-of-government-experts": "-advises",
         "industrial-council": "-advises",
         "network": "consults",
-        "office": "-delegates",
+        "office": "owns",
         "profession": "consults",
         "research-centre": "-advises",
         "research-council": "-advises",
@@ -46,7 +46,7 @@ mappings = {
         "network": "consults",
         "science-advisory-council": "-advises",
         "research-centre": "sponsors",
-        "executive-agency": "delegates",
+        "executive-agency": "owns",
     },
     "executive-agency": {
         "science-advisory-committee": "-advises",
@@ -337,8 +337,7 @@ class Curator:
             g.add((
                 elt.get_uri(),
                 URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
-#                elt.get_type(),
-                URIRef(self.schema.map("schema:Organization")),
+                elt.get_type(),
             ))
 
             g.add((
@@ -359,16 +358,28 @@ class Curator:
             fwd, rev = self.get_relationship(edge.src, edge.dest)
 
             if fwd:
+
+                if fwd == "owns":
+                    fwd = URIRef(self.schema.map("schema:parentOrganization"))
+                else:
+                    fwd = ADVISES + fwd
+
                 g.add((
                     edge.src.get_uri(),
-                    ADVISES + fwd,
+                    fwd,
                     edge.dest.get_uri(),
                 ))
 
             if rev:
+
+                if rev == "owns":
+                    rev = URIRef(self.schema.map("schema:parentOrganization"))
+                else:
+                    rev = ADVISES + rev
+
                 g.add((
                     edge.dest.get_uri(),
-                    ADVISES + rev,
+                    rev,
                     edge.src.get_uri(),
                 ))
 

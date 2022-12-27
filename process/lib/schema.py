@@ -94,4 +94,3 @@ class Schema:
             return Literal(str, datatype=tp)
         return Literal(str)
 
-  

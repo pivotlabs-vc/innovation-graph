@@ -56,6 +56,21 @@ class Curator:
 
         return cls.load(subdir, metadata, self.schema)
 
+    def sub_class(self, cls, par, graph, schema):
+
+        if cls == par:
+            return True
+
+        for (s, p, o) in graph.triples((cls, SUB_CLASS_OF, None)):
+            if self.sub_class(o, par, graph, schema):
+                return True
+
+        for (s, p, o) in schema.triples((cls, SUB_CLASS_OF, None)):
+            if self.sub_class(o, par, graph, schema):
+                return True
+
+        return False
+
     def is_type(self, val, cls, graph, schema):
 
         if type(val) == Literal:
@@ -69,6 +84,14 @@ class Curator:
 
         for (s, p, o) in schema.triples((val, IS_A, cls)):
             return True
+
+        for (s, p, o) in graph.triples((val, IS_A, None)):
+            if self.sub_class(o, cls, graph, schema):
+                return True
+
+        for (s, p, o) in schema.triples((val, IS_A, None)):
+            if self.sub_class(o, cls, graph, schema):
+                return True
 
         return False
 
