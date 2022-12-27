@@ -21,19 +21,19 @@ mappings = {
     },
     "committee": {
         "arms-length-body": "-advises",
-        "department": "-owns",
+        "department": "parent",
         "science-advisory-committee": "-advises",
     },
     "department": {
         "arms-length-body": "-advises",
-        "committee": "owns",
+        "committee": "-parent",
         "department": "=consults",
-        "executive-agency": "owns",
+        "executive-agency": "-parent",
         "external-experts": "-advises",
         "group-of-government-experts": "-advises",
         "industrial-council": "-advises",
         "network": "consults",
-        "office": "owns",
+        "office": "-parent",
         "profession": "consults",
         "research-centre": "-advises",
         "research-council": "-advises",
@@ -46,7 +46,7 @@ mappings = {
         "network": "consults",
         "science-advisory-council": "-advises",
         "research-centre": "sponsors",
-        "executive-agency": "owns",
+        "executive-agency": "-parent",
     },
     "executive-agency": {
         "science-advisory-committee": "-advises",
@@ -359,7 +359,7 @@ class Curator:
 
             if fwd:
 
-                if fwd == "owns":
+                if fwd == "parent":
                     fwd = URIRef(self.schema.map("schema:parentOrganization"))
                 else:
                     fwd = ADVISES + fwd
@@ -372,7 +372,7 @@ class Curator:
 
             if rev:
 
-                if rev == "owns":
+                if rev == "parent":
                     rev = URIRef(self.schema.map("schema:parentOrganization"))
                 else:
                     rev = ADVISES + rev
