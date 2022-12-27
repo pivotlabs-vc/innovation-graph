@@ -32,17 +32,21 @@
 		},
 		{
 		    "class": "schema:Organization",
-		    "predicate": "schema:affiliation",
+		    "predicate": "schema:worksFor",
 		    "id-prefix": "organisationinst:",
 		    "id-fields": ["Organisation"],
 		    "with-id": "derive",
 		    "properties": [
 			{
 			    "class": "schema:Organization",
-			    "predicate": "schema:worksFor",
+			    "predicate": "schema:parentOrganization",
 			    "id-fields": ["Parent Department"],
 			    "with-id": "map",
 			    "properties": [
+				{
+				    "predicate": "schema:name",
+				    "field": "Parent Department"
+				}
 			    ],
 			    "map": {
 				"Department for Business, Energy & Industrial Strategy": "departmentinst:beis"
