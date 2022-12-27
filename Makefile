@@ -10,7 +10,7 @@ curate:
 
 # RDFlib doesn't seem to output prefix for rdf: namespace?!
 turtle:
-	./process/curate data/ukri-organogram schema > data.ttl.tmp
+	./process/curate data/science-networks schema > data.ttl.tmp
 	( \
 	  echo '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .';\
 	  cat data.ttl.tmp; \

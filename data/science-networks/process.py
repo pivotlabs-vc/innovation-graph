@@ -7,7 +7,91 @@ from rdflib import Literal, URIRef, Graph
 import csv
 
 COMMENT=URIRef("http://www.w3.org/2000/01/rdf-schema#comment")
-ADVISES=URIRef("http://pivotlabs.vc/innov/t/organisation#advises")
+ADVISES=URIRef("http://pivotlabs.vc/innov/t/organisation#")
+
+mappings = {
+    "arms-length-body": {
+        "arms-length-body": "=consults",
+        "committee": "advises",
+        "department": "advises",
+        "network": "=consults",
+        "science-advisory-committee": "-advises",
+        "science-advisory-council": "-advises",
+        "subcommittee": "advises",
+    },
+    "committee": {
+        "arms-length-body": "-advises",
+        "department": "-delegates",
+        "science-advisory-committee": "-advises",
+    },
+    "department": {
+        "arms-length-body": "-advises",
+        "committee": "delegates",
+        "department": "=consults",
+        "executive-agency": "-delegates",
+        "external-experts": "-advises",
+        "group-of-government-experts": "-advises",
+        "industrial-council": "-advises",
+        "network": "consults",
+        "office": "-delegates",
+        "profession": "consults",
+        "research-centre": "-advises",
+        "research-council": "-advises",
+        "science-advisory-committee": "-advises",
+        "science-advisory-council": "-advises",
+    },
+    "devolved-administration": {
+        "science-advisory-committee": "-advises",
+        "arms-length-body": "=consults",
+        "network": "consults",
+        "science-advisory-council": "-advises",
+        "research-centre": "sponsors",
+        "executive-agency": "delegates",
+    },
+    "executive-agency": {
+        "science-advisory-committee": "-advises",
+    },
+    "external-experts": {
+        "office": "advises",
+        "external-experts": "=consults",
+        "science-advisory-committee": "advises",
+        "industrial-council": "advises",
+        "committee": "advises",
+    },
+    "industrial-council": {
+        "science-advisory-committee": "advises",
+    },
+    "network": {
+        "network": "=consults",
+    },
+    "office": {
+        "profession": "consults",
+        "network": "consults",
+        "arms-length-body": "-advises",
+        "group-of-government-experts": "-advises",
+        "office": "=consults",
+        "science-advisory-committee": "-advises",
+        "science-advisory-council": "-advises",
+    },
+    "research-centre": {
+        "research-centre": "=consults",
+        "arms-length-body": "-sponsors",
+    },
+    "research-council": {
+        "research-council": "=consults",
+        "executive-agency": "-sponsors",
+        "research-centre": "sponsors",
+    },
+    "science-advisory-committee": {
+        "science-advisory-committee": "=advises",
+    },
+    "science-advisory-council": {
+        "science-advisory-council": "=advises",
+    },
+    "subcommittee": {
+        "science-advisory-committee": "-advises"
+    }
+}
 
 class Edge:
     def __init__(self, data):
@@ -172,8 +256,9 @@ class Project:
         return Map(elements, edges)
 
 class Curator:
-    def __init__(self, map):
+    def __init__(self, map, schema):
         self.map = map
+        self.schema = schema
         self.tiers = self.construct_tiers()
 
     def construct_tiers(self):
@@ -205,6 +290,44 @@ class Curator:
 
         raise RuntimeError("Cannot determine advises relationship")
 
+    def get_relationship(self, src, dest):
+        stype = src.get_type_slug()
+        dtype = dest.get_type_slug()
+
+        reln = None
+        rev = False
+
+        if stype in mappings:
+            if dtype in mappings[stype]:
+                reln = mappings[stype][dtype]
+
+        if dtype in mappings:
+            if stype in mappings[dtype]:
+                reln = mappings[dtype][stype]
+                rev = True
+
+        if reln == None:
+            raise RuntimeError(
+                "No relationship between %s to %s" % (stype, dtype)
+            )
+
+        if reln[0] == '-':
+            reln = reln[1:]
+            rev = not rev
+
+        if reln[0] == '=':
+            reln = reln[1:]
+            frel = reln
+            brel = reln
+        else:
+            frel = reln
+            brel = None
+
+        if rev:
+            brel, frel = frel, brel
+
+        return frel, brel
+    
     def make_graph(self):
 
         g = Graph()
@@ -214,7 +337,8 @@ class Curator:
             g.add((
                 elt.get_uri(),
                 URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
-                elt.get_type(),
+#                elt.get_type(),
+                URIRef(self.schema.map("schema:Organization")),
             ))
 
             g.add((
@@ -232,20 +356,21 @@ class Curator:
 
         for edge in self.map.edges.values():
 
-            try:
-                a, b = self.determine_advises_relationship(edge.src, edge.dest)
-            except:
+            fwd, rev = self.get_relationship(edge.src, edge.dest)
 
-                # No advises relationship, ignore this edge
-                continue
+            if fwd:
+                g.add((
+                    edge.src.get_uri(),
+                    ADVISES + fwd,
+                    edge.dest.get_uri(),
+                ))
 
-            # FIXME
-            continue
-            g.add((
-                a.get_uri(),
-                ADVISES,
-                b.get_uri(),
-            ))
+            if rev:
+                g.add((
+                    edge.dest.get_uri(),
+                    ADVISES + rev,
+                    edge.src.get_uri(),
+                ))
 
         return g
 
@@ -284,7 +409,9 @@ class Curator:
         p = Project.load(subdir + "/" + "science-networks.json")
         m = p.get("map-1vlBsQ28")
 
-        c = Curator(m)
+        c = Curator(m, schema)
 
-        return c.make_graph()
+        g = c.make_graph()
+
+        return g
 
