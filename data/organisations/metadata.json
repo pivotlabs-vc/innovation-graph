@@ -17,33 +17,33 @@
 	"founded"
     ],
 
-    "object": {
-
-	"class": "type:sponsor",
-	"id-prefix": "sponsorinst:",
-	"id-field": "id",
-
-	"properties": [
-	    {
-		"predicate": "rdfs:comment",
-		"object-field": "description"
-	    },
-	    {
-		"predicate": "rdfs:seeAlso",
-		"object-field": "web-url"
-	    },
-	    {
-		"predicate": "rdfs:label",
-		"object-field": "label"
-	    },
-	    {
-		"predicate": "organisation:founded",
-		"object-field": "founded",
-		"datatype": "xsd:gYear"
-	    }
-	]
-
-    }
+    "objects": [
+	{
+	    "class": "type:sponsor",
+	    "id-prefix": "sponsorinst:",
+	    "id-fields": ["id"],
+	    "with-id": "derive",
+	    "properties": [
+		{
+		    "predicate": "rdfs:comment",
+		    "field": "description"
+		},
+		{
+		    "predicate": "rdfs:seeAlso",
+		    "field": "web-url"
+		},
+		{
+		    "predicate": "rdfs:label",
+		    "field": "label"
+		},
+		{
+		    "predicate": "organisation:founded",
+		    "field": "founded",
+		    "datatype": "xsd:gYear"
+		}
+	    ]
+	}
+    ]
 
 }
 
