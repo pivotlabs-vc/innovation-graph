@@ -8,7 +8,7 @@ import hashlib
 from . exceptions import *
 
 def hash(x):
-    return hashlib.md5(x.encode('utf-8')).hexdigest()[:12]
+    return hashlib.md5(x.encode('utf-8')).hexdigest()[:16]
 
 class Row:
     def __init__(self, row, fields):
@@ -21,7 +21,7 @@ class Row:
 
 class Table:
 
-    def __init__(self, path, fields=None, use_header=False, skip=0):
+    def __init__(self, path, fields=None, use_header=False, skip=0, limit=None):
 
         f = open(path)
         self.table = csv.reader(f)
@@ -40,11 +40,20 @@ class Table:
 
         self.fields = fmap
 
+        # Limit is compared to line numbers, so include the skip in the limit
+        if limit:
+            self.limit = limit + skip
+        else:
+            self.limit = None
+
         for i in range(0, skip):
             self.line += 1
             row = next(self.table)
 
     def __next__(self):
+
+        if self.limit and self.line > self.limit:
+            raise StopIteration
 
         row = next(self.table)
 
@@ -61,18 +70,18 @@ class Table:
     def __iter__(self):
         return self
 
-class LiteralField:
-    def __init__(self, props, schema):
+class LiteralValue:
+    def __init__(self, subdir, props, schema):
 
         self.schema = schema
 
         if "ignore" in props:
-            self.ignore = props["ignore"]
+            self.ignore = set(props["ignore"])
         else:
-            self.ignore = {}
+            self.ignore = set()
 
         self.pred = schema.map(props["predicate"])
-        self.field = props["object-field"]
+        self.field = props["field"]
 
         if "map" in props:
             self.mapping = props["map"]
@@ -84,7 +93,9 @@ class LiteralField:
         else:
             self.datatype = None
 
-    def handle(self, identity, row):
+    def handle(self, row, parent=None):
+
+        if parent == None: return []
 
         value = row.get(self.field)
         raw = value
@@ -102,110 +113,165 @@ class LiteralField:
         else:
             obj = self.schema.map(value)
 
-        return [(identity, self.pred, obj)]
+        return [(parent, self.pred, obj)]
 
-class ClassField:
-    def __init__(self, props, schema):
+class HashId:
+    def __init__(self, fields, pfx=None, ignore=None):
+        self.prefix = pfx
+        self.fields = fields
+        self.ignore = ignore
+
+    def handle(self, row):
+
+        value = "///".join([
+            row.get(fld)
+            for fld in self.fields
+        ])
+
+        if self.ignore and value in self.ignore:
+            return None
+
+        value = hash(value)
+        if self.prefix:
+            return self.prefix + value
+        else:
+            return value
+
+class DeriveId:
+    def __init__(self, fields, pfx, ignore=None):
+        self.prefix = pfx
+        self.fields = fields
+        self.ignore = ignore
+        
+    def handle(self, row):
+        value = "//".join([
+            row.get(fld)
+            for fld in self.fields
+        ])
+
+        if self.ignore and value in self.ignore:
+            return None
+
+        value = value.replace(" ", "-")
+        value = value.lower()
+        value = self.prefix + value
+        return value
+
+class CopyId:
+    def __init__(self, fieldsx, ignore=None):
+
+        if len(fields) != 1:
+            raise MetadataError("With 'copy' there must be exactly 1 field")
+        self.fields = fields
+
+    def handle(self, row):
+        value = row.get(self.fields[0])
+        if self.ignore and value in self.ignore: return None
+        return value
+
+class MapId:
+    def __init__(self, fields, mapping, ignore=None):
+        if len(fields) != 1:
+            raise MetadataError("With 'copy' there must be exactly 1 field")
+        self.fields = fields
+        self.mapping = mapping
+        self.ignore = ignore
+    def handle(self, row):
+        value = row.get(self.fields[0])
+        if self.ignore and value in self.ignore: return None
+        if value in self.mapping: return self.mapping[value]
+        return None
+
+class ObjectValue:
+    def __init__(self, subdir, props, schema):
 
         self.schema = schema
-
-        if "ignore" in props:
-            self.ignore = props["ignore"]
-        else:
-            self.ignore = {}
-
-        self.pred = schema.map(props["predicate"])
-        self.field = props["object-field"]
-
-        if "map" in props:
-            self.mapping = props["map"]
-        else:
-            self.mapping = None
-
-        if "derive-object-id" in props and props["derive-object-id"]:
-            self.id_prefix = props["object-id-prefix"]
-            self.derive_id = True
-        else:
-            self.derive_id = False
-
-        if "use-object-id-hash" in props and props["use-object-id-hash"]:
-            self.id_prefix = props["object-id-prefix"]
-            self.use_id_hash = True
-        else:
-            self.use_id_hash = False
-
-
-        self.object_type = schema.map(props["object-type"])
-
-    def handle(self, identity, row):
-
-        value = row.get(self.field)
-        raw = value
-
-        if value in self.ignore: return []
-
-        if self.mapping:
-            if value not in self.mapping:
-                return []
-            else:
-                value = self.mapping[value]
-
-        if self.derive_id:
-            value = value.replace(" ", "-")
-            value = value.lower()
-            value = self.id_prefix + value
-        elif self.use_id_hash:
-            value = hash(value)
-            value = self.id_prefix + value
-
-        obj = self.schema.map(value)
-
-        return [
-            (identity, self.pred, obj),
-            (obj, self.schema.map("rdf:type"), self.object_type),
-            (obj, self.schema.map("rdfs:label"), self.schema.map(raw))
-        ]
-
-class Obj:
-    def __init__(self, props, schema):
-
-        self.schema = schema
-
-        if "id-prefix" in props:
-            self.id_prefix = props["id-prefix"]
-        else:
-            self.id_prefix = None
 
         if "class" not in props:
             raise MetadataError(
-                subdir, "The 'object.class' field does not exist"
+                subdir, "The 'class' field does not exist"
             )
 
-        self.id_field = props["id-field"]
+        if "properties" not in props:
+            raise MetadataError(
+                subdir, "The 'properties' field does not exist"
+            )
+
+        if "id-prefix" in props:
+            id_prefix = props["id-prefix"]
+        else:
+            id_prefix = None
+
+        if "ignore" in props:
+            ignore = set(props["ignore"])
+        else:
+            ignore = set()
+
+        if "predicate" in props:
+            self.predicate = schema.map(props["predicate"])
+        else:
+            self.predicate = None
+
+        if "with-id" not in props:
+            raise MetadataError(
+                subdir, "The 'with-id' field does not exist"
+            )
+
+        if "id-fields" not in props:
+            raise MetadataError(
+                subdir, "The 'id-fields' field does not exist"
+            )
+
+        id_fields = props["id-fields"]
+
+        if props["with-id"] == "hash":
+            self.derive_id = HashId(props["id-fields"], id_prefix, ignore)
+        elif props["with-id"] == "derive":
+            self.derive_id = DeriveId(props["id-fields"], id_prefix, ignore)
+        elif props["with-id"] == "copy":
+            self.derive_id = CopyId(props["id-fields"], ignore)
+        elif props["with-id"] == "map":
+            self.derive_id = MapId(props["id-fields"], props["map"], ignore)
+        else:
+            raise MetadataError(
+                subdir, "Don't know with-id: '%s'" % props["with-id"]
+            )
 
         self.cls = schema.map(props["class"])
 
         self.properties = []
 
         for prop in props["properties"]:
-            if "object-type" in prop:
-                self.properties.append(ClassField(prop, schema))
+            if "class" in prop:
+                self.properties.append(ObjectValue(subdir, prop, schema))
             else:
-                self.properties.append(LiteralField(prop, schema))
+                self.properties.append(LiteralValue(subdir, prop, schema))
 
-    def handle(self, row):
+    def handle(self, row, parent=None):
 
-        identity = row.get(self.id_field)
-        if self.id_prefix:
-            identity = self.id_prefix + identity
-            identity = self.schema.map(identity)
+        identity = self.derive_id.handle(row)
+
+        if identity == None:
+
+            tpls = []
+
+            for prop in self.properties:
+                if type(prop) == LiteralValue: continue
+                tpls.extend(prop.handle(row, None))
+
+            return tpls
+
+        identity = self.schema.map(identity)
 
         tpls = [
             (identity, self.schema.map("rdf:type"), self.cls)
         ]
 
         for prop in self.properties:
-            tpls.extend(prop.handle(identity, row))
+            tpls.extend(prop.handle(row, identity))
+
+        if parent and self.predicate:
+            tpls.append((parent, self.predicate, identity))
 
         return tpls
 
@@ -236,23 +302,30 @@ class Csv:
         else:
             skip = 0
 
+        if "limit" in metadata:
+            limit = int(metadata["limit"])
+        else:
+            limit = None
+
         tbl = Table(
             subdir + "/" + metadata["input"], fields=fields,
-            use_header=from_header, skip=skip
+            use_header=from_header, skip=skip, limit=limit
         )
         
-        if "object" not in metadata:
-            raise MetadataError(subdir, "The 'object' field does not exist")
+        if "objects" not in metadata:
+            raise MetadataError(subdir, "The 'objects' field does not exist")
 
-        object = metadata["object"]
-
-        obj = Obj(object, schema)
+        objects = [
+            ObjectValue(subdir, obj, schema)
+            for obj in metadata["objects"]
+        ]
 
         for row in tbl:
 
-            tpls = obj.handle(row)
-            for tpl in tpls:
-                g.add(tpl)
+            for obj in objects:
+                tpls = obj.handle(row)
+                for tpl in tpls:
+                    g.add(tpl)
 
         c = Csv()
         c.graph = g

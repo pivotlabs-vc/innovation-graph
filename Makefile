@@ -5,8 +5,17 @@ all:
 
 curate:
 	rm -f data.db
-	./process/curate data schema > data.ttl
+	make turtle
 	rdfproc -n -s sqlite -t synchronous=off data.db parse data.ttl turtle
+
+# RDFlib doesn't seem to output prefix for rdf: namespace?!
+turtle:
+	./process/curate data schema > data.ttl.tmp
+	( \
+	  echo '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .';\
+	  cat data.ttl.tmp; \
+	) > data.ttl
+	rm -f data.ttl.tmp
 
 REPO=europe-west1-docker.pkg.dev/pivot-labs/pivot-labs
 WEB_CONTAINER=${REPO}/web:${VERSION}

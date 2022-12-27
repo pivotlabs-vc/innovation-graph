@@ -3,6 +3,8 @@
 
 from rdflib import Literal, URIRef, Graph
 import json
+import os
+import logging
 
 from . defs import *
 
@@ -12,13 +14,23 @@ class Schema:
        self.properties = {}
        self.classes = {}
 
+       self.domains = {}
+       self.ranges = {}
+
     @staticmethod
     def load(path):
 
         s = Schema()
 
         g = Graph()
-        g.parse(path + "/schema.ttl", format="turtle")
+
+        # Walk subdirectory, load anything with a .ttl suffix
+        for subdir, dirs, files in os.walk(path):
+            for f in files:
+                if f.endswith(".ttl"):
+                    file = subdir + "/" + f
+                    logging.info(f"Loading {file}...")
+                    g.parse(file, format="turtle")
 
         s.graph = g
         s.namespaces = json.load(open(path + "/namespaces.json"))
@@ -37,8 +49,25 @@ class Schema:
                 if tpl[2] == CLASS:
                     s.classes[tpl[0]] = True
 
+            if tpl[1] == DOMAIN:
+                if tpl[0] not in s.domains: s.domains[tpl[0]] = []
+                s.domains[tpl[0]].append(tpl[2])
+
+            if tpl[1] == RANGE:
+                if tpl[0] not in s.ranges: s.ranges[tpl[0]] = []
+                s.ranges[tpl[0]].append(tpl[2])
+
+        # Boot-strap a set of fundamental predicates
         s.properties[LABEL] = True
         s.properties[IS_A] = True
+        s.properties[SEE_ALSO] = True
+        s.properties[COMMENT] = True
+        s.properties[DOMAIN] = True
+        s.properties[RANGE] = True
+        s.properties[SUB_CLASS_OF] = True
+        s.properties[EQUIVALENT_PROPERTY] = True
+        s.properties[SUB_PROPERTY_OF] = True
+        s.properties[EQUIVALENT_CLASS] = True
 
         return s
 
@@ -65,4 +94,3 @@ class Schema:
             return Literal(str, datatype=tp)
         return Literal(str)
 
-  

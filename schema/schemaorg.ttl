@@ -1,0 +1,44 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+schema:domainIncludes a rdfs:Property ;
+    rdfs:label "domain includes" .
+
+schema:rangeIncludes a rdfs:Property ;
+    rdfs:label "range includes" .
+
+schema:isPartOf a rdfs:Property ;
+    rdfs:label "is part of" .
+
+schema:source a rdfs:Property ;
+    rdfs:label "source" .
+
+schema:supersededBy a rdfs:Property ;
+    rdfs:label "superseded by" .
+
+schema:inverseOf a rdfs:Property ;
+    rdfs:label "inverse of" .
+
+skos:core a rdfs:Property ;
+    rdfs:label "core" .
+
+dcterms:source a rdfs:Property ;
+    rdfs:label "inverse of" .
+
+schema:sameAs a rdfs:Property ;
+    rdfs:label "same as" .
+
+skos:closeMatch a rdfs:Property ;
+    rdfs:label "close match" .
+
+skos:exactMatch a rdfs:Property ;
+    rdfs:label "exact match" .
+

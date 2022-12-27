@@ -17,7 +17,6 @@ class LineProcessingError(Exception):
       super().__init__(msg)
 
 class PredicateNotKnown(Exception):
-   def __init__(self, file, predicate, msg):
-      self.file = file
+   def __init__(self, predicate, msg):
       self.predicate = predicate
       super().__init__(msg)

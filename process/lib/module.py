@@ -31,13 +31,6 @@ class Module:
 
       g = fn(subdir, metadata, schema)
       
-      
-
-      for (s, p, o) in g:
-         if p not in schema.properties:
-            if p not in schema.classes:
-               raise PredicateNotKnown(path, p, "Not known: " + str(p))
-
       t.graph = g
 
       return t
