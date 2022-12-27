@@ -122,8 +122,8 @@ class Curator:
 
             logging.error("Predicate not known: " + str(p))
 
-            for p in schema.properties:
-                logging.error(p)
+#            for p in schema.properties:
+#                logging.error(p)
 
             raise PredicateNotKnown(p, "Not known: " + str(p))
         

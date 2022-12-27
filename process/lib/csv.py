@@ -95,6 +95,8 @@ class LiteralValue:
 
     def handle(self, row, parent=None):
 
+        if parent == None: return []
+
         value = row.get(self.field)
         raw = value
 
@@ -126,7 +128,7 @@ class HashId:
             for fld in self.fields
         ])
 
-        if self.ignore and value in ignore:
+        if self.ignore and value in self.ignore:
             return None
 
         value = hash(value)
@@ -250,7 +252,14 @@ class ObjectValue:
         identity = self.derive_id.handle(row)
 
         if identity == None:
-            return []
+
+            tpls = []
+
+            for prop in self.properties:
+                if type(prop) == LiteralValue: continue
+                tpls.extend(prop.handle(row, None))
+
+            return tpls
 
         identity = self.schema.map(identity)
 
@@ -312,8 +321,6 @@ class Csv:
         ]
 
         for row in tbl:
-
-            print(row.row)
 
             for obj in objects:
                 tpls = obj.handle(row)

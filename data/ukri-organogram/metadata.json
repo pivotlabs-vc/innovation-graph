@@ -10,8 +10,7 @@
     "processing": "csv",
 
     "input": "organogram-senior.csv",
-    "skip": 1,
-    "limit": 1,
+    "skip": 0,
 
     "fields-from-header": true,
 
@@ -19,16 +18,49 @@
 	{
 	    "class": "schema:Person",
 	    "id-prefix": "personinst:ukri/",
-	    "id-fields": ["Post Unique Reference"],
+	    "id-fields": ["Name"],
 	    "with-id": "hash",
+	    "ignore": [ "N/A" ],
 	    "properties": [
 		{
 		    "predicate": "schema:name",
 		    "field": "Name"
 		},
 		{
+		    "predicate": "rdfs:label",
+		    "field": "Name"
+		},
+		{
 		    "predicate": "schema:jobTitle",
 		    "field": "Job Title"
+		},
+		{
+		    "class": "schema:Place",
+		    "predicate": "schema:workLocation",
+		    "id-fields": ["Office Region"],
+		    "ignore": {
+			"Unknown": true
+		    },
+		    "properties": [
+			{
+			    "predicate": "schema:name",
+			    "field": "Office Region"
+			},
+			{
+			    "predicate": "rdfs:label",
+			    "field": "Office Region"
+			}
+		    ],
+		    "with-id": "map",
+		    "map": {
+			"East Midlands": "regioninst:east-midlands",
+			"East of England": "regioninst:east-of-england",
+			"London": "regioninst:london",
+			"North West": "regioninst:north-west",
+			"Scotland": "regioninst:scotland",
+			"South East": "regioninst:south-east",
+			"South West": "regioninst:south-west"
+		    }
 		},
 		{
 		    "class": "schema:Organization",
@@ -39,6 +71,10 @@
 		    "properties": [
 			{
 			    "predicate": "schema:name",
+			    "field": "Unit"
+			},
+			{
+			    "predicate": "rdfs:label",
 			    "field": "Unit"
 			},
 			{
@@ -53,6 +89,10 @@
 				    "field": "Organisation"
 				},
 				{
+				    "predicate": "rdfs:label",
+				    "field": "Organisation"
+				},
+				{
 				    "class": "schema:Organization",
 				    "predicate": "schema:parentOrganization",
 				    "id-fields": ["Parent Department"],
@@ -60,6 +100,10 @@
 				    "properties": [
 					{
 					    "predicate": "schema:name",
+					    "field": "Parent Department"
+					},
+					{
+					    "predicate": "rdfs:label",
 					    "field": "Parent Department"
 					}
 				    ],
@@ -83,36 +127,16 @@
 			    "field": "Job Title"
 			},
 			{
-			    "predicate": "schema:responsibiltiies",
+			    "predicate": "rdfs:label",
+			    "field": "Job Title"
+			},
+			{
+			    "predicate": "schema:responsibilities",
 			    "field": "Job/Team Function"
 			},
 			{
-			    "predicate": "schema:occpupationalCategory",
+			    "predicate": "schema:occupationalCategory",
 			    "field": "Professional/Occupational Group"
-			},
-			{
-			    "class": "schema:Place",
-			    "predicate": "schema:workLocation",
-			    "id-fields": ["Office Region"],
-			    "ignore": {
-				"Unknown": true
-			    },
-			    "properties": [
-				{
-				    "predicate": "schema:name",
-				    "field": "Office Region"
-				}
-			    ],
-			    "with-id": "map",
-			    "map": {
-				"East Midlands": "regioninst:east-midlands",
-				"East of England": "regioninst:east-of-england",
-				"London": "regioninst:london",
-				"North West": "regioninst:north-west",
-				"Scotland": "regioninst:scotland",
-				"South East": "regioninst:south-east",
-				"South West": "regioninst:south-west"
-			    }
 			}
 		    ]
 		}
