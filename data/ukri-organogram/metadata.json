@@ -65,6 +65,31 @@
 			    "field": "Job/Team Function"
 			}
 		    ]
+		},
+		{
+		    "class": "schema:Place",
+		    "predicate": "schema:workLocation",
+		    "id-prefix": "regioninst:",
+		    "id-fields": ["Office Region"],
+		    "ignore": {
+			"Unknown": true
+		    },
+		    "properties": [
+			{
+			    "predicate": "schema:name",
+			    "field": "Office Region"
+			}
+		    ],
+		    "with-id": "map",
+		    "map": {
+			"East Midlands": "regioninst:east-midlands",
+			"East of England": "regioninst:east-of-england",
+			"London": "regioninst:london",
+			"North West": "regioninst:north-west",
+			"Scotland": "regioninst:scotland",
+			"South East": "regioninst:south-east",
+			"South West": "regioninst:south-west"
+		    }
 		}
 	    ]
 	}
