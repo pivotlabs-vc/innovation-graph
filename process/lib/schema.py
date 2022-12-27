@@ -57,12 +57,17 @@ class Schema:
                 if tpl[0] not in s.ranges: s.ranges[tpl[0]] = []
                 s.ranges[tpl[0]].append(tpl[2])
 
+        # Boot-strap a set of fundamental predicates
         s.properties[LABEL] = True
         s.properties[IS_A] = True
         s.properties[SEE_ALSO] = True
         s.properties[COMMENT] = True
         s.properties[DOMAIN] = True
         s.properties[RANGE] = True
+        s.properties[SUB_CLASS_OF] = True
+        s.properties[EQUIVALENT_PROPERTY] = True
+        s.properties[SUB_PROPERTY_OF] = True
+        s.properties[EQUIVALENT_CLASS] = True
 
         return s
 

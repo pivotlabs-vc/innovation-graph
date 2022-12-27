@@ -107,6 +107,7 @@ class Curator:
             if p in schema.classes:
                 continue
 
+            logging.error("Predicate not known: " + str(p))
             raise PredicateNotKnown(p, "Not known: " + str(p))
         
     # Walks a directory searching for sub-directories with metadata.json
@@ -136,7 +137,9 @@ class Curator:
                 g.add(tpl)
 
         # Validate against schema
+        logging.info("Validating...")
         self.validate(g)
+        logging.info("Validated successfully")
 
         return g
 
