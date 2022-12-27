@@ -10,7 +10,7 @@
     "processing": "csv",
 
     "input": "organogram-senior.csv",
-    "skip": 0,
+    "skip": 1,
     "limit": 1,
 
     "fields-from-header": true,
@@ -34,23 +34,40 @@
 		    "class": "schema:Organization",
 		    "predicate": "schema:worksFor",
 		    "id-prefix": "organisationinst:",
-		    "id-fields": ["Organisation"],
+		    "id-fields": ["Unit"],
 		    "with-id": "derive",
 		    "properties": [
 			{
+			    "predicate": "schema:name",
+			    "field": "Unit"
+			},
+			{
 			    "class": "schema:Organization",
 			    "predicate": "schema:parentOrganization",
-			    "id-fields": ["Parent Department"],
-			    "with-id": "map",
+			    "id-prefix": "organisationinst:",
+			    "id-fields": ["Organisation"],
+			    "with-id": "derive",
 			    "properties": [
 				{
 				    "predicate": "schema:name",
-				    "field": "Parent Department"
+				    "field": "Organisation"
+				},
+				{
+				    "class": "schema:Organization",
+				    "predicate": "schema:parentOrganization",
+				    "id-fields": ["Parent Department"],
+				    "with-id": "map",
+				    "properties": [
+					{
+					    "predicate": "schema:name",
+					    "field": "Parent Department"
+					}
+				    ],
+				    "map": {
+					"Department for Business, Energy & Industrial Strategy": "departmentinst:beis"
+				    }
 				}
-			    ],
-			    "map": {
-				"Department for Business, Energy & Industrial Strategy": "departmentinst:beis"
-			    }
+			    ]
 			}
 		    ]
 		},
@@ -64,36 +81,40 @@
 			{
 			    "predicate": "schema:name",
 			    "field": "Job Title"
-			},{
+			},
+			{
 			    "predicate": "schema:responsibiltiies",
 			    "field": "Job/Team Function"
+			},
+			{
+			    "predicate": "schema:occpupationalCategory",
+			    "field": "Professional/Occupational Group"
+			},
+			{
+			    "class": "schema:Place",
+			    "predicate": "schema:workLocation",
+			    "id-fields": ["Office Region"],
+			    "ignore": {
+				"Unknown": true
+			    },
+			    "properties": [
+				{
+				    "predicate": "schema:name",
+				    "field": "Office Region"
+				}
+			    ],
+			    "with-id": "map",
+			    "map": {
+				"East Midlands": "regioninst:east-midlands",
+				"East of England": "regioninst:east-of-england",
+				"London": "regioninst:london",
+				"North West": "regioninst:north-west",
+				"Scotland": "regioninst:scotland",
+				"South East": "regioninst:south-east",
+				"South West": "regioninst:south-west"
+			    }
 			}
 		    ]
-		},
-		{
-		    "class": "schema:Place",
-		    "predicate": "schema:workLocation",
-		    "id-prefix": "regioninst:",
-		    "id-fields": ["Office Region"],
-		    "ignore": {
-			"Unknown": true
-		    },
-		    "properties": [
-			{
-			    "predicate": "schema:name",
-			    "field": "Office Region"
-			}
-		    ],
-		    "with-id": "map",
-		    "map": {
-			"East Midlands": "regioninst:east-midlands",
-			"East of England": "regioninst:east-of-england",
-			"London": "regioninst:london",
-			"North West": "regioninst:north-west",
-			"Scotland": "regioninst:scotland",
-			"South East": "regioninst:south-east",
-			"South West": "regioninst:south-west"
-		    }
 		}
 	    ]
 	}

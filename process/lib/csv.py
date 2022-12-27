@@ -76,9 +76,9 @@ class LiteralValue:
         self.schema = schema
 
         if "ignore" in props:
-            self.ignore = props["ignore"]
+            self.ignore = set(props["ignore"])
         else:
-            self.ignore = {}
+            self.ignore = set()
 
         self.pred = schema.map(props["predicate"])
         self.field = props["field"]
@@ -113,76 +113,22 @@ class LiteralValue:
 
         return [(parent, self.pred, obj)]
 
-class ClassField:
-    def __init__(self, props, schema):
-
-        self.schema = schema
-
-        if "ignore" in props:
-            self.ignore = set(props["ignore"])
-        else:
-            self.ignore = set()
-
-        self.pred = schema.map(props["predicate"])
-#        self.field = props["field"]
-
-        if "map" in props:
-            self.mapping = props["map"]
-        else:
-            self.mapping = None
-
-        if "derive-object-id" in props and props["derive-object-id"]:
-            self.id_prefix = props["object-id-prefix"]
-            self.derive_id = True
-        else:
-            self.derive_id = False
-
-        if "id-hash" in props and props["id-hash"]:
-            self.id_prefix = props["object-id-prefix"]
-            self.use_id_hash = True
-        else:
-            self.use_id_hash = False
-
-        self.object_type = schema.map(props["object-type"])
-
-    def handle(self, identity, row):
-
-        value = row.get(self.field)
-        raw = value
-
-        if value in self.ignore: return []
-
-        if self.mapping:
-            if value not in self.mapping:
-                return []
-            else:
-                value = self.mapping[value]
-
-        if self.derive_id:
-            value = value.replace(" ", "-")
-            value = value.lower()
-            value = self.id_prefix + value
-        elif self.use_id_hash:
-            value = hash(value)
-            value = self.id_prefix + value
-
-        obj = self.schema.map(value)
-
-        return [
-            (identity, self.pred, obj),
-            (obj, self.schema.map("rdf:type"), self.object_type),
-            (obj, self.schema.map("rdfs:label"), self.schema.map(raw))
-        ]
-
 class HashId:
-    def __init__(self, fields, pfx=None):
+    def __init__(self, fields, pfx=None, ignore=None):
         self.prefix = pfx
         self.fields = fields
+        self.ignore = ignore
+
     def handle(self, row):
+
         value = "///".join([
             row.get(fld)
             for fld in self.fields
         ])
+
+        if self.ignore and value in ignore:
+            return None
+
         value = hash(value)
         if self.prefix:
             return self.prefix + value
@@ -190,36 +136,47 @@ class HashId:
             return value
 
 class DeriveId:
-    def __init__(self, fields, pfx):
+    def __init__(self, fields, pfx, ignore=None):
         self.prefix = pfx
         self.fields = fields
+        self.ignore = ignore
+        
     def handle(self, row):
         value = "//".join([
             row.get(fld)
             for fld in self.fields
         ])
+
+        if self.ignore and value in self.ignore:
+            return None
+
         value = value.replace(" ", "-")
         value = value.lower()
         value = self.prefix + value
         return value
 
 class CopyId:
-    def __init__(self, fields):
+    def __init__(self, fieldsx, ignore=None):
+
         if len(fields) != 1:
             raise MetadataError("With 'copy' there must be exactly 1 field")
         self.fields = fields
+
     def handle(self, row):
         value = row.get(self.fields[0])
+        if self.ignore and value in self.ignore: return None
         return value
 
 class MapId:
-    def __init__(self, fields, mapping):
+    def __init__(self, fields, mapping, ignore=None):
         if len(fields) != 1:
             raise MetadataError("With 'copy' there must be exactly 1 field")
         self.fields = fields
         self.mapping = mapping
+        self.ignore = ignore
     def handle(self, row):
         value = row.get(self.fields[0])
+        if self.ignore and value in self.ignore: return None
         if value in self.mapping: return self.mapping[value]
         return None
 
@@ -243,6 +200,11 @@ class ObjectValue:
         else:
             id_prefix = None
 
+        if "ignore" in props:
+            ignore = set(props["ignore"])
+        else:
+            ignore = set()
+
         if "predicate" in props:
             self.predicate = schema.map(props["predicate"])
         else:
@@ -261,13 +223,13 @@ class ObjectValue:
         id_fields = props["id-fields"]
 
         if props["with-id"] == "hash":
-            self.derive_id = HashId(props["id-fields"], id_prefix)
+            self.derive_id = HashId(props["id-fields"], id_prefix, ignore)
         elif props["with-id"] == "derive":
-            self.derive_id = DeriveId(props["id-fields"], id_prefix)
+            self.derive_id = DeriveId(props["id-fields"], id_prefix, ignore)
         elif props["with-id"] == "copy":
-            self.derive_id = CopyId(props["id-fields"])
+            self.derive_id = CopyId(props["id-fields"], ignore)
         elif props["with-id"] == "map":
-            self.derive_id = MapId(props["id-fields"], props["map"])
+            self.derive_id = MapId(props["id-fields"], props["map"], ignore)
         else:
             raise MetadataError(
                 subdir, "Don't know with-id: '%s'" % props["with-id"]
@@ -285,7 +247,12 @@ class ObjectValue:
 
     def handle(self, row, parent=None):
 
-        identity = self.schema.map(self.derive_id.handle(row))
+        identity = self.derive_id.handle(row)
+
+        if identity == None:
+            return []
+
+        identity = self.schema.map(identity)
 
         tpls = [
             (identity, self.schema.map("rdf:type"), self.cls)
@@ -345,6 +312,8 @@ class Csv:
         ]
 
         for row in tbl:
+
+            print(row.row)
 
             for obj in objects:
                 tpls = obj.handle(row)
