@@ -9,7 +9,7 @@ a simple graph viewer application.
 This is currently hosted at the pivotlabs.vc site.  A good starting
 point is this URL:
 
-https://graph.innovate.pivotlabs.vc/graph?node=http:%2F%2Fpivotlabs.vc%2Fchallenges%2Fs%2Fktn.
+https://graph.innovate.pivotlabs.vc/graph?node=http:%2F%2Fpivotlabs.vc%2Finnov%2Forganisation%2Fktn
 
 The dataset is also available through an open graph API supporting the
 SPARQL query language allowing access to the underlying dataset.

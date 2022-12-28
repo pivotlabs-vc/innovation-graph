@@ -145,9 +145,6 @@ class Curator:
 
             logging.error("Predicate not known: " + str(p))
 
-#            for p in schema.properties:
-#                logging.error(p)
-
             raise PredicateNotKnown(p, "Not known: " + str(p))
         
     # Walks a directory searching for sub-directories with metadata.json
@@ -175,6 +172,8 @@ class Curator:
             # Add the sub-graph to the conglomerate graph
             for tpl in sg.graph:
                 g.add(tpl)
+
+        logging.info("Processing done")
 
         # Validate against schema
         logging.info("Validating...")

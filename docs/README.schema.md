@@ -1,29 +1,72 @@
 
 # Schema
 
+The knowledge graph is built on RDF technology, and makes use of
+RDF constructs to define schema.
+
 ## Innovation challenge
 
-- Type: `http://pivotlabs.vc/challenges/t#challenge`
+This schema was created for this project and is defined
+[here](../schema/challenge.ttl).
+
+- Type: `http://pivotlabs.vc/innov/t/challenge`
 - Abbreviation: `type:challenge`
 
 Properties:
-- `http://pivotlabs.vc/challenges/p#opens`: Date innovation challenge
+- `http://pivotlabs.vc/innov/t/challenge#opens`: Date innovation challenge
   opens
-- `http://pivotlabs.vc/challenges/p#closes`: Date innovation challenge
+- `http://pivotlabs.vc/innov/t/challenge#closes`: Date innovation challenge
   closes
-- `http://pivotlabs.vc/challenges/p#has-topic`: links to topic entity
-- `http://pivotlabs.vc/challenges/p#title`: Innovation challenge title
-- `http://pivotlabs.vc/challenges/p#has-source`: links to innovation challenge
-  source.
-- `http://pivotlabs.vc/challenges/p#description`: Innovation challenge long textual description
+- `http://pivotlabs.vc/innov/t/challenge#has-topic`: links to topic entity
+- `http://pivotlabs.vc/innov/t/challenge#title`: Innovation challenge title
+- `http://pivotlabs.vc/innov/t/challenge#has-sponsor`: links to innovation
+  challenge sponsoring organisation.
+- `http://pivotlabs.vc/innov/t/challenge#description`: Innovation challenge
+  long textual description
 
-## Innovation challenge source
+## Schema.org
 
-- Type: `http://pivotlabs.vc/challenges/t#source`
-- Abbreviation: `type:source`
+This project imports schema.org's full schema
+[here](../schema/schemaorg-current-https.ttl).  The released schema
+appears to be inconsistent, so we replace `rdf:Property` with
+`rdfs:Property` to make it consistent with the RDF Schema specification.
 
-## Innovatin challenge topic
+A number of fundamental entities used by `schema.org` are defined
+[here](../schema/schemaorg.ttl).
 
-- Type: `http://pivotlabs.vc/challenges/t#topic`
-- Abbreviation: `type:topic`
+### Organisation
+
+Defined by [Schema.org](https://schema.org/Organization).
+
+- Type: `https://schema.org/Organization`
+- Abbreviation: `schema:Organization`
+
+Several types of government department have been created by this project
+which are sub-classes of the Organization type defined
+[here](../schema/organisation.ttl).
+
+Watch out for UK vs US spelling, `schema.org` uses `Organization`.
+
+### Innovation challenge topic
+
+This project uses `DefinedTerm`
+from [Schema.org](https://schema.org/DefinedTerm).
+
+- Type: `https://schema.org/DefinedTerm`
+- Abbreviation: `schema:DefinedTerm`
+
+### Person
+
+This project uses `Person` from [Schema.org](https://schema.org/DefinedTerm).
+
+- Type: `https://schema.org/Person`
+- Abbreviation: `schema:Person`
+
+### Occupation
+
+This project uses `Occupation` from
+[Schema.org](https://schema.org/Occupation).
+
+- Type: `https://schema.org/Occupation`
+- Abbreviation: `schema:Occupation`
 

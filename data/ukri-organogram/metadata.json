@@ -65,9 +65,19 @@
 		{
 		    "class": "schema:Organization",
 		    "predicate": "schema:worksFor",
-		    "id-prefix": "organisationinst:",
 		    "id-fields": ["Unit"],
-		    "with-id": "derive",
+		    "with-id": "map",
+		    "map": {
+			"AHRC": "organisationinst:ahrc",
+			"EPSRC": "organisationinst:epsrc",
+			"ESRC": "organisationinst:esrc",
+			"Innovate UK": "organisationinst:innovate-uk",
+			"NERC": "organisationinst:nerc",
+			"RE": "organisationinst:research-england",
+			"STFC": "organisationinst:stfc",
+			"UK Research & Innovation": "organisationinst:ukri",
+			"UKRI Corporate Hub": "organisationinst:ukri-corporate"
+		    },
 		    "properties": [
 			{
 			    "predicate": "schema:name",
@@ -80,35 +90,21 @@
 			{
 			    "class": "schema:Organization",
 			    "predicate": "schema:parentOrganization",
-			    "id-prefix": "organisationinst:",
 			    "id-fields": ["Organisation"],
-			    "with-id": "derive",
+			    "with-id": "map",
+			    "map": {
+				"UK Research & Innovation": "organisationinst:ukri"
+			    },
 			    "properties": [
-				{
-				    "predicate": "schema:name",
-				    "field": "Organisation"
-				},
-				{
-				    "predicate": "rdfs:label",
-				    "field": "Organisation"
-				},
 				{
 				    "class": "schema:Organization",
 				    "predicate": "schema:parentOrganization",
 				    "id-fields": ["Parent Department"],
 				    "with-id": "map",
 				    "properties": [
-					{
-					    "predicate": "schema:name",
-					    "field": "Parent Department"
-					},
-					{
-					    "predicate": "rdfs:label",
-					    "field": "Parent Department"
-					}
 				    ],
 				    "map": {
-					"Department for Business, Energy & Industrial Strategy": "departmentinst:beis"
+					"Department for Business, Energy & Industrial Strategy": "organisationinst:beis"
 				    }
 				}
 			    ]
