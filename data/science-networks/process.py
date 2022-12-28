@@ -5,6 +5,7 @@ import hashlib
 import sys
 from rdflib import Literal, URIRef, Graph
 import csv
+import logging
 
 COMMENT=URIRef("http://www.w3.org/2000/01/rdf-schema#comment")
 ADVISES=URIRef("http://pivotlabs.vc/innov/t/organisation#")
@@ -417,12 +418,17 @@ class Curator:
     @staticmethod
     def process(subdir, metadata, schema):
 
+        path = subdir + "/" + "science-networks.json"
+        logging.info(f"  Loading network...")
         p = Project.load(subdir + "/" + "science-networks.json")
+
+        logging.info("  Get map...")
         m = p.get("map-1vlBsQ28")
 
+        logging.info("  Create graph...")
         c = Curator(m, schema)
-
         g = c.make_graph()
+        logging.info("  Graph creation complete")
 
         return g
 

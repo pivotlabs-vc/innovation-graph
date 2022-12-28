@@ -34,7 +34,7 @@ try:
 
    logging.info("Process inputs...")
    g = c.walk(sys.argv[1])
-   logging.info("Processing complete")
+   logging.info("Complete")
 
 except MetadataError as e:
    logging.error(f"Metadata error in {e.dir}: {e}")
