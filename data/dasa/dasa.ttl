@@ -1,71 +1,70 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns1: <http://pivotlabs.vc/challenges/p#> .
+@prefix ns1: <http://pivotlabs.vc/innov/t/challenge#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://pivotlabs.vc/challenges/c/57059d315c7883ce2c0610ff6fffac2a400b9320> a <http://pivotlabs.vc/challenges/t#challenge> ;
+<http://pivotlabs.vc/innov/challenge/57059d315c7883ce2c0610ff6fffac2a400b9320> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Advanced Materials for Defence" ;
-    ns1:description "Unique Identifier: IFA038 Background Advanced Materials is identified in the Defence Technology Framework as a critical technology family to drive innovation across defence. It is one of the seven technology families where the UK has globally competitive R&D and industrial strength as identified in the UK Innovation Strategy. This IFA aims to harness the strengths of the UK innovation landscape to provide Advanced Materials solutions in support of defence’s generation-after-next capabilities. The Advanced Materials Programme (AMP) is one of 25 S&T Programmes in the current MOD S&T portfolio. AMP is the successor to the Materials for Strategic Advantage (MSA) Programme and is the focal point for defence’s S&T investment in materials science and engineering. It exists to exploit global developments and innovation in materials science and engineering to enable UK defence and security to maintain strategic and operational technological advantage. This IFA will enable new opportunities under the Advanced Materials" ;
-    ns1:has-source <http://pivotlabs.vc/challenges/s/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/challenges/t/concept>,
-        <http://pivotlabs.vc/challenges/t/material>,
-        <http://pivotlabs.vc/challenges/t/platform> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/dasa> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/concept>,
+        <http://pivotlabs.vc/innov/topic/material>,
+        <http://pivotlabs.vc/innov/topic/platform> ;
     ns1:title "Advanced Materials for Defence" ;
-    dc:relation <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA038> .
+    rdfs:comment "Unique Identifier: IFA038 Background Advanced Materials is identified in the Defence Technology Framework as a critical technology family to drive innovation across defence. It is one of the seven technology families where the UK has globally competitive R&D and industrial strength as identified in the UK Innovation Strategy. This IFA aims to harness the strengths of the UK innovation landscape to provide Advanced Materials solutions in support of defence’s generation-after-next capabilities. The Advanced Materials Programme (AMP) is one of 25 S&T Programmes in the current MOD S&T portfolio. AMP is the successor to the Materials for Strategic Advantage (MSA) Programme and is the focal point for defence’s S&T investment in materials science and engineering. It exists to exploit global developments and innovation in materials science and engineering to enable UK defence and security to maintain strategic and operational technological advantage. This IFA will enable new opportunities under the Advanced Materials" ;
+    rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA038> .
 
-<http://pivotlabs.vc/challenges/c/699d2442f163aeb1d0f55f1b0870e1312b9448c5> a <http://pivotlabs.vc/challenges/t#challenge> ;
+<http://pivotlabs.vc/innov/challenge/699d2442f163aeb1d0f55f1b0870e1312b9448c5> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Making Science Fiction a Reality: Future" ;
-    ns1:description "Unique Identifier: IFA035 Background Directed Energy Weapons (DEW) are systems capable of discrete target selection that emit laser or Radio Frequency (RF) energy as the primary means to cause disruptive, damaging or destructive effects on equipment or facilities. The vision of the UK Ministry of Defence (MOD) is to make Directed Energy Weapons a realistic choice for our armed forces, which can contribute a decisive edge and sustain strategic advantage. The MOD is currently investing in several high-value demonstrators, including DragonFire and several projects integrating both RF and laser-based systems onto military platforms. DASA is supporting the   department’s efforts to understand the next steps necessary to develop and introduce Directed Energy Weapons into service across Land, Sea and Air domains. Scope This Innovation Focus Area is seeking proposals which present ideas to contribute to the first generation of deployed Directed Energy Weapons and help address departmental decisions as described above" ;
-    ns1:has-source <http://pivotlabs.vc/challenges/s/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/challenges/t/2>,
-        <http://pivotlabs.vc/challenges/t/capability>,
-        <http://pivotlabs.vc/challenges/t/energy> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/dasa> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/2>,
+        <http://pivotlabs.vc/innov/topic/capability>,
+        <http://pivotlabs.vc/innov/topic/energy> ;
     ns1:title "Making Science Fiction a Reality: Future Directed Energy Weapons" ;
-    dc:relation <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA035> .
+    rdfs:comment "Unique Identifier: IFA035 Background Directed Energy Weapons (DEW) are systems capable of discrete target selection that emit laser or Radio Frequency (RF) energy as the primary means to cause disruptive, damaging or destructive effects on equipment or facilities. The vision of the UK Ministry of Defence (MOD) is to make Directed Energy Weapons a realistic choice for our armed forces, which can contribute a decisive edge and sustain strategic advantage. The MOD is currently investing in several high-value demonstrators, including DragonFire and several projects integrating both RF and laser-based systems onto military platforms. DASA is supporting the   department’s efforts to understand the next steps necessary to develop and introduce Directed Energy Weapons into service across Land, Sea and Air domains. Scope This Innovation Focus Area is seeking proposals which present ideas to contribute to the first generation of deployed Directed Energy Weapons and help address departmental decisions as described above" ;
+    rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA035> .
 
-<http://pivotlabs.vc/challenges/c/8f9524ba70c03e2c6be0961a6f36cb7ea32d082f> a <http://pivotlabs.vc/challenges/t#challenge> ;
+<http://pivotlabs.vc/innov/challenge/8f9524ba70c03e2c6be0961a6f36cb7ea32d082f> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Beyond Line of Sight Communications" ;
-    ns1:description "Unique Identifier: IFA036 This Defence and Security Accelerator (DASA) IFA, run on behalf of the Defence Science and Technology Laboratory (Dstl) Communication and Networks programme, is seeking Generation-After-Next (GAN)[footnote 1] proposals, which explore and develop new / novel beyond line of sight (BLOS) communication options. The Ministry of Defence (MOD)/Front Line Commands (FLCs) relies heavily on the same mature BLOS communication technologies, such as military High Frequency (HF), troposcatter or satellite communications. These technologies have existed within the military for many years, so developing novel and more efficient BLOS communication options is a continuous aim. It is crucial to build a pipeline of future technologies and have a diverse repertoire of communication approaches to overcome any threat and ensure that if one form of bearer is denied, there are alternatives available and communications remain robust. This IFA is seeking GAN proposals that explore and develop new / novel BLOS " ;
-    ns1:has-source <http://pivotlabs.vc/challenges/s/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/challenges/t/approach>,
-        <http://pivotlabs.vc/challenges/t/communication>,
-        <http://pivotlabs.vc/challenges/t/technological> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/dasa> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/approach>,
+        <http://pivotlabs.vc/innov/topic/communication>,
+        <http://pivotlabs.vc/innov/topic/technological> ;
     ns1:title "Beyond Line of Sight Communications" ;
-    dc:relation <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA036> .
+    rdfs:comment "Unique Identifier: IFA036 This Defence and Security Accelerator (DASA) IFA, run on behalf of the Defence Science and Technology Laboratory (Dstl) Communication and Networks programme, is seeking Generation-After-Next (GAN)[footnote 1] proposals, which explore and develop new / novel beyond line of sight (BLOS) communication options. The Ministry of Defence (MOD)/Front Line Commands (FLCs) relies heavily on the same mature BLOS communication technologies, such as military High Frequency (HF), troposcatter or satellite communications. These technologies have existed within the military for many years, so developing novel and more efficient BLOS communication options is a continuous aim. It is crucial to build a pipeline of future technologies and have a diverse repertoire of communication approaches to overcome any threat and ensure that if one form of bearer is denied, there are alternatives available and communications remain robust. This IFA is seeking GAN proposals that explore and develop new / novel BLOS " ;
+    rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA036> .
 
-<http://pivotlabs.vc/challenges/t/2> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/2> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "2" ;
-    ns1:description "The topic '2' derived from natural language analysis" .
+    rdfs:comment "The topic '2' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/approach> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/approach> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "approach" ;
-    ns1:description "The topic 'approach' derived from natural language analysis" .
+    rdfs:comment "The topic 'approach' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/capability> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/capability> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "capability" ;
-    ns1:description "The topic 'capability' derived from natural language analysis" .
+    rdfs:comment "The topic 'capability' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/communication> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/communication> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "communication" ;
-    ns1:description "The topic 'communication' derived from natural language analysis" .
+    rdfs:comment "The topic 'communication' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/concept> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/concept> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "concept" ;
-    ns1:description "The topic 'concept' derived from natural language analysis" .
+    rdfs:comment "The topic 'concept' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/energy> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/energy> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "energy" ;
-    ns1:description "The topic 'energy' derived from natural language analysis" .
+    rdfs:comment "The topic 'energy' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/material> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/material> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "material" ;
-    ns1:description "The topic 'material' derived from natural language analysis" .
+    rdfs:comment "The topic 'material' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/platform> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/platform> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "platform" ;
-    ns1:description "The topic 'platform' derived from natural language analysis" .
+    rdfs:comment "The topic 'platform' derived from natural language analysis" .
 
-<http://pivotlabs.vc/challenges/t/technological> a <http://pivotlabs.vc/challenges/t#topic> ;
+<http://pivotlabs.vc/innov/topic/technological> a <http://pivotlabs.vc/innov/t/topic> ;
     rdfs:label "technological" ;
-    ns1:description "The topic 'technological' derived from natural language analysis" .
+    rdfs:comment "The topic 'technological' derived from natural language analysis" .
 
 
