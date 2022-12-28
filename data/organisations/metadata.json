@@ -19,8 +19,8 @@
 
     "objects": [
 	{
-	    "class": "type:sponsor",
-	    "id-prefix": "sponsorinst:",
+	    "class": "schema:Organization",
+	    "id-prefix": "organisationinst:",
 	    "id-fields": ["id"],
 	    "with-id": "derive",
 	    "properties": [

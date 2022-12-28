@@ -3,6 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix challenge: <http://pivotlabs.vc/innov/t/challenge#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
 
 type:challenge a rdfs:Class ;
     rdfs:label "challenge" ;
@@ -31,13 +32,13 @@ challenge:has-sponsor a rdfs:Property ;
     rdfs:label "has-sponsor" ;
     rdfs:comment "Relationship describing sponsor of innovation challenges" ;
     rdfs:domain type:challenge ;
-    rdfs:range type:sponsor .
+    rdfs:range schema:Organization .
 
 challenge:has-topic a rdfs:Property ;
     rdfs:label "has-topic" ;
     rdfs:comment "Relationship describing innovation topics" ;
     rdfs:domain type:challenge ;
-    rdfs:range type:topic .
+    rdfs:range schema:DefinedTerm .
 
 type:sponsor a rdfs:Class ;
     rdfs:label "sponsor" ;

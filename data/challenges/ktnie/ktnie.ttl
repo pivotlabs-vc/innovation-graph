@@ -1,11 +1,12 @@
 @prefix ns1: <http://pivotlabs.vc/innov/t/challenge#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://pivotlabs.vc/innov/challenge/144d468982c789efdaf832df2f25230348dbd6e8> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Vehicle based internet access solutions " ;
     ns1:closes "2023-01-17"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/hub>,
         <http://pivotlabs.vc/innov/topic/sse>,
         <http://pivotlabs.vc/innov/topic/trialled> ;
@@ -20,7 +21,7 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
 <http://pivotlabs.vc/innov/challenge/2cbf7d35f2ca2d50512dd329c21fd843c0d8998f> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Automating identification of litter" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/litterlotto®>,
         <http://pivotlabs.vc/innov/topic/opportunity>,
         <http://pivotlabs.vc/innov/topic/£25000> ;
@@ -32,7 +33,7 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
 <http://pivotlabs.vc/innov/challenge/35601079b70326c23d74dd7a3ae1b9b01eb38302> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "NICA Healthy Ageing Accelerator" ;
     ns1:closes "2023-02-02"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/behalf>,
         <http://pivotlabs.vc/innov/topic/oxford>,
         <http://pivotlabs.vc/innov/topic/successful> ;
@@ -44,7 +45,7 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
 <http://pivotlabs.vc/innov/challenge/7656d0e8ba9607c5e26b6861409cb5f6dd100bca> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Remote measurement of carbon sequestrati" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/applicant>,
         <http://pivotlabs.vc/innov/topic/bloci>,
         <http://pivotlabs.vc/innov/topic/will> ;
@@ -56,7 +57,7 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
 <http://pivotlabs.vc/innov/challenge/794aedd1db64c0aaaea6f921d0e1c9d4c08b0a74> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Alternatives for moth treatment in wool" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/applicant>,
         <http://pivotlabs.vc/innov/topic/wale>,
         <http://pivotlabs.vc/innov/topic/wool> ;
@@ -68,7 +69,7 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
 <http://pivotlabs.vc/innov/challenge/8218f56aad914843dbad3ff26e6cd407f58e7bb9> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Low Carbon Alternatives to Standby Gener" ;
     ns1:closes "2022-12-12"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/diesel>,
         <http://pivotlabs.vc/innov/topic/possibility>,
         <http://pivotlabs.vc/innov/topic/ssent> ;
@@ -82,7 +83,7 @@ Selected solution(s) will be trialled in pilot studies at SSEN-T sites, with the
 <http://pivotlabs.vc/innov/challenge/ae9c373337fc8ab0087fba6ea95e850c4ff2848c> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Reusable packaging and logistics solutio" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/applicant>,
         <http://pivotlabs.vc/innov/topic/project>,
         <http://pivotlabs.vc/innov/topic/will> ;
@@ -94,7 +95,7 @@ Selected solution(s) will be trialled in pilot studies at SSEN-T sites, with the
 <http://pivotlabs.vc/innov/challenge/c0a707770f43d5be0a4a9d5fb666cb67fe1d32cf> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Alternative drying processes for textile" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/applicant>,
         <http://pivotlabs.vc/innov/topic/company>,
         <http://pivotlabs.vc/innov/topic/will> ;
@@ -106,7 +107,7 @@ Selected solution(s) will be trialled in pilot studies at SSEN-T sites, with the
 <http://pivotlabs.vc/innov/challenge/dc1aa3bed3ba43063161d69952b4040c3aefb830> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Environmental monitoring and data analyt" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/applicant>,
         <http://pivotlabs.vc/innov/topic/magical>,
         <http://pivotlabs.vc/innov/topic/mushroom> ;
@@ -118,7 +119,7 @@ Selected solution(s) will be trialled in pilot studies at SSEN-T sites, with the
 <http://pivotlabs.vc/innov/challenge/ec256b790b009afb9e0a4def5899a4da9b37f875> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Hydrophyllic solutions to prevent foggin" ;
     ns1:closes "2023-01-06"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/sponsor/ktnie> ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/opportunity>,
         <http://pivotlabs.vc/innov/topic/solution>,
         <http://pivotlabs.vc/innov/topic/will> ;
@@ -127,92 +128,114 @@ Selected solution(s) will be trialled in pilot studies at SSEN-T sites, with the
     rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to the Challenger. The final successful applicant will deliver a proof-of-concept trial with the Challenger, to demonstrate the solution or a feasibility study if the solution is an early stage concept. The project team will receive a £25,000 grant award, to be apportioned between the Challenger and the successful applicant, as agreed on a bilateral basis." ;
     rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/221/hydrophyllic_solutions_to_prevent_fogging_of> .
 
-<http://pivotlabs.vc/innov/topic/behalf> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/behalf> a schema:DefinedTerm ;
     rdfs:label "behalf" ;
-    rdfs:comment "The topic 'behalf' derived from natural language analysis" .
+    rdfs:comment "The topic 'behalf' derived from natural language analysis" ;
+    schema:name "behalf" .
 
-<http://pivotlabs.vc/innov/topic/bloci> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/bloci> a schema:DefinedTerm ;
     rdfs:label "bloci" ;
-    rdfs:comment "The topic 'bloci' derived from natural language analysis" .
+    rdfs:comment "The topic 'bloci' derived from natural language analysis" ;
+    schema:name "bloci" .
 
-<http://pivotlabs.vc/innov/topic/company> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/company> a schema:DefinedTerm ;
     rdfs:label "company" ;
-    rdfs:comment "The topic 'company' derived from natural language analysis" .
+    rdfs:comment "The topic 'company' derived from natural language analysis" ;
+    schema:name "company" .
 
-<http://pivotlabs.vc/innov/topic/diesel> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/diesel> a schema:DefinedTerm ;
     rdfs:label "diesel" ;
-    rdfs:comment "The topic 'diesel' derived from natural language analysis" .
+    rdfs:comment "The topic 'diesel' derived from natural language analysis" ;
+    schema:name "diesel" .
 
-<http://pivotlabs.vc/innov/topic/hub> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/hub> a schema:DefinedTerm ;
     rdfs:label "hub" ;
-    rdfs:comment "The topic 'hub' derived from natural language analysis" .
+    rdfs:comment "The topic 'hub' derived from natural language analysis" ;
+    schema:name "hub" .
 
-<http://pivotlabs.vc/innov/topic/litterlotto®> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/litterlotto®> a schema:DefinedTerm ;
     rdfs:label "litterlotto®" ;
-    rdfs:comment "The topic 'litterlotto®' derived from natural language analysis" .
+    rdfs:comment "The topic 'litterlotto®' derived from natural language analysis" ;
+    schema:name "litterlotto®" .
 
-<http://pivotlabs.vc/innov/topic/magical> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/magical> a schema:DefinedTerm ;
     rdfs:label "magical" ;
-    rdfs:comment "The topic 'magical' derived from natural language analysis" .
+    rdfs:comment "The topic 'magical' derived from natural language analysis" ;
+    schema:name "magical" .
 
-<http://pivotlabs.vc/innov/topic/mushroom> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/mushroom> a schema:DefinedTerm ;
     rdfs:label "mushroom" ;
-    rdfs:comment "The topic 'mushroom' derived from natural language analysis" .
+    rdfs:comment "The topic 'mushroom' derived from natural language analysis" ;
+    schema:name "mushroom" .
 
-<http://pivotlabs.vc/innov/topic/oxford> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/oxford> a schema:DefinedTerm ;
     rdfs:label "oxford" ;
-    rdfs:comment "The topic 'oxford' derived from natural language analysis" .
+    rdfs:comment "The topic 'oxford' derived from natural language analysis" ;
+    schema:name "oxford" .
 
-<http://pivotlabs.vc/innov/topic/possibility> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/possibility> a schema:DefinedTerm ;
     rdfs:label "possibility" ;
-    rdfs:comment "The topic 'possibility' derived from natural language analysis" .
+    rdfs:comment "The topic 'possibility' derived from natural language analysis" ;
+    schema:name "possibility" .
 
-<http://pivotlabs.vc/innov/topic/project> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/project> a schema:DefinedTerm ;
     rdfs:label "project" ;
-    rdfs:comment "The topic 'project' derived from natural language analysis" .
+    rdfs:comment "The topic 'project' derived from natural language analysis" ;
+    schema:name "project" .
 
-<http://pivotlabs.vc/innov/topic/solution> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/solution> a schema:DefinedTerm ;
     rdfs:label "solution" ;
-    rdfs:comment "The topic 'solution' derived from natural language analysis" .
+    rdfs:comment "The topic 'solution' derived from natural language analysis" ;
+    schema:name "solution" .
 
-<http://pivotlabs.vc/innov/topic/sse> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/sse> a schema:DefinedTerm ;
     rdfs:label "sse" ;
-    rdfs:comment "The topic 'sse' derived from natural language analysis" .
+    rdfs:comment "The topic 'sse' derived from natural language analysis" ;
+    schema:name "sse" .
 
-<http://pivotlabs.vc/innov/topic/ssent> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/ssent> a schema:DefinedTerm ;
     rdfs:label "ssent" ;
-    rdfs:comment "The topic 'ssent' derived from natural language analysis" .
+    rdfs:comment "The topic 'ssent' derived from natural language analysis" ;
+    schema:name "ssent" .
 
-<http://pivotlabs.vc/innov/topic/successful> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/successful> a schema:DefinedTerm ;
     rdfs:label "successful" ;
-    rdfs:comment "The topic 'successful' derived from natural language analysis" .
+    rdfs:comment "The topic 'successful' derived from natural language analysis" ;
+    schema:name "successful" .
 
-<http://pivotlabs.vc/innov/topic/trialled> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/trialled> a schema:DefinedTerm ;
     rdfs:label "trialled" ;
-    rdfs:comment "The topic 'trialled' derived from natural language analysis" .
+    rdfs:comment "The topic 'trialled' derived from natural language analysis" ;
+    schema:name "trialled" .
 
-<http://pivotlabs.vc/innov/topic/wale> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/wale> a schema:DefinedTerm ;
     rdfs:label "wale" ;
-    rdfs:comment "The topic 'wale' derived from natural language analysis" .
+    rdfs:comment "The topic 'wale' derived from natural language analysis" ;
+    schema:name "wale" .
 
-<http://pivotlabs.vc/innov/topic/wool> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/wool> a schema:DefinedTerm ;
     rdfs:label "wool" ;
-    rdfs:comment "The topic 'wool' derived from natural language analysis" .
+    rdfs:comment "The topic 'wool' derived from natural language analysis" ;
+    schema:name "wool" .
 
-<http://pivotlabs.vc/innov/topic/£25000> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/£25000> a schema:DefinedTerm ;
     rdfs:label "£25000" ;
-    rdfs:comment "The topic '£25000' derived from natural language analysis" .
+    rdfs:comment "The topic '£25000' derived from natural language analysis" ;
+    schema:name "£25000" .
 
-<http://pivotlabs.vc/innov/topic/opportunity> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/opportunity> a schema:DefinedTerm ;
     rdfs:label "opportunity" ;
-    rdfs:comment "The topic 'opportunity' derived from natural language analysis" .
+    rdfs:comment "The topic 'opportunity' derived from natural language analysis" ;
+    schema:name "opportunity" .
 
-<http://pivotlabs.vc/innov/topic/will> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/will> a schema:DefinedTerm ;
     rdfs:label "will" ;
-    rdfs:comment "The topic 'will' derived from natural language analysis" .
+    rdfs:comment "The topic 'will' derived from natural language analysis" ;
+    schema:name "will" .
 
-<http://pivotlabs.vc/innov/topic/applicant> a <http://pivotlabs.vc/innov/t/topic> ;
+<http://pivotlabs.vc/innov/topic/applicant> a schema:DefinedTerm ;
     rdfs:label "applicant" ;
-    rdfs:comment "The topic 'applicant' derived from natural language analysis" .
+    rdfs:comment "The topic 'applicant' derived from natural language analysis" ;
+    schema:name "applicant" .
 
 
