@@ -37,6 +37,3 @@ This captures relationships between science advisory teams and the
 government departments with which they work.  The data set was provided
 by a UK government rep at a graph collabotion event.
 
-
-
-
