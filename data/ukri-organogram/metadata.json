@@ -90,7 +90,6 @@
 			{
 			    "class": "schema:Organization",
 			    "predicate": "schema:parentOrganization",
-			    "id-prefix": "organisationinst:",
 			    "id-fields": ["Organisation"],
 			    "with-id": "map",
 			    "map": {
@@ -103,17 +102,9 @@
 				    "id-fields": ["Parent Department"],
 				    "with-id": "map",
 				    "properties": [
-					{
-					    "predicate": "schema:name",
-					    "field": "Parent Department"
-					},
-					{
-					    "predicate": "rdfs:label",
-					    "field": "Parent Department"
-					}
 				    ],
 				    "map": {
-					"Department for Business, Energy & Industrial Strategy": "departmentinst:beis"
+					"Department for Business, Energy & Industrial Strategy": "organisationinst:beis"
 				    }
 				}
 			    ]

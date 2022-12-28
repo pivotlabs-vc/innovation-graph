@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import json
-import hashlib
 import sys
 from rdflib import Literal, URIRef, Graph
 import csv
@@ -110,7 +109,6 @@ class Element:
         self.tags = attrs.get("tags", [])
         self.type = attrs.get("element type", None)
         self.size = attrs.get("size", 0)
-        self.betweenness = attrs.get("betweenness", 0)
         self.last = attrs.get("metrics::last", 0)
 
     def get_type_slug(self):
@@ -126,28 +124,32 @@ class Element:
             "Department": "department",
             "Science Advisory Council": "science-advisory-council",
             "Research Council": "research-council",
-            None: "committee",
             "Subcommittee": "subcommittee",
-            "n/a": "committee",
             "Profession": "profession",
             "Industrial Council": "industrial-council",
             "Group of government experts": "group-of-government-experts",
             "Devolved Administration": "devolved-administration",
+
+            # Assert it's a committe if type wasn't recorded
+            "n/a": "committee",
+            None: "committee",
         }
 
         return map[self.type]
 
     def get_id(self):
-        return self.get_type_slug() + "/" + self.id
-
-    def hash(self, id):
-        return  hashlib.md5(id.encode('utf-8')).hexdigest()[:12]
+        id = self.label
+        id = id.replace(" - ", "-")
+        id = id.replace(" ", "-")
+        id = id.lower()
+        return id
         
     def get_uri(self):
-        hid = self.hash(self.get_id())
+
+        id = self.get_id()
 
         return URIRef(
-            "http://pivotlabs.vc/innov/sci-net/" + hid
+            "http://pivotlabs.vc/innov/organisation/" + id
         )
 
     def get_type(self):
@@ -167,44 +169,6 @@ class Map:
             for v in self.elements.values()
             if v.type == type
         ]
-
-    def get_hierarchy(self, base):
-
-        hier = []
-        discovered = set([v.id for v in base])
-        tier = 1
-
-        while True:
-
-            discovered_before = len(discovered)
-            tier_discovery = set()
-
-            for elt in self.elements.values():
-
-                if elt.id in discovered: continue
-
-                this_tier = False
-
-                for edge in self.edges.values():
-                    if edge.src == elt and edge.dest.id in discovered:
-                        this_tier = True
-                    elif edge.dest == elt and edge.src.id in discovered:
-                        this_tier = True
-
-                if this_tier:
-                    tier_discovery.add(elt.id)
-
-            tier += 1
-
-            hier.append(
-                [self.elements[v] for v in tier_discovery]
-            )
-            discovered = discovered.union(tier_discovery)
-
-            if len(discovered) == discovered_before:
-                break
-
-        return hier
 
 class Project:
     def __init__(self):
@@ -260,36 +224,6 @@ class Curator:
     def __init__(self, map, schema):
         self.map = map
         self.schema = schema
-        self.tiers = self.construct_tiers()
-
-    def construct_tiers(self):
-
-        depts = self.map.get_type("Department")
-        hier = self.map.get_hierarchy(depts)
-
-        tiers = {
-            v: 0
-            for v in depts
-        }
-
-        for i in range(0, len(hier)):
-            for elt in hier[i]:
-                tiers[elt] = i + 1
-
-        return tiers
-
-    def determine_advises_relationship(self, a, b):
-
-        if self.tiers[a] < self.tiers[b]:
-            return b, a
-        elif self.tiers[b] < self.tiers[a]:
-            return a, b
-        elif a.betweenness > b.betweenness:
-            return b, a
-        elif b.betweenness > a.betweenness:
-            return a, b
-
-        raise RuntimeError("Cannot determine advises relationship")
 
     def get_relationship(self, src, dest):
         stype = src.get_type_slug()
@@ -385,35 +319,6 @@ class Curator:
                 ))
 
         return g
-
-    def make_table(map):
-
-        # FIXME: Did nothing with tiers
-
-        table = []
-
-        for v in map.edges.values():
-
-            src = v.src
-            dest = v.dest
-
-            row = (
-                src.label, src.description, src.type,
-                dest.label, dest.description, dest.type
-            )
-
-            table.append(row)
-
-        return table
-
-    def write_csv(map):
-
-        tbl = make_table(map)
-
-        writer = csv.writer(sys.stdout)
-
-        for row in tbl:
-            writer.writerow(row)
 
     @staticmethod
     def process(subdir, metadata, schema):
