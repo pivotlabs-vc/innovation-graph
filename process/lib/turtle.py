@@ -19,11 +19,6 @@ class Turtle:
       path = subdir + "/" + metadata["input"]
       g.parse(source=open(path), format="turtle")
 
-      for (s, p, o) in g:
-         if p not in schema.properties:
-            if p not in schema.classes:
-               raise PredicateNotKnown(path, p, "Not known: " + str(p))
-
       t.graph = g
 
       return t
