@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:ktnie-challenges
+  a schema:Dataset ;
+  rdfs:label "KTN - Innovation Exchange" ;
+  schema:headline "KTN - Innovation Exchange" ;
+  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en,
+    "ktn"@en, "ktn-ix"@en ;
+  schema:description "KTN-iX™ is a cross-sector program supporting innovation transfer by matching industry challenges to innovative companies from other sectors. It does this by putting large businesses with technical needs in contact with companies who have the right innovative solutions, for faster development of novel solutions." ;
+  schema:distribution download:ktnie-challenges-github ;
+  schema:about organisation:innovate-uk ;
+  schema:author organisation:innovate-uk ;
+  schema:creator organisation:innovate-uk ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:innovate-uk ;
+  schema:maintainer organisation:innovate-uk ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://ktn-uk.org/programme/innovation-exchange/> .
+
+download:ktnie-challenges-github
+  a schema:DataDownload ;
+  rdfs:label "KTN - Innovation Exchange dataset" ;
+  schema:headline "KTN - Innovation Exchange dataset" ;
+  schema:description "KTN - Innovation Exchange in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

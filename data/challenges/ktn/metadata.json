@@ -1,11 +1,6 @@
 {
     "id": "ktn-challenges",
-    "description": "KTN innovation challenges",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "Scraped from KTN website, publicly hosted assets",
-    "copyright": "Open Government",
+    "catalogue": "catalogue.ttl",
     "processing": "turtle",
     "input": "ktn.ttl"
 }

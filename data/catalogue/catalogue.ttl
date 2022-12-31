@@ -1,6 +1,7 @@
 
-@prefix pl: <http://pivotlabs.vc/innov/> .
 @prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+
+@prefix pl: <http://pivotlabs.vc/innov/> .
 @prefix dc: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -8,13 +9,16 @@
 @prefix people: <https://pivotlabs.vc/people/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 
 dataset:challenges
-  a dcat:Dataset ;
+  a schema:Dataset ;
   rdfs:label "UK government (UKRI, DASA, NCSC) challenges automatically pulled from the UKRI web-site" ;
-  dct:title "UK government (UKRI, DASA, NCSC) challenges automatically pulled from the UKRI web-site"@en ;
-  dcat:keyword "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en ;
-  dct:description "This dataset contains a number of innovation challenges scraped from UK government public websites.  This covers UKRI, as well as Innovate UK's KTN and Knowledge Transfer Innovation Exchange.  Also included are challenges from NCSC and DASA." ;
+  schema:headline "UK government (UKRI, DASA, NCSC) challenges automatically pulled from the UKRI web-site"@en ;
+  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en ;
+  schema:description "This dataset contains a number of innovation challenges scraped from UK government public websites.  This covers UKRI, as well as Innovate UK's KTN and Knowledge Transfer Innovation Exchange.  Also included are challenges from NCSC and DASA." ;
+
+
   foaf:homepage <https://www.ukri.org/> ;
   foaf:homepage <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas/> ;
   foaf:homepage <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges/> ;
