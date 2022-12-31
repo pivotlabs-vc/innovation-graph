@@ -1,11 +1,6 @@
 {
     "id": "ukri-challenges",
-    "description": "UKRI innovation challenges",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "Scraped from UKRI website, publicly hosted assets",
-    "copyright": "Open Government",
+    "catalogue": "catalogue.ttl",
     "processing": "turtle",
     "input": "ukri.ttl"
 }

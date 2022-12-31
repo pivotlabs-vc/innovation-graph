@@ -1,11 +1,6 @@
 {
     "id": "ktnie-challenges",
-    "description": "KTN-iX innovation challenges",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "Scraped from KTN website, publicly hosted assets",
-    "copyright": "Open Government",
+    "catalogue": "catalogue.ttl",
     "processing": "turtle",
     "input": "ktnie.ttl"
 }

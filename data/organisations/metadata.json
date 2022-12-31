@@ -1,12 +1,8 @@
 {
+
     "id": "organisations",
-    "description": "UK government organisations with innovation remit",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "Copied from Wikipedia, and the organisations own websites",
-    "copyright": "Not defined, information in the public domain",
     "processing": "csv",
+    "catalogue": "catalogue.ttl",
     "input": "orgs.csv",
 
     "fields": [
