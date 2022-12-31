@@ -1,11 +1,6 @@
 {
     "id": "science-networks",
-    "description": "Interoperation of UK government science networks with government organisations",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "https://kumu.io/Buryan/science-networks",
-    "copyright": "Copyright (c) 2022 Buryan Aleksiev",
+    "catalogue": "catalogue.ttl",
     "processing": "module",
     "module": "process.py",
     "entrypoint": "Curator.process"

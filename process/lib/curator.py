@@ -40,8 +40,7 @@ class Curator:
         metadata = json.load(open(subdir + "/metadata.json"))
 
         for field in [
-                "id", "description", "contributors", "origin", "copyright",
-                "processing"
+                "id", "processing", "catalogue"
         ]:
             if field not in metadata:
                 raise MetadataError(
@@ -54,8 +53,19 @@ class Curator:
    
         cls = processors[metadata["processing"]]
 
-        return cls.load(subdir, metadata, self.schema)
+        g = cls.load(subdir, metadata, self.schema)
 
+        cg = Graph()
+        file = subdir + "/" + metadata["catalogue"]
+        logging.info(f"Loading catalog {file}...")
+        cg.parse(file, format="turtle")
+
+        for t in cg:
+            g.graph.add(t)
+
+        return g
+        
+        
     def sub_class(self, cls, par, graph, schema):
 
         if cls == par:

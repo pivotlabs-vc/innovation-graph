@@ -1,11 +1,6 @@
 {
     "id": "dasa-challenges",
-    "description": "DASA innovation challenges",
-    "contributors": [
-	"cybermaggedon"
-    ],
-    "origin": "Scraped from DASA website, publicly hosted assets",
-    "copyright": "Open Government",
+    "catalogue": "catalogue.ttl",
     "processing": "turtle",
     "input": "dasa.ttl"
 }
