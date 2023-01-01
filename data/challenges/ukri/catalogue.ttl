@@ -13,8 +13,8 @@ dataset:ukri-challenges
   a schema:Dataset ;
   rdfs:label "UKRI Funding Opportunities" ;
   schema:headline "UKRI Funding Opportunities" ;
-  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en,
-    "funding"@en;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "funding";
   schema:description "Current funding opportunities from across UKRI, research councils and Innovate UK" ;
   schema:distribution download:ukri-challenges-github ;
   schema:about organisation:ukri ;

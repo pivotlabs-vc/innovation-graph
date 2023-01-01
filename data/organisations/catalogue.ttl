@@ -13,7 +13,7 @@ dataset:organisations
   a schema:Dataset ;
   rdfs:label "UK innovation organisations" ;
   schema:headline "UK innovation organisations" ;
-  schema:keywords "innovation"@en, "research"@en, "challenges"@en, "technology"@en ;
+  schema:keywords "innovation", "research", "challenges", "technology" ;
   schema:description "Entity definitions for UK innovation organisations.  Acquired from Wikipedia, and the organisations own websites"@en ;
   schema:distribution download:organisations-github ;
   schema:about organisation:ukri ;
