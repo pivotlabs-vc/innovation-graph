@@ -13,8 +13,8 @@ dataset:ktn-challenges
   a schema:Dataset ;
   rdfs:label "Innovate UK - KTN Funding Opportunities" ;
   schema:headline "Innovate UK - KTN Funding Opportunities." ;
-  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en,
-    "Innovate UK"@en, "ktn"@en;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "Innovate UK", "ktn";
   schema:description "Positive change is driven through new ideas and innovation. But innovation is complex. Sometimes projects need to be connected with new opportunities or looked at from new perspectives to make the difference. This is where Innovate UK KTN comes in. If you’re looking for experienced input into your idea, product, service, research or challenge, then invite us to get involved. We will not only work with you in understanding your market or challenge but will also direct you to the latest funding opportunities available, and how you can apply." ;
   schema:distribution download:ktn-challenges-github ;
   schema:about organisation:innovate-uk ;

@@ -13,7 +13,7 @@ dataset:science-networks
   a schema:Dataset ;
   rdfs:label "Science Networks" ;
   schema:headline "Science Networks" ;
-  schema:keywords "networks"@en, "science"@en, "chief science advisor"@en, "advisor"@en, "government office for science"@en, "advisors"@en, "technology"@en ;
+  schema:keywords "networks", "science", "chief science advisor", "advisor", "government office for science", "advisors", "technology" ;
   schema:description "Mindmap describing network of communications between Science advisory companies and UK government organisations" ;
   schema:about organisation:gos ;
   schema:author person:buryan ;

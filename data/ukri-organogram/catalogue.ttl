@@ -13,8 +13,8 @@ dataset:ukri-organogram
   a schema:Dataset ;
   rdfs:label "UK Research and Innovation Organograms and Senior Salaries" ;
   schema:headline "UK Research and Innovation Organograms and Senior Salaries." ;
-  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en,
-    "ncsc"@en;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "ncsc";
   schema:description "Organogram (organisation chart) showing all staff roles. Names and salaries are also listed for the Senior Civil Servants" ;
   schema:distribution download:ukri-organogram-github ;
   schema:about organisation:ukri ;

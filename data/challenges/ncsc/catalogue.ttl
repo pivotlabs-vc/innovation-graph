@@ -13,8 +13,8 @@ dataset:ncsc-challenges
   a schema:Dataset ;
   rdfs:label "NCSC for Startups - Current Challenges" ;
   schema:headline "NCSC for Startups - Current Challenges." ;
-  schema:keywords "innovation"@en, "ukri"@en, "challenges"@en, "technology"@en,
-    "ncsc"@en;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "ncsc";
   schema:description "The NCSC and Plexal are welcoming applications from startups that meet our chosen challenges" ;
   schema:distribution download:ncsc-challenges-github ;
   schema:about organisation:ncsc ;
