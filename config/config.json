@@ -1,0 +1,51 @@
+{
+    "sparql-url": "/sparql",
+    "gallery": [
+	{
+	    "title": "DASA - Open Call for Innovation",
+	    "description": "DASA sponsors a funded innovation challenge project",
+	    "graph": "/assets/graph1.json",
+	    "image": "/assets/thumb1.png",
+	    "keywords": [
+		"dasa", "innovation", "open", "dual use"
+	    ]
+	},
+	{
+	    "title": "Welsh government advisory network",
+	    "description": "How the Welsh government is connected with the Science Advisory networks",
+	    "graph": "/assets/graph2.json",
+	    "image": "/assets/thumb2.png",
+	    "keywords": [
+		"wales", "welsh government", "welsh ministers"
+	    ]
+	},
+	{
+	    "title": "Innnovation in nuclear technologies",
+	    "description": "UKRI has sponsored a number of initiatives in the nuclear industry",
+	    "graph": "/assets/graph3.json",
+	    "image": "/assets/thumb3.png",
+	    "keywords": [
+		"innovation", "nuclear", "energy"
+	    ]
+	},
+	{
+	    "title": "Quantum innovation",
+	    "description": "Quantum technologies",
+	    "graph": "/assets/graph4.json",
+	    "image": "/assets/thumb4.png",
+	    "keywords": [
+		"innovation", "quantum", "technology"
+	    ]
+	},
+	{
+	    "title": "UKRI Corporate Structure",
+	    "description": "The organisational parts of Innovate UK",
+	    "graph": "/assets/graph5.json",
+	    "image": "/assets/thumb5.png",
+	    "keywords": [
+		"innovation", "organogram", "ukri", "innovate uk"
+	    ]
+	}
+    ]
+}
+
