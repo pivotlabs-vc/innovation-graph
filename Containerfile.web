@@ -1,5 +1,5 @@
 
-FROM docker.io/cybermaggedon/sparql-explorer:1.7.0
+FROM docker.io/cybermaggedon/sparql-sleuth:1.8.0
 
 COPY config/* /usr/local/web/assets/
 
