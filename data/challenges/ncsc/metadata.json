@@ -1,0 +1,6 @@
+{
+    "id": "ncsc-challenges",
+    "catalogue": "catalogue.ttl",
+    "processing": "turtle",
+    "input": "ncsc.ttl"
+}

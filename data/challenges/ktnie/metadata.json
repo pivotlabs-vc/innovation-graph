@@ -1,0 +1,6 @@
+{
+    "id": "ktnie-challenges",
+    "catalogue": "catalogue.ttl",
+    "processing": "turtle",
+    "input": "ktnie.ttl"
+}

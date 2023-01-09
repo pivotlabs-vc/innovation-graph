@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:ukri-organogram
+  a schema:Dataset ;
+  rdfs:label "UK Research and Innovation Organograms and Senior Salaries" ;
+  schema:headline "UK Research and Innovation Organograms and Senior Salaries." ;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "ncsc";
+  schema:description "Organogram (organisation chart) showing all staff roles. Names and salaries are also listed for the Senior Civil Servants" ;
+  schema:distribution download:ukri-organogram-github ;
+  schema:about organisation:ukri ;
+  schema:author organisation:ukri ;
+  schema:creator organisation:ukri ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-02-07"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:ukri ;
+  schema:maintainer organisation:ukri ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://www.data.gov.uk/dataset/7b1573ca-7e0e-4578-babc-90250ec45732/uk-research-and-innovation-organograms-and-senior-salaries> .
+
+download:ukri-organogram-github
+  a schema:DataDownload ;
+  rdfs:label "UK Research and Innovation Organograms and Senior Salaries dataset" ;
+  schema:headline "UK Research and Innovation Organograms and Senior Salaries dataset" ;
+  schema:description "UK Research and Innovation Organograms and Senior Salaries dataset in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

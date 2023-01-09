@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:ktn-challenges
+  a schema:Dataset ;
+  rdfs:label "Innovate UK - KTN Funding Opportunities" ;
+  schema:headline "Innovate UK - KTN Funding Opportunities." ;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "Innovate UK", "ktn";
+  schema:description "Positive change is driven through new ideas and innovation. But innovation is complex. Sometimes projects need to be connected with new opportunities or looked at from new perspectives to make the difference. This is where Innovate UK KTN comes in. If you’re looking for experienced input into your idea, product, service, research or challenge, then invite us to get involved. We will not only work with you in understanding your market or challenge but will also direct you to the latest funding opportunities available, and how you can apply." ;
+  schema:distribution download:ktn-challenges-github ;
+  schema:about organisation:innovate-uk ;
+  schema:author organisation:innovate-uk ;
+  schema:creator organisation:innovate-uk ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:innovate-uk ;
+  schema:maintainer organisation:innovate-uk ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://ktn-uk.org/opportunities/> .
+
+download:ktn-challenges-github
+  a schema:DataDownload ;
+  rdfs:label "Innovate UK - KTN Funding Opportunities dataset" ;
+  schema:headline "Innovate UK - KTN Funding Opportunities dataset" ;
+  schema:description "Innovate UK - KTN Funding Opportunities in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

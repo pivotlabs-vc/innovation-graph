@@ -1,0 +1,14 @@
+<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/has-legs> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://pivotlabs.vc.animal/fred> <http://pivotlabs.vc/property/lives-with> <http://pivotlabs.vc.animal/hope> .
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/type/cat> .
+<http://pivotlabs.vc.animal/fred> <http://www.w3.org/2000/01/rdf-schema#label> "Fred" .
+<http://pivotlabs.vc.animal/hope> <http://pivotlabs.vc/property/has-legs> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://pivotlabs.vc.animal/hope> <http://pivotlabs.vc/property/lives-with> <http://pivotlabs.vc.animal/fred> .
+<http://pivotlabs.vc.animal/hope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://pivotlabs.vc/type/cat> .
+<http://pivotlabs.vc.animal/hope> <http://www.w3.org/2000/01/rdf-schema#label> "Hope" .
+<http://pivotlabs.vc/property/has-legs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://pivotlabs.vc/property/has-legs> <http://www.w3.org/2000/01/rdf-schema#label> "has legs" .
+<http://pivotlabs.vc/property/lives-with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Property> .
+<http://pivotlabs.vc/property/lives-with> <http://www.w3.org/2000/01/rdf-schema#label> "lives with" .
+<http://pivotlabs.vc/type/cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://pivotlabs.vc/type/cat> <http://www.w3.org/2000/01/rdf-schema#label> "cat" .

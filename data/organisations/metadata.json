@@ -1,0 +1,45 @@
+{
+
+    "id": "organisations",
+    "processing": "csv",
+    "catalogue": "catalogue.ttl",
+    "input": "orgs.csv",
+
+    "fields": [
+	"id",
+	"description",
+	"web-url",
+	"label",
+	"founded"
+    ],
+
+    "objects": [
+	{
+	    "class": "schema:Organization",
+	    "id-prefix": "organisationinst:",
+	    "id-fields": ["id"],
+	    "with-id": "derive",
+	    "properties": [
+		{
+		    "predicate": "rdfs:comment",
+		    "field": "description"
+		},
+		{
+		    "predicate": "rdfs:seeAlso",
+		    "field": "web-url"
+		},
+		{
+		    "predicate": "rdfs:label",
+		    "field": "label"
+		},
+		{
+		    "predicate": "organisation:founded",
+		    "field": "founded",
+		    "datatype": "xsd:gYear"
+		}
+	    ]
+	}
+    ]
+
+}
+

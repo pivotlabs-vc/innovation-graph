@@ -1,0 +1,137 @@
+{
+    "id": "ukri-organogram",
+    "catalogue": "catalogue.ttl",
+    "processing": "csv",
+
+    "input": "organogram-senior.csv",
+    "skip": 0,
+
+    "fields-from-header": true,
+
+    "objects": [
+	{
+	    "class": "schema:Person",
+	    "id-prefix": "personinst:ukri/",
+	    "id-fields": ["Name"],
+	    "with-id": "hash",
+	    "ignore": [ "N/A" ],
+	    "properties": [
+		{
+		    "predicate": "schema:name",
+		    "field": "Name"
+		},
+		{
+		    "predicate": "rdfs:label",
+		    "field": "Name"
+		},
+		{
+		    "predicate": "schema:jobTitle",
+		    "field": "Job Title"
+		},
+		{
+		    "class": "schema:Place",
+		    "predicate": "schema:workLocation",
+		    "id-fields": ["Office Region"],
+		    "ignore": {
+			"Unknown": true
+		    },
+		    "properties": [
+			{
+			    "predicate": "schema:name",
+			    "field": "Office Region"
+			},
+			{
+			    "predicate": "rdfs:label",
+			    "field": "Office Region"
+			}
+		    ],
+		    "with-id": "map",
+		    "map": {
+			"East Midlands": "regioninst:east-midlands",
+			"East of England": "regioninst:east-of-england",
+			"London": "regioninst:london",
+			"North West": "regioninst:north-west",
+			"Scotland": "regioninst:scotland",
+			"South East": "regioninst:south-east",
+			"South West": "regioninst:south-west"
+		    }
+		},
+		{
+		    "class": "schema:Organization",
+		    "predicate": "schema:worksFor",
+		    "id-fields": ["Unit"],
+		    "with-id": "map",
+		    "map": {
+			"AHRC": "organisationinst:ahrc",
+			"EPSRC": "organisationinst:epsrc",
+			"ESRC": "organisationinst:esrc",
+			"Innovate UK": "organisationinst:innovate-uk",
+			"NERC": "organisationinst:nerc",
+			"RE": "organisationinst:research-england",
+			"STFC": "organisationinst:stfc",
+			"UK Research & Innovation": "organisationinst:ukri",
+			"UKRI Corporate Hub": "organisationinst:ukri-corporate"
+		    },
+		    "properties": [
+			{
+			    "predicate": "schema:name",
+			    "field": "Unit"
+			},
+			{
+			    "predicate": "rdfs:label",
+			    "field": "Unit"
+			},
+			{
+			    "class": "schema:Organization",
+			    "predicate": "schema:parentOrganization",
+			    "id-fields": ["Organisation"],
+			    "with-id": "map",
+			    "map": {
+				"UK Research & Innovation": "organisationinst:ukri"
+			    },
+			    "properties": [
+				{
+				    "class": "schema:Organization",
+				    "predicate": "schema:parentOrganization",
+				    "id-fields": ["Parent Department"],
+				    "with-id": "map",
+				    "properties": [
+				    ],
+				    "map": {
+					"Department for Business, Energy & Industrial Strategy": "organisationinst:beis"
+				    }
+				}
+			    ]
+			}
+		    ]
+		},
+		{
+		    "class": "schema:Occupation",
+		    "predicate": "schema:hasOccupation",
+		    "id-prefix": "http://pivotlabs.vc/innov/occupation/ukri/",
+		    "id-fields": ["Post Unique Reference"],
+		    "with-id": "derive",
+		    "properties": [
+			{
+			    "predicate": "schema:name",
+			    "field": "Job Title"
+			},
+			{
+			    "predicate": "rdfs:label",
+			    "field": "Job Title"
+			},
+			{
+			    "predicate": "schema:responsibilities",
+			    "field": "Job/Team Function"
+			},
+			{
+			    "predicate": "schema:occupationalCategory",
+			    "field": "Professional/Occupational Group"
+			}
+		    ]
+		}
+	    ]
+	}
+    ]
+}
+

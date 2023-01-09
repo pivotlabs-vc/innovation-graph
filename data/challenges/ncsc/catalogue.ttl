@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:ncsc-challenges
+  a schema:Dataset ;
+  rdfs:label "NCSC for Startups - Current Challenges" ;
+  schema:headline "NCSC for Startups - Current Challenges." ;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "ncsc";
+  schema:description "The NCSC and Plexal are welcoming applications from startups that meet our chosen challenges" ;
+  schema:distribution download:ncsc-challenges-github ;
+  schema:about organisation:ncsc ;
+  schema:author organisation:ncsc ;
+  schema:creator organisation:ncsc ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:ncsc ;
+  schema:maintainer organisation:ncsc ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges> .
+
+download:ncsc-challenges-github
+  a schema:DataDownload ;
+  rdfs:label "NCSC for Startups - Current Challenges dataset" ;
+  schema:headline "NCSC for Startups - Current Challenges dataset" ;
+  schema:description "NCSC for Startups web scrape in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

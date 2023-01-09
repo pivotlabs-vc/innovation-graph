@@ -1,0 +1,42 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:organisations
+  a schema:Dataset ;
+  rdfs:label "UK innovation organisations" ;
+  schema:headline "UK innovation organisations" ;
+  schema:keywords "innovation", "research", "challenges", "technology" ;
+  schema:description "Entity definitions for UK innovation organisations.  Acquired from Wikipedia, and the organisations own websites"@en ;
+  schema:distribution download:organisations-github ;
+  schema:about organisation:ukri ;
+  schema:author organisation:pivotlabs ;
+  schema:creator organisation:pivotlabs ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:mainEntity organisation:ukri ;
+  schema:maintainer organisation:pivotlabs ;
+  schema:publisher organisation:pivotlabs .
+
+download:organisations-github
+  a schema:DataDownload ;
+  rdfs:label "UK innovation organisations dataset" ;
+  schema:headline "UK innovation organisations dataset" ;
+  schema:description "UK innovation organisations in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+
+organisation:pivotlabs
+  a schema:Organization ;
+  rdfs:label "Pivot Labs" ;
+  orgprop:founded "2022"^^xsd:gYear ;
+  rdfs:comment "Pivot Labs" ;
+  rdfs:seeAlso <https://pivotlabs.vc/> .

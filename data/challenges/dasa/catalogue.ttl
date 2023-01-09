@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:dasa-challenges
+  a schema:Dataset ;
+  rdfs:label "DASA Open Call for Innovation" ;
+  schema:headline "DASA Open Call for Innovation" ;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "dasa";
+  schema:description "Defence and Security Accelerator (DASA) Open Call for Innovation. The Open Call is looking for innovative ideas to improve the defence and security of the UK. Your idea could be a concept, product or service, at various levels of maturity." ;
+  schema:distribution download:dasa-challenges-github ;
+  schema:about organisation:dasa ;
+  schema:author organisation:dasa ;
+  schema:creator organisation:dasa ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:dasa ;
+  schema:maintainer organisation:dasa ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation> .
+
+download:dasa-challenges-github
+  a schema:DataDownload ;
+  rdfs:label "DASA Open Call for Innovation dataset" ;
+  schema:headline "DASA Open Call for Innovation dataset" ;
+  schema:description "DASA Open Call for Innovation in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

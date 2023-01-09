@@ -1,0 +1,4 @@
+
+pulumi config set gcp:credentials private.json
+pulumi config set gcp:project pivot-labs
+

@@ -1,0 +1,6 @@
+{
+    "id": "ukri-challenges",
+    "catalogue": "catalogue.ttl",
+    "processing": "turtle",
+    "input": "ukri.ttl"
+}

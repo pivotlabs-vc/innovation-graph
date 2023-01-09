@@ -1,0 +1,42 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:science-networks
+  a schema:Dataset ;
+  rdfs:label "Science Networks" ;
+  schema:headline "Science Networks" ;
+  schema:keywords "networks", "science", "chief science advisor", "advisor", "government office for science", "advisors", "technology" ;
+  schema:description "Mindmap describing network of communications between Science advisory companies and UK government organisations" ;
+  schema:about organisation:gos ;
+  schema:author person:buryan ;
+  schema:creator person:buryan ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Copyright Buryan Aleksiev" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:gos ;
+  schema:maintainer organisation:gos ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://kumu.io/Buryan/science-networks> .
+
+person:cybermaggedon
+  a schema:Person ;
+  rdfs:label "cybermaggedon" ;
+  schema:name "cybermaggedon" ;
+  schema:url <https://github.com/cybermaggedon/> .
+
+person:buryan
+  a schema:Person ;
+  rdfs:label "Buryan Aleksiev" ;
+  schema:name "Buryan Aleksiev" ;
+  schema:url <https://kumu.io/Buryan/> .
+

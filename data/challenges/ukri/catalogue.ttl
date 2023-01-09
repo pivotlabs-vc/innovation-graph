@@ -1,0 +1,40 @@
+
+@prefix orgprop: <http://pivotlabs.vc/innov/t/organisation#> .
+@prefix dataset: <http://pivotlabs.vc/innov/dataset/> .
+@prefix download: <http://pivotlabs.vc/innov/download/> .
+@prefix organisation: <http://pivotlabs.vc/innov/organisation/> .
+@prefix person: <http://pivotlabs.vc/innov/person/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dataset:ukri-challenges
+  a schema:Dataset ;
+  rdfs:label "UKRI Funding Opportunities" ;
+  schema:headline "UKRI Funding Opportunities" ;
+  schema:keywords "innovation", "ukri", "challenges", "technology",
+    "funding";
+  schema:description "Current funding opportunities from across UKRI, research councils and Innovate UK" ;
+  schema:distribution download:ukri-challenges-github ;
+  schema:about organisation:ukri ;
+  schema:author organisation:ukri ;
+  schema:creator organisation:ukri ;
+  schema:contributor person:cybermaggedon ;
+  schema:editor person:cybermaggedon ;
+  schema:copyrightNotice "Crown Copyright" ;
+  schema:datePublished "2022-12-31"^^xsd:date ;
+  schema:license <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> ;
+  schema:mainEntity organisation:ukri ;
+  schema:maintainer organisation:ukri ;
+  schema:publisher organisation:pivotlabs ;
+  schema:url <https://www.ukri.org/opportunity/> .
+
+download:ukri-challenges-github
+  a schema:DataDownload ;
+  rdfs:label "UKRI Funding Opportunities dataset" ;
+  schema:headline "UKRI Funding Opportunities dataset" ;
+  schema:description "UKRI Funding Opportunities in RDF schema" ;
+  schema:uploadDate "2022-31-12"^^xsd:date ;
+  schema:contributor person:cybermaggedon .
+

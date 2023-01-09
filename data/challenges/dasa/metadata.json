@@ -1,0 +1,6 @@
+{
+    "id": "dasa-challenges",
+    "catalogue": "catalogue.ttl",
+    "processing": "turtle",
+    "input": "dasa.ttl"
+}

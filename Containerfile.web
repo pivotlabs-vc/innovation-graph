@@ -1,0 +1,5 @@
+
+FROM docker.io/cybermaggedon/sparql-sleuth:1.8.1
+
+COPY config/* /usr/local/web/assets/
+

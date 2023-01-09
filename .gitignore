@@ -1,0 +1,10 @@
+__pycache__
+sparql-explorer/
+sparql
+sparql-service/
+*~
+challenges.db
+serve
+data.ttl
+data.db
+data.db-journal

@@ -1,0 +1,7 @@
+{
+    "id": "science-networks",
+    "catalogue": "catalogue.ttl",
+    "processing": "module",
+    "module": "process.py",
+    "entrypoint": "Curator.process"
+}

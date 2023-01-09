@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix animal: <http://pivotlabs.vc.animal/> .
+@prefix prop: <http://pivotlabs.vc/property/> .
+@prefix type: <http://pivotlabs.vc/type/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+animal:fred
+    prop:has-legs 4 ;
+    prop:lives-with animal:hope ;
+    a type:cat ;
+    rdfs:label "Fred" .
+
+animal:hope
+    prop:has-legs 4 ;
+    prop:lives-with animal:fred ;
+    a type:cat ;
+    rdfs:label "Hope" .
+
+prop:has-legs
+    a rdfs:Property ;
+    rdfs:label "has legs" .
+
+prop:lives-with
+    a rdfs:Property ;
+    rdfs:label "lives with" .
+
+type:cat
+    a rdfs:Class ;
+    rdfs:label "cat" .
+
