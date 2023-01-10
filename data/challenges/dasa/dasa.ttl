@@ -5,9 +5,11 @@
 <http://pivotlabs.vc/innov/challenge/57059d315c7883ce2c0610ff6fffac2a400b9320> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Advanced Materials for Defence" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/concept>,
-        <http://pivotlabs.vc/innov/topic/material>,
-        <http://pivotlabs.vc/innov/topic/platform> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/aim>,
+        <http://pivotlabs.vc/innov/topic/alternative>,
+        <http://pivotlabs.vc/innov/topic/critical>,
+        <http://pivotlabs.vc/innov/topic/point> ;
     ns1:title "Advanced Materials for Defence" ;
     rdfs:comment "Unique Identifier: IFA038 Background Advanced Materials is identified in the Defence Technology Framework as a critical technology family to drive innovation across defence. It is one of the seven technology families where the UK has globally competitive R&D and industrial strength as identified in the UK Innovation Strategy. This IFA aims to harness the strengths of the UK innovation landscape to provide Advanced Materials solutions in support of defence’s generation-after-next capabilities. The Advanced Materials Programme (AMP) is one of 25 S&T Programmes in the current MOD S&T portfolio. AMP is the successor to the Materials for Strategic Advantage (MSA) Programme and is the focal point for defence’s S&T investment in materials science and engineering. It exists to exploit global developments and innovation in materials science and engineering to enable UK defence and security to maintain strategic and operational technological advantage. This IFA will enable new opportunities under the Advanced Materials" ;
     rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA038> .
@@ -15,9 +17,11 @@
 <http://pivotlabs.vc/innov/challenge/699d2442f163aeb1d0f55f1b0870e1312b9448c5> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Making Science Fiction a Reality: Future" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/2>,
-        <http://pivotlabs.vc/innov/topic/capability>,
-        <http://pivotlabs.vc/innov/topic/energy> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/aim>,
+        <http://pivotlabs.vc/innov/topic/decisive>,
+        <http://pivotlabs.vc/innov/topic/development>,
+        <http://pivotlabs.vc/innov/topic/hf> ;
     ns1:title "Making Science Fiction a Reality: Future Directed Energy Weapons" ;
     rdfs:comment "Unique Identifier: IFA035 Background Directed Energy Weapons (DEW) are systems capable of discrete target selection that emit laser or Radio Frequency (RF) energy as the primary means to cause disruptive, damaging or destructive effects on equipment or facilities. The vision of the UK Ministry of Defence (MOD) is to make Directed Energy Weapons a realistic choice for our armed forces, which can contribute a decisive edge and sustain strategic advantage. The MOD is currently investing in several high-value demonstrators, including DragonFire and several projects integrating both RF and laser-based systems onto military platforms. DASA is supporting the   department’s efforts to understand the next steps necessary to develop and introduce Directed Energy Weapons into service across Land, Sea and Air domains. Scope This Innovation Focus Area is seeking proposals which present ideas to contribute to the first generation of deployed Directed Energy Weapons and help address departmental decisions as described above" ;
     rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA035> .
@@ -25,56 +29,73 @@
 <http://pivotlabs.vc/innov/challenge/8f9524ba70c03e2c6be0961a6f36cb7ea32d082f> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Beyond Line of Sight Communications" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/dasa> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/approach>,
-        <http://pivotlabs.vc/innov/topic/communication>,
-        <http://pivotlabs.vc/innov/topic/technological> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/communications>,
+        <http://pivotlabs.vc/innov/topic/explore>,
+        <http://pivotlabs.vc/innov/topic/framework>,
+        <http://pivotlabs.vc/innov/topic/global> ;
     ns1:title "Beyond Line of Sight Communications" ;
     rdfs:comment "Unique Identifier: IFA036 This Defence and Security Accelerator (DASA) IFA, run on behalf of the Defence Science and Technology Laboratory (Dstl) Communication and Networks programme, is seeking Generation-After-Next (GAN)[footnote 1] proposals, which explore and develop new / novel beyond line of sight (BLOS) communication options. The Ministry of Defence (MOD)/Front Line Commands (FLCs) relies heavily on the same mature BLOS communication technologies, such as military High Frequency (HF), troposcatter or satellite communications. These technologies have existed within the military for many years, so developing novel and more efficient BLOS communication options is a continuous aim. It is crucial to build a pipeline of future technologies and have a diverse repertoire of communication approaches to overcome any threat and ensure that if one form of bearer is denied, there are alternatives available and communications remain robust. This IFA is seeking GAN proposals that explore and develop new / novel BLOS " ;
     rdfs:seeAlso <https://www.gov.uk/government/publications/defence-and-security-accelerator-dasa-open-call-for-innovation/open-call-innovation-focus-areas#IFA036> .
 
-<http://pivotlabs.vc/innov/topic/2> a schema:DefinedTerm ;
-    rdfs:label "2" ;
-    rdfs:comment "The topic '2' derived from natural language analysis" ;
-    schema:name "2" .
+<http://pivotlabs.vc/innov/topic/alternative> a schema:DefinedTerm ;
+    rdfs:label "alternative" ;
+    rdfs:comment "The topic 'alternative' derived from natural language analysis" ;
+    schema:name "alternative" .
 
-<http://pivotlabs.vc/innov/topic/approach> a schema:DefinedTerm ;
-    rdfs:label "approach" ;
-    rdfs:comment "The topic 'approach' derived from natural language analysis" ;
-    schema:name "approach" .
+<http://pivotlabs.vc/innov/topic/communications> a schema:DefinedTerm ;
+    rdfs:label "communications" ;
+    rdfs:comment "The topic 'communications' derived from natural language analysis" ;
+    schema:name "communications" .
 
-<http://pivotlabs.vc/innov/topic/capability> a schema:DefinedTerm ;
-    rdfs:label "capability" ;
-    rdfs:comment "The topic 'capability' derived from natural language analysis" ;
-    schema:name "capability" .
+<http://pivotlabs.vc/innov/topic/critical> a schema:DefinedTerm ;
+    rdfs:label "critical" ;
+    rdfs:comment "The topic 'critical' derived from natural language analysis" ;
+    schema:name "critical" .
 
-<http://pivotlabs.vc/innov/topic/communication> a schema:DefinedTerm ;
-    rdfs:label "communication" ;
-    rdfs:comment "The topic 'communication' derived from natural language analysis" ;
-    schema:name "communication" .
+<http://pivotlabs.vc/innov/topic/decisive> a schema:DefinedTerm ;
+    rdfs:label "decisive" ;
+    rdfs:comment "The topic 'decisive' derived from natural language analysis" ;
+    schema:name "decisive" .
 
-<http://pivotlabs.vc/innov/topic/concept> a schema:DefinedTerm ;
-    rdfs:label "concept" ;
-    rdfs:comment "The topic 'concept' derived from natural language analysis" ;
-    schema:name "concept" .
+<http://pivotlabs.vc/innov/topic/development> a schema:DefinedTerm ;
+    rdfs:label "development" ;
+    rdfs:comment "The topic 'development' derived from natural language analysis" ;
+    schema:name "development" .
 
-<http://pivotlabs.vc/innov/topic/energy> a schema:DefinedTerm ;
-    rdfs:label "energy" ;
-    rdfs:comment "The topic 'energy' derived from natural language analysis" ;
-    schema:name "energy" .
+<http://pivotlabs.vc/innov/topic/explore> a schema:DefinedTerm ;
+    rdfs:label "explore" ;
+    rdfs:comment "The topic 'explore' derived from natural language analysis" ;
+    schema:name "explore" .
 
-<http://pivotlabs.vc/innov/topic/material> a schema:DefinedTerm ;
-    rdfs:label "material" ;
-    rdfs:comment "The topic 'material' derived from natural language analysis" ;
-    schema:name "material" .
+<http://pivotlabs.vc/innov/topic/framework> a schema:DefinedTerm ;
+    rdfs:label "framework" ;
+    rdfs:comment "The topic 'framework' derived from natural language analysis" ;
+    schema:name "framework" .
 
-<http://pivotlabs.vc/innov/topic/platform> a schema:DefinedTerm ;
-    rdfs:label "platform" ;
-    rdfs:comment "The topic 'platform' derived from natural language analysis" ;
-    schema:name "platform" .
+<http://pivotlabs.vc/innov/topic/global> a schema:DefinedTerm ;
+    rdfs:label "global" ;
+    rdfs:comment "The topic 'global' derived from natural language analysis" ;
+    schema:name "global" .
 
-<http://pivotlabs.vc/innov/topic/technological> a schema:DefinedTerm ;
-    rdfs:label "technological" ;
-    rdfs:comment "The topic 'technological' derived from natural language analysis" ;
-    schema:name "technological" .
+<http://pivotlabs.vc/innov/topic/hf> a schema:DefinedTerm ;
+    rdfs:label "hf" ;
+    rdfs:comment "The topic 'hf' derived from natural language analysis" ;
+    schema:name "hf" .
+
+<http://pivotlabs.vc/innov/topic/point> a schema:DefinedTerm ;
+    rdfs:label "point" ;
+    rdfs:comment "The topic 'point' derived from natural language analysis" ;
+    schema:name "point" .
+
+<http://pivotlabs.vc/innov/topic/aim> a schema:DefinedTerm ;
+    rdfs:label "aim" ;
+    rdfs:comment "The topic 'aim' derived from natural language analysis" ;
+    schema:name "aim" .
+
+<http://pivotlabs.vc/innov/topic/advanced> a schema:DefinedTerm ;
+    rdfs:label "advanced" ;
+    rdfs:comment "The topic 'advanced' derived from natural language analysis" ;
+    schema:name "advanced" .
 
 

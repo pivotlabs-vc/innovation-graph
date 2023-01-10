@@ -2,99 +2,36 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 
-<http://pivotlabs.vc/innov/challenge/32a9e744bf531391ad7d3a1fadebf762da037ade> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Broader cyber security challenge areas" ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/challenge>,
-        <http://pivotlabs.vc/innov/topic/startup>,
-        <http://pivotlabs.vc/innov/topic/still> ;
-    ns1:title "Broader cyber security challenge areas" ;
-    rdfs:comment """Applications and enquiries from startups addressing our broad cyber security
-challenge areas below are still welcomed as we continue to introduce other
-challenges and invite new startups to join our programme throughout 2022.""" ;
-    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_8> .
-
 <http://pivotlabs.vc/innov/challenge/3dd03799289653172f354f60956c6de5c9f7af4d> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Ransomware" ;
+    rdfs:label "Incident response for SMEs and citizens" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/looking>,
-        <http://pivotlabs.vc/innov/topic/startup>,
-        <http://pivotlabs.vc/innov/topic/​> ;
-    ns1:title "Ransomware" ;
-    rdfs:comment """Ransomware is the biggest cyber security challenge facing the UK today and the
-models used by criminals have been honed and strengthened over time. ​
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/acute>,
+        <http://pivotlabs.vc/innov/topic/base>,
+        <http://pivotlabs.vc/innov/topic/develop>,
+        <http://pivotlabs.vc/innov/topic/people>,
+        <http://pivotlabs.vc/innov/topic/second> ;
+    ns1:title "Incident response for SMEs and citizens" ;
+    rdfs:comment """When a cyber attack happens, how quickly can people and organisations recover?
+We're looking for startups that can build resilience.
 
-Organised crime groups invest in collecting information about potential
-victims while Ransomware as a Service - where off-the-shelf malware is used by
-cyber criminals - is on the rise. ​
+For example, can you help people and SMEs with the following:
 
-Through the NCSC For Startups initiative, the National Cyber Security Centre
-and Plexal will work with startups to help them develop, adapt and pilot
-solutions that tackle ransomware. ​
+  * Confirming that incidents are real, rather than part of any fraudulent activity
+  * Automating incident response functions across devices using machine learning or AI
+  * Recovering compromised social media or email accounts
 
-We're looking for startups that can;""" ;
+We want these solutions to be affordable so that everyone has what they need
+to recover from a cyber incident.""" ;
     rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_5> .
 
-<http://pivotlabs.vc/innov/challenge/86d6cd1478c4ffcdc0ca8f02e3788c69d4241d58> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Malvertising" ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/advertising>,
-        <http://pivotlabs.vc/innov/topic/can>,
-        <http://pivotlabs.vc/innov/topic/online> ;
-    ns1:title "Malvertising" ;
-    rdfs:comment """The online advertising ecosystem offers attackers unique opportunities to
-commit fraud and deliver malware. To keep people safe online, we want to hear
-from startups that:
-
-  * can effectively and repeatably measure the scale of the problem
-  * can provide threat intelligence sourced specifically from malvertising campaigns
-  * specialise in detecting abuse of ad-tech platforms and securing the underlying infrastructure
-
-If you have any questions about whether you're a good fit for this challenge,
-get in touch with Plexal's innovation team at
-[ncscforstartups@plexal.com](mailto:ncscforstartups@plexal.com)""" ;
-    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_7> .
-
-<http://pivotlabs.vc/innov/challenge/95c9fd92900bd9df7ffc1011c56924f6ab1c9af4> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Operational technology" ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/cyber>,
-        <http://pivotlabs.vc/innov/topic/protect>,
-        <http://pivotlabs.vc/innov/topic/vulnerability> ;
-    ns1:title "Operational technology" ;
-    rdfs:comment """As the internet is combined with operational technology, new digital risks are
-introduced. To realise the benefits of Industry 4.0 in advanced manufacturing
-settings and protect our most critical national infrastructure, we need robust
-cyber security.
-
-How can we protect the integrity of this operational technology and make sure
-cyber vulnerabilities don't cause any production delays or safety issues?
-
-How can the people managing operations spot a network breach sooner, and react
-faster?""" ;
-    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_1> .
-
-<http://pivotlabs.vc/innov/challenge/b516bd5a926903d52c75f3ac535379cb00ff2722> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Protecting SMEs and citizens" ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/cyber>,
-        <http://pivotlabs.vc/innov/topic/helping>,
-        <http://pivotlabs.vc/innov/topic/updating> ;
-    ns1:title "Protecting SMEs and citizens" ;
-    rdfs:comment """Cyber security should be for everyone. We're looking for solutions that can
-empower busy SMEs and citizens to defend themselves from digital threats.
-
-We want to raise the level of cyber awareness and basic cyber hygiene. Your
-solution or idea could involve helping people with using passwords managers,
-updating devices or creating backups, for example.""" ;
-    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_2> .
-
-<http://pivotlabs.vc/innov/challenge/b7c664ab2187e9b6069b624971a52e9e2d6ecf3b> a <http://pivotlabs.vc/innov/t/challenge> ;
+<http://pivotlabs.vc/innov/challenge/50bdd37d2911b7af64cb93e5f955c92d253bca21> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Better engagement" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/culture>,
-        <http://pivotlabs.vc/innov/topic/security>,
-        <http://pivotlabs.vc/innov/topic/use> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/build>,
+        <http://pivotlabs.vc/innov/topic/harness>,
+        <http://pivotlabs.vc/innov/topic/identifier>,
+        <http://pivotlabs.vc/innov/topic/new> ;
     ns1:title "Better engagement" ;
     rdfs:comment """How can we use innovative ways of engaging people, security teams and the
 wider business in cyber security to help them put what they learn into
@@ -110,121 +47,316 @@ economics or psychology (for example) to:
   * amplify the success of cyber initiatives
   * build stakeholder engagement
   * increase business empathy""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_6> .
+
+<http://pivotlabs.vc/innov/challenge/7272b358b7fb5aeeb66b2d3643390d5d47fc5ee7> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Malvertising" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/form>,
+        <http://pivotlabs.vc/innov/topic/mature>,
+        <http://pivotlabs.vc/innov/topic/practice>,
+        <http://pivotlabs.vc/innov/topic/raise> ;
+    ns1:title "Malvertising" ;
+    rdfs:comment """The online advertising ecosystem offers attackers unique opportunities to
+commit fraud and deliver malware. To keep people safe online, we want to hear
+from startups that:
+
+  * can effectively and repeatably measure the scale of the problem
+  * can provide threat intelligence sourced specifically from malvertising campaigns
+  * specialise in detecting abuse of ad-tech platforms and securing the underlying infrastructure
+
+If you have any questions about whether you're a good fit for this challenge,
+get in touch with Plexal's innovation team at
+[ncscforstartups@plexal.com](mailto:ncscforstartups@plexal.com)""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_9> .
+
+<http://pivotlabs.vc/innov/challenge/86d6cd1478c4ffcdc0ca8f02e3788c69d4241d58> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Ransomware" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/build>,
+        <http://pivotlabs.vc/innov/topic/cost>,
+        <http://pivotlabs.vc/innov/topic/identifier>,
+        <http://pivotlabs.vc/innov/topic/msa>,
+        <http://pivotlabs.vc/innov/topic/strategic> ;
+    ns1:title "Ransomware" ;
+    rdfs:comment """Ransomware is the biggest cyber security challenge facing the UK today and the
+models used by criminals have been honed and strengthened over time. ​
+
+Organised crime groups invest in collecting information about potential
+victims while Ransomware as a Service - where off-the-shelf malware is used by
+cyber criminals - is on the rise. ​
+
+Through the NCSC For Startups initiative, the National Cyber Security Centre
+and Plexal will work with startups to help them develop, adapt and pilot
+solutions that tackle ransomware. ​
+
+We're looking for startups that can;""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_7> .
+
+<http://pivotlabs.vc/innov/challenge/95c9fd92900bd9df7ffc1011c56924f6ab1c9af4> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Industrial IoT encryption" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/contribute>,
+        <http://pivotlabs.vc/innov/topic/line>,
+        <http://pivotlabs.vc/innov/topic/mean>,
+        <http://pivotlabs.vc/innov/topic/target>,
+        <http://pivotlabs.vc/innov/topic/unencrypted> ;
+    ns1:title "Industrial IoT encryption" ;
+    rdfs:comment """Recent estimates have suggested that around 98% of IoT traffic is unencrypted.
+This cyber risk is particularly acute for IoT devices in industrial settings,
+as industrial digitalisation continues at pace.
+
+How can we produce aftermarket solutions that add encryption to IIoT devices?
+How can we make it simple and cost effective for IIoT device manufacturers to
+add encryption to their devices' communications?""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_1> .
+
+<http://pivotlabs.vc/innov/challenge/b516bd5a926903d52c75f3ac535379cb00ff2722> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Resilient products" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/aim>,
+        <http://pivotlabs.vc/innov/topic/framework>,
+        <http://pivotlabs.vc/innov/topic/iot>,
+        <http://pivotlabs.vc/innov/topic/simple> ;
+    ns1:title "Resilient products" ;
+    rdfs:comment """Building a resilient and prosperous digital UK is the second pillar of the
+[National Cyber Strategy](https://www.gov.uk/government/publications/national-
+cyber-strategy-2022). This challenge requires SMEs with the potential to
+strengthen the resilience of the safety and security-critical applications
+that are protecting the UK's most sensitive systems.
+
+How might novel architectures and technologies protect against the highest
+threats? What new ideas are driving innovation, diversity and cost-efficiency
+in resilient hardware?""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_2> .
+
+<http://pivotlabs.vc/innov/challenge/b7c664ab2187e9b6069b624971a52e9e2d6ecf3b> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Protecting SMEs and citizens" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/develop>,
+        <http://pivotlabs.vc/innov/topic/exist>,
+        <http://pivotlabs.vc/innov/topic/heavily>,
+        <http://pivotlabs.vc/innov/topic/operational> ;
+    ns1:title "Protecting SMEs and citizens" ;
+    rdfs:comment """Cyber security should be for everyone. We're looking for solutions that can
+empower busy SMEs and citizens to defend themselves from digital threats.
+
+We want to raise the level of cyber awareness and basic cyber hygiene. Your
+solution or idea could involve helping people with using passwords managers,
+updating devices or creating backups, for example.""" ;
     rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_4> .
 
 <http://pivotlabs.vc/innov/challenge/b93ca147c803ee967b93d0892f55ebf8e85ab760> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Incident response for SMEs and citizens" ;
+    rdfs:label "Operational technology" ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/everyone>,
-        <http://pivotlabs.vc/innov/topic/incident>,
-        <http://pivotlabs.vc/innov/topic/response> ;
-    ns1:title "Incident response for SMEs and citizens" ;
-    rdfs:comment """When a cyber attack happens, how quickly can people and organisations recover?
-We're looking for startups that can build resilience.
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/aim>,
+        <http://pivotlabs.vc/innov/topic/critical>,
+        <http://pivotlabs.vc/innov/topic/development>,
+        <http://pivotlabs.vc/innov/topic/hf>,
+        <http://pivotlabs.vc/innov/topic/simple> ;
+    ns1:title "Operational technology" ;
+    rdfs:comment """As the internet is combined with operational technology, new digital risks are
+introduced. To realise the benefits of Industry 4.0 in advanced manufacturing
+settings and protect our most critical national infrastructure, we need robust
+cyber security.
 
-For example, can you help people and SMEs with the following:
+How can we protect the integrity of this operational technology and make sure
+cyber vulnerabilities don't cause any production delays or safety issues?
 
-  * Confirming that incidents are real, rather than part of any fraudulent activity
-  * Automating incident response functions across devices using machine learning or AI
-  * Recovering compromised social media or email accounts
-
-We want these solutions to be affordable so that everyone has what they need
-to recover from a cyber incident.""" ;
+How can the people managing operations spot a network breach sooner, and react
+faster?""" ;
     rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_3> .
 
-<http://pivotlabs.vc/innov/topic/advertising> a schema:DefinedTerm ;
-    rdfs:label "advertising" ;
-    rdfs:comment "The topic 'advertising' derived from natural language analysis" ;
-    schema:name "advertising" .
+<http://pivotlabs.vc/innov/challenge/f8587f1ed7c5ce67bfda16ac4f7d495130e7ce20> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Broader cyber security challenge areas" ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ncsc> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/engineering>,
+        <http://pivotlabs.vc/innov/topic/exploit>,
+        <http://pivotlabs.vc/innov/topic/identifier>,
+        <http://pivotlabs.vc/innov/topic/landscape> ;
+    ns1:title "Broader cyber security challenge areas" ;
+    rdfs:comment """Applications and enquiries from startups addressing our broad cyber security
+challenge areas below are still welcomed as we continue to introduce other
+challenges and invite new startups to join our programme throughout 2022.""" ;
+    rdfs:seeAlso <https://www.ncsc.gov.uk/section/ncsc-for-startups/current-challenges#section_10> .
 
-<http://pivotlabs.vc/innov/topic/can> a schema:DefinedTerm ;
-    rdfs:label "can" ;
-    rdfs:comment "The topic 'can' derived from natural language analysis" ;
-    schema:name "can" .
+<http://pivotlabs.vc/innov/topic/acute> a schema:DefinedTerm ;
+    rdfs:label "acute" ;
+    rdfs:comment "The topic 'acute' derived from natural language analysis" ;
+    schema:name "acute" .
 
-<http://pivotlabs.vc/innov/topic/challenge> a schema:DefinedTerm ;
-    rdfs:label "challenge" ;
-    rdfs:comment "The topic 'challenge' derived from natural language analysis" ;
-    schema:name "challenge" .
+<http://pivotlabs.vc/innov/topic/base> a schema:DefinedTerm ;
+    rdfs:label "base" ;
+    rdfs:comment "The topic 'base' derived from natural language analysis" ;
+    schema:name "base" .
 
-<http://pivotlabs.vc/innov/topic/culture> a schema:DefinedTerm ;
-    rdfs:label "culture" ;
-    rdfs:comment "The topic 'culture' derived from natural language analysis" ;
-    schema:name "culture" .
+<http://pivotlabs.vc/innov/topic/contribute> a schema:DefinedTerm ;
+    rdfs:label "contribute" ;
+    rdfs:comment "The topic 'contribute' derived from natural language analysis" ;
+    schema:name "contribute" .
 
-<http://pivotlabs.vc/innov/topic/everyone> a schema:DefinedTerm ;
-    rdfs:label "everyone" ;
-    rdfs:comment "The topic 'everyone' derived from natural language analysis" ;
-    schema:name "everyone" .
+<http://pivotlabs.vc/innov/topic/cost> a schema:DefinedTerm ;
+    rdfs:label "cost" ;
+    rdfs:comment "The topic 'cost' derived from natural language analysis" ;
+    schema:name "cost" .
 
-<http://pivotlabs.vc/innov/topic/helping> a schema:DefinedTerm ;
-    rdfs:label "helping" ;
-    rdfs:comment "The topic 'helping' derived from natural language analysis" ;
-    schema:name "helping" .
+<http://pivotlabs.vc/innov/topic/critical> a schema:DefinedTerm ;
+    rdfs:label "critical" ;
+    rdfs:comment "The topic 'critical' derived from natural language analysis" ;
+    schema:name "critical" .
 
-<http://pivotlabs.vc/innov/topic/incident> a schema:DefinedTerm ;
-    rdfs:label "incident" ;
-    rdfs:comment "The topic 'incident' derived from natural language analysis" ;
-    schema:name "incident" .
+<http://pivotlabs.vc/innov/topic/development> a schema:DefinedTerm ;
+    rdfs:label "development" ;
+    rdfs:comment "The topic 'development' derived from natural language analysis" ;
+    schema:name "development" .
 
-<http://pivotlabs.vc/innov/topic/looking> a schema:DefinedTerm ;
-    rdfs:label "looking" ;
-    rdfs:comment "The topic 'looking' derived from natural language analysis" ;
-    schema:name "looking" .
+<http://pivotlabs.vc/innov/topic/engineering> a schema:DefinedTerm ;
+    rdfs:label "engineering" ;
+    rdfs:comment "The topic 'engineering' derived from natural language analysis" ;
+    schema:name "engineering" .
 
-<http://pivotlabs.vc/innov/topic/online> a schema:DefinedTerm ;
-    rdfs:label "online" ;
-    rdfs:comment "The topic 'online' derived from natural language analysis" ;
-    schema:name "online" .
+<http://pivotlabs.vc/innov/topic/exist> a schema:DefinedTerm ;
+    rdfs:label "exist" ;
+    rdfs:comment "The topic 'exist' derived from natural language analysis" ;
+    schema:name "exist" .
 
-<http://pivotlabs.vc/innov/topic/protect> a schema:DefinedTerm ;
-    rdfs:label "protect" ;
-    rdfs:comment "The topic 'protect' derived from natural language analysis" ;
-    schema:name "protect" .
+<http://pivotlabs.vc/innov/topic/exploit> a schema:DefinedTerm ;
+    rdfs:label "exploit" ;
+    rdfs:comment "The topic 'exploit' derived from natural language analysis" ;
+    schema:name "exploit" .
 
-<http://pivotlabs.vc/innov/topic/response> a schema:DefinedTerm ;
-    rdfs:label "response" ;
-    rdfs:comment "The topic 'response' derived from natural language analysis" ;
-    schema:name "response" .
+<http://pivotlabs.vc/innov/topic/form> a schema:DefinedTerm ;
+    rdfs:label "form" ;
+    rdfs:comment "The topic 'form' derived from natural language analysis" ;
+    schema:name "form" .
 
-<http://pivotlabs.vc/innov/topic/security> a schema:DefinedTerm ;
-    rdfs:label "security" ;
-    rdfs:comment "The topic 'security' derived from natural language analysis" ;
-    schema:name "security" .
+<http://pivotlabs.vc/innov/topic/framework> a schema:DefinedTerm ;
+    rdfs:label "framework" ;
+    rdfs:comment "The topic 'framework' derived from natural language analysis" ;
+    schema:name "framework" .
 
-<http://pivotlabs.vc/innov/topic/still> a schema:DefinedTerm ;
-    rdfs:label "still" ;
-    rdfs:comment "The topic 'still' derived from natural language analysis" ;
-    schema:name "still" .
+<http://pivotlabs.vc/innov/topic/harness> a schema:DefinedTerm ;
+    rdfs:label "harness" ;
+    rdfs:comment "The topic 'harness' derived from natural language analysis" ;
+    schema:name "harness" .
 
-<http://pivotlabs.vc/innov/topic/updating> a schema:DefinedTerm ;
-    rdfs:label "updating" ;
-    rdfs:comment "The topic 'updating' derived from natural language analysis" ;
-    schema:name "updating" .
+<http://pivotlabs.vc/innov/topic/heavily> a schema:DefinedTerm ;
+    rdfs:label "heavily" ;
+    rdfs:comment "The topic 'heavily' derived from natural language analysis" ;
+    schema:name "heavily" .
 
-<http://pivotlabs.vc/innov/topic/use> a schema:DefinedTerm ;
-    rdfs:label "use" ;
-    rdfs:comment "The topic 'use' derived from natural language analysis" ;
-    schema:name "use" .
+<http://pivotlabs.vc/innov/topic/hf> a schema:DefinedTerm ;
+    rdfs:label "hf" ;
+    rdfs:comment "The topic 'hf' derived from natural language analysis" ;
+    schema:name "hf" .
 
-<http://pivotlabs.vc/innov/topic/vulnerability> a schema:DefinedTerm ;
-    rdfs:label "vulnerability" ;
-    rdfs:comment "The topic 'vulnerability' derived from natural language analysis" ;
-    schema:name "vulnerability" .
+<http://pivotlabs.vc/innov/topic/iot> a schema:DefinedTerm ;
+    rdfs:label "iot" ;
+    rdfs:comment "The topic 'iot' derived from natural language analysis" ;
+    schema:name "iot" .
 
-<http://pivotlabs.vc/innov/topic/​> a schema:DefinedTerm ;
-    rdfs:label "​" ;
-    rdfs:comment "The topic '​' derived from natural language analysis" ;
-    schema:name "​" .
+<http://pivotlabs.vc/innov/topic/landscape> a schema:DefinedTerm ;
+    rdfs:label "landscape" ;
+    rdfs:comment "The topic 'landscape' derived from natural language analysis" ;
+    schema:name "landscape" .
 
-<http://pivotlabs.vc/innov/topic/cyber> a schema:DefinedTerm ;
-    rdfs:label "cyber" ;
-    rdfs:comment "The topic 'cyber' derived from natural language analysis" ;
-    schema:name "cyber" .
+<http://pivotlabs.vc/innov/topic/line> a schema:DefinedTerm ;
+    rdfs:label "line" ;
+    rdfs:comment "The topic 'line' derived from natural language analysis" ;
+    schema:name "line" .
 
-<http://pivotlabs.vc/innov/topic/startup> a schema:DefinedTerm ;
-    rdfs:label "startup" ;
-    rdfs:comment "The topic 'startup' derived from natural language analysis" ;
-    schema:name "startup" .
+<http://pivotlabs.vc/innov/topic/mature> a schema:DefinedTerm ;
+    rdfs:label "mature" ;
+    rdfs:comment "The topic 'mature' derived from natural language analysis" ;
+    schema:name "mature" .
+
+<http://pivotlabs.vc/innov/topic/mean> a schema:DefinedTerm ;
+    rdfs:label "mean" ;
+    rdfs:comment "The topic 'mean' derived from natural language analysis" ;
+    schema:name "mean" .
+
+<http://pivotlabs.vc/innov/topic/msa> a schema:DefinedTerm ;
+    rdfs:label "msa" ;
+    rdfs:comment "The topic 'msa' derived from natural language analysis" ;
+    schema:name "msa" .
+
+<http://pivotlabs.vc/innov/topic/new> a schema:DefinedTerm ;
+    rdfs:label "new" ;
+    rdfs:comment "The topic 'new' derived from natural language analysis" ;
+    schema:name "new" .
+
+<http://pivotlabs.vc/innov/topic/operational> a schema:DefinedTerm ;
+    rdfs:label "operational" ;
+    rdfs:comment "The topic 'operational' derived from natural language analysis" ;
+    schema:name "operational" .
+
+<http://pivotlabs.vc/innov/topic/people> a schema:DefinedTerm ;
+    rdfs:label "people" ;
+    rdfs:comment "The topic 'people' derived from natural language analysis" ;
+    schema:name "people" .
+
+<http://pivotlabs.vc/innov/topic/practice> a schema:DefinedTerm ;
+    rdfs:label "practice" ;
+    rdfs:comment "The topic 'practice' derived from natural language analysis" ;
+    schema:name "practice" .
+
+<http://pivotlabs.vc/innov/topic/raise> a schema:DefinedTerm ;
+    rdfs:label "raise" ;
+    rdfs:comment "The topic 'raise' derived from natural language analysis" ;
+    schema:name "raise" .
+
+<http://pivotlabs.vc/innov/topic/second> a schema:DefinedTerm ;
+    rdfs:label "second" ;
+    rdfs:comment "The topic 'second' derived from natural language analysis" ;
+    schema:name "second" .
+
+<http://pivotlabs.vc/innov/topic/strategic> a schema:DefinedTerm ;
+    rdfs:label "strategic" ;
+    rdfs:comment "The topic 'strategic' derived from natural language analysis" ;
+    schema:name "strategic" .
+
+<http://pivotlabs.vc/innov/topic/target> a schema:DefinedTerm ;
+    rdfs:label "target" ;
+    rdfs:comment "The topic 'target' derived from natural language analysis" ;
+    schema:name "target" .
+
+<http://pivotlabs.vc/innov/topic/unencrypted> a schema:DefinedTerm ;
+    rdfs:label "unencrypted" ;
+    rdfs:comment "The topic 'unencrypted' derived from natural language analysis" ;
+    schema:name "unencrypted" .
+
+<http://pivotlabs.vc/innov/topic/aim> a schema:DefinedTerm ;
+    rdfs:label "aim" ;
+    rdfs:comment "The topic 'aim' derived from natural language analysis" ;
+    schema:name "aim" .
+
+<http://pivotlabs.vc/innov/topic/build> a schema:DefinedTerm ;
+    rdfs:label "build" ;
+    rdfs:comment "The topic 'build' derived from natural language analysis" ;
+    schema:name "build" .
+
+<http://pivotlabs.vc/innov/topic/develop> a schema:DefinedTerm ;
+    rdfs:label "develop" ;
+    rdfs:comment "The topic 'develop' derived from natural language analysis" ;
+    schema:name "develop" .
+
+<http://pivotlabs.vc/innov/topic/simple> a schema:DefinedTerm ;
+    rdfs:label "simple" ;
+    rdfs:comment "The topic 'simple' derived from natural language analysis" ;
+    schema:name "simple" .
+
+<http://pivotlabs.vc/innov/topic/identifier> a schema:DefinedTerm ;
+    rdfs:label "identifier" ;
+    rdfs:comment "The topic 'identifier' derived from natural language analysis" ;
+    schema:name "identifier" .
+
+<http://pivotlabs.vc/innov/topic/advanced> a schema:DefinedTerm ;
+    rdfs:label "advanced" ;
+    rdfs:comment "The topic 'advanced' derived from natural language analysis" ;
+    schema:name "advanced" .
 
 
