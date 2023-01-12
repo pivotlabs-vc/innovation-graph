@@ -409,7 +409,7 @@ const sparqlLatencySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "300s",
+	    windowPeriod: "24h",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    latency: {
@@ -434,7 +434,7 @@ const webLatencySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "300s",
+	    windowPeriod: "24h",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    latency: {
