@@ -399,7 +399,7 @@ const webServiceMon = new gcp.monitoring.GenericService(
 	provider: provider,
     }
 );
-
+/*
 const sparqlLatencySlo = new gcp.monitoring.Slo(
     "sparql-latency-slo",
     {
@@ -499,3 +499,4 @@ const webAvailabilitySlo = new gcp.monitoring.Slo(
     }
 );
 
+*/
