@@ -364,7 +364,7 @@ const sparqlServiceMon = new gcp.monitoring.GenericService(
             },
             serviceType: "CLOUD_RUN",
 	},
-	displayName: "SPARQL Service (" + process.env.ENVIRONMENT + ")",
+	displayName: "SPARQL service (" + process.env.ENVIRONMENT + ")",
 	serviceId: "sparql-service-" + process.env.ENVIRONMENT + "-mon",
 	userLabels: {
 	    "service": sparqlService.name,
@@ -387,7 +387,7 @@ const webServiceMon = new gcp.monitoring.GenericService(
             },
             serviceType: "CLOUD_RUN",
 	},
-	displayName: "Web Service (" + process.env.ENVIRONMENT + ")",
+	displayName: "Web service (" + process.env.ENVIRONMENT + ")",
 	serviceId: "web-service-" + process.env.ENVIRONMENT + "-mon",
 	userLabels: {
 	    "service": webService.name,
@@ -400,20 +400,28 @@ const webServiceMon = new gcp.monitoring.GenericService(
     }
 );
 
-/*
-const sparlLatencySlo = new gcp.monitoring.Slo("requestBasedSlo", {
-    service: sparqlServicecustomsrv.serviceId,
-    sloId: "consumed-api-slo",
-    displayName: "Test SLO with request based SLI (good total ratio)",
-    goal: 0.9,
-    rollingPeriodDays: 30,
-    requestBasedSli: {
-        distributionCut: {
-            distributionFilter: "metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  ",
-            range: {
-                max: 0.5,
-            },
-        },
+const sparlLatencySlo = new gcp.monitoring.Slo(
+    "requestBasedSlo",
+    {
+	service: sparqlServiceMon.serviceId,
+	sloId: "sparql-service-" + process.env.ENVIRONMENT + "-latency-slo",
+	displayName: "SPARQL latency (" + process.env.ENVIRONMENT + ")",
+	goal: 0.9,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "300s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    latency: {
+			threshold: "0.1s"
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
     },
-});
-*/
+    {
+	provider: provider,
+    }
+);
+	
