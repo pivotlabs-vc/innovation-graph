@@ -409,7 +409,7 @@ const sparqlLatencySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "24h",
+	    windowPeriod: "7200s",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    latency: {
@@ -434,7 +434,7 @@ const webLatencySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "24h",
+	    windowPeriod: "7200s",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    latency: {
@@ -459,7 +459,7 @@ const sparqlAvailabilitySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "300s",
+	    windowPeriod: "3600s",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    availability: {
@@ -484,7 +484,7 @@ const webAvailabilitySlo = new gcp.monitoring.Slo(
 	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
-	    windowPeriod: "300s",
+	    windowPeriod: "3600s",
 	    goodTotalRatioThreshold: {
 		basicSliPerformance: {
 		    availability: {
