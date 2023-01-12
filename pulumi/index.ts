@@ -354,3 +354,149 @@ const recordSet = new gcp.dns.RecordSet(
     }
 );
 
+const sparqlServiceMon = new gcp.monitoring.GenericService(
+    "sparql-service-monitoring",
+    {
+	basicService: {
+            serviceLabels: {
+		service_name: sparqlService.name,
+		location: process.env.CLOUD_RUN_REGION,
+            },
+            serviceType: "CLOUD_RUN",
+	},
+	displayName: "SPARQL service (" + process.env.ENVIRONMENT + ")",
+	serviceId: "sparql-service-" + process.env.ENVIRONMENT + "-mon",
+	userLabels: {
+	    "service": sparqlService.name,
+	    "application": "sparql-service",
+	    "environment": process.env.ENVIRONMENT,
+	},
+    },
+    {
+	provider: provider,
+    }
+);
+
+const webServiceMon = new gcp.monitoring.GenericService(
+    "web-service-monitoring",
+    {
+	basicService: {
+            serviceLabels: {
+		service_name: webService.name,
+		location: process.env.CLOUD_RUN_REGION,
+            },
+            serviceType: "CLOUD_RUN",
+	},
+	displayName: "Web service (" + process.env.ENVIRONMENT + ")",
+	serviceId: "web-service-" + process.env.ENVIRONMENT + "-mon",
+	userLabels: {
+	    "service": webService.name,
+	    "application": "web-service",
+	    "environment": process.env.ENVIRONMENT,
+	},
+    },
+    {
+	provider: provider,
+    }
+);
+
+const sparqlLatencySlo = new gcp.monitoring.Slo(
+    "sparql-latency-slo",
+    {
+	service: sparqlServiceMon.serviceId,
+	sloId: "sparql-service-" + process.env.ENVIRONMENT + "-latency-slo",
+	displayName: "SPARQL latency (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "7200s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    latency: {
+			threshold: "0.1s"
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+const webLatencySlo = new gcp.monitoring.Slo(
+    "web-latency-slo",
+    {
+	service: webServiceMon.serviceId,
+	sloId: "web-service-" + process.env.ENVIRONMENT + "-latency-slo",
+	displayName: "Web latency (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "7200s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    latency: {
+			threshold: "0.03s"
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+const sparqlAvailabilitySlo = new gcp.monitoring.Slo(
+    "sparql-availability-slo",
+    {
+	service: sparqlServiceMon.serviceId,
+	sloId: "sparql-service-" + process.env.ENVIRONMENT + "-availability-slo",
+	displayName: "SPARQL availability (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "3600s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    availability: {
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+
+const webAvailabilitySlo = new gcp.monitoring.Slo(
+    "web-availability-slo",
+    {
+	service: webServiceMon.serviceId,
+	sloId: "web-service-" + process.env.ENVIRONMENT + "-availability-slo",
+	displayName: "Web availability (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "3600s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    availability: {
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+
