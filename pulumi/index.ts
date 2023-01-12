@@ -354,3 +354,37 @@ const recordSet = new gcp.dns.RecordSet(
     }
 );
 
+const sparqlServiceMon = new gcp.monitoring.GenericService(
+    "sparql-service-monitoring",
+    {
+	basicService: {
+            serviceLabels: {
+		module_id: sparqlService.name,
+            },
+            serviceType: "CLOUD_RUN",
+	},
+	displayName: "SPARQL Service (" + process.env.ENVIRONMENT + ")",
+	serviceId: "sparql-service-" + process.env.ENVIRONMENT + "-mon",
+    },
+    {
+	provider: provider,
+    }
+);
+
+/*
+const sparlLatencySlo = new gcp.monitoring.Slo("requestBasedSlo", {
+    service: sparqlServicecustomsrv.serviceId,
+    sloId: "consumed-api-slo",
+    displayName: "Test SLO with request based SLI (good total ratio)",
+    goal: 0.9,
+    rollingPeriodDays: 30,
+    requestBasedSli: {
+        distributionCut: {
+            distributionFilter: "metric.type=\"serviceruntime.googleapis.com/api/request_latencies\" resource.type=\"api\"  ",
+            range: {
+                max: 0.5,
+            },
+        },
+    },
+});
+*/
