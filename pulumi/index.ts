@@ -377,6 +377,29 @@ const sparqlServiceMon = new gcp.monitoring.GenericService(
     }
 );
 
+const webServiceMon = new gcp.monitoring.GenericService(
+    "web-service-monitoring",
+    {
+	basicService: {
+            serviceLabels: {
+		service_name: webService.name,
+		location: process.env.CLOUD_RUN_REGION,
+            },
+            serviceType: "CLOUD_RUN",
+	},
+	displayName: "Web Service (" + process.env.ENVIRONMENT + ")",
+	serviceId: "web-service-" + process.env.ENVIRONMENT + "-mon",
+	userLabels: {
+	    "service": webService.name,
+	    "application": "web-service",
+	    "environment": process.env.ENVIRONMENT,
+	},
+    },
+    {
+	provider: provider,
+    }
+);
+
 /*
 const sparlLatencySlo = new gcp.monitoring.Slo("requestBasedSlo", {
     service: sparqlServicecustomsrv.serviceId,
