@@ -400,13 +400,13 @@ const webServiceMon = new gcp.monitoring.GenericService(
     }
 );
 
-const sparlLatencySlo = new gcp.monitoring.Slo(
-    "requestBasedSlo",
+const sparqlLatencySlo = new gcp.monitoring.Slo(
+    "sparql-latency-slo",
     {
 	service: sparqlServiceMon.serviceId,
 	sloId: "sparql-service-" + process.env.ENVIRONMENT + "-latency-slo",
 	displayName: "SPARQL latency (" + process.env.ENVIRONMENT + ")",
-	goal: 0.9,
+	goal: 0.95,
 	rollingPeriodDays: 5,
 	windowsBasedSli: {
 	    windowPeriod: "300s",
@@ -424,4 +424,78 @@ const sparlLatencySlo = new gcp.monitoring.Slo(
 	provider: provider,
     }
 );
-	
+
+const webLatencySlo = new gcp.monitoring.Slo(
+    "web-latency-slo",
+    {
+	service: webServiceMon.serviceId,
+	sloId: "web-service-" + process.env.ENVIRONMENT + "-latency-slo",
+	displayName: "Web latency (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "300s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    latency: {
+			threshold: "0.03s"
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+const sparqlAvailabilitySlo = new gcp.monitoring.Slo(
+    "sparql-availability-slo",
+    {
+	service: sparqlServiceMon.serviceId,
+	sloId: "sparql-service-" + process.env.ENVIRONMENT + "-availability-slo",
+	displayName: "SPARQL availability (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "300s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    availability: {
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
+
+const webAvailabilitySlo = new gcp.monitoring.Slo(
+    "web-availability-slo",
+    {
+	service: webServiceMon.serviceId,
+	sloId: "web-service-" + process.env.ENVIRONMENT + "-availability-slo",
+	displayName: "Web availability (" + process.env.ENVIRONMENT + ")",
+	goal: 0.95,
+	rollingPeriodDays: 5,
+	windowsBasedSli: {
+	    windowPeriod: "300s",
+	    goodTotalRatioThreshold: {
+		basicSliPerformance: {
+		    availability: {
+		    }
+		},
+		threshold: 0.9,
+	    }
+	}
+    },
+    {
+	provider: provider,
+    }
+);
+
