@@ -408,17 +408,11 @@ const sparqlLatencySlo = new gcp.monitoring.Slo(
 	displayName: "SPARQL latency (" + process.env.ENVIRONMENT + ")",
 	goal: 0.95,
 	rollingPeriodDays: 5,
-	windowsBasedSli: {
-	    windowPeriod: "7200s",
-	    goodTotalRatioThreshold: {
-		basicSliPerformance: {
-		    latency: {
-			threshold: "0.1s"
-		    }
-		},
-		threshold: 0.9,
+	basicSli: {
+	    latency: {
+		threshold: "2s"
 	    }
-	}
+	},
     },
     {
 	provider: provider,
@@ -433,17 +427,11 @@ const webLatencySlo = new gcp.monitoring.Slo(
 	displayName: "Web latency (" + process.env.ENVIRONMENT + ")",
 	goal: 0.95,
 	rollingPeriodDays: 5,
-	windowsBasedSli: {
-	    windowPeriod: "7200s",
-	    goodTotalRatioThreshold: {
-		basicSliPerformance: {
-		    latency: {
-			threshold: "0.03s"
-		    }
-		},
-		threshold: 0.9,
+	basicSli: {
+	    latency: {
+		threshold: "2s"
 	    }
-	}
+	},
     },
     {
 	provider: provider,
@@ -498,5 +486,4 @@ const webAvailabilitySlo = new gcp.monitoring.Slo(
 	provider: provider,
     }
 );
-
 
