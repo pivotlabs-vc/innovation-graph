@@ -359,12 +359,18 @@ const sparqlServiceMon = new gcp.monitoring.GenericService(
     {
 	basicService: {
             serviceLabels: {
-		module_id: sparqlService.name,
+		service_name: sparqlService.name,
+		location: process.env.CLOUD_RUN_REGION,
             },
             serviceType: "CLOUD_RUN",
 	},
 	displayName: "SPARQL Service (" + process.env.ENVIRONMENT + ")",
 	serviceId: "sparql-service-" + process.env.ENVIRONMENT + "-mon",
+	userLabels: {
+	    "service": sparqlService.name,
+	    "application": "sparql-service",
+	    "environment": process.env.ENVIRONMENT,
+	},
     },
     {
 	provider: provider,
