@@ -815,6 +815,20 @@
     rdfs:comment "The aim of this competition is to improve the productivity and competitiveness of foundation industry companies and supply chains, by funding cross-sector collaborative research and development projects. Sectors include cement, glass, paper, ceramics, metals and chemicals." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/iscf-tfi-large-collaborative-rd-projects/> .
 
+<http://pivotlabs.vc/innov/challenge/17e59d367e3a065d44ed147f6900b1fb4c6934f9> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Freight Innovation Fund Accelerator" ;
+    ns1:closes "2023-02-05"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/competitive>,
+        <http://pivotlabs.vc/innov/topic/critical>,
+        <http://pivotlabs.vc/innov/topic/ifa>,
+        <http://pivotlabs.vc/innov/topic/operational> ;
+    ns1:opens "2023-01-09"^^xsd:date ;
+    ns1:title "Freight Innovation Fund Accelerator" ;
+    rdfs:comment "Up to 12 SMEs will be selected to join a 6-month programme with up to £150,000 of funding to trial their freight solutions." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/freight-innovation-fund-accelerator/> .
+
 <http://pivotlabs.vc/innov/challenge/1816bc61190c91f2af1351ebef731af13cc3c2d7> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "BBSRC-STFC facility access funding for b" ;
     ns1:closes "2023-01-06"^^xsd:date ;
@@ -1192,6 +1206,20 @@
     ns1:title "Horizon Europe Guarantee: EIT KICs 2021" ;
     rdfs:comment "This funding route is to deliver the UK Government’s Horizon Europe guarantee. Specifically it covers retrospective funding for UK partners involved in EIT-KIC (European Institute of Innovation and Technology Knowledge and Innovation Communities) activities in the 2021 calendar year who have been unable to receive EIT funding." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/horizon-europe-guarantee-eit-kics-2021/> .
+
+<http://pivotlabs.vc/innov/challenge/23bae1642f3cf9910f00ab4e9f16a99fe0d48668> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Farming Innovation Programme: Research S" ;
+    ns1:closes "2023-03-08"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/choice>,
+        <http://pivotlabs.vc/innov/topic/commands>,
+        <http://pivotlabs.vc/innov/topic/competitive>,
+        <http://pivotlabs.vc/innov/topic/science> ;
+    ns1:opens "2023-01-30"^^xsd:date ;
+    ns1:title "Farming Innovation Programme: Research Starter Round 3, expression of interest" ;
+    rdfs:comment "Farming, growing or forestry businesses based in England can apply for a share of up to £850,000 for feasibility projects to improve productivity, sustainability, resilience and move the agricultural sector to net zero." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/farming-innovation-programme-research-starter-round-3-eoi/> .
 
 <http://pivotlabs.vc/innov/challenge/2494b76721b9252299eb9c3339a27a5c588281a0> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Smart Farming Innovations for Small-Scal" ;
@@ -3169,6 +3197,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "Through this pilot, border agencies will work with industry to create a broad, end-to-end pilot, to definitively test whether new capabilities across supply chain security and technology, providing greater assurance of goods crossing the border, can unlock world-leading Trusted Trader schemes and develop further simplified customs declaration processes that are able to facilitate greater trade without jeopardising security." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/cabinet-office-border-innovation-hub-ecosystem-of-trust-pilot/> .
 
+<http://pivotlabs.vc/innov/challenge/62c21833fcfffb35b3b491846a847822264d880c> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "APC23: Industrialising net-zero automoti" ;
+    ns1:closes "2023-03-15"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/harness>,
+        <http://pivotlabs.vc/innov/topic/materials>,
+        <http://pivotlabs.vc/innov/topic/mod>,
+        <http://pivotlabs.vc/innov/topic/technology> ;
+    ns1:opens "2023-01-16"^^xsd:date ;
+    ns1:title "APC23: Industrialising net-zero automotive technology" ;
+    rdfs:comment "UK registered businesses can apply for a share of up to £20 million for late-stage R&D projects that help accelerate the UK towards a net zero automotive future." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/apc23-industrialising-net-zero-automotive-technology/> .
+
 <http://pivotlabs.vc/innov/challenge/62c758a8b0a5ef561ae0801d29e86ad5338f7d95> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "GovStart: a free six month programme to " ;
     ns1:closes "2022-05-01"^^xsd:date ;
@@ -3700,6 +3742,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     ns1:title "KTN Innovation Exchange challenge - battery systems for a zero emission passenger ferry" ;
     rdfs:comment "Innovative solutions are being sought by Artemis Technologies on KTN’s Innovation Exchange for battery pack designs that would be suitable in a marine environment." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/ktn-innovation-exchange-challenge-battery-systems-for-a-zero-emission-passenger-ferry/> .
+
+<http://pivotlabs.vc/innov/challenge/72d6f137dc3f4d6b60af2fce0553ea6e6bf7cc4c> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Made Smarter Innovation: Industry ready " ;
+    ns1:closes "2023-04-05"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/amp>,
+        <http://pivotlabs.vc/innov/topic/capability>,
+        <http://pivotlabs.vc/innov/topic/identify>,
+        <http://pivotlabs.vc/innov/topic/materials> ;
+    ns1:opens "2023-01-18"^^xsd:date ;
+    ns1:title "Made Smarter Innovation: Industry ready Robotics and Automation" ;
+    rdfs:comment "UK registered organisations can apply for a share of up to £6 million for late-stage robotics and automation innovation projects. This is to develop industrially ready solutions deployable within manufacturing processes in factories." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/made-smarter-innovation-industry-ready-robotics-and-automation/> .
 
 <http://pivotlabs.vc/innov/challenge/731ca4d1e28f0635ed412e70a6f26550d3ffac41> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Tree Production Innovation Fund" ;
@@ -4835,6 +4891,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment """Mid stage industrial research
 UK registered organisations can apply for a share of up to £2.5 million to work on agri-tech and food chain innovations in Africa.""" ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/agri-tech-catalyst-round-10-agriculture-and-food-systems-mid-stage/> .
+
+<http://pivotlabs.vc/innov/challenge/967fd264eec72de02d0fcce690faba493f160fe6> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Advancing precision medicine" ;
+    ns1:closes "2023-03-08"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/alternative>,
+        <http://pivotlabs.vc/innov/topic/focus>,
+        <http://pivotlabs.vc/innov/topic/identifier>,
+        <http://pivotlabs.vc/innov/topic/novel> ;
+    ns1:opens "2023-01-16"^^xsd:date ;
+    ns1:title "Advancing precision medicine" ;
+    rdfs:comment "UK registered businesses can apply for a share of up to £20m over two rounds, to develop digital and data-enabled tools and multi-modal approaches. Your proposal must address an unmet clinical need or respond to NHS demand signalling." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/advancing-precision-medicine/> .
 
 <http://pivotlabs.vc/innov/challenge/9808b8d78fe0880a79e6ad38add15a7615cfa0be> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Call for Ideas: UK Space Agency Climate " ;
@@ -7090,6 +7160,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "This Innovation Exchange challenge, delivered by Innovate UK KTN through the Global Alliance Africa project, is supporting Hinckley Group to identify innovative solutions for second life Lithium-Ion batteries, focussing on solutions for roadside kiosks, personal mobility, light or cooling provision within Nigeria." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/ga-ix-challenge-innovative-solutions-for-second-life-batteries/> .
 
+<http://pivotlabs.vc/innov/challenge/db286932bbce30c9488c6846aab9ca7175c91b59> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Innovation Loans Future Economy Competit" ;
+    ns1:closes "2023-03-08"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/competitive>,
+        <http://pivotlabs.vc/innov/topic/harness>,
+        <http://pivotlabs.vc/innov/topic/ifa>,
+        <http://pivotlabs.vc/innov/topic/innovation> ;
+    ns1:opens "2023-01-13"^^xsd:date ;
+    ns1:title "Innovation Loans Future Economy Competition: Round 8" ;
+    rdfs:comment "UK registered businesses can apply for loans of £100k-£2m for innovative projects with strong commercial potential to significantly improve the UK economy." ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/innovation-loans-future-economy-competition-round-8/> .
+
 <http://pivotlabs.vc/innov/challenge/db2d67c205da56ede5a17d01e5acff9b7c9f544d> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Industrial Energy Transformation Fund (I" ;
     ns1:closes "2023-02-17"^^xsd:date ;
@@ -7117,6 +7201,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     ns1:title "Sustainable Aviation Fuels - Innovation Centre: Aviation Characterisation Laboratory Equipment" ;
     rdfs:comment "The University of Sheffield (UoS) is establishing a Sustainable Aviation Fuels Innovation Centre (SAF-IC) and looking to procure a range of test equipment approved to various ASTM (American Society for Testing and Materials) standards as well as other internationally recognised standards where appropriate." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/sustainable-aviation-fuels-innovation-centre-aviation-characterisation-laboratory-equipment/> .
+
+<http://pivotlabs.vc/innov/challenge/dc95127fd96665a9b62d7e8227b1b7b3c98863b1> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Unloc Young Entrepreneurs Challenge 2023" ;
+    ns1:closes "2023-01-20"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/engineering>,
+        <http://pivotlabs.vc/innov/topic/globally>,
+        <http://pivotlabs.vc/innov/topic/harness>,
+        <http://pivotlabs.vc/innov/topic/seven> ;
+    ns1:opens "2022-10-20"^^xsd:date ;
+    ns1:title "Unloc Young Entrepreneurs Challenge 2023" ;
+    rdfs:comment "If you’re 16-25 and have a fresh and innovative technology led idea for a business, or have started one already – then Verizon and Unloc want to hear from you!" ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/unloc-young-entrepreneurs-challenge-2023/> .
 
 <http://pivotlabs.vc/innov/challenge/dce3152d489127e83c8931b54e990caef09675af> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "KTN-iX challenge: Mobile services of Zer" ;
@@ -7902,6 +8000,20 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "Organisations can apply for a share of £1.2 million, inclusive of VAT, to develop open solutions to accelerate decarbonisation of energy in the UK." ;
     rdfs:seeAlso <https://ktn-uk.org/opportunities/sbri-competition-open-digital-solutions-for-net-zero-energy/> .
 
+<http://pivotlabs.vc/innov/challenge/f5f160fac42f198ec4280abe40619dcfd867ecea> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Transport Pathfinder 2023" ;
+    ns1:closes "2023-02-27"^^xsd:date ;
+    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktn> ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
+        <http://pivotlabs.vc/innov/topic/encryption>,
+        <http://pivotlabs.vc/innov/topic/globally>,
+        <http://pivotlabs.vc/innov/topic/integrate>,
+        <http://pivotlabs.vc/innov/topic/rf> ;
+    ns1:opens "2023-01-01"^^xsd:date ;
+    ns1:title "Transport Pathfinder 2023" ;
+    rdfs:comment "Do you have an inspirational, life-enhancing idea, prototype, or plan to reimagine how transport options in the UK can better support a rapidly ageing population to stay connected, active, and independent for longer?" ;
+    rdfs:seeAlso <https://ktn-uk.org/opportunities/transport-pathfinder-2023/> .
+
 <http://pivotlabs.vc/innov/challenge/f613710fe33e0388299e40afedbf380965eb175c> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "Future Economy Investor Partnerships: In" ;
     ns1:closes "2022-11-02"^^xsd:date ;
@@ -8676,11 +8788,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'response' derived from natural language analysis" ;
     schema:name "response" .
 
-<http://pivotlabs.vc/innov/topic/rf> a schema:DefinedTerm ;
-    rdfs:label "rf" ;
-    rdfs:comment "The topic 'rf' derived from natural language analysis" ;
-    schema:name "rf" .
-
 <http://pivotlabs.vc/innov/topic/rise> a schema:DefinedTerm ;
     rdfs:label "rise" ;
     rdfs:comment "The topic 'rise' derived from natural language analysis" ;
@@ -9006,6 +9113,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'resilience' derived from natural language analysis" ;
     schema:name "resilience" .
 
+<http://pivotlabs.vc/innov/topic/rf> a schema:DefinedTerm ;
+    rdfs:label "rf" ;
+    rdfs:comment "The topic 'rf' derived from natural language analysis" ;
+    schema:name "rf" .
+
 <http://pivotlabs.vc/innov/topic/sea> a schema:DefinedTerm ;
     rdfs:label "sea" ;
     rdfs:comment "The topic 'sea' derived from natural language analysis" ;
@@ -9081,11 +9193,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'decisive' derived from natural language analysis" ;
     schema:name "decisive" .
 
-<http://pivotlabs.vc/innov/topic/encryption> a schema:DefinedTerm ;
-    rdfs:label "encryption" ;
-    rdfs:comment "The topic 'encryption' derived from natural language analysis" ;
-    schema:name "encryption" .
-
 <http://pivotlabs.vc/innov/topic/facility> a schema:DefinedTerm ;
     rdfs:label "facility" ;
     rdfs:comment "The topic 'facility' derived from natural language analysis" ;
@@ -9120,11 +9227,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "natural" ;
     rdfs:comment "The topic 'natural' derived from natural language analysis" ;
     schema:name "natural" .
-
-<http://pivotlabs.vc/innov/topic/novel> a schema:DefinedTerm ;
-    rdfs:label "novel" ;
-    rdfs:comment "The topic 'novel' derived from natural language analysis" ;
-    schema:name "novel" .
 
 <http://pivotlabs.vc/innov/topic/option> a schema:DefinedTerm ;
     rdfs:label "option" ;
@@ -9241,6 +9343,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'emit' derived from natural language analysis" ;
     schema:name "emit" .
 
+<http://pivotlabs.vc/innov/topic/encryption> a schema:DefinedTerm ;
+    rdfs:label "encryption" ;
+    rdfs:comment "The topic 'encryption' derived from natural language analysis" ;
+    schema:name "encryption" .
+
 <http://pivotlabs.vc/innov/topic/family> a schema:DefinedTerm ;
     rdfs:label "family" ;
     rdfs:comment "The topic 'family' derived from natural language analysis" ;
@@ -9251,10 +9358,10 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'high' derived from natural language analysis" ;
     schema:name "high" .
 
-<http://pivotlabs.vc/innov/topic/integrate> a schema:DefinedTerm ;
-    rdfs:label "integrate" ;
-    rdfs:comment "The topic 'integrate' derived from natural language analysis" ;
-    schema:name "integrate" .
+<http://pivotlabs.vc/innov/topic/novel> a schema:DefinedTerm ;
+    rdfs:label "novel" ;
+    rdfs:comment "The topic 'novel' derived from natural language analysis" ;
+    schema:name "novel" .
 
 <http://pivotlabs.vc/innov/topic/opportunity> a schema:DefinedTerm ;
     rdfs:label "opportunity" ;
@@ -9311,6 +9418,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'infrastructure' derived from natural language analysis" ;
     schema:name "infrastructure" .
 
+<http://pivotlabs.vc/innov/topic/integrate> a schema:DefinedTerm ;
+    rdfs:label "integrate" ;
+    rdfs:comment "The topic 'integrate' derived from natural language analysis" ;
+    schema:name "integrate" .
+
 <http://pivotlabs.vc/innov/topic/invest> a schema:DefinedTerm ;
     rdfs:label "invest" ;
     rdfs:comment "The topic 'invest' derived from natural language analysis" ;
@@ -9340,11 +9452,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "area" ;
     rdfs:comment "The topic 'area' derived from natural language analysis" ;
     schema:name "area" .
-
-<http://pivotlabs.vc/innov/topic/choice> a schema:DefinedTerm ;
-    rdfs:label "choice" ;
-    rdfs:comment "The topic 'choice' derived from natural language analysis" ;
-    schema:name "choice" .
 
 <http://pivotlabs.vc/innov/topic/decision> a schema:DefinedTerm ;
     rdfs:label "decision" ;
@@ -9401,6 +9508,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'successor' derived from natural language analysis" ;
     schema:name "successor" .
 
+<http://pivotlabs.vc/innov/topic/choice> a schema:DefinedTerm ;
+    rdfs:label "choice" ;
+    rdfs:comment "The topic 'choice' derived from natural language analysis" ;
+    schema:name "choice" .
+
 <http://pivotlabs.vc/innov/topic/departmental> a schema:DefinedTerm ;
     rdfs:label "departmental" ;
     rdfs:comment "The topic 'departmental' derived from natural language analysis" ;
@@ -9431,11 +9543,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'satellite' derived from natural language analysis" ;
     schema:name "satellite" .
 
-<http://pivotlabs.vc/innov/topic/alternative> a schema:DefinedTerm ;
-    rdfs:label "alternative" ;
-    rdfs:comment "The topic 'alternative' derived from natural language analysis" ;
-    schema:name "alternative" .
-
 <http://pivotlabs.vc/innov/topic/edge> a schema:DefinedTerm ;
     rdfs:label "edge" ;
     rdfs:comment "The topic 'edge' derived from natural language analysis" ;
@@ -9445,11 +9552,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "effect" ;
     rdfs:comment "The topic 'effect' derived from natural language analysis" ;
     schema:name "effect" .
-
-<http://pivotlabs.vc/innov/topic/focus> a schema:DefinedTerm ;
-    rdfs:label "focus" ;
-    rdfs:comment "The topic 'focus' derived from natural language analysis" ;
-    schema:name "focus" .
 
 <http://pivotlabs.vc/innov/topic/frequency> a schema:DefinedTerm ;
     rdfs:label "frequency" ;
@@ -9461,10 +9563,10 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'heavily' derived from natural language analysis" ;
     schema:name "heavily" .
 
-<http://pivotlabs.vc/innov/topic/seven> a schema:DefinedTerm ;
-    rdfs:label "seven" ;
-    rdfs:comment "The topic 'seven' derived from natural language analysis" ;
-    schema:name "seven" .
+<http://pivotlabs.vc/innov/topic/alternative> a schema:DefinedTerm ;
+    rdfs:label "alternative" ;
+    rdfs:comment "The topic 'alternative' derived from natural language analysis" ;
+    schema:name "alternative" .
 
 <http://pivotlabs.vc/innov/topic/available> a schema:DefinedTerm ;
     rdfs:label "available" ;
@@ -9475,6 +9577,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "blos" ;
     rdfs:comment "The topic 'blos' derived from natural language analysis" ;
     schema:name "blos" .
+
+<http://pivotlabs.vc/innov/topic/focus> a schema:DefinedTerm ;
+    rdfs:label "focus" ;
+    rdfs:comment "The topic 'focus' derived from natural language analysis" ;
+    schema:name "focus" .
 
 <http://pivotlabs.vc/innov/topic/form> a schema:DefinedTerm ;
     rdfs:label "form" ;
@@ -9491,6 +9598,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'global' derived from natural language analysis" ;
     schema:name "global" .
 
+<http://pivotlabs.vc/innov/topic/seven> a schema:DefinedTerm ;
+    rdfs:label "seven" ;
+    rdfs:comment "The topic 'seven' derived from natural language analysis" ;
+    schema:name "seven" .
+
 <http://pivotlabs.vc/innov/topic/strategic> a schema:DefinedTerm ;
     rdfs:label "strategic" ;
     rdfs:comment "The topic 'strategic' derived from natural language analysis" ;
@@ -9500,11 +9612,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "build" ;
     rdfs:comment "The topic 'build' derived from natural language analysis" ;
     schema:name "build" .
-
-<http://pivotlabs.vc/innov/topic/commands> a schema:DefinedTerm ;
-    rdfs:label "commands" ;
-    rdfs:comment "The topic 'commands' derived from natural language analysis" ;
-    schema:name "commands" .
 
 <http://pivotlabs.vc/innov/topic/deny> a schema:DefinedTerm ;
     rdfs:label "deny" ;
@@ -9535,6 +9642,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "technological" ;
     rdfs:comment "The topic 'technological' derived from natural language analysis" ;
     schema:name "technological" .
+
+<http://pivotlabs.vc/innov/topic/commands> a schema:DefinedTerm ;
+    rdfs:label "commands" ;
+    rdfs:comment "The topic 'commands' derived from natural language analysis" ;
+    schema:name "commands" .
 
 <http://pivotlabs.vc/innov/topic/defence> a schema:DefinedTerm ;
     rdfs:label "defence" ;
@@ -9571,11 +9683,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'maintain' derived from natural language analysis" ;
     schema:name "maintain" .
 
-<http://pivotlabs.vc/innov/topic/technology> a schema:DefinedTerm ;
-    rdfs:label "technology" ;
-    rdfs:comment "The topic 'technology' derived from natural language analysis" ;
-    schema:name "technology" .
-
 <http://pivotlabs.vc/innov/topic/unique> a schema:DefinedTerm ;
     rdfs:label "unique" ;
     rdfs:comment "The topic 'unique' derived from natural language analysis" ;
@@ -9585,6 +9692,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "strategy" ;
     rdfs:comment "The topic 'strategy' derived from natural language analysis" ;
     schema:name "strategy" .
+
+<http://pivotlabs.vc/innov/topic/technology> a schema:DefinedTerm ;
+    rdfs:label "technology" ;
+    rdfs:comment "The topic 'technology' derived from natural language analysis" ;
+    schema:name "technology" .
 
 <http://pivotlabs.vc/innov/topic/line> a schema:DefinedTerm ;
     rdfs:label "line" ;
@@ -9606,11 +9718,6 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'develop' derived from natural language analysis" ;
     schema:name "develop" .
 
-<http://pivotlabs.vc/innov/topic/operational> a schema:DefinedTerm ;
-    rdfs:label "operational" ;
-    rdfs:comment "The topic 'operational' derived from natural language analysis" ;
-    schema:name "operational" .
-
 <http://pivotlabs.vc/innov/topic/point> a schema:DefinedTerm ;
     rdfs:label "point" ;
     rdfs:comment "The topic 'point' derived from natural language analysis" ;
@@ -9620,6 +9727,11 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:label "continuous" ;
     rdfs:comment "The topic 'continuous' derived from natural language analysis" ;
     schema:name "continuous" .
+
+<http://pivotlabs.vc/innov/topic/operational> a schema:DefinedTerm ;
+    rdfs:label "operational" ;
+    rdfs:comment "The topic 'operational' derived from natural language analysis" ;
+    schema:name "operational" .
 
 <http://pivotlabs.vc/innov/topic/dstl> a schema:DefinedTerm ;
     rdfs:label "dstl" ;
@@ -9656,30 +9768,30 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'new' derived from natural language analysis" ;
     schema:name "new" .
 
-<http://pivotlabs.vc/innov/topic/materials> a schema:DefinedTerm ;
-    rdfs:label "materials" ;
-    rdfs:comment "The topic 'materials' derived from natural language analysis" ;
-    schema:name "materials" .
-
 <http://pivotlabs.vc/innov/topic/science> a schema:DefinedTerm ;
     rdfs:label "science" ;
     rdfs:comment "The topic 'science' derived from natural language analysis" ;
     schema:name "science" .
+
+<http://pivotlabs.vc/innov/topic/materials> a schema:DefinedTerm ;
+    rdfs:label "materials" ;
+    rdfs:comment "The topic 'materials' derived from natural language analysis" ;
+    schema:name "materials" .
 
 <http://pivotlabs.vc/innov/topic/engineering> a schema:DefinedTerm ;
     rdfs:label "engineering" ;
     rdfs:comment "The topic 'engineering' derived from natural language analysis" ;
     schema:name "engineering" .
 
-<http://pivotlabs.vc/innov/topic/identifier> a schema:DefinedTerm ;
-    rdfs:label "identifier" ;
-    rdfs:comment "The topic 'identifier' derived from natural language analysis" ;
-    schema:name "identifier" .
-
 <http://pivotlabs.vc/innov/topic/provide> a schema:DefinedTerm ;
     rdfs:label "provide" ;
     rdfs:comment "The topic 'provide' derived from natural language analysis" ;
     schema:name "provide" .
+
+<http://pivotlabs.vc/innov/topic/identifier> a schema:DefinedTerm ;
+    rdfs:label "identifier" ;
+    rdfs:comment "The topic 'identifier' derived from natural language analysis" ;
+    schema:name "identifier" .
 
 <http://pivotlabs.vc/innov/topic/innovation> a schema:DefinedTerm ;
     rdfs:label "innovation" ;
@@ -9726,15 +9838,15 @@ UK registered organisations can apply for a share of up to £2.5 million to work
     rdfs:comment "The topic 'globally' derived from natural language analysis" ;
     schema:name "globally" .
 
-<http://pivotlabs.vc/innov/topic/harness> a schema:DefinedTerm ;
-    rdfs:label "harness" ;
-    rdfs:comment "The topic 'harness' derived from natural language analysis" ;
-    schema:name "harness" .
-
 <http://pivotlabs.vc/innov/topic/identify> a schema:DefinedTerm ;
     rdfs:label "identify" ;
     rdfs:comment "The topic 'identify' derived from natural language analysis" ;
     schema:name "identify" .
+
+<http://pivotlabs.vc/innov/topic/harness> a schema:DefinedTerm ;
+    rdfs:label "harness" ;
+    rdfs:comment "The topic 'harness' derived from natural language analysis" ;
+    schema:name "harness" .
 
 <http://pivotlabs.vc/innov/topic/exist> a schema:DefinedTerm ;
     rdfs:label "exist" ;
