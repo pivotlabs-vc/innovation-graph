@@ -3,134 +3,21 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://pivotlabs.vc/innov/challenge/144d468982c789efdaf832df2f25230348dbd6e8> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Vehicle based internet access solutions " ;
-    ns1:closes "2023-01-17"^^xsd:date ;
+<http://pivotlabs.vc/innov/challenge/dc7841e7849927080d9d6b1930b4562a23c199a7> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Advancing Vehicle Operations in Ports wi" ;
+    ns1:closes "2023-02-20"^^xsd:date ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
     ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
         <http://pivotlabs.vc/innov/topic/aim>,
         <http://pivotlabs.vc/innov/topic/amp>,
-        <http://pivotlabs.vc/innov/topic/generation>,
-        <http://pivotlabs.vc/innov/topic/run> ;
-    ns1:opens "2022-11-29"^^xsd:date ;
-    ns1:title "Vehicle based internet access solutions for remote locations" ;
-    rdfs:comment """SSE Renewables Hydro is looking to use open innovation to find solutions which enable the use of company vehicles as reliable communications hubs for their operational staff in remote locations to access the internet. Successful applicants will be given the opportunity to pitch their innovation to SSE.
-
-Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the possibility of further adoption upon successful trials.
+        <http://pivotlabs.vc/innov/topic/development>,
+        <http://pivotlabs.vc/innov/topic/exist> ;
+    ns1:opens "2023-01-17"^^xsd:date ;
+    ns1:title "Advancing Vehicle Operations in Ports with 5G" ;
+    rdfs:comment """Successful applicants to this iX challenge will have the opportunity to apply their technology to develop a novel solution that will have a real life impact for the Port of Tyne, improving operational efficiency, data collection/analysis and control over CO2 emissions.
+Successful applicants may have the opportunity to partner with the Port of Tyne to bid for R&D funding to further develop the proposed project and will be allowed site access to demonstrate their solution. There is also the potential to present at a future event as part of Maritime Innovation week 2023.
 """ ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/218/vehicle_based_internet_access_solutions_for_r> .
-
-<http://pivotlabs.vc/innov/challenge/2cbf7d35f2ca2d50512dd329c21fd843c0d8998f> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Automating identification of litter" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-09"^^xsd:date ;
-    ns1:title "Automating identification of litter" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to LitterLotto®. The final successful applicant will deliver a proof-of-concept trial with LitterLotto®, to demonstrate the solution. The project team (LitterLotto® and the winning applicant) will receive a £25,000 grant award, to be apportioned between LitterLotto® and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/225/automating_identification_of_litter> .
-
-<http://pivotlabs.vc/innov/challenge/74fd6ef4bb26b9f1a05201038fc2baaa9846cc83> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Aluminium joining processes for battery " ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-13"^^xsd:date ;
-    ns1:title "Aluminium joining processes for battery cooling systems" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to Balance Batteries. The final successful applicant will deliver a proof-of-concept trial with Balance Batteries, to demonstrate the solution. The project team will receive a £25,000 grant award, to be apportioned between Balance Batteries and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/228/aluminium_joining_processes_for_battery_cooli> .
-
-<http://pivotlabs.vc/innov/challenge/7656d0e8ba9607c5e26b6861409cb5f6dd100bca> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Remote measurement of carbon sequestrati" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-05"^^xsd:date ;
-    ns1:title "Remote measurement of carbon sequestration on UK farms" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to Bloci. The final successful applicant will deliver a proof-of-concept trial with Bloci, to demonstrate the solution. The project team will receive a £25,000 grant award, to be apportioned between Bloci and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/222/remote_measurement_of_carbon_sequestration_on> .
-
-<http://pivotlabs.vc/innov/challenge/794aedd1db64c0aaaea6f921d0e1c9d4c08b0a74> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Alternatives for moth treatment in wool" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-09"^^xsd:date ;
-    ns1:title "Alternatives for moth treatment in wool" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to Wool Insulation Wales. The final successful applicant will deliver a proof-of-concept trial with Wool Insulation Wales, to demonstrate the solution. The project team will receive a £25,000 grant award, to be apportioned between Wool Insulation Wales and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/224/alternatives_for_moth_treatment_in_wool> .
-
-<http://pivotlabs.vc/innov/challenge/ae9c373337fc8ab0087fba6ea95e850c4ff2848c> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Reusable packaging and logistics solutio" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-05"^^xsd:date ;
-    ns1:title "Reusable packaging and logistics solution for Air Source Heat Pumps" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to ICAX. The final successful applicant will deliver a proof-of-concept trial with ICAX, to demonstrate the solution. The project team will receive a £25,000 grant award, to be apportioned between ICAX and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/219/reusable_packaging_and_logistics_solution_for> .
-
-<http://pivotlabs.vc/innov/challenge/c0a707770f43d5be0a4a9d5fb666cb67fe1d32cf> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Alternative drying processes for textile" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-09"^^xsd:date ;
-    ns1:title "Alternative drying processes for textile production" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to The Natural Fibre Company. The final successful applicant will deliver a feasibility study or proof-of-concept trial with The Natural Fibre Company, to demonstrate the benefits of a solution. The project team will receive a £25,000 grant award, to be apportioned between The Natural Fibre Company and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/226/alternative_drying_processes_for_textile_prod> .
-
-<http://pivotlabs.vc/innov/challenge/dc1aa3bed3ba43063161d69952b4040c3aefb830> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Environmental monitoring and data analyt" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-05"^^xsd:date ;
-    ns1:title "Environmental monitoring and data analytics for mycelium growth optimisation" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to Magical Mushroom Company. The final successful applicant will deliver a proof-of-concept trial with Magical Mushroom Company, to demonstrate the solution. The project team will receive a £25,000 grant award, to be apportioned between Magical Mushroom Company and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/220/environmental_monitoring_and_data_analytics_f> .
-
-<http://pivotlabs.vc/innov/challenge/ec256b790b009afb9e0a4def5899a4da9b37f875> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Hydrophyllic solutions to prevent foggin" ;
-    ns1:closes "2023-01-13"^^xsd:date ;
-    ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/drive>,
-        <http://pivotlabs.vc/innov/topic/enable>,
-        <http://pivotlabs.vc/innov/topic/exist>,
-        <http://pivotlabs.vc/innov/topic/generation> ;
-    ns1:opens "2022-12-05"^^xsd:date ;
-    ns1:title "Hydrophyllic solutions to prevent fogging of thermoplastics" ;
-    rdfs:comment "Shortlisted applicants will be given an opportunity to pitch their solution to the Challenger. The final successful applicant will deliver a proof-of-concept trial with the Challenger, to demonstrate the solution or a feasibility study if the solution is an early stage concept. The project team will receive a £25,000 grant award, to be apportioned between the Challenger and the successful applicant, as agreed on a bilateral basis." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/221/hydrophyllic_solutions_to_prevent_fogging_of> .
+    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/231/advancing_vehicle_operations_in_ports_with_5g> .
 
 <http://pivotlabs.vc/innov/challenge/f01c114049b77e0285ecf27ec38055a861712788> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "UK-China Healthy Ageing Accelerator" ;
@@ -161,49 +48,34 @@ Selected solution(s) will be trialled at SSE Renewables Hydro sites, with the po
     rdfs:comment "The topic 'current' derived from natural language analysis" ;
     schema:name "current" .
 
-<http://pivotlabs.vc/innov/topic/explore> a schema:DefinedTerm ;
-    rdfs:label "explore" ;
-    rdfs:comment "The topic 'explore' derived from natural language analysis" ;
-    schema:name "explore" .
-
-<http://pivotlabs.vc/innov/topic/networks> a schema:DefinedTerm ;
-    rdfs:label "networks" ;
-    rdfs:comment "The topic 'networks' derived from natural language analysis" ;
-    schema:name "networks" .
-
-<http://pivotlabs.vc/innov/topic/run> a schema:DefinedTerm ;
-    rdfs:label "run" ;
-    rdfs:comment "The topic 'run' derived from natural language analysis" ;
-    schema:name "run" .
-
-<http://pivotlabs.vc/innov/topic/advanced> a schema:DefinedTerm ;
-    rdfs:label "advanced" ;
-    rdfs:comment "The topic 'advanced' derived from natural language analysis" ;
-    schema:name "advanced" .
-
 <http://pivotlabs.vc/innov/topic/development> a schema:DefinedTerm ;
     rdfs:label "development" ;
     rdfs:comment "The topic 'development' derived from natural language analysis" ;
     schema:name "development" .
-
-<http://pivotlabs.vc/innov/topic/drive> a schema:DefinedTerm ;
-    rdfs:label "drive" ;
-    rdfs:comment "The topic 'drive' derived from natural language analysis" ;
-    schema:name "drive" .
-
-<http://pivotlabs.vc/innov/topic/enable> a schema:DefinedTerm ;
-    rdfs:label "enable" ;
-    rdfs:comment "The topic 'enable' derived from natural language analysis" ;
-    schema:name "enable" .
 
 <http://pivotlabs.vc/innov/topic/exist> a schema:DefinedTerm ;
     rdfs:label "exist" ;
     rdfs:comment "The topic 'exist' derived from natural language analysis" ;
     schema:name "exist" .
 
+<http://pivotlabs.vc/innov/topic/explore> a schema:DefinedTerm ;
+    rdfs:label "explore" ;
+    rdfs:comment "The topic 'explore' derived from natural language analysis" ;
+    schema:name "explore" .
+
 <http://pivotlabs.vc/innov/topic/generation> a schema:DefinedTerm ;
     rdfs:label "generation" ;
     rdfs:comment "The topic 'generation' derived from natural language analysis" ;
     schema:name "generation" .
+
+<http://pivotlabs.vc/innov/topic/networks> a schema:DefinedTerm ;
+    rdfs:label "networks" ;
+    rdfs:comment "The topic 'networks' derived from natural language analysis" ;
+    schema:name "networks" .
+
+<http://pivotlabs.vc/innov/topic/advanced> a schema:DefinedTerm ;
+    rdfs:label "advanced" ;
+    rdfs:comment "The topic 'advanced' derived from natural language analysis" ;
+    schema:name "advanced" .
 
 
