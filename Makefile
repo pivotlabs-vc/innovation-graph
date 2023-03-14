@@ -4,9 +4,11 @@ VERSION=$(shell git describe | sed 's/^v//')
 all:
 
 curate:
-	rm -f data.db
+	rm -rf inno-db
 	make turtle
-	rdfproc -n -s sqlite -t synchronous=off data.db parse data.ttl turtle
+	docker run -v $$(pwd):/files \
+	    docker.io/cybermaggedon/sparql-service-rocksdb \
+	    rdfproc -n -s rocksdb /files/inno-db parse /files/data.ttl turtle
 
 # RDFlib doesn't seem to output prefix for rdf: namespace?!
 turtle:
