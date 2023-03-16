@@ -1,5 +1,5 @@
 
-FROM docker.io/cybermaggedon/sparql-service-rocksdb:0.2.0
+FROM docker.io/cybermaggedon/sparql-service-rocksdb:0.3.0
 
 COPY inno-db/* /data/db/
 
