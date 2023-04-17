@@ -3,79 +3,46 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://pivotlabs.vc/innov/challenge/dc7841e7849927080d9d6b1930b4562a23c199a7> a <http://pivotlabs.vc/innov/t/challenge> ;
-    rdfs:label "Advancing Vehicle Operations in Ports wi" ;
-    ns1:closes "2023-02-20"^^xsd:date ;
+<http://pivotlabs.vc/innov/challenge/735079f90b7d744b0d0fccaf787b6f28d118c624> a <http://pivotlabs.vc/innov/t/challenge> ;
+    rdfs:label "Carbon accounting tools for SMEs in the " ;
+    ns1:closes "2023-05-09"^^xsd:date ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
-        <http://pivotlabs.vc/innov/topic/aim>,
-        <http://pivotlabs.vc/innov/topic/amp>,
-        <http://pivotlabs.vc/innov/topic/development>,
-        <http://pivotlabs.vc/innov/topic/exist> ;
-    ns1:opens "2023-01-17"^^xsd:date ;
-    ns1:title "Advancing Vehicle Operations in Ports with 5G" ;
-    rdfs:comment """Successful applicants to this iX challenge will have the opportunity to apply their technology to develop a novel solution that will have a real life impact for the Port of Tyne, improving operational efficiency, data collection/analysis and control over CO2 emissions.
-Successful applicants may have the opportunity to partner with the Port of Tyne to bid for R&D funding to further develop the proposed project and will be allowed site access to demonstrate their solution. There is also the potential to present at a future event as part of Maritime Innovation week 2023.
-""" ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/231/advancing_vehicle_operations_in_ports_with_5g> .
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/carbon+accounting+tools>,
+        <http://pivotlabs.vc/innov/topic/welsh> ;
+    ns1:opens "2023-03-27"^^xsd:date ;
+    ns1:title "Carbon accounting tools for SMEs in the Welsh public sector supply chain" ;
+    rdfs:comment "Successful applicants will be given an opportunity to pitch their innovation to BCBC and CCR representatives for the chance to bid for up to £50,000 in project funding from the CCR Challenge Fund to build and trial the tool with BCBC. If trials are successful, there is the possibility of further adoption across CCR public sector bodies." ;
+    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/247/carbon_accounting_tools_for_smes_in_the_welsh> .
 
-<http://pivotlabs.vc/innov/challenge/f01c114049b77e0285ecf27ec38055a861712788> a <http://pivotlabs.vc/innov/t/challenge> ;
+<http://pivotlabs.vc/innov/challenge/c8c7146de84cba1d2fca1d50c7ce279a5dc74557> a <http://pivotlabs.vc/innov/t/challenge> ;
     rdfs:label "UK-China Healthy Ageing Accelerator" ;
-    ns1:closes "2023-02-02"^^xsd:date ;
+    ns1:closes "2023-04-17"^^xsd:date ;
     ns1:has-sponsor <http://pivotlabs.vc/innov/organisation/ktnie> ;
-    ns1:has-topic <http://pivotlabs.vc/innov/topic/advanced>,
-        <http://pivotlabs.vc/innov/topic/current>,
-        <http://pivotlabs.vc/innov/topic/explore>,
-        <http://pivotlabs.vc/innov/topic/generation>,
-        <http://pivotlabs.vc/innov/topic/networks> ;
-    ns1:opens "2022-12-12"^^xsd:date ;
+    ns1:has-topic <http://pivotlabs.vc/innov/topic/business+growth+support+package>,
+        <http://pivotlabs.vc/innov/topic/oxford+innovation> ;
+    ns1:opens "2023-02-20"^^xsd:date ;
     ns1:title "UK-China Healthy Ageing Accelerator" ;
     rdfs:comment "Successful applicants will be given the opportunity to benefit from a business growth support package delivered by Oxford Innovation on behalf of NICA to strengthen their entry into the Chinese Healthy Ageing market." ;
-    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/227/uk-china_healthy_ageing_accelerator> .
+    rdfs:seeAlso <https://www.ktninnovationexchange.co.uk/challenges/233/uk-china_healthy_ageing_accelerator> .
 
-<http://pivotlabs.vc/innov/topic/aim> a schema:DefinedTerm ;
-    rdfs:label "aim" ;
-    rdfs:comment "The topic 'aim' derived from natural language analysis" ;
-    schema:name "aim" .
+<http://pivotlabs.vc/innov/topic/business+growth+support+package> a schema:DefinedTerm ;
+    rdfs:label "business growth support package" ;
+    rdfs:comment "The topic 'business growth support package'" ;
+    schema:name "business growth support package" .
 
-<http://pivotlabs.vc/innov/topic/amp> a schema:DefinedTerm ;
-    rdfs:label "amp" ;
-    rdfs:comment "The topic 'amp' derived from natural language analysis" ;
-    schema:name "amp" .
+<http://pivotlabs.vc/innov/topic/carbon+accounting+tools> a schema:DefinedTerm ;
+    rdfs:label "carbon accounting tools" ;
+    rdfs:comment "The topic 'carbon accounting tools'" ;
+    schema:name "carbon accounting tools" .
 
-<http://pivotlabs.vc/innov/topic/current> a schema:DefinedTerm ;
-    rdfs:label "current" ;
-    rdfs:comment "The topic 'current' derived from natural language analysis" ;
-    schema:name "current" .
+<http://pivotlabs.vc/innov/topic/oxford+innovation> a schema:DefinedTerm ;
+    rdfs:label "oxford innovation" ;
+    rdfs:comment "The topic 'oxford innovation'" ;
+    schema:name "oxford innovation" .
 
-<http://pivotlabs.vc/innov/topic/development> a schema:DefinedTerm ;
-    rdfs:label "development" ;
-    rdfs:comment "The topic 'development' derived from natural language analysis" ;
-    schema:name "development" .
-
-<http://pivotlabs.vc/innov/topic/exist> a schema:DefinedTerm ;
-    rdfs:label "exist" ;
-    rdfs:comment "The topic 'exist' derived from natural language analysis" ;
-    schema:name "exist" .
-
-<http://pivotlabs.vc/innov/topic/explore> a schema:DefinedTerm ;
-    rdfs:label "explore" ;
-    rdfs:comment "The topic 'explore' derived from natural language analysis" ;
-    schema:name "explore" .
-
-<http://pivotlabs.vc/innov/topic/generation> a schema:DefinedTerm ;
-    rdfs:label "generation" ;
-    rdfs:comment "The topic 'generation' derived from natural language analysis" ;
-    schema:name "generation" .
-
-<http://pivotlabs.vc/innov/topic/networks> a schema:DefinedTerm ;
-    rdfs:label "networks" ;
-    rdfs:comment "The topic 'networks' derived from natural language analysis" ;
-    schema:name "networks" .
-
-<http://pivotlabs.vc/innov/topic/advanced> a schema:DefinedTerm ;
-    rdfs:label "advanced" ;
-    rdfs:comment "The topic 'advanced' derived from natural language analysis" ;
-    schema:name "advanced" .
+<http://pivotlabs.vc/innov/topic/welsh> a schema:DefinedTerm ;
+    rdfs:label "welsh" ;
+    rdfs:comment "The topic 'welsh'" ;
+    schema:name "welsh" .
 
 
