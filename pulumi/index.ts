@@ -62,46 +62,6 @@ const provider = new gcp.Provider(
     }
 );
 
-const enableCloudRun = new gcp.projects.Service(
-    "enable-cloud-run",
-    {
-	service: "run.googleapis.com",
-    },
-    {
-	provider: provider
-    }
-);
-
-const enableComputeEngine = new gcp.projects.Service(
-    "enable-compute-engine",
-    {
-	service: "compute.googleapis.com",
-    },
-    {
-	provider: provider
-    }
-);
-
-const enableCloudDns = new gcp.projects.Service(
-    "enable-cloud-dns",
-    {
-	service: "dns.googleapis.com",
-    },
-    {
-	provider: provider
-    }
-);
-
-const enableArtifactRegistry = new gcp.projects.Service(
-    "enable-artifact-registry",
-    {
-	service: "artifactregistry.googleapis.com",
-    },
-    {
-	provider: provider
-    }
-);
-
 const repo = process.env.ARTIFACT_REPO;
 
 const artifactRepo = new gcp.artifactregistry.Repository(
@@ -114,7 +74,6 @@ const artifactRepo = new gcp.artifactregistry.Repository(
     },
     {
 	provider: provider,
-	dependsOn: enableArtifactRegistry,
     }
 );
 
@@ -197,7 +156,7 @@ const sparqlService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun, sparqlImage],
+	dependsOn: [sparqlImage],
     }
 );
 
@@ -256,7 +215,7 @@ const webService = new gcp.cloudrun.Service(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudRun, webImage],
+	dependsOn: [webImage],
     }
 );
 
@@ -335,7 +294,6 @@ const zone = new gcp.dns.ManagedZone(
     },
     {
 	provider: provider,
-	dependsOn: [enableCloudDns],
     }
 );
 
