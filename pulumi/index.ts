@@ -300,7 +300,6 @@ const recordSet = new gcp.dns.RecordSet(
     },
     {
 	provider: provider,
-	dependsOn: zone,
     }
 );
 
