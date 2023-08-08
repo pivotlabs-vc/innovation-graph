@@ -115,8 +115,7 @@ jobs:
           ARTIFACT_NAME: dev
           ARTIFACT_REPO_REGION: europe-west1
           WEB_HOSTNAME: graph.dev.pivotlabs.vc
-          DOMAIN: dev.pivotlabs.vc.
-          DNS_DOMAIN_DESCRIPTION: dev
+          MANAGED_ZONE: dev
           SPARQL_MIN_SCALE: "0"
           SPARQL_MAX_SCALE: "1"
           WEB_MIN_SCALE: "0"

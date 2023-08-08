@@ -24,6 +24,9 @@ if (!process.env.ARTIFACT_NAME)
 if (!process.env.WEB_HOSTNAME)
     throw Error("WEB_HOSTNAME not defined");
 
+if (!process.env.MANAGED_ZONE)
+    throw Error("MANAGED_ZONE not defined");
+
 if (!process.env.GCP_PROJECT)
     throw Error("GCP_PROJECT not defined");
 
@@ -35,12 +38,6 @@ if (!process.env.ENVIRONMENT)
 
 if (!process.env.CLOUD_RUN_REGION)
     throw Error("CLOUD_RUN_REGION not defined");
-
-if (!process.env.DNS_DOMAIN_DESCRIPTION)
-    throw Error("DNS_DOMAIN_DESCRIPTION not defined");
-
-if (!process.env.DOMAIN)
-    throw Error("DOMAIN not defined");
 
 if (!process.env.WEB_MIN_SCALE)
     throw Error("WEB_MIN_SCALE not defined");
@@ -283,14 +280,9 @@ export const webhost = webDomainMapping.statuses.apply(
     x => x.rrdata
 );
 
-const zone = new gcp.dns.ManagedZone(
-    "zone",
+const zone = gcp.dns.getManagedZoneOutput(
     {
-	name: process.env.DNS_DOMAIN_DESCRIPTION,
-	description: process.env.DOMAIN,
-	dnsName: process.env.DOMAIN,
-	labels: {
-	},
+	name: process.env.MANAGED_ZONE,
     },
     {
 	provider: provider,

@@ -117,8 +117,7 @@ jobs:
           ARTIFACT_NAME: pivot-labs
           ARTIFACT_REPO_REGION: europe-west1
           WEB_HOSTNAME: graph.innovate.pivotlabs.vc
-          DOMAIN: innovate.pivotlabs.vc.
-          DNS_DOMAIN_DESCRIPTION: innovate
+          MANAGED_ZONE: innovate
           SPARQL_MIN_SCALE: "0"
           SPARQL_MAX_SCALE: "1"
           WEB_MIN_SCALE: "0"
